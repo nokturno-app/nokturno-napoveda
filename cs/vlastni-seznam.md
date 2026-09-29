@@ -16,7 +16,12 @@ odpovídáš ty.
 1. **Nastavení → Zdroje a účty → Vlastní seznam** (další dva seznamy jsou ve skupinách **Vlastní seznam 2**
    a **Vlastní seznam 3**).
 2. **Adresa seznamu (JSON)**: adresa souboru, musí začínat `http://` nebo `https://`.
-3. **Hlavička požadavku 1** a **2**: nepovinné, ve tvaru `Název: hodnota`, třeba `X-Key: tajny-klic`. Pošlou se
+3. **Ikona v menu**: ikona položky v hlavním menu. Nabízí se jen ikony, které dodává vzhled Kodi (seznam videí,
+   filmy, seriály, hudební videa, hudební alba, hudba, oblíbené, nově přidané, žánry, rok, herci, složka). Výchozí
+   je **Seznam videí**.
+4. **Místo v menu**: kde se položka ukáže – **Nahoře**, **Pod Hlídanými**, **Pod Filmy a Seriály** (výchozí)
+   nebo **Dole** nad Nastavením. Víc seznamů na stejném místě jde podle svého čísla.
+5. **Hlavička požadavku 1** a **2**: nepovinné, ve tvaru `Název: hodnota`, třeba `X-Key: tajny-klic`. Pošlou se
    při každém načtení seznamu. Hodí se, když je soubor za přihlášením. Hodnota se v nastavení nezobrazuje.
 
 Každý seznam s vyplněnou adresou je v hlavním menu vlastní položka. Jmenuje se podle `title` v souboru, dokud se
