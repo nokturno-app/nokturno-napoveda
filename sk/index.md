@@ -17,6 +17,7 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 ## Funkcie
 - [Sledované: nové diely a Kontrolovať ďalej](hlidane.md)
 - [Vlastné katalógy](vlastni-katalogy.md)
+- [Vlastný zoznam](vlastni-seznam.md)
 - [Výber streamu: filtre, 3D a posledný filter](vyber-streamu.md)
 - [FastShare s účtom zo Sdilej.cz](sdilej-cz.md)
 - [Trakt.tv: prihlásenie kódom](trakt.md)

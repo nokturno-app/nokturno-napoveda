@@ -17,6 +17,7 @@ nehostuje a za to, co přehráváš, odpovídáš ty. Více v článku [Co je No
 ## Funkce
 - [Hlídané: nové díly a Kontrolovat dál](cs/hlidane.md)
 - [Vlastní katalogy](cs/vlastni-katalogy.md)
+- [Vlastní seznam](cs/vlastni-seznam.md)
 - [Výběr streamu: filtry, 3D a poslední filtr](cs/vyber-streamu.md)
 - [FastShare s účtem ze Sdilej.cz](cs/sdilej-cz.md)
 - [Trakt.tv: přihlášení kódem](cs/trakt.md)
