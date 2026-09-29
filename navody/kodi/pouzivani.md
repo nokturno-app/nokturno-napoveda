@@ -13,13 +13,13 @@ Položky shora dolů. Některé se ukážou, jen když mají co nabídnout – n
 | **Novinky ve verzi** | po aktualizaci, dokud je nepřečteš | co přinesla nová verze |
 | **Hledat** | vždy | jedno hledání ve všech zapnutých zdrojích, pro filmy i seriály naráz |
 | **Pokračovat ve sledování** | když máš něco rozkoukaného | rozkoukané filmy a další díly rozkoukaných seriálů (jen díly, které už vyšly) |
-| **Hlídané** | když něco hlídáš | hlídané seriály a tituly, u nového dílu i jejich počet – viz [Hlídané](hlidane.md) |
+| **Hlídané** | když něco hlídáš | hlídané seriály a tituly, u nového dílu i jejich počet – viz [Hlídané](../../cs/hlidane.md) |
 | **Filmy**, **Seriály** | vždy | katalogy včetně vlastních, viz [Filmy a Seriály](#filmy-a-serialy) |
 | sezónní katalogy | jen v sezóně | občas přidáme katalog na určité období, třeba vánoční filmy |
 | **TV program** | vždy | česká a slovenská televize spárovaná s databází filmů |
 | **Můj seznam** | když v něm něco máš nebo už máš něco zhlédnuté | uložené tituly, **Naposledy zhlédnuté** a **Synchronizovat teď** |
 | **SyncWatch** | vždy | společné sledování, viz [SyncWatch](syncwatch.md) |
-| **Moje úložiště** | s nastaveným vlastním úložištěm | procházení tvých souborů, viz [Vlastní úložiště](vlastni-uloziste.md) |
+| **Moje úložiště** | s nastaveným vlastním úložištěm | procházení tvých souborů, viz [Vlastní úložiště](../../cs/vlastni-uloziste.md) |
 | **Stažené** | s nastavenou složkou pro stahování | stažené a rozstahované soubory |
 | **Nastavení** | vždy | viz [Nastavení](nastaveni.md) |
 
@@ -88,7 +88,7 @@ Místní nabídka (podržet OK nebo pravé tlačítko) u filmu a dílu nabízí:
 - **Stáhnout** – stejný dialog, vybraný stream se stáhne místo přehrání.
 - **Podobné tituly**
 - **Přidat do Mého seznamu** / **Odebrat z Mého seznamu**
-- **Hlídat nové díly** (seriál), **Hlídat, až bude k dispozici** (film), **Kontrolovat dál** (díl) – viz [Hlídané](hlidane.md).
+- **Hlídat nové díly** (seriál), **Hlídat, až bude k dispozici** (film), **Kontrolovat dál** (díl) – viz [Hlídané](../../cs/hlidane.md).
 - **Označit jako zhlédnuté** / **Označit jako nezhlédnuté**
 
 Označit jako zhlédnuté funguje i z místní nabídky skinu. Změna se promítne do Nokturna, na Trakt.tv i do [synchronizace](synchronizace.md).
@@ -118,6 +118,6 @@ V menu **Stažené** je průběh a hotové soubory. Přerušené stahování (v�
 
 - [Synchronizace a přenos](synchronizace.md) – zhlédnuté, Můj seznam a Hlídané na všech tvých Kodi.
 - [SyncWatch](syncwatch.md) – společné sledování jednoho filmu na víc zařízeních.
-- [Hlídané](hlidane.md) – hlídání nových dílů a titulů, které zatím nikde nejsou.
+- [Hlídané](../../cs/hlidane.md) – hlídání nových dílů a titulů, které zatím nikde nejsou.
 
 Když něco nefunguje, pokračuj do [nápovědy](../../index.md).

@@ -1,6 +1,6 @@
 # Zdroje a účty
 
-Hlavní funkcí Nokturna je [vlastní úložiště](vlastni-uloziste.md). Vše na této stránce jsou **volitelné vyhledávače třetích stran** – zapneš si je jen ty, se svým účtem, doplněk sám žádný obsah nehostuje (viz [Právní upozornění](index.md#pravni-upozorneni)).
+Hlavní funkcí Nokturna je [vlastní úložiště](../../cs/vlastni-uloziste.md). Vše na této stránce jsou **volitelné vyhledávače třetích stran** – zapneš si je jen ty, se svým účtem, doplněk sám žádný obsah nehostuje (viz [Právní upozornění](index.md#pravni-upozorneni)).
 
 Všechno je v jedné kategorii nastavení **Zdroje a účty**. Každý zdroj má vlastní skupinu, pořadí na této stránce odpovídá pořadí v nastavení. Zapnout můžeš jeden zdroj, několik, nebo všechny – navzájem se neruší, jejich výsledky se sloučí do jednoho seznamu streamů.
 
@@ -150,7 +150,7 @@ Každá další se zkusí, jen když předchozí nic nevrátila. S klíčem TMDB
 
 ## Trakt.tv
 
-Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Tituly z tvého watchlistu na Traktu doplněk hlídá stejně jako [Hlídané](hlidane.md).
+Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Tituly z tvého watchlistu na Traktu doplněk hlídá stejně jako [Hlídané](../../cs/hlidane.md).
 
 - **Používat Trakt.tv**
 - **Přihlásit se k Traktu (kódem zařízení)** – na TV se ukáže kód, zadáš ho na `trakt.tv/activate`. Vlastní aplikaci na Traktu zakládat nemusíš. Stačí free účet; ten může mít připojené dvě aplikace naráz.

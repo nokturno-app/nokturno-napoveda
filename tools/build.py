@@ -106,10 +106,65 @@ def broken_links():
     return errors
 
 
+TABS = {"Kodi": "kodi", "Home Assistant": "ha", "Stremio": "stremio"}
+TAB_SEP = " › "
+MENU_LINK_RE = re.compile(r"^- \[(.+?)\]\((.+?\.md)\)")
+
+
+def menu(index):
+    """Sekce rozcestníku jako [(záložka, sekce, [(popisek, odkaz)])]. Nadpis `## Kodi › Funkce` patří
+    do záložky Kodi, nadpis bez záložky (`## Úvod`) do záložky Nápověda (záložka None)."""
+    out = []
+    for line in index.read_text(encoding="utf-8").splitlines():
+        if line.startswith("## "):
+            head = line[3:].strip()
+            tab, _, section = head.rpartition(TAB_SEP)
+            out.append((tab or None, section, []))
+        elif out and (m := MENU_LINK_RE.match(line)):
+            out[-1][2].append((m.group(1), m.group(2)))
+    return out
+
+
+def menu_errors():
+    """Každý článek je v menu právě jednou a jen v záložce produktu, kterého se týká (`products:`);
+    česká a slovenská záložka mají stejné články."""
+    errors, tabs_by_lang = [], {}
+    for lang, index in (("cs", ROOT / "index.md"), ("sk", ROOT / "sk" / "index.md")):
+        where, listed, tabs = index.relative_to(ROOT), set(), tabs_by_lang.setdefault(lang, {})
+        for tab, section, items in menu(index):
+            if tab is not None and tab not in TABS:
+                errors.append(f"{where}: neznámá záložka {tab!r} v sekci {section!r}")
+                continue
+            for _, link in items:
+                target = (index.parent / link).resolve()
+                if target in listed:
+                    errors.append(f"{where}: {link} je v menu víckrát")
+                listed.add(target)
+                if target.parent == ROOT / lang:
+                    tabs.setdefault(tab, set()).add(target.stem)
+                if tab is None or not target.exists():
+                    continue
+                key = TABS[tab]
+                if target.parent == ROOT / lang:
+                    products = (front_matter(target) or {}).get("products") or []
+                    if key not in products:
+                        errors.append(f"{where}: {link} je v záložce {tab}, ale nemá {key!r} v products")
+                elif ROOT / "navody" in target.parents and target.relative_to(ROOT / "navody").parts[0] != key:
+                    errors.append(f"{where}: návod {link} nepatří do záložky {tab}")
+        for path in sorted((ROOT / lang).glob("*.md")):
+            if path.stem != "index" and path.resolve() not in listed:
+                errors.append(f"{lang}/{path.name}: článek chybí v menu ({where})")
+    for tab in set(tabs_by_lang["cs"]) | set(tabs_by_lang["sk"]):
+        cs, sk = tabs_by_lang["cs"].get(tab, set()), tabs_by_lang["sk"].get(tab, set())
+        if cs != sk:
+            errors.append(f"záložka {tab or 'Nápověda'}: cs a sk se liší v {sorted(cs ^ sk)}")
+    return errors
+
+
 def main():
     check = "--check" in sys.argv[1:]
     errors, records = build()
-    errors += broken_links()
+    errors += broken_links() + menu_errors()
     out = ROOT / "templates.json"
     data = {"version": 1, "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "base_url": BASE_URL, "vars": VARS, "templates": records}

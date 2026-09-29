@@ -5,7 +5,7 @@
     python3 tools/site.py --serve                            # náhled (hledání jen s diakritikou)
 
 Český web je v kořeni, slovenský pod `/sk/`, jazyk se přepíná v hlavičce.
-Menu se nikde ručně nevede: bere se ze sekcí `## …` a odkazů `- [..](..md)` v rozcestnících
+Menu se nikde ručně nevede: bere se ze sekcí `## …` (`## Kodi › Funkce` = záložka Kodi) a odkazů `- [..](..md)` v rozcestnících
 (`index.md` česky, `sk/index.md` slovensky). Články zůstávají v `cs/` a `sk/` (čte je i Eliška), návody k doplňkům
 (bývalá wiki na GitHubu) v `navody/<kodi|ha|stremio>/`, jejich menu v `_nav.md`.
 """
@@ -20,21 +20,12 @@ import unicodedata
 import hashlib
 import yaml
 
+import build
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "_src"
 LIST_RE = re.compile(r"^( *)([-*]|\d+\.) ")
 LINK_RE = re.compile(r"^- \[(.+?)\]\((.+?\.md)\)")
-
-
-def sections(index, prefix):
-    nav, current = [], None
-    for line in index.read_text(encoding="utf-8").splitlines():
-        if line.startswith("## "):
-            current = []
-            nav.append({line[3:].strip(): current})
-        elif current is not None and (m := LINK_RE.match(line)):
-            current.append({m.group(1): prefix + m.group(2).split("/")[-1]})
-    return nav
 
 
 def fix_lists(text):
@@ -70,15 +61,49 @@ def fold_search_index(path):
 
 
 GUIDES = {"kodi": "Kodi", "ha": "Home Assistant", "stremio": "Stremio"}
+# Návody, které se sloučily do článku nápovědy; stará adresa koluje v příspěvcích, proto přesměruje.
+REDIRECTS = {"navody/kodi/vlastni-uloziste.md": "cs/vlastni-uloziste.md",
+             "navody/kodi/hlidane.md": "cs/hlidane.md"}
 
 
 def guide(d):
-    """Menu návodu z `navody/<d>/_nav.md` (převzatý postranní panel bývalé wiki)."""
+    """Stránky návodu v pořadí z `navody/<d>/_nav.md` (převzatý postranní panel bývalé wiki),
+    jako [(popisek, cesta od kořene zdroje)]."""
     items = []
     for line in (ROOT / "navody" / d / "_nav.md").read_text(encoding="utf-8").splitlines():
         if m := LINK_RE.match(line):
-            items.append({m.group(1): f"navody/{d}/{m.group(2)}"})
+            target = (ROOT / "navody" / d / m.group(2)).resolve()
+            items.append((m.group(1), target.relative_to(ROOT).as_posix()))
     return items
+
+
+def site_nav(index, lang):
+    """Záložky webu ze sekcí rozcestníku (`## Kodi › Funkce`, bez záložky = Nápověda). Na konec
+    záložky produktu přidá stránky návodu, které v rozcestníku nejsou. Slovenský web návody nemá,
+    odkazuje na české s označením „(po česky)“."""
+    home = "Nápověda" if lang == "cs" else "Nápoveda"
+    tabs = {None: ["index.md"], **{name: [] for name in GUIDES.values()}}
+    listed = set()
+    for tab, section, items in build.menu(index):
+        entries = []
+        for label, link in items:
+            path = (index.parent / link).resolve().relative_to(ROOT).as_posix()
+            listed.add(path)
+            entries.append({label: link})
+        if entries:
+            tabs[tab].append({section: entries})
+    for d, name in GUIDES.items():
+        rest = [(label, path) for label, path in guide(d) if path not in listed]
+        if lang == "cs":
+            rest = [{label: path} for label, path in rest]
+            title = "Podrobné návody"
+        else:
+            rest = [{f"{label} (po česky)": KB + path[:-3] + ".html"}
+                    for label, path in rest if path.startswith("navody/")]
+            title = "Podrobné návody (po česky)"
+        if rest:
+            tabs[name].append({title: rest})
+    return [{home: tabs.pop(None)}, *({name: items} for name, items in tabs.items() if items)]
 
 
 KB = "https://nokturno-app.github.io/nokturno-napoveda/"
@@ -142,20 +167,20 @@ def main():
     shutil.copy(ROOT / "index.md", cs / "index.md")
     (cs / "index.md").write_text(fix_lists((cs / "index.md").read_text(encoding="utf-8")), encoding="utf-8")
     shutil.copy(ROOT / "templates.json", cs / "templates.json")
+    for old, new in REDIRECTS.items():
+        url = pathlib.PurePosixPath(*[".."] * old.count("/"), new[:-3] + ".html")
+        (cs / old).write_text(
+            f'---\nsearch:\n  exclude: true\n---\n<meta http-equiv="refresh" content="0; url={url}">\n'
+            f'<script>location.replace("{url}" + location.hash)</script>\n\n'
+            f"Stránka se přesunula: [{new}](../../{new})\n", encoding="utf-8")
     # slovenské články leží v kořeni slovenského webu; odkazy na české návody míří do jiného webu,
     # MkDocs je nepřeloží, proto rovnou na .html
     copy_md(ROOT / "sk", sk, lambda t: NAVODY_MD.sub(r"\1.html", t))
     for docs, lang in ((cs, "cs"), (sk, "sk")):
         shutil.copytree(ROOT / "assets", docs / "assets")
 
-    cs_cfg = config_for("cs", cs, [
-        {"Nápověda": ["index.md", *sections(ROOT / "index.md", "cs/")]},
-        *({name: guide(d)} for d, name in GUIDES.items()),
-    ])
-    sk_cfg = config_for("sk", sk, [
-        {"Nápoveda": ["index.md", *sections(ROOT / "sk" / "index.md", "")]},
-        *({f"{name}": f"{KB}navody/{d}/"} for d, name in GUIDES.items()),
-    ])
+    cs_cfg = config_for("cs", cs, site_nav(ROOT / "index.md", "cs"))
+    sk_cfg = config_for("sk", sk, site_nav(ROOT / "sk" / "index.md", "sk"))
     return cs_cfg, sk_cfg
 
 

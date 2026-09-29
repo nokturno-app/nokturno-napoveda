@@ -45,7 +45,7 @@ Když máš v [Nastavení](nastaveni.md#vlastni-uloziste) vyplněné úložišt�
 - **Přehrát na jiném přehrávači** (TV, Chromecast, prohlížeč), **Poslat do mobilu** a **Zkopírovat odkaz** – soubor jde přes Home Assistant a přehrávač dostane dočasný podepsaný odkaz (platí 12 hodin, do mobilu 24 hodin). Přetáčení funguje, heslo k úložišti z Home Assistantu neodejde.
 - **Stáhnout** – stáhne soubor z úložiště do složky pro stahování.
 
-Nový soubor se v úložišti objeví nejpozději do hodiny, viz [návod pro Kodi](../kodi/vlastni-uloziste.md#kdy-doplnek-uvidi-novy-soubor).
+Nový soubor se v úložišti objeví nejpozději do hodiny, viz [Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md#kdy-doplnek-uvidi-novy-soubor).
 
 ## Hlídané
 

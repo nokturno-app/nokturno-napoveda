@@ -39,7 +39,7 @@ Každý okruh jde zapnout zvlášť:
 - **Synchronizovat zhlédnuté a rozkoukané**
 - **Synchronizovat Můj seznam**
 - **Synchronizovat historii hledání**
-- **Synchronizovat Hlídané** – viz [Hlídané](hlidane.md)
+- **Synchronizovat Hlídané** – viz [Hlídané](../../cs/hlidane.md)
 - **Synchronizovat nastavení doplňku** (výchozí vypnuto) – preferovaný jazyk, řazení streamů, zapnuté zdroje a podobně.
 - **Synchronizovat účty ke zdrojům** (výchozí vypnuto) – přihlášení ke zdrojům, vlastnímu úložišti a klíč TMDB. Hesla jdou zašifrovaná a server je nepřečte, ale kdo má kód skupiny, přečte je – kód patří jen tvým zařízením.
 

@@ -20,7 +20,7 @@ Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
 - **Přehrává se přímo z úložiště.** Stream nese adresu souboru a přihlašovací hlavičky, které aplikace pošle úložišti sama; přes Nokturno žádná data neteče. Ve webovém přehrávači Stremia v prohlížeči se proto nepřehraje, jen v aplikaci (Stremio, Nuvio).
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory) **i ze zařízení, kde přehráváš** (stahuje z něj). Když je obojí doma, stačí adresa z domácí sítě.
-- Jak soubory pojmenovat (rok u filmu, `S01E02` u dílu, **složka s originálním názvem** u filmů s odlišným českým názvem – Stremio zná tituly často jen anglicky) je podrobně v [návodu pro Kodi → Vlastní úložiště](../kodi/vlastni-uloziste.md#jak-pojmenovat-soubory).
+- Jak soubory pojmenovat (rok u filmu, `S01E02` u dílu, **složka s originálním názvem** u filmů s odlišným českým názvem – Stremio zná tituly často jen anglicky) je podrobně v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md#jak-pojmenovat-soubory).
 - Nový soubor se objeví nejpozději do hodiny.
 
 ## Volitelné zdroje

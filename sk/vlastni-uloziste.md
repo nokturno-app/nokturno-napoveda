@@ -61,7 +61,7 @@ V Stremiu platia dve veci navyše:
 - **Seriál:** značka dielu je nutná – `Seriály/Hospoda/Hospoda S02E04 - Úraz.avi` (funguje aj `2x04`).
 - Keď má film slovenský či český názov úplne iný ako originál, daj ho do priečinka s originálnym názvom.
 
-Podrobnosti (po česky): [Vlastní úložiště](../navody/kodi/vlastni-uloziste.md).
+Podrobnosti (po česky): [Jak připojit vlastní úložiště](https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste).
 
 ---
 [Všetky návody](./) · [Česky](../cs/vlastni-uloziste)

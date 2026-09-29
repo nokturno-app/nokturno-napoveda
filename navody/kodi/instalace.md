@@ -55,4 +55,4 @@ Po aktualizaci ze starší verze se průvodce sám nenabídne, pokud už máš n
 
 ## Co dál
 
-Katalog a hledání fungují hned i bez nastavení. K přehrání potřebuješ vlastní úložiště nebo aspoň jeden volitelný zdroj: pokračuj na [Vlastní úložiště](vlastni-uloziste.md) nebo [Zdroje a účty](zdroje-a-ucty.md). Nastavení z jednoho Kodi do dalšího přeneseš podle stránky [Synchronizace a přenos](synchronizace.md#prenos-nastaveni-do-dalsiho-kodi).
+Katalog a hledání fungují hned i bez nastavení. K přehrání potřebuješ vlastní úložiště nebo aspoň jeden volitelný zdroj: pokračuj na [Vlastní úložiště](../../cs/vlastni-uloziste.md) nebo [Zdroje a účty](zdroje-a-ucty.md). Nastavení z jednoho Kodi do dalšího přeneseš podle stránky [Synchronizace a přenos](synchronizace.md#prenos-nastaveni-do-dalsiho-kodi).

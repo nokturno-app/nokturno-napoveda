@@ -1,6 +1,11 @@
 # Nokturno pro Stremio
 
-**Nokturno pro Stremio** je aplikace, která běží u tebe – na počítači, NASu nebo Android TV boxu – a přidá k filmům
+!!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
+    Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
+    (WebShare, FastShare, Přehraj.to…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
+    a uložit a musíš mu věřit. Jistotu máš jen s doplňkem, který běží u tebe.
+
+**Nokturno pro Stremio** je aplikace, která běží u tebe – na počítači, NASu, Android TV boxu nebo jako doplněk Home Assistantu – a přidá k filmům
 a seriálům ve Stremiu (i v Nuviu a dalších přehrávačích s doplňky Stremia) streamy z tvého **vlastního úložiště** (WebDAV)
 a volitelně i z vyhledávačů třetích stran, které si zapneš – **WebShare, Sosáč, Sledujteto, FastShare / Sdilej.cz, HellSpy,
 Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna se objeví v detailu filmu nebo dílu mezi ostatními.
@@ -8,7 +13,7 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
 ## V kostce
 
 - **Běží u tebe.** Aplikaci stáhneš z [vydání na GitHubu](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest)
-  pro Windows, macOS, Linux nebo Android a sama se aktualizuje. Doplněk funguje, jen když aplikace běží. Viz [Instalace](instalace.md).
+  pro Windows, macOS, Linux nebo Android a sama se aktualizuje. Doplněk funguje, jen když aplikace běží. Viz [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md).
 - **Vlastní úložiště** – až tři WebDAV složky s vlastními soubory, mezi streamy jako první. Viz [Zdroje a nastavení](zdroje-a-nastaveni.md#vlastni-uloziste).
 - **Volitelně i další zdroje.** K titulu, který si otevřeš, Nokturno dohledá soubory i u zdrojů, které si zapneš.
   Názvy, plakáty a popisy má Stremio samo; Nokturno volitelně přidá vlastní [katalogy](zdroje-a-nastaveni.md#katalogy).

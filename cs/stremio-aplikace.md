@@ -22,6 +22,8 @@ templates:
 
 Nokturno pro Stremio a Nuvio je malá aplikace, která běží **u tebe**. Stremio i Nuvio pak jen zadají adresu
 doplňku a ptají se aplikace jako každého jiného doplňku. Aplikace musí běžet, kdykoli se díváš.
+Doma ji pustíš na televizi s Androidem, na počítači, na Raspberry Pi nebo NAS, nebo jako
+[doplněk Home Assistantu](#home-assistant), pokud Home Assistant doma máš.
 
 ## Kde ji pustit
 | Co máš | Kde aplikace běží | Postup |
@@ -90,6 +92,9 @@ Doplněk používá síť hostitele: port **7140** (nastavení a doplněk pro Nu
 pro Stremio). V záložce **Konfigurace** jde vypnout statistiky (`stats`), hlášení o pádech (`crash_reports`)
 a HTTPS (`enable_https`), zadat vlastní klíč TMDB (`tmdb_key`). Nové verze si doplněk stahuje sám.
 Home Assistantu nastav v routeru pevnou IP.
+
+Popis doplňku a jeho zdrojový kód jsou v repozitáři
+[nokturno-app/nokturno-stremio-ha](https://github.com/nokturno-app/nokturno-stremio-ha).
 
 ## Raspberry Pi a NAS
 Platí pro Raspberry Pi, NAS s Linuxem a jiný malý počítač se systemd. Aplikace na něm běží pořád,

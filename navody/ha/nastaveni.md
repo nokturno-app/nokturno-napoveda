@@ -58,7 +58,7 @@ Sekce **Vlastní úložiště (WebDAV)** – až tři složky s vlastními soubo
 | **Úložiště N – uživatel**, **heslo** | přihlášení k úložišti (HTTP Basic); bez hesla nech prázdné |
 | **Úložiště N – název u streamů** | např. `NAS` – ukáže se v kartě na zeleném štítku u streamu |
 
-Úložiště musí být dosažitelné **z Home Assistantu** – Home Assistant soubory prochází a přehrávačům je předává. Jak soubory pojmenovat, aby se přiřadily k titulům (rok u filmu, `S01E02` u dílu), je v [návodu pro Kodi → Vlastní úložiště](../kodi/vlastni-uloziste.md) a platí i tady.
+Úložiště musí být dosažitelné **z Home Assistantu** – Home Assistant soubory prochází a přehrávačům je předává. Jak soubory pojmenovat, aby se přiřadily k titulům (rok u filmu, `S01E02` u dílu), je v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md) a platí i tady.
 
 ## Stahování a odkazy
 

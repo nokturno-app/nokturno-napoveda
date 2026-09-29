@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T15:09:49Z",
+  "generated": "2026-09-29T17:23:46Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -923,6 +923,26 @@
       "title": "Pri streame chýba jazyk zvuku",
       "text": "Ahoj, jazyk zvuku sa číta z hlavičky súboru a pri časti streamov chýba:\n1. `[EAC3 5.1]` bez kódu jazyka znamená, že ho ten, kto súbor nahral, nevyplnil. Často je to originálna stopa.\n2. `~CZ` s vlnovkou je jazyk odhadnutý z názvu súboru, nie overený.\n3. Koľko streamov sa číta, nastavíš v Nastavenia → Prehrávanie → Zisťovať zvuk zo súboru (koľko streamov).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/jazyk-zvuku\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/jazyk-zvuku",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "soukromi",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Soukromí a data",
+      "text": "Ahoj, Nokturno posílá na náš server jen anonymní statistiky (náhodné ID instalace, verze, zapnuté zdroje, tituly, u kterých se otevřely streamy) a hlášení o chybách. Hesla, účty a adresy úložišť neodcházejí nikdy.\nVypnout jde v Nokturno → Nastavení → Statistiky → Odesílat anonymní statistiky.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/soukromi\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/soukromi",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "soukromi",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Súkromie a dáta",
+      "text": "Ahoj, Nokturno posiela na náš server len anonymné štatistiky (náhodné ID inštalácie, verzia, zapnuté zdroje, tituly, pri ktorých sa otvorili streamy) a hlásenia o chybách. Heslá, účty a adresy úložísk neodchádzajú nikdy.\nVypnúť sa dá v Nokturno → Nastavenia → Štatistiky → Odosielať anonymné štatistiky.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/soukromi\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/soukromi",
       "when": {},
       "priority": 3
     },

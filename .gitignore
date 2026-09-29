@@ -1,3 +1,4 @@
 _src/
 _mkdocs*.yml
 site/
+__pycache__/

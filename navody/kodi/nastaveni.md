@@ -6,7 +6,7 @@ Nastavení otevřeš položkou **Nastavení** na konci hlavního menu doplňku, 
 
 | Kategorie | Co v ní je |
 |---|---|
-| **Vlastní úložiště** | až tři WebDAV složky s tvými soubory, viz [Vlastní úložiště](vlastni-uloziste.md) |
+| **Vlastní úložiště** | až tři WebDAV složky s tvými soubory, viz [Vlastní úložiště](../../cs/vlastni-uloziste.md) |
 | **Zdroje a účty** | volitelné zdroje, OpenSubtitles, TMDB a Trakt.tv, viz [Zdroje a účty](zdroje-a-ucty.md) |
 | **Nastavit z mobilu a přenos** | vyplnění nastavení v telefonu a přenos do dalšího Kodi |
 | **Přehrávání** | jazyk, titulky, kvalita, řazení streamů, stahování |
