@@ -1,0 +1,930 @@
+{
+  "version": 1,
+  "generated": "2026-09-29T10:11:35Z",
+  "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
+  "vars": {
+    "verze": "verze doplňku u instalace (installs.version)",
+    "nejnovejsi": "nejnovější stabilní verze Kodi (obrazovka Rodina)",
+    "zdroj": "název zdroje, vyplní autor ručně"
+  },
+  "templates": [
+    {
+      "id": "luna-neodpovida",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Luna: „server neodpovídá“",
+      "text": "Ahoj, Nokturno se nemůže spojit se serverem Luna, proto se z ní nic nenačte.\n1. Lunu nepoužíváš? Nokturno → Nastavení → Zdroje a účty, ve skupině Luna vypni Používat Lunu. Ostatní zdroje fungují dál.\n2. Používáš ji? Zařízení, kde Luna běží, musí být zapnuté a ve stejné síti jako Kodi. Home Assistant není potřeba: Luna běží i přímo na Android TV boxu (adresa http://127.0.0.1:7126), na počítači nebo na NAS. Potřebuje WebShare VIP.\n3. Ve skupině Luna klikni na Najít Lunu v síti a pak na Ověřit nastavení Luny. Ověření napíše, co přesně nesedí.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/luna-neodpovida\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/luna-neodpovida",
+      "when": {
+        "luna": [
+          "unreachable",
+          "not_luna",
+          "bad_url",
+          "no_url"
+        ]
+      },
+      "priority": 0
+    },
+    {
+      "id": "luna-neodpovida",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Luna: „server neodpovedá“",
+      "text": "Ahoj, Nokturno sa nemôže spojiť so serverom Luna, preto sa z nej nič nenačíta.\n1. Lunu nepoužívaš? Nokturno → Nastavenia → Zdroje a účty, v skupine Luna vypni Používať Lunu. Ostatné zdroje fungujú ďalej.\n2. Používaš ju? Zariadenie, kde Luna beží, musí byť zapnuté a v rovnakej sieti ako Kodi. Home Assistant nie je potrebný: Luna beží aj priamo na Android TV boxe (adresa http://127.0.0.1:7126), na počítači alebo na NAS. Potrebuje WebShare VIP.\n3. V skupine Luna klikni na Nájsť Lunu v sieti a potom na Overiť nastavenie Luny. Overenie napíše, čo presne nesedí.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/luna-neodpovida\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/luna-neodpovida",
+      "when": {
+        "luna": [
+          "unreachable",
+          "not_luna",
+          "bad_url",
+          "no_url"
+        ]
+      },
+      "priority": 0
+    },
+    {
+      "id": "luna-token",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Luna: „běží, ale chybí token“",
+      "text": "Ahoj, Luna ti běží, ale Nokturno od ní nemá token. Bez něj z ní nic nepřijde.\n1. Na mobilu nebo počítači otevři v prohlížeči adresu Luny s /setup na konci, například http://192.168.1.10:7126/setup.\n2. Přihlas se do WebShare (účet s VIP), zvol Ruční instalace a u Luna: Absolute Cinema dej Kopírovat.\n3. V Kodi: Nokturno → Nastavení → Nastavit z mobilu a přenos → Nastavit z mobilu. Naskenuj QR kód a zkopírovanou adresu vlož do sekce Luna.\n4. Pak v Nastavení → Zdroje a účty, ve skupině Luna, klikni na Ověřit nastavení Luny.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/luna-token\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/luna-token",
+      "when": {
+        "luna": [
+          "no_token",
+          "bad_token_format",
+          "bad_token",
+          "main_empty",
+          "no_streams"
+        ]
+      },
+      "priority": 0
+    },
+    {
+      "id": "luna-token",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Luna: „beží, ale chýba token“",
+      "text": "Ahoj, Luna ti beží, ale Nokturno od nej nemá token. Bez neho z nej nič nepríde.\n1. Na mobile alebo počítači otvor v prehliadači adresu Luny s /setup na konci, napríklad http://192.168.1.10:7126/setup.\n2. Prihlás sa do WebShare (účet s VIP), zvoľ ručnú inštaláciu a pri Luna: Absolute Cinema daj Kopírovať.\n3. V Kodi: Nokturno → Nastavenia → Nastaviť z mobilu a prenos → Nastaviť z mobilu. Naskenuj QR kód a skopírovanú adresu vlož do sekcie Luna.\n4. Potom v Nastavenia → Zdroje a účty, v skupine Luna, klikni na Overiť nastavenie Luny.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/luna-token\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/luna-token",
+      "when": {
+        "luna": [
+          "no_token",
+          "bad_token_format",
+          "bad_token",
+          "main_empty",
+          "no_streams"
+        ]
+      },
+      "priority": 0
+    },
+    {
+      "id": "stremio-stara-adresa",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Stremio: „Adresa doplňku je zastaralá“",
+      "text": "Vidíš u filmu „Adresa doplňku je zastaralá“? Otevři ve Stremiu Doplňky → Nokturno → ozubené kolo.\nStránka vytvoří novou adresu, dej Přidat do Stremia.\nPak starý doplněk Nokturno odinstaluj, ať ho nemáš dvakrát.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-stara-adresa",
+      "when": {},
+      "priority": 0
+    },
+    {
+      "id": "stremio-stara-adresa",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Stremio: „Adresa doplnku je zastaraná“",
+      "text": "Vidíš pri filme „Adresa doplnku je zastaraná“? Otvor v Stremiu Doplnky → Nokturno → ozubené koliesko.\nStránka vytvorí novú adresu, daj Pridať do Stremia.\nPotom starý doplnok Nokturno odinštaluj, nech ho nemáš dvakrát.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-stara-adresa",
+      "when": {},
+      "priority": 0
+    },
+    {
+      "id": "aktualizace",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Jak zjistit verzi a aktualizovat",
+      "text": "Ahoj, máš starší verzi Nokturna ({verze}). Nejnovější je {nejnovejsi}, opravuje řadu chyb.\n1. Nokturno → Nastavení → Pokročilé → Zkontrolovat aktualizace doplňků.\n2. Aby příště přišla aktualizace sama: v Kodi Nastavení → Systém → Doplňky → Aktualizace a zvol automatickou instalaci.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/aktualizace\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/aktualizace",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "aktualizace",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Ako zistiť verziu a aktualizovať",
+      "text": "Ahoj, máš staršiu verziu Nokturna ({verze}). Najnovšia je {nejnovejsi}, opravuje množstvo chýb.\n1. Nokturno → Nastavenia → Pokročilé → Skontrolovať aktualizácie doplnkov.\n2. Aby nabudúce prišla aktualizácia sama: v Kodi Nastavenia → Systém → Doplnky → Aktualizácie a zvoľ automatickú inštaláciu.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/aktualizace\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/aktualizace",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "kde-hledat-pomoc",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Kde hledat pomoc",
+      "text": "Ahoj, Nokturno má vlastní Discord server: discord.gg/ChmMPmDDEj\nDotazy piš do fóra #pomoc, novinky a vydání najdeš v #novinky.\nNápověda k nejčastějším problémům: https://nokturno-app.github.io/nokturno-napoveda\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/kde-hledat-pomoc",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "kde-hledat-pomoc",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Kde hľadať pomoc",
+      "text": "Ahoj, Nokturno má vlastný Discord server: discord.gg/ChmMPmDDEj\nOtázky píš do fóra #pomoc, novinky a vydania nájdeš v #novinky.\nNápoveda k najčastejším problémom: https://nokturno-app.github.io/nokturno-napoveda/sk/\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/kde-hledat-pomoc",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "kde-hledat-pomoc",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Kde hledat pomoc",
+      "text": "Něco nefunguje? Nápověda k nejčastějším problémům je na odkazu.\nNa dotazy odpovídáme na Discordu: discord.gg/ChmMPmDDEj",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/kde-hledat-pomoc",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "kde-hledat-pomoc",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Kde hľadať pomoc",
+      "text": "Niečo nefunguje? Nápoveda k najčastejším problémom je na odkaze.\nNa otázky odpovedáme na Discorde: discord.gg/ChmMPmDDEj",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/kde-hledat-pomoc",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "nejde-prehrat",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Film se najde, ale nejde přehrát",
+      "text": "Ahoj, stream se ti ukáže, ale nepřehraje se.\n1. Zkus jiný stream ze seznamu. Když jeden nejde, Nokturno samo zkusí ještě několik dalších.\n2. Když nejdou streamy jen z jednoho zdroje, zkontroluj u něj účet: Sledujteto a Přehraj.to potřebují Premium, FastShare / Sdilej.cz kredit, WebShare VIP.\n3. Nokturno → Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje) ukáže stav účtů.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/nejde-prehrat\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/nejde-prehrat",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "nejde-prehrat",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Film sa nájde, ale nedá sa prehrať",
+      "text": "Ahoj, stream sa ti zobrazí, ale neprehrá sa.\n1. Skús iný stream zo zoznamu. Keď jeden nejde, Nokturno samo skúsi ešte niekoľko ďalších.\n2. Keď nejdú streamy len z jedného zdroja, skontroluj pri ňom účet: Sledujteto a Přehraj.to potrebujú Premium, FastShare / Sdilej.cz kredit, WebShare VIP.\n3. Nokturno → Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje) ukáže stav účtov.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/nejde-prehrat\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/nejde-prehrat",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "poslat-log",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Jak poslat log a zjistit ID instalace",
+      "text": "Ahoj, díky za log. Podíváme se na něj a odpověď ti pošleme sem do Kodi.\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/poslat-log",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "poslat-log",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Ako poslať log a zistiť ID inštalácie",
+      "text": "Ahoj, ďakujeme za log. Pozrieme sa naň a odpoveď ti pošleme sem do Kodi.\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/poslat-log",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "premium-a-kredit",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "„Účet bez Premium“, „účet bez VIP“, „došel kredit“",
+      "text": "Ahoj, {zdroj} u tebe nemá aktivní předplatné nebo kredit, proto z něj přehrávání nejde nebo je pomalé.\n1. Na webu zdroje zkontroluj předplatné (WebShare VIP, Sledujteto a Přehraj.to Premium, FastShare / Sdilej.cz kredit).\n2. Když ho mít nechceš, v Nokturno → Nastavení → Zdroje a účty zdroj vypni. Ostatní zdroje fungují dál.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/premium-a-kredit\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/premium-a-kredit",
+      "when": {
+        "webshare": [
+          "free",
+          "expired"
+        ],
+        "sledujteto": [
+          "no_premium"
+        ],
+        "fastshare": [
+          "no_credit"
+        ],
+        "prehrajto": [
+          "no_premium"
+        ],
+        "cztor": [
+          "expired"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "premium-a-kredit",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "„Účet bez Premium“, „účet bez VIP“, „minul sa kredit“",
+      "text": "Ahoj, {zdroj} u teba nemá aktívne predplatné alebo kredit, preto z neho prehrávanie nejde alebo je pomalé.\n1. Na webe zdroja skontroluj predplatné (WebShare VIP, Sledujteto a Přehraj.to Premium, FastShare / Sdilej.cz kredit).\n2. Keď ho mať nechceš, v Nokturno → Nastavenia → Zdroje a účty zdroj vypni. Ostatné zdroje fungujú ďalej.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/premium-a-kredit\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/premium-a-kredit",
+      "when": {
+        "webshare": [
+          "free",
+          "expired"
+        ],
+        "sledujteto": [
+          "no_premium"
+        ],
+        "fastshare": [
+          "no_credit"
+        ],
+        "prehrajto": [
+          "no_premium"
+        ],
+        "cztor": [
+          "expired"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "prihlaseni",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Zdroj hlásí „nesedí jméno nebo heslo“",
+      "text": "Ahoj, {zdroj} odmítá přihlášení: nesedí jméno nebo heslo.\n1. Přihlas se stejnými údaji na webu zdroje. Když to nejde ani tam, obnov si heslo na webu.\n2. Nokturno → Nastavení → Zdroje a účty, ve skupině {zdroj} vyplň jméno a heslo znovu (bez mezery na konci).\n3. Pak dej Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/prihlaseni\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/prihlaseni",
+      "when": {
+        "webshare": [
+          "bad_login"
+        ],
+        "fastshare": [
+          "bad_login"
+        ],
+        "sledujteto": [
+          "bad_login"
+        ],
+        "prehrajto": [
+          "bad_login"
+        ],
+        "storage": [
+          "bad_login"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "prihlaseni",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Zdroj hlási „nesedí meno alebo heslo“",
+      "text": "Ahoj, {zdroj} odmieta prihlásenie: nesedí meno alebo heslo.\n1. Prihlás sa rovnakými údajmi na webe zdroja. Keď to nejde ani tam, obnov si heslo na webe.\n2. Nokturno → Nastavenia → Zdroje a účty, v skupine {zdroj} vyplň meno a heslo znova (bez medzery na konci).\n3. Potom daj Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/prihlaseni\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/prihlaseni",
+      "when": {
+        "webshare": [
+          "bad_login"
+        ],
+        "fastshare": [
+          "bad_login"
+        ],
+        "sledujteto": [
+          "bad_login"
+        ],
+        "prehrajto": [
+          "bad_login"
+        ],
+        "storage": [
+          "bad_login"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "stremio-instalace",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Jak přidat Nokturno do Stremia nebo Nuvia",
+      "text": "Nokturno pro Stremio se přidává ze stránky nokturno.stream/configure.\nVyplň úložiště nebo účty, dej Ověřit účet a pak Přidat do Stremia (nebo Nuvia).\nNa TV se doplněk objeví sám, když ho přidáš na telefonu pod stejným účtem Stremio.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-instalace",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "stremio-instalace",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Ako pridať Nokturno do Stremia alebo Nuvia",
+      "text": "Nokturno pre Stremio sa pridáva zo stránky nokturno.stream/configure.\nVyplň úložisko alebo účty, daj Overiť účet a potom Pridať do Stremia (alebo Nuvia).\nNa TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "stremio-zadne-streamy",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "U filmu nejsou streamy Nokturna",
+      "text": "U filmu nevidíš streamy Nokturna? Ve Stremiu otevři Doplňky → Nokturno → ozubené kolo a u každého zdroje dej Ověřit účet.\nNejčastěji jde o překlep v hesle nebo vypršelé VIP na WebShare.\nPo opravě dej Přidat do Stremia a starý doplněk odinstaluj.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-zadne-streamy",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "stremio-zadne-streamy",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Pri filme nie sú streamy Nokturna",
+      "text": "Pri filme nevidíš streamy Nokturna? V Stremiu otvor Doplnky → Nokturno → ozubené koliesko a pri každom zdroji daj Overiť účet.\nNajčastejšie ide o preklep v hesle alebo vypršané VIP na WebShare.\nPo oprave daj Pridať do Stremia a starý doplnok odinštaluj.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-zadne-streamy",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "vlastni-uloziste",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Jak připojit vlastní úložiště",
+      "text": "Ahoj, Nokturno se nemůže spojit s tvým vlastním úložištěm.\n1. Nokturno → Nastavení → Vlastní úložiště: zkontroluj Adresu složky, uživatelské jméno a heslo.\n2. Adresa v domácí síti (například 192.168.…) funguje jen doma. Mimo domov je potřeba veřejná adresa nebo VPN.\n3. Úložiště, které nepoužíváš, vypni volbou Používat toto úložiště. Zůstane vyplněné, jen se v něm nebude hledat.\n4. Pak dej Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste",
+      "when": {
+        "storage": [
+          "unreachable",
+          "bad_login"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "vlastni-uloziste",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Ako pripojiť vlastné úložisko",
+      "text": "Ahoj, Nokturno sa nemôže spojiť s tvojím vlastným úložiskom.\n1. Nokturno → Nastavenia → Vlastné úložisko: skontroluj Adresu priečinka, používateľské meno a heslo.\n2. Adresa v domácej sieti (napríklad 192.168.…) funguje len doma. Mimo domova je potrebná verejná adresa alebo VPN.\n3. Úložisko, ktoré nepoužívaš, vypni voľbou Používať toto úložisko. Zostane vyplnené, len sa v ňom nebude hľadať.\n4. Potom daj Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-uloziste\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-uloziste",
+      "when": {
+        "storage": [
+          "unreachable",
+          "bad_login"
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "zadny-stream",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Nejde najít žádný film („Žádný stream nenalezen“)",
+      "text": "Ahoj, Nokturno k titulu nenašlo žádný stream.\n1. Nokturno → Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje). Ukáže, které zdroje fungují. Když žádný, začni u něj.\n2. V Nastavení → Zdroje a účty musí být zapnutý a přihlášený aspoň jeden zdroj, nebo nastavené vlastní úložiště.\n3. Když zdroje fungují, titul na nich nemusí být. Zkus dole v dialogu streamů hledat volněji podle názvu souboru.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/zadny-stream\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/zadny-stream",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "zadny-stream",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Nedá sa nájsť žiadny film („Nenašiel sa žiadny stream“)",
+      "text": "Ahoj, Nokturno k titulu nenašlo žiadny stream.\n1. Nokturno → Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje). Ukáže, ktoré zdroje fungujú. Keď žiadny, začni pri ňom.\n2. V Nastavenia → Zdroje a účty musí byť zapnutý a prihlásený aspoň jeden zdroj, alebo nastavené vlastné úložisko.\n3. Keď zdroje fungujú, titul na nich nemusí byť. Skús dole v dialógu streamov hľadať voľnejšie podľa názvu súboru.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/zadny-stream\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/zadny-stream",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "cztor",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "CZtor: „zařízení není spárované“",
+      "text": "Ahoj, CZtor u tebe není spárovaný, proto z něj nic nepřijde.\n1. Nokturno → Nastavení → Zdroje a účty, skupina CZtor → Spárovat PINem.\n2. Na telefonu nebo počítači otevři cztor.com/activate, přihlas se a zadej PIN z televize.\n3. Stav účtu ve stejné skupině ukáže předplatné. CZtor bez předplatného nepřehraje nic.\nNepoužíváš CZtor? Ve skupině CZtor vypni Používat CZtor.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/cztor\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/cztor",
+      "when": {
+        "cztor": [
+          "not_paired",
+          "expired"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "cztor",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "CZtor: „zariadenie nie je spárované“",
+      "text": "Ahoj, CZtor u teba nie je spárovaný, preto z neho nič nepríde.\n1. Nokturno → Nastavenia → Zdroje a účty, skupina CZtor → Spárovať PIN kódom.\n2. Na telefóne alebo počítači otvor cztor.com/activate, prihlás sa a zadaj PIN z televízora.\n3. Stav účtu v rovnakej skupine ukáže predplatné. CZtor bez predplatného neprehrá nič.\nNepoužívaš CZtor? V skupine CZtor vypni Používať CZtor.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/cztor\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/cztor",
+      "when": {
+        "cztor": [
+          "not_paired",
+          "expired"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "hlidane",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Hlídané: nové díly a Kontrolovat dál",
+      "text": "Ahoj, na to jsou v Nokturnu Hlídané. Nokturno se samo ozve, až půjde titul pustit.\n1. Seriál: v kontextovém menu seriálu dej Hlídat nové díly.\n2. Film nebo seriál, který zatím nikde není: v kontextovém menu dej Hlídat, až bude k dispozici.\n3. Díl má streamy, ale ne takové, jaké chceš (třeba bez CZ titulků): v kontextovém menu dílu dej Kontrolovat dál. Nokturno se ozve, až streamů přibude.\nSeznam je v hlavním menu pod Pokračovat ve sledování, položka Hlídané.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "hlidane",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Sledované: nové diely a Kontrolovať ďalej",
+      "text": "Ahoj, na toto sú v Nokturne Sledované. Nokturno sa samo ozve, keď sa titul bude dať pustiť.\n1. Seriál: v kontextovom menu seriálu daj Sledovať nové diely.\n2. Film alebo seriál, ktorý zatiaľ nikde nie je: v kontextovom menu daj Sledovať, kým bude dostupné.\n3. Diel má streamy, ale nie také, aké chceš (napríklad bez CZ titulkov): v kontextovom menu dielu daj Kontrolovať ďalej. Nokturno sa ozve, keď streamov pribudne.\nZoznam je v hlavnom menu pod Pokračovať v sledovaní, položka Sledované.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "menu-se-neotevre",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Nokturno se neotevře nebo je menu prázdné",
+      "text": "Ahoj, když se ti menu Nokturna neotevře, chybí nejspíš souhlas s podmínkami použití.\n1. Otevři Nokturno z Doplňky → Video doplňky a v dialogu „Souhlasíš s podmínkami použití výše?“ zvol Souhlasím.\n2. Když se dialog neukáže: Nokturno → Nastavení → Podmínky použití (poslední kategorie) a zapni souhlas.\n3. Pak projdi Nastavení → Pokročilé → Průvodce nastavením.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/menu-se-neotevre\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/menu-se-neotevre",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "menu-se-neotevre",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Nokturno sa neotvorí alebo je menu prázdne",
+      "text": "Ahoj, keď sa ti menu Nokturna neotvorí, chýba najskôr súhlas s podmienkami použitia.\n1. Otvor Nokturno z Doplnky → Video doplnky a v dialógu „Súhlasíš s podmienkami použitia vyššie?“ zvoľ Súhlasím.\n2. Keď sa dialóg nezobrazí: Nokturno → Nastavenia → Podmienky použitia (posledná kategória) a zapni súhlas.\n3. Potom prejdi Nastavenia → Pokročilé → Sprievodca nastavením.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/menu-se-neotevre\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/menu-se-neotevre",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "popisy-anglicky",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Popisy filmů jsou anglicky",
+      "text": "Ahoj, s vlastním klíčem TMDB budou popisy, žánry i herci česky. Klíč je zdarma.\n1. Na themoviedb.org se zaregistruj, v nastavení profilu otevři API, požádej o klíč (Developer) a zkopíruj API Key (v3 auth).\n2. Nokturno → Nastavení → Zdroje a účty, skupina TMDB API → API klíč TMDB, vlož klíč.\n3. Pak dej Nastavení → Pokročilé → Vymazat cache (katalogy, hledání, streamy).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/popisy-anglicky\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/popisy-anglicky",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "popisy-anglicky",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Popisy filmov sú po anglicky",
+      "text": "Ahoj, s vlastným kľúčom TMDB budú popisy, žánre aj herci po česky. Kľúč je zadarmo.\n1. Na themoviedb.org sa zaregistruj, v nastaveniach profilu otvor API, požiadaj o kľúč (Developer) a skopíruj API Key (v3 auth).\n2. Nokturno → Nastavenia → Zdroje a účty, skupina TMDB API → API kľúč TMDB, vlož kľúč.\n3. Potom daj Nastavenia → Pokročilé → Vymazať cache (katalógy, hľadanie, streamy).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/popisy-anglicky\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/popisy-anglicky",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "prehrat-v-detailu",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Přehrát v detailu filmu nic nepustí",
+      "text": "Ahoj, aby tlačítko Přehrát v detailu filmu (TMDb Helper, Arctic Fuse a další skiny) hledalo streamy v Nokturnu:\n1. Nokturno → Nastavení → Pokročilé → Přidat Nokturno do TMDb Helperu (Přehrát v detailu filmu).\n2. Potvrď Nokturno jako výchozí přehrávač.\n3. Pak dej v detailu filmu Přehrát. Otevře se výběr streamu.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/prehrat-v-detailu\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/prehrat-v-detailu",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "prehrat-v-detailu",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Prehrať v detaile filmu nič nespustí",
+      "text": "Ahoj, aby tlačidlo Prehrať v detaile filmu (TMDb Helper, Arctic Fuse a ďalšie skiny) hľadalo streamy v Nokturne:\n1. Nokturno → Nastavenia → Pokročilé → Pridať Nokturno do TMDb Helpera (Prehrať v detaile filmu).\n2. Potvrď Nokturno ako predvolený prehrávač.\n3. Potom daj v detaile filmu Prehrať. Otvorí sa výber streamu.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/prehrat-v-detailu\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/prehrat-v-detailu",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "prvni-nastaveni",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "První nastavení: průvodce a Nastavit z mobilu",
+      "text": "Ahoj, v Nokturnu zatím nemáš nastavený žádný zdroj, proto nic nepřehraje.\n1. Nokturno → Nastavení → Nastavit z mobilu a přenos → Nastavit z mobilu. Na TV se ukáže QR kód.\n2. Naskenuj ho mobilem ve stejné Wi-Fi a v prohlížeči vyplň vlastní úložiště nebo účty zdrojů.\n3. Dole na stránce dej Uložit do Kodi.\nOvladačem to jde přes Nastavení → Pokročilé → Průvodce nastavením.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/prvni-nastaveni\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/prvni-nastaveni",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "prvni-nastaveni",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Prvé nastavenie: sprievodca a Nastaviť z mobilu",
+      "text": "Ahoj, v Nokturne zatiaľ nemáš nastavený žiadny zdroj, preto nič neprehrá.\n1. Nokturno → Nastavenia → Nastaviť z mobilu a prenos → Nastaviť z mobilu. Na TV sa zobrazí QR kód.\n2. Naskenuj ho mobilom v rovnakej Wi-Fi a v prehliadači vyplň vlastné úložisko alebo účty zdrojov.\n3. Dole na stránke daj Uložiť do Kodi.\nOvládačom to ide cez Nastavenia → Pokročilé → Sprievodca nastavením.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/prvni-nastaveni\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/prvni-nastaveni",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "sdilej-cz",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "FastShare s účtem ze Sdilej.cz",
+      "text": "Ahoj, Sdilej.cz má stejné soubory jako FastShare, ale účty jsou oddělené. Účet ze Sdilej.cz s FastShare nefunguje a naopak.\n1. Nokturno → Nastavení → Zdroje a účty, skupina FastShare.\n2. Účet z: vyber web, kde máš účet a kredit (FastShare, nebo Sdilej.cz).\n3. Vyplň jméno a heslo z toho webu a dej Nastavení → Pokročilé → Ověřit zdroje.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz",
+      "when": {
+        "fastshare": [
+          "bad_login"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "sdilej-cz",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "FastShare s účtom zo Sdilej.cz",
+      "text": "Ahoj, Sdilej.cz má rovnaké súbory ako FastShare, ale účty sú oddelené. Účet zo Sdilej.cz s FastShare nefunguje a naopak.\n1. Nokturno → Nastavenia → Zdroje a účty, skupina FastShare.\n2. Účet z: vyber web, kde máš účet a kredit (FastShare alebo Sdilej.cz).\n3. Vyplň meno a heslo z toho webu a daj Nastavenia → Pokročilé → Overiť zdroje.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz",
+      "when": {
+        "fastshare": [
+          "bad_login"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "sdilej-cz",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "FastShare s účtem ze Sdilej.cz",
+      "text": "Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.\nNa nokturno.stream/configure v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz a dej Ověřit účet.\nPak doplněk přidej znovu tlačítkem Přidat do Stremia a starý odinstaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz",
+      "when": {
+        "fastshare": [
+          "bad_login"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "sdilej-cz",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "FastShare s účtom zo Sdilej.cz",
+      "text": "Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.\nNa nokturno.stream/configure v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.\nPotom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz",
+      "when": {
+        "fastshare": [
+          "bad_login"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "seka-se-to",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Přehrávání se seká",
+      "text": "Ahoj, když se přehrávání seká, nestíhá internet nebo zdroj.\n1. Vyber menší soubor nebo nižší kvalitu. Full HD potřebuje zhruba 8–15 Mb/s, 4K 25–60 Mb/s.\n2. Nokturno → Nastavení → Přehrávání → Změřit rychlost a nastavit datový tok. Příliš velké soubory se pak nenabídnou.\n3. WebShare bez VIP stahuje jen pár kB/s, plynule nepřehraje nic.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/seka-se-to\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/seka-se-to",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "seka-se-to",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Prehrávanie sa seká",
+      "text": "Ahoj, keď sa prehrávanie seká, nestíha internet alebo zdroj.\n1. Vyber menší súbor alebo nižšiu kvalitu. Full HD potrebuje zhruba 8–15 Mb/s, 4K 25–60 Mb/s.\n2. Nokturno → Nastavenia → Prehrávanie → Zmerať rýchlosť a nastaviť dátový tok. Príliš veľké súbory sa potom neponúknu.\n3. WebShare bez VIP sťahuje len pár kB/s, plynulo neprehrá nič.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/seka-se-to\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/seka-se-to",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "seka-se-to",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Přehrávání se seká",
+      "text": "Seká se ti přehrávání? Vyber menší soubor nebo nižší kvalitu.\nV nastavení doplňku (ozubené kolo) nastav v Předvolbách Nejvyšší datový tok podle svého internetu.\nWebShare bez VIP plynule nepřehraje nic.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/seka-se-to",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "seka-se-to",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Prehrávanie sa seká",
+      "text": "Seká sa ti prehrávanie? Vyber menší súbor alebo nižšiu kvalitu.\nV nastaveniach doplnku (ozubené koliesko) nastav v Predvoľbách Najvyšší dátový tok podľa svojho internetu.\nWebShare bez VIP plynulo neprehrá nič.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/seka-se-to",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "sit-odmitnuta-429",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "„Odmítá tuto síť (HTTP 429)“",
+      "text": "Ahoj, {zdroj} odmítá tvoji síť (HTTP 429). Nejčastěji kvůli VPN, mobilním datům nebo adrese sdílené s dalšími lidmi.\n1. Vypni VPN, nebo zkus jinou síť.\n2. Nokturno zdroj po odmítnutí na 10 minut samo přestane zkoušet. Ostatní zdroje fungují dál.\n3. Když se to opakuje pořád, zdroj vypni v Nokturno → Nastavení → Zdroje a účty.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sit-odmitnuta-429\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/sit-odmitnuta-429",
+      "when": {
+        "hellspy": [
+          "paused"
+        ],
+        "prehrajto": [
+          "paused"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "sit-odmitnuta-429",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "„Odmieta túto sieť (HTTP 429)“",
+      "text": "Ahoj, {zdroj} odmieta tvoju sieť (HTTP 429). Najčastejšie kvôli VPN, mobilným dátam alebo adrese zdieľanej s ďalšími ľuďmi.\n1. Vypni VPN, alebo skús inú sieť.\n2. Nokturno zdroj po odmietnutí na 10 minút samo prestane skúšať. Ostatné zdroje fungujú ďalej.\n3. Keď sa to opakuje stále, zdroj vypni v Nokturno → Nastavenia → Zdroje a účty.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sit-odmitnuta-429\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/sit-odmitnuta-429",
+      "when": {
+        "hellspy": [
+          "paused"
+        ],
+        "prehrajto": [
+          "paused"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "stahovani",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Stahování selhalo",
+      "text": "Ahoj, stahování se nepovedlo.\n1. Aktualizuj Nokturno na nejnovější verzi, starší verze některé zdroje a síťové složky stahovat neuměly.\n2. Nokturno → Nastavení → Přehrávání → Stahování: Složka pro stahování musí být zapisovatelná, třeba USB disk nebo síťová složka.\n3. V menu Stažené dej u položky Zkusit znovu. Přerušené stahování naváže, kde skončilo.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stahovani\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stahovani",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stahovani",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Sťahovanie zlyhalo",
+      "text": "Ahoj, sťahovanie sa nepodarilo.\n1. Aktualizuj Nokturno na najnovšiu verziu, staršie verzie niektoré zdroje a sieťové priečinky sťahovať nevedeli.\n2. Nokturno → Nastavenia → Prehrávanie → Sťahovanie: Priečinok na sťahovanie musí byť zapisovateľný, napríklad USB disk alebo sieťový priečinok.\n3. V menu Stiahnuté daj pri položke Skúsiť znova. Prerušené sťahovanie nadviaže, kde skončilo.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stahovani\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stahovani",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stara-adresa-repozitare",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Kodi hlásí chybu u staré adresy Nokturna",
+      "text": "Ahoj, ve Správci souborů máš starou adresu Nokturna nokturno.tailf0014.ts.net. Od září 2026 nefunguje a Kodi u ní hlásí chybu.\n1. Nastavení → Správce souborů, na zdroji se starou adresou podrž OK a zvol Odstranit zdroj.\n2. Aktualizace doplňku na té adrese nezávisí, chodí z GitHubu dál.\n3. Pro novou instalaci slouží adresa https://nokturno.stream/repo/\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stara-adresa-repozitare\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stara-adresa-repozitare",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stara-adresa-repozitare",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Kodi hlási chybu pri starej adrese Nokturna",
+      "text": "Ahoj, v Správcovi súborov máš starú adresu Nokturna nokturno.tailf0014.ts.net. Od septembra 2026 nefunguje a Kodi pri nej hlási chybu.\n1. Nastavenia → Správca súborov, na zdroji so starou adresou podrž OK a zvoľ Odstrániť zdroj.\n2. Aktualizácie doplnku od tej adresy nezávisia, chodia z GitHubu ďalej.\n3. Na novú inštaláciu slúži adresa https://nokturno.stream/repo/\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stara-adresa-repozitare\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stara-adresa-repozitare",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stremio-webovy-prehravac",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "„⚠️ Ve webovém přehrávači se nepřehraje“",
+      "text": "Stream s řádkem „⚠️ Ve webovém přehrávači se nepřehraje“ (vlastní úložiště, FastShare) přehraje jen aplikace Stremio nebo Nuvio.\nStremio v prohlížeči (web.stremio.com) ho odmítne.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-webovy-prehravac",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-webovy-prehravac",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stremio-webovy-prehravac",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "„⚠️ Vo webovom prehrávači sa neprehrá“",
+      "text": "Stream s riadkom „⚠️ Vo webovom prehrávači sa neprehrá“ (vlastné úložisko, FastShare) prehrá len aplikácia Stremio alebo Nuvio.\nStremio v prehliadači (web.stremio.com) ho odmietne.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "synchronizace",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Synchronizace mezi zařízeními nefunguje",
+      "text": "Ahoj, synchronizace se ti nedaří. Nejjednodušší je středisko Dashboard Nokturna, Home Assistant k tomu potřeba není.\n1. Nokturno → Nastavení → Synchronizace: zapni Synchronizovat mezi více Kodi a jako Středisko synchronizace zvol Dashboard Nokturna.\n2. Na prvním Kodi dej Založit skupinu / otevřít připojení (ve starších verzích Založit skupinu) a opiš kód NKT-….\n3. Na dalších Kodi stejné nastavení a Připojit se ke skupině s tímto kódem, do 30 minut od založení.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/synchronizace\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/synchronizace",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "synchronizace",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Synchronizácia medzi zariadeniami nefunguje",
+      "text": "Ahoj, synchronizácia sa ti nedarí. Najjednoduchšie je stredisko Dashboard Nokturna, Home Assistant na to netreba.\n1. Nokturno → Nastavenia → Synchronizácia: zapni Synchronizovať medzi viacerými Kodi a ako Stredisko synchronizácie zvoľ Dashboard Nokturna.\n2. Na prvom Kodi daj Založiť skupinu / otvoriť pripojenie (v starších verziách Založiť skupinu) a opíš kód NKT-….\n3. Na ďalších Kodi rovnaké nastavenie a Pripojiť sa ku skupine s týmto kódom, do 30 minút od založenia.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/synchronizace\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/synchronizace",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "titulky",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Chybí titulky nebo nesedí k dílu",
+      "text": "Ahoj, k titulkům v Nokturnu:\n1. Nokturno → Nastavení → Přehrávání: nastav Preferovaný jazyk zvuku a u Titulky zvol, kdy se mají zapínat.\n2. Když zdroj titulky nemá, Nokturno je zkusí najít na OpenSubtitles. Stav ukáže Nastavení → Zdroje a účty → OpenSubtitles → Ověřit OpenSubtitles.\n3. Bez účtu jde stáhnout 5 titulků denně, s bezplatným účtem na opensubtitles.com 20.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/titulky\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/titulky",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "titulky",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Chýbajú titulky alebo nesedia k dielu",
+      "text": "Ahoj, k titulkom v Nokturne:\n1. Nokturno → Nastavenia → Prehrávanie: nastav Preferovaný jazyk zvuku a pri Titulky zvoľ, kedy sa majú zapínať.\n2. Keď zdroj titulky nemá, Nokturno ich skúsi nájsť na OpenSubtitles. Stav ukáže Nastavenia → Zdroje a účty → OpenSubtitles → Overiť OpenSubtitles.\n3. Bez účtu sa dá stiahnuť 5 titulkov denne, s bezplatným účtom na opensubtitles.com 20.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/titulky\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/titulky",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "trakt",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Trakt.tv: přihlášení kódem",
+      "text": "Ahoj, vlastní aplikaci na Traktu zakládat nemusíš, Nokturno má svou. Stačí přihlášení kódem, jde to i s free účtem.\n1. Nokturno → Nastavení → Zdroje a účty, skupina Trakt.tv: zapni Používat Trakt.tv a nastavení zavři tlačítkem OK.\n2. Otevři nastavení znovu a dej Přihlásit se k Traktu (kódem zařízení).\n3. Na telefonu nebo počítači otevři trakt.tv/activate a zadej kód z televize.\nPole Vlastní Trakt client id a secret nech prázdná. Free účet může mít připojené jen dvě aplikace naráz, případně jednu odpoj na trakt.tv.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/trakt\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/trakt",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "trakt",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Trakt.tv: prihlásenie kódom",
+      "text": "Ahoj, vlastnú aplikáciu na Trakte zakladať nemusíš, Nokturno má svoju. Stačí prihlásenie kódom, ide to aj s free účtom.\n1. Nokturno → Nastavenia → Zdroje a účty, skupina Trakt.tv: zapni Používať Trakt.tv a nastavenia zavri tlačidlom OK.\n2. Otvor nastavenia znova a daj Prihlásiť sa do Traktu (kódom zariadenia).\n3. Na telefóne alebo počítači otvor trakt.tv/activate a zadaj kód z televízora.\nPolia Vlastné Trakt client id a secret nechaj prázdne. Free účet môže mať pripojené len dve aplikácie naraz, prípadne jednu odpoj na trakt.tv.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/trakt\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/trakt",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "zdroj-neodpovida",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "„<Zdroj> neodpovídá“",
+      "text": "Ahoj, Nokturno se nemůže spojit se zdrojem {zdroj}. Ostatní zdroje fungují dál.\n1. Zkus to za chvíli, zdroj mohl mít výpadek.\n2. Máš zapnutou VPN, rodičovskou kontrolu nebo blokování reklam v DNS (Pi-hole, AdGuard)? Zkus je vypnout, nebo v routeru nastav DNS 1.1.1.1.\n3. Pak dej Nokturno → Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/zdroj-neodpovida\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/zdroj-neodpovida",
+      "when": {
+        "webshare": [
+          "unreachable"
+        ],
+        "sledujteto": [
+          "unreachable"
+        ],
+        "fastshare": [
+          "unreachable"
+        ],
+        "prehrajto": [
+          "unreachable"
+        ],
+        "cztor": [
+          "unreachable"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "zdroj-neodpovida",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "„<Zdroj> neodpovedá“",
+      "text": "Ahoj, Nokturno sa nemôže spojiť so zdrojom {zdroj}. Ostatné zdroje fungujú ďalej.\n1. Skús to o chvíľu, zdroj mohol mať výpadok.\n2. Máš zapnutú VPN, rodičovskú kontrolu alebo blokovanie reklám v DNS (Pi-hole, AdGuard)? Skús ich vypnúť, alebo v routeri nastav DNS 1.1.1.1.\n3. Potom daj Nokturno → Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/zdroj-neodpovida\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/zdroj-neodpovida",
+      "when": {
+        "webshare": [
+          "unreachable"
+        ],
+        "sledujteto": [
+          "unreachable"
+        ],
+        "fastshare": [
+          "unreachable"
+        ],
+        "prehrajto": [
+          "unreachable"
+        ],
+        "cztor": [
+          "unreachable"
+        ]
+      },
+      "priority": 2
+    },
+    {
+      "id": "discord",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Discord server Nokturno",
+      "text": "Ahoj, Nokturno má i Discord server: https://discord.gg/ChmMPmDDEj\nDotazy piš do fóra #pomoc (jedno vlákno na jeden problém), nápady do #nápady. Novinky a vydání chodí do #novinky.\nDo vlákna napiš jen ID instalace, log pošli z doplňku (Nastavení → Pokročilé → Info → Odeslat log).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/discord\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/discord",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "discord",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Discord server Nokturno",
+      "text": "Ahoj, Nokturno má aj Discord server: https://discord.gg/ChmMPmDDEj\nOtázky píš do fóra #pomoc (jedno vlákno na jeden problém), nápady do #nápady. Novinky a vydania chodia do #novinky.\nDo vlákna napíš len ID inštalácie, log pošli z doplnku (Nastavenia → Pokročilé → Info → Odoslať log).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/discord\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/discord",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "discord",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Discord server Nokturno",
+      "text": "Nokturno má i Discord server: discord.gg/ChmMPmDDEj\nDotazy piš do fóra #pomoc, novinky a vydání chodí do #novinky.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/discord",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "discord",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Discord server Nokturno",
+      "text": "Nokturno má aj Discord server: discord.gg/ChmMPmDDEj\nOtázky píš do fóra #pomoc, novinky a vydania chodia do #novinky.",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/discord",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "jazyk-zvuku",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "U streamu chybí jazyk zvuku",
+      "text": "Ahoj, jazyk zvuku se čte z hlavičky souboru a u části streamů chybí:\n1. `[EAC3 5.1]` bez kódu jazyka znamená, že ho ten, kdo soubor nahrál, nevyplnil. Často je to originální stopa.\n2. `~CZ` s vlnovkou je jazyk odhadnutý z názvu souboru, ne ověřený.\n3. Kolik streamů se čte, nastavíš v Nastavení → Přehrávání → Zjišťovat zvuk ze souboru (kolik streamů).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/jazyk-zvuku\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/jazyk-zvuku",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "jazyk-zvuku",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Pri streame chýba jazyk zvuku",
+      "text": "Ahoj, jazyk zvuku sa číta z hlavičky súboru a pri časti streamov chýba:\n1. `[EAC3 5.1]` bez kódu jazyka znamená, že ho ten, kto súbor nahral, nevyplnil. Často je to originálna stopa.\n2. `~CZ` s vlnovkou je jazyk odhadnutý z názvu súboru, nie overený.\n3. Koľko streamov sa číta, nastavíš v Nastavenia → Prehrávanie → Zisťovať zvuk zo súboru (koľko streamov).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/jazyk-zvuku\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/jazyk-zvuku",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "stremio-polozky-nokturno",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Položky „📢 Nokturno“ a „⛔ Nokturno“",
+      "text": "„⛔ Nokturno“ místo streamů znamená, že z tvé adresy doplňku přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, a zkus to znovu. Nic nastavovat nemusíš.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "stremio-polozky-nokturno",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Položky „📢 Nokturno“ a „⛔ Nokturno“",
+      "text": "„⛔ Nokturno“ namiesto streamov znamená, že z tvojej adresy doplnku prišlo naraz príliš veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, a skús to znova. Nič nastavovať nemusíš.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vyber-streamu",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Výběr streamu: filtry, 3D a poslední filtr",
+      "text": "Ahoj, 3D verze jde schovat.\n1. Nokturno → Nastavení → Přehrávání: zapni Skrýt 3D streamy. 3D soubory se pak nezobrazí nikdy, ani když jiný stream není.\n2. Chceš mít výběr rovnou s filtrem (třeba jen CZ zvuk)? V Nastavení → Výběr streamu zapni Automaticky použít poslední filtr.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vyber-streamu\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vyber-streamu",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vyber-streamu",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Výber streamu: filtre, 3D a posledný filter",
+      "text": "Ahoj, 3D verzie sa dajú skryť.\n1. Nokturno → Nastavenia → Prehrávanie: zapni Skryť 3D streamy. 3D súbory sa potom nezobrazia nikdy, ani keď iný stream nie je.\n2. Chceš mať výber rovno s filtrom (napríklad len CZ zvuk)? V Nastavenia → Výber streamu zapni Automaticky použiť posledný filter.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vyber-streamu\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vyber-streamu",
+      "when": {},
+      "priority": 3
+    }
+  ]
+}

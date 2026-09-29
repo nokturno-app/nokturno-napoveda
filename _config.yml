@@ -1,0 +1,7 @@
+title: Nokturno – nápověda
+description: Nápověda k Nokturnu pro Kodi, Home Assistant a Stremio
+lang: cs
+theme: jekyll-theme-primer
+exclude:
+  - README.md
+  - tools

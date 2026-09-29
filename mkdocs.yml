@@ -1,0 +1,66 @@
+# Web nápovědy (MkDocs Material). Neobsahuje nav ani docs_dir – ty doplní tools/site.py,
+# který složí zdroj do _src/ a menu vezme ze sekcí rozcestníků (index.md, sk/index.md).
+site_name: Nokturno – nápověda
+site_url: https://nokturno-app.github.io/nokturno-napoveda/
+site_description: Nápověda k Nokturnu pro Kodi, Home Assistant a Stremio
+repo_url: https://github.com/nokturno-app/nokturno-napoveda
+repo_name: nokturno-napoveda
+edit_uri: ""
+# Adresy článků zůstávají /cs/<slug> jako za Jekyllu (GitHub Pages doplní .html).
+use_directory_urls: false
+
+theme:
+  name: material
+  language: cs
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Tmavý režim
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Světlý režim
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+
+plugins:
+  - search:
+      separator: '[\s\-–,:!=\[\]()"/]+'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - assets/nokturno.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/ChmMPmDDEj
+      name: Discord
+    - icon: fontawesome/brands/github
+      link: https://github.com/nokturno-app/plugin.video.nokturno
+      name: GitHub
