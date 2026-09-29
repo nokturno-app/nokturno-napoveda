@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T14:50:25Z",
+  "generated": "2026-09-29T14:56:59Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -83,7 +83,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Nokturno pro Stremio – aplikace",
-      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).\nStáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
+      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (Android TV box, počítač, Raspberry Pi, NAS).\nStáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.\nDoplněk na cizím serveru dostává tvoje přihlašovací údaje ke zdrojům. Když běží u tebe, nedostane je nikdo jiný.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
       "when": {},
       "priority": 0
@@ -93,7 +93,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Nokturno pre Stremio – aplikácia",
-      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba (PC, NAS, Android TV box).\nStiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
+      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba (Android TV box, počítač, Raspberry Pi, NAS).\nStiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.\nDoplnok na cudzom serveri dostáva tvoje prihlasovacie údaje k zdrojom. Keď beží u teba, nedostane ich nikto iný.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
       "when": {},
       "priority": 0
@@ -691,6 +691,26 @@
       "title": "Kodi hlási chybu pri starej adrese Nokturna",
       "text": "Ahoj, v Správcovi súborov máš starú adresu Nokturna nokturno.tailf0014.ts.net. Od septembra 2026 nefunguje a Kodi pri nej hlási chybu.\n1. Nastavenia → Správca súborov, na zdroji so starou adresou podrž OK a zvoľ Odstrániť zdroj.\n2. Aktualizácie doplnku od tej adresy nezávisia, chodia z GitHubu ďalej.\n3. Na novú inštaláciu slúži adresa https://nokturno.stream/repo/\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stara-adresa-repozitare\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stara-adresa-repozitare",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stremio-vps",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Nokturno pro Stremio na VPS s vlastní doménou",
+      "text": "Aby doplněk fungoval i mimo domov, pusť aplikaci Nokturno na VPS s vlastní doménou a před ni dej Caddy s HTTPS.\nAdresa doplňku pak bude https://<tvoje doména>/c/…, nikomu ji neposílej.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stremio-vps",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Nokturno pre Stremio na VPS s vlastnou doménou",
+      "text": "Aby doplnok fungoval aj mimo domova, spusti aplikáciu Nokturno na VPS s vlastnou doménou a pred ňu daj Caddy s HTTPS.\nAdresa doplnku potom bude https://<tvoja doména>/c/…, nikomu ju neposielaj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-vps",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-vps",
       "when": {},
       "priority": 2
     },

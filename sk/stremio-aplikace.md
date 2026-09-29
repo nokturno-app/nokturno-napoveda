@@ -6,54 +6,161 @@ products: [stremio]
 priority: 0
 templates:
   stremio: |
-    Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba (PC, NAS, Android TV box).
+    Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba (Android TV box, počítač, Raspberry Pi, NAS).
     Stiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.
+    Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje k zdrojom. Keď beží u teba, nedostane ich nikto iný.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace
 ---
 
 # Nokturno pre Stremio – aplikácia
 
-Nokturno pre Stremio a Nuvio je malá aplikácia, ktorá beží **u teba** – na počítači, NASe alebo Android TV boxe.
-Stremio sa jej pýta ako každého iného doplnku.
+!!! warning "Prihlasovacie údaje sú v adrese doplnku"
+    Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
+    (WebShare, FastShare, Přehraj.to…). Sú totiž v adrese doplnku a s každou požiadavkou prechádzajú cez ten
+    server. Jeho prevádzkovateľ ich tak môže vidieť a uložiť a musíš mu veriť. Istotu, že ich nemá nikto iný,
+    máš len vtedy, keď doplnok beží u teba: na televízore, počítači, Raspberry Pi alebo na vlastnom VPS.
 
-Aplikácia musí bežať vždy, keď pozeráš. Najlepšie na zariadení, ktoré je stále zapnuté (NAS, TV box),
-alebo priamo na tom, kde Stremio spúšťaš.
+Nokturno pre Stremio a Nuvio je malá aplikácia, ktorá beží **u teba**. Stremio aj Nuvio potom len zadajú adresu
+doplnku a pýtajú sa aplikácie ako každého iného doplnku. Aplikácia musí bežať vždy, keď pozeráš.
 
-## 1. Stiahni aplikáciu
-Z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest) vyber súbor podľa zariadenia:
+## Kde ju spustiť
+| Čo máš | Kde aplikácia beží | Postup |
+|---|---|---|
+| Android TV, Google TV alebo Android box | priamo na televízore alebo boxe | [Android TV a Android box](#android-tv-a-android-box) |
+| Počítač s Windows, macOS alebo Linuxom | na počítači, doplnok funguje len vtedy, keď počítač beží | [Počítač](#pocitac) |
+| Home Assistant | – | [pripravujeme](#home-assistant) |
+| Raspberry Pi, NAS alebo iný malý linuxový počítač | na ňom, beží stále | [Raspberry Pi a NAS](#raspberry-pi-a-nas) |
+| VPS s vlastnou doménou, prístup odkiaľkoľvek | na VPS | [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md) |
+
+Najlepšie je spustiť aplikáciu na zariadení, ktoré je stále zapnuté (box, Raspberry Pi, NAS), alebo priamo na tom,
+kde Stremio spúšťaš.
+
+## Android TV a Android box
+1. Povoľ inštaláciu z neznámych zdrojov pre aplikáciu, cez ktorú APK dostaneš do televízora, napríklad
+   **Downloader** alebo **Send files to TV**.
+2. Stiahni `nokturno-<verzia>.apk` z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest)
+   (v Downloaderi zadaj adresu `github.com/nokturno-app/nokturno-stremio-app/releases/latest`) a nainštaluj ho.
+3. Otvor aplikáciu **Nokturno**. Ukáže adresy na nastavenie. Beží na pozadí s trvalým oznámením „Nokturno beží“,
+   počúva na porte **7140** (a **7141** pre HTTPS) a po zapnutí zariadenia sa spustí sama. Po inštalácii ju
+   raz otvor, inak ju Android po zapnutí nespustí.
+4. Otvor nastavenie: na televízore priamo v aplikácii Nokturno (bez prehliadača sa formulár otvorí v nej), alebo
+   pohodlnejšie z telefónu v rovnakej sieti na `http://<IP adresa televízora>:7140/configure`. IP adresu ukazuje
+   hlavná obrazovka aplikácie.
+5. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
+6. **Pridať do Stremia** alebo **Pridať do Nuvia**. Na tom istom televízore to ide rovno z formulára v aplikácii,
+   na ostatných zariadeniach v sieti z formulára otvoreného cez IP adresu.
+
+## Počítač
+Z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest) vyber súbor podľa systému:
 
 | Zariadenie | Súbor |
 |---|---|
 | Windows 10 a 11 | `nokturno-<verzia>-windows-amd64.exe` |
 | Mac s čipom Apple (M1 a novší) | `nokturno-<verzia>-macos-arm64` |
 | Mac s procesorom Intel | `nokturno-<verzia>-macos-amd64` |
-| Linux, PC a väčšina NASov | `nokturno-<verzia>-linux-amd64` |
-| Raspberry Pi a ARM NAS | `nokturno-<verzia>-linux-arm64` (64bit systém), `-linux-arm` (32bit) |
-| Android, Android TV, Google TV | `nokturno-<verzia>.apk` |
+| Linux | `nokturno-<verzia>-linux-amd64` |
 
-## 2. Spusti ju
+Spusti ho:
 - **Windows:** spusti `.exe`. Na hlášku „Systém Windows ochránil váš počítač“ daj **Ďalšie informácie → Napriek tomu spustiť**.
   Bránu firewall povoľ pre **súkromné siete**. Okno s výpisom nechaj otvorené, jeho zatvorením aplikáciu vypneš.
 - **macOS:** v Termináli `chmod +x nokturno-*-macos-*` a `xattr -d com.apple.quarantine nokturno-*-macos-*`,
   potom `./nokturno-<verzia>-macos-arm64`. Bez druhého príkazu spustenie zablokuje Gatekeeper, pretože aplikácia
   nie je podpísaná (ide to aj cez **Nastavenia systému → Súkromie a zabezpečenie → Napriek tomu otvoriť**).
 - **Linux:** `chmod +x nokturno-*-linux-*` a `./nokturno-<verzia>-linux-amd64`. Ako ju spúšťať ako službu,
-  nájdeš v [README aplikácie](https://github.com/nokturno-app/nokturno-stremio-app#linux).
-- **Android a Android TV:** povoľ inštaláciu z neznámych zdrojov (na TV napríklad v aplikácii **Downloader**)
-  a nainštaluj APK. Aplikácia **Nokturno** ukáže adresy na nastavenie, beží na pozadí a po zapnutí zariadenia
-  sa spustí sama.
+  je v časti [Raspberry Pi a NAS](#raspberry-pi-a-nas).
 
-## 3. Pridaj doplnok do Stremia
-1. Otvor v prehliadači nastavenie:
-   - na zariadení, kde aplikácia beží: `http://127.0.0.1:7140/configure`,
-   - z telefónu alebo počítača v rovnakej sieti: `http://<IP adresa zariadenia s aplikáciou>:7140/configure`.
-     IP adresu vypíše aplikácia pri štarte, na Androide je na hlavnej obrazovke.
-2. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
-   Potvrď súhlas s podmienkami.
-3. Klikni na **Pridať do Stremia** alebo **Pridať do Nuvia**. Do Streamletu adresu vlož cez **Skopírovať adresu**.
-4. Na televízore sa doplnok objaví sám, keď ho pridáš na telefóne alebo počítači pod rovnakým účtom Stremio.
+Potom otvor `http://127.0.0.1:7140/configure`, vyplň úložisko alebo účty a daj **Pridať do Stremia** alebo
+**Pridať do Nuvia**. Ostatné zariadenia v sieti otvoria `http://<IP adresa počítača>:7140/configure`, IP adresu
+vypíše aplikácia pri štarte.
 
-Adresa doplnku obsahuje tvoje účty. Nikomu ju neposielaj. Podrobnosti v článku
+Doplnok funguje len vtedy, keď počítač beží a aplikácia je spustená. Na televízore a telefóne tiež.
+
+## Home Assistant
+Doplnok pre Home Assistant pripravujeme. Zatiaľ aplikáciu spusti na inom zariadení v sieti, napríklad na Android TV
+boxe alebo Raspberry Pi.
+
+## Raspberry Pi a NAS
+Platí pre Raspberry Pi, NAS s Linuxom a iný malý počítač so systemd. Aplikácia na ňom beží stále,
+aj keď ostatné zariadenia vypneš.
+
+1. Zisti architektúru príkazom `uname -m` a vyber súbor:
+
+   | `uname -m` | Súbor |
+   |---|---|
+   | `aarch64` | `nokturno-<verzia>-linux-arm64` |
+   | `armv7l`, `armv6l` | `nokturno-<verzia>-linux-arm` |
+   | `x86_64` | `nokturno-<verzia>-linux-amd64` |
+
+2. Stiahni ho a priprav používateľa a priečinok (číslo verzie nájdeš na stránke vydaní):
+
+   ```bash
+   sudo mkdir -p /opt/nokturno
+   sudo curl -L -o /opt/nokturno/nokturno \
+     https://github.com/nokturno-app/nokturno-stremio-app/releases/download/v<verzia>/nokturno-<verzia>-linux-arm64
+   sudo chmod +x /opt/nokturno/nokturno
+   sudo useradd --system --create-home --home-dir /var/lib/nokturno --shell /usr/sbin/nologin nokturno
+   ```
+
+3. Vytvor službu `/etc/systemd/system/nokturno.service`:
+
+   ```ini
+   [Unit]
+   Description=Nokturno pre Stremio
+   After=network-online.target
+   Wants=network-online.target
+
+   [Service]
+   User=nokturno
+   ExecStart=/opt/nokturno/nokturno --data /var/lib/nokturno
+   Restart=always
+   RestartSec=10
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+4. Zapni ju: `sudo systemctl daemon-reload` a `sudo systemctl enable --now nokturno`. Výpis uvidíš cez
+   `journalctl -u nokturno -f`.
+5. Z telefónu alebo počítača v rovnakej sieti otvor `http://<IP adresa zariadenia>:7140/configure`, vyplň úložisko
+   alebo účty a daj **Pridať do Stremia** alebo **Pridať do Nuvia**.
+
+Nastavenia aplikácie sú potom v `/var/lib/nokturno/nokturno.json`. Aktualizácie sa sťahujú do toho istého priečinka,
+súbor `/opt/nokturno/nokturno` sa preto pri novej verzii meniť nemusí.
+
+## Ako to rozbehnúť
+### V domácej sieti
+- **Stremio** prijme doplnok cez obyčajné `http` len z toho istého zariadenia. Na ostatných zariadeniach chce HTTPS.
+  Keď formulár otvoríš cez IP adresu, dá do doplnku adresu `https://<IP s pomlčkami>.my.local-ip.co:7141` sám.
+  Prečo, je vysvetlené nižšie v časti o adrese local-ip.co.
+- **Nuvio** vezme aj adresu cez `http://<IP adresa>:7140`.
+- Zariadeniu s aplikáciou nastav v routeri **pevnú IP** (rezervácia DHCP). Inak sa po reštarte routera adresa
+  zmení a doplnok prestane fungovať.
+
+### Mimo domova cez VPN
+Aplikácia zostane doma, do internetu sa nič neotvára a zariadenia vonku (mobil, televízor u rodičov) sa k nej dostanú
+cez súkromnú sieť medzi tvojimi zariadeniami. Najjednoduchší je [Tailscale](https://tailscale.com), ide to aj cez
+WireGuard alebo VPN v routeri. Tailscale musí bežať na zariadení s aplikáciou aj na zariadení, kde prehrávaš
+(pre Android TV je aplikácia Tailscale v obchode Google Play).
+
+- **Nuviu** stačí adresa cez `http://<adresa 100.x.y.z zariadenia s aplikáciou>:7140`.
+- **Stremio** chce pri vzdialenom doplnku HTTPS. Spoľahlivo to zariadi `tailscale serve` na zariadení s aplikáciou
+  (v administrácii Tailscale musia byť zapnuté MagicDNS a HTTPS certifikáty):
+
+  ```bash
+  tailscale serve --bg --https=443 http://127.0.0.1:7140
+  ```
+
+  Nastavenie potom otvor na `https://<zariadenie>.<tailnet>.ts.net/configure` a doplnok pridaj odtiaľ. Adresa platí
+  len vnútri tvojho tailnetu. Vypneš to príkazom `tailscale serve --bg --https=443 off`.
+- Adresa cez local-ip.co s adresou Tailscale (`https://100-x-y-z.my.local-ip.co:7141`) môže fungovať tiež,
+  formulár ju ale sám neponúkne a niektoré routery alebo DNS také meno zablokujú.
+- **Tailscale Funnel nepoužívaj.** Zverejnil by aplikáciu celému internetu.
+
+### Mimo domova na vlastnej doméne
+Adresa cez local-ip.co funguje len v domácej sieti. Kto chce doplnok aj na mobile mimo domova alebo na televízore
+u rodičov, spustí aplikáciu na VPS s vlastnou doménou: [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md).
+
+Adresa doplnku obsahuje tvoje účty. Nikomu ju neposielaj. Podrobnosti o pridaní v článku
 [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 
 ## Aktualizácie
@@ -78,10 +185,11 @@ Služba local-ip.co také meno preloží späť na tvoju domácu IP, dáta teč�
 Keď nastavenie otvoríš cez IP adresu, formulár dá túto adresu do doplnku sám.
 
 ## Nastavenia aplikácie a štatistiky
-Na počítači vznikne pri prvom spustení súbor `nokturno.json` (Windows `%APPDATA%\Nokturno`,
-macOS `~/Library/Application Support/Nokturno`, Linux `~/.local/share/nokturno`). V ňom sa dajú zmeniť porty,
-vypnúť HTTPS, zadať vlastný kľúč TMDB pre katalógy TMDB (`tmdb_key`) a vypnúť anonymné štatistiky
-(`"stats": false`) a hlásenia o pádoch (`"crash_reports": false`). Po úprave aplikáciu reštartuj.
+Pri prvom spustení vznikne súbor `nokturno.json` (Windows `%APPDATA%\Nokturno`,
+macOS `~/Library/Application Support/Nokturno`, Linux `~/.local/share/nokturno`, ako služba v priečinku
+z parametra `--data`). V ňom sa dajú zmeniť porty, vypnúť HTTPS, zadať vlastný kľúč TMDB pre katalógy TMDB
+(`tmdb_key`) a vypnúť anonymné štatistiky (`"stats": false`) a hlásenia o pádoch (`"crash_reports": false`).
+Po úprave aplikáciu reštartuj.
 Popis všetkých volieb je v [README aplikácie](https://github.com/nokturno-app/nokturno-stremio-app#nastavení-aplikace).
 
 ---

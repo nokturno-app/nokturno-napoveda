@@ -4,7 +4,8 @@
 
 Z [vydání na GitHubu](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest) stáhni soubor pro svoje
 zařízení (Windows, macOS s čipem Apple nebo Intel, Linux amd64/arm64/arm/386, APK pro Android a Android TV) a spusť ho.
-Postup pro každý systém včetně hlášek Windows a macOS je v článku [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md).
+Postup pro Android TV, počítač, Raspberry Pi a NAS je v článku [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md),
+provoz mimo domov na vlastní doméně v článku [Nokturno pro Stremio na VPS s vlastní doménou](../../cs/stremio-vps.md).
 
 Aplikace poslouchá na portu **7140** (nastavení a doplněk přes http) a **7141** (HTTPS pro Stremio z jiného zařízení v síti).
 Musí běžet, kdykoli se díváš – nejlíp na zařízení, které je pořád zapnuté, nebo přímo na tom, kde Stremio pouštíš.

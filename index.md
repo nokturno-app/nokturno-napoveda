@@ -59,6 +59,7 @@ nehostuje a za to, co přehráváš, odpovídáš ty. Více v článku [Co je No
 
 ## Stremio
 - [Nokturno pro Stremio – aplikace](cs/stremio-aplikace.md)
+- [Nokturno pro Stremio na VPS s vlastní doménou](cs/stremio-vps.md)
 - [Jak přidat Nokturno do Stremia nebo Nuvia](cs/stremio-instalace.md)
 - [U filmu nejsou streamy Nokturna](cs/stremio-zadne-streamy.md)
 - [„⚠️ Ve webovém přehrávači se nepřehraje“](cs/stremio-webovy-prehravac.md)
