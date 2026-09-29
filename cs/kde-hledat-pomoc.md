@@ -33,7 +33,6 @@ Návody jsou seřazené podle toho, co vidíš na obrazovce: [všechny návody](
   a hlášení problémů (fórum #pomoc), novinky v #novinky.
   Viz [Discord server Nokturno](discord.md).
 - Fórum pro Kodi: vlákno Nokturno na [xbmc-kodi.cz](https://www.xbmc-kodi.cz/prispevek-nokturno-webshare-sosac-hellspy-sledujteto-a-vlastni-uloziste-%E2%80%93-kodi-i-stremio).
-- Fórum pro Stremio: [stremio.cz/d/240](https://stremio.cz/d/240).
 
 Napiš, na čem Nokturno používáš (Kodi, Stremio, Home Assistant, jaké zařízení), co přesně se stalo a jakou hlášku vidíš.
 
