@@ -6,27 +6,90 @@ products: [stremio]
 priority: 2
 templates:
   stremio: |
-    Aby doplněk fungoval i mimo domov, pusť aplikaci Nokturno na VPS s vlastní doménou a před ni dej Caddy s HTTPS.
-    Adresa doplňku pak bude https://<tvoje doména>/c/…, nikomu ji neposílej.
+    Aby doplněk fungoval i mimo domov, pusť aplikaci Nokturno na VPS s vlastní doménou. Instalace jedním příkazem:
+    curl -fsSL https://raw.githubusercontent.com/nokturno-app/nokturno-stremio-app/main/install.sh | sudo bash -s -- --domain <tvoje doména>
+    Instance je jen pro tebe, adresu doplňku ani doménu nikomu nedávej.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps
 ---
 
 # Nokturno pro Stremio na VPS s vlastní doménou
 
 V domácí síti stačí aplikace na televizi, počítači nebo Raspberry Pi, viz
-[Nokturno pro Stremio – aplikace](stremio-aplikace.md). Když chceš doplněk i na mobilu mimo domov nebo na
-televizi u rodičů, pusť aplikaci na VPS s vlastní doménou. Stremio i Nuvio pak jen zadají adresu
-`https://<tvoje doména>/…`.
+[Nokturno pro Stremio – aplikace](stremio-aplikace.md). Mimo domov se k ní dostaneš i bez VPS, přes Tailscale
+nebo jinou VPN, viz [Nokturno pro Stremio mimo domov – Tailscale a VPN](stremio-mimo-domov.md).
+Když chceš doplněk na mobilu nebo televizi bez VPN, pusť aplikaci na vlastním VPS s vlastní doménou.
+Stremio i Nuvio pak jen zadají adresu `https://<tvoje doména>/…`.
+
+Instance na VPS je **osobní**: je pro tebe a tvou domácnost. Adresu doplňku ani doménu nikomu nedávej
+a provoz pro cizí lidi nedělej.
 
 Postup počítá s tím, že umíš pracovat v příkazové řádce Linuxu přes SSH.
 
-## 1. VPS a doména
-- **VPS** s Debianem nebo Ubuntu. Stačí 1 vCPU a 512 MB až 1 GB RAM. Soubory z VPS netečou, přehrávač si je
-  stahuje přímo ze zdroje, takže na přenosu dat nezáleží.
-- **Doména nebo subdoména** (třeba `nokturno.tvoje-domena.cz`) s **A záznamem** na veřejnou IP adresu VPS.
-  Ověříš to příkazem `getent hosts nokturno.tvoje-domena.cz`, musí vypsat IP VPS.
+## Kde vzít VPS a doménu
+### VPS
+Stačí nejmenší VPS s **1 vCPU, 1 GB RAM** a systémem **Debian 12** nebo **Ubuntu 24.04**. Pár příkladů
+poskytovatelů, ceny jsou orientační, ověř je na webu poskytovatele. S žádným z nich nejsme nijak spojeni.
 
-## 2. Aplikace jako služba
+| Poskytovatel | Orientační cena | Poznámka |
+|---|---|---|
+| Hetzner Cloud (nejmenší stroj řady CX nebo CAX, třeba CX22 nebo CAX11) | kolem 4 € měsíčně | datacentra v EU, CAX je procesor ARM |
+| Contabo | kolem 5 € měsíčně | víc RAM a disku za podobnou cenu |
+| Oracle Cloud Always Free | zdarma | stroj s procesorem ARM, registrace je složitější, chce platební kartu a volná kapacita někdy chybí |
+| WEDOS (VPS ON), Forpsi | podle konfigurace | české, s administrací a podporou v češtině |
+
+### Stačí nejlevnější VPS?
+Ano, s velkou rezervou. Data filmu přes VPS neteče, přehrávač si soubor stahuje přímo ze zdroje. Server jen hledá
+a vrací seznam streamů. Z měření: aplikace si bere zhruba 250 MB RAM a na jednom jádře zvládla i tisíce hledání
+denně při zhruba 5 % vytížení procesoru. Pro tebe a tvou domácnost je to víc než dost.
+
+Omezení je jinde než ve výkonu: všechno hledání jde z jedné IP adresy VPS a zdroje můžou IP, ze které přichází
+hodně dotazů, omezit nebo zablokovat. I proto je instance osobní, adresu doplňku ani doménu nikomu nedávej.
+
+### Doména
+- **Vlastní doména nebo subdoména** od libovolného registrátora (třeba `nokturno.tvoje-domena.cz`)
+  s **A záznamem** na veřejnou IP adresu VPS.
+- **Zdarma:** subdoména od [DuckDNS](https://www.duckdns.org) (třeba `tvoje-jmeno.duckdns.org`). VPS má
+  veřejnou IP, stačí ji v DuckDNS nastavit jednou.
+
+Ověříš to příkazem `getent hosts nokturno.tvoje-domena.cz`, musí vypsat IP VPS.
+
+## Instalace jedním příkazem
+Na VPS se přihlas přes SSH a spusť:
+
+```bash
+sudo apt install -y curl ufw
+curl -fsSL https://raw.githubusercontent.com/nokturno-app/nokturno-stremio-app/main/install.sh | sudo bash -s -- --domain nokturno.tvoje-domena.cz
+```
+
+Skript:
+- pozná architekturu, stáhne aplikaci z posledního vydání a ověří její otisk SHA-256;
+- založí systémového uživatele `nokturno` a službu `nokturno` (aplikace v `/opt/nokturno/nokturno`,
+  nastavení a data v `/opt/nokturno/data`);
+- nainstaluje [Caddy](https://caddyserver.com), který před aplikací zajistí HTTPS s certifikátem Let's Encrypt;
+- když je nainstalovaný firewall `ufw`, povolí porty 22, 80 a 443 a zapne ho (proto ho první řádek instaluje);
+- zkontroluje, že doména míří na tento server, a na konci vypíše adresu nastavení.
+
+Aplikace pak poslouchá jen na `127.0.0.1` a zvenku je dostupná jen přes Caddy. Tuhle izolaci umí aplikace
+od verze 9.0.4. Se starší verzí poslouchá na všech rozhraních, skript její port ve firewallu nepovolí a na konci
+na to upozorní. Když má poskytovatel VPS vlastní firewall v administraci, povol v něm jen porty 22, 80 a 443.
+
+| Přepínač | Co dělá |
+|---|---|
+| `--domain DOMÉNA` | instalace s doménou a Caddy |
+| `--port 7140` | jiný port aplikace |
+| `--no-firewall` | na `ufw` nesahá |
+| `--uninstall` | odstraní službu, aplikaci a konfiguraci Caddy pro Nokturno, data nechá v `/opt/nokturno/data` |
+
+**Aktualizace:** aplikace se aktualizuje sama. Nový soubor aplikace stáhne i opětovné spuštění téhož příkazu,
+doménu a port si skript pamatuje a nastavení zachová. **Odinstalace:** stejný příkaz s `--uninstall`
+místo `--domain …`.
+
+Stav služby: `systemctl status nokturno`, výpis: `journalctl -u nokturno -f`.
+
+## Ruční instalace
+Když chceš mít každý krok pod kontrolou, jde to i bez skriptu.
+
+### Aplikace jako služba
 Zjisti architekturu VPS příkazem `uname -m`: `x86_64` = soubor `linux-amd64`, `aarch64` = `linux-arm64`.
 Číslo poslední verze najdeš na [stránce vydání](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest).
 
@@ -79,7 +142,7 @@ curl http://127.0.0.1:7140/health
 Poslední příkaz musí odpovědět. Aplikace poslouchá na všech rozhraních, port **7140** proto ven neotevírej,
 zavře ho firewall v dalším kroku.
 
-## 3. Caddy a firewall
+### Caddy a firewall
 Caddy se postará o HTTPS certifikát od Let's Encrypt sám.
 
 ```bash
@@ -110,7 +173,7 @@ sudo ufw enable
 
 Když má poskytovatel VPS vlastní firewall v administraci, povol v něm taky porty 80 a 443.
 
-## 4. Přidání do Stremia a Nuvia
+## Přidání do Stremia a Nuvia
 1. Otevři `https://nokturno.tvoje-domena.cz/configure`.
 2. Vyplň [vlastní úložiště](vlastni-uloziste.md) a případně účty zdrojů, u každého dej **Ověřit**.
 3. **Přidat do Stremia** nebo **Přidat do Nuvia**. Adresa doplňku začíná `https://nokturno.tvoje-domena.cz/c/…`.
@@ -119,23 +182,25 @@ Když má poskytovatel VPS vlastní firewall v administraci, povol v něm taky p
 Vlastní úložiště doma musí být dosažitelné z VPS i ze zařízení, kde přehráváš, tedy přes veřejnou adresu
 nebo VPN. Adresa v domácí síti (`192.168.…`) z VPS nefunguje.
 
-## 5. Aktualizace a logy
-- Aplikace se aktualizuje sama, při startu a pak každých 6 hodin. Nové verze stahuje do `/var/lib/nokturno`,
+## Aktualizace a logy
+- Aplikace se aktualizuje sama, při startu a pak každých 6 hodin. Nové verze stahuje do složky s daty,
   soubor `/opt/nokturno/nokturno` se měnit nemusí. Když nová verze nenaběhne, vrátí předchozí.
+- Při instalaci skriptem stáhne nový soubor aplikace i opětovné spuštění téhož příkazu.
 - Výpis aplikace: `journalctl -u nokturno -f`, výpis Caddy: `journalctl -u caddy -f`.
 - Systém VPS aktualizuj jako obvykle (`sudo apt update && sudo apt upgrade`).
 
-## 6. Bezpečnost a soukromí
+## Bezpečnost a soukromí
 - **Adresa doplňku obsahuje tvoje nastavení a účty.** Není zašifrovaná, jen zakódovaná. Nikomu ji neposílej.
 - **Instance je jen pro tebe.** Neprovozuj ji jako veřejnou službu pro cizí lidi. Kdo zná adresu tvé domény,
   může si ve formuláři vyrobit vlastní doplněk a hledat přes tvůj server, proto doménu nikde nezveřejňuj.
 - **Heslo na celou doménu** (basic auth v Caddy) nedávej. Stremio ani Nuvio jsme s doplňkem za heslem
   neověřovali a doplněk by nejspíš přestal fungovat.
-- **Statistiky** vypneš v `nokturno.json`: `"stats": false`, hlášení o pádech `"crash_reports": false`.
+- **Statistiky** vypneš v `nokturno.json` (`/opt/nokturno/data` při instalaci skriptem, `/var/lib/nokturno`
+  při ruční instalaci): `"stats": false`, hlášení o pádech `"crash_reports": false`.
   Pak aplikaci restartuj: `sudo systemctl restart nokturno`. Účty ani adresa doplňku se neposílají nikdy.
 - Na VPS se přihlašuj **SSH klíčem**, ne heslem.
 
-## 7. Časté problémy
+## Časté problémy
 | Co se děje | Co udělat |
 |---|---|
 | `https://…/configure` se neotevře, Caddy hlásí chybu certifikátu | doména ještě neukazuje na VPS. Počkej, až `getent hosts <doména>` vypíše IP VPS (obvykle minuty, výjimečně hodiny), pak `sudo systemctl reload caddy`. |

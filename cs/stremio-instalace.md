@@ -13,6 +13,11 @@ templates:
 
 # Jak přidat Nokturno do Stremia nebo Nuvia
 
+!!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
+    Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
+    (WebShare, FastShare, Přehraj.to…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
+    a uložit a musíš mu věřit. Jistotu máš jen s doplňkem, který běží u tebe: doma, přes VPN nebo na vlastním VPS.
+
 Doplněk pro Stremio běží v aplikaci **Nokturno pro Stremio** u tebe doma. Jak ji stáhnout a spustit, je v článku
 [Nokturno pro Stremio – aplikace](stremio-aplikace.md). Tvoje nastavení je zakódované v adrese doplňku,
 kterou si vyrobíš na stránce nastavení v aplikaci.

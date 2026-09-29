@@ -58,7 +58,16 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Ako poslať log a zistiť ID inštalácie](poslat-log.md)
 
 ## Stremio
+!!! danger "Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje"
+    Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
+    (WebShare, FastShare, Přehraj.to…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
+    a uložiť a musíš mu veriť. Istotu máš len s doplnkom, ktorý beží u teba.
+
+Nokturno pre Stremio si spustíš u seba a len pre seba: [doma](stremio-aplikace.md),
+[mimo domova cez Tailscale alebo VPN](stremio-mimo-domov.md), alebo [na vlastnom VPS](stremio-vps.md).
+
 - [Nokturno pre Stremio – aplikácia](stremio-aplikace.md)
+- [Nokturno pre Stremio mimo domova – Tailscale a VPN](stremio-mimo-domov.md)
 - [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md)
 - [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md)
 - [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md)

@@ -14,7 +14,7 @@ templates:
 
 # Nokturno pro Stremio – aplikace
 
-!!! warning "Přihlašovací údaje jsou v adrese doplňku"
+!!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
     (WebShare, FastShare, Přehraj.to…). Jsou totiž v adrese doplňku a s každým požadavkem procházejí přes ten
     server. Jeho provozovatel je tak může vidět a uložit a musíš mu věřit. Jistotu, že je nemá nikdo jiný,
@@ -30,7 +30,8 @@ doplňku a ptají se aplikace jako každého jiného doplňku. Aplikace musí b�
 | Počítač s Windows, macOS nebo Linuxem | na počítači, doplněk funguje jen, když počítač běží | [Počítač](#pocitac) |
 | Home Assistant (HA OS) | jako doplněk Home Assistantu | [Home Assistant](#home-assistant) |
 | Raspberry Pi, NAS nebo jiný malý linuxový počítač | na něm, běží pořád | [Raspberry Pi a NAS](#raspberry-pi-a-nas) |
-| VPS s vlastní doménou, přístup odkudkoli | na VPS | [Nokturno pro Stremio na VPS s vlastní doménou](stremio-vps.md) |
+| Mobil nebo TV mimo domov, aplikace zůstane doma | doma, přístup přes Tailscale nebo VPN | [Nokturno pro Stremio mimo domov – Tailscale a VPN](stremio-mimo-domov.md) |
+| VPS s vlastní doménou, přístup odkudkoli bez VPN | na VPS | [Nokturno pro Stremio na VPS s vlastní doménou](stremio-vps.md) |
 
 Nejlíp je pustit aplikaci na zařízení, které je pořád zapnuté (box, Raspberry Pi, NAS), nebo přímo na tom,
 kde Stremio pouštíš.
@@ -149,23 +150,8 @@ soubor `/opt/nokturno/nokturno` se proto při nové verzi měnit nemusí.
 
 ### Mimo domov přes VPN
 Aplikace zůstane doma, do internetu se nic neotevírá a zařízení venku (mobil, televize u rodičů) se k ní dostane
-přes soukromou síť mezi tvými zařízeními. Nejjednodušší je [Tailscale](https://tailscale.com), jde to i přes
-WireGuard nebo VPN v routeru. Tailscale musí běžet na zařízení s aplikací i na zařízení, kde přehráváš
-(pro Android TV je aplikace Tailscale v obchodě Google Play).
-
-- **Nuvio** stačí adresa přes `http://<adresa 100.x.y.z zařízení s aplikací>:7140`.
-- **Stremio** chce u vzdáleného doplňku HTTPS. Spolehlivě to zařídí `tailscale serve` na zařízení s aplikací
-  (v administraci Tailscale musí být zapnuté MagicDNS a HTTPS certifikáty):
-
-  ```bash
-  tailscale serve --bg --https=443 http://127.0.0.1:7140
-  ```
-
-  Nastavení pak otevři na `https://<zařízení>.<tailnet>.ts.net/configure` a doplněk přidej odtud. Adresa platí
-  jen uvnitř tvého tailnetu. Vypneš to příkazem `tailscale serve --bg --https=443 off`.
-- Adresa přes local-ip.co s adresou Tailscale (`https://100-x-y-z.my.local-ip.co:7141`) může fungovat taky,
-  formulář ji ale sám nenabídne a některé routery nebo DNS takové jméno zablokují.
-- **Tailscale Funnel nepoužívej.** Zveřejnil by aplikaci celému internetu.
+přes Tailscale nebo jinou VPN. Postup krok za krokem je v článku
+[Nokturno pro Stremio mimo domov – Tailscale a VPN](stremio-mimo-domov.md).
 
 ### Mimo domov na vlastní doméně
 Adresa přes local-ip.co funguje jen v domácí síti. Kdo chce doplněk i na mobilu mimo domov nebo na televizi

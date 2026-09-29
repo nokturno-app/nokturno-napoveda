@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T14:58:20Z",
+  "generated": "2026-09-29T15:09:49Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -695,11 +695,31 @@
       "priority": 2
     },
     {
+      "id": "stremio-mimo-domov",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Nokturno pro Stremio mimo domov – Tailscale a VPN",
+      "text": "Mimo domov se k aplikaci Nokturno dostaneš přes Tailscale: nainstaluj ho na zařízení s aplikací i na mobil nebo TV.\nNuvio vezme http://<adresa 100.x.y.z>:7140, Stremio chce HTTPS: tailscale serve --bg --https=443 http://127.0.0.1:7140\nTailscale Funnel nepoužívej, zveřejnil by aplikaci celému internetu.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-mimo-domov",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-mimo-domov",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "stremio-mimo-domov",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Nokturno pre Stremio mimo domova – Tailscale a VPN",
+      "text": "Mimo domova sa k aplikácii Nokturno dostaneš cez Tailscale: nainštaluj ho na zariadenie s aplikáciou aj na mobil alebo TV.\nNuvio vezme http://<adresa 100.x.y.z>:7140, Stremio chce HTTPS: tailscale serve --bg --https=443 http://127.0.0.1:7140\nTailscale Funnel nepoužívaj, zverejnil by aplikáciu celému internetu.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-mimo-domov",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-mimo-domov",
+      "when": {},
+      "priority": 2
+    },
+    {
       "id": "stremio-vps",
       "lang": "cs",
       "product": "stremio",
       "title": "Nokturno pro Stremio na VPS s vlastní doménou",
-      "text": "Aby doplněk fungoval i mimo domov, pusť aplikaci Nokturno na VPS s vlastní doménou a před ni dej Caddy s HTTPS.\nAdresa doplňku pak bude https://<tvoje doména>/c/…, nikomu ji neposílej.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps",
+      "text": "Aby doplněk fungoval i mimo domov, pusť aplikaci Nokturno na VPS s vlastní doménou. Instalace jedním příkazem:\ncurl -fsSL https://raw.githubusercontent.com/nokturno-app/nokturno-stremio-app/main/install.sh | sudo bash -s -- --domain <tvoje doména>\nInstance je jen pro tebe, adresu doplňku ani doménu nikomu nedávej.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-vps",
       "when": {},
       "priority": 2
@@ -709,7 +729,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Nokturno pre Stremio na VPS s vlastnou doménou",
-      "text": "Aby doplnok fungoval aj mimo domova, spusti aplikáciu Nokturno na VPS s vlastnou doménou a pred ňu daj Caddy s HTTPS.\nAdresa doplnku potom bude https://<tvoja doména>/c/…, nikomu ju neposielaj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-vps",
+      "text": "Aby doplnok fungoval aj mimo domova, spusti aplikáciu Nokturno na VPS s vlastnou doménou. Inštalácia jedným príkazom:\ncurl -fsSL https://raw.githubusercontent.com/nokturno-app/nokturno-stremio-app/main/install.sh | sudo bash -s -- --domain <tvoja doména>\nInštancia je len pre teba, adresu doplnku ani doménu nikomu nedávaj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-vps",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-vps",
       "when": {},
       "priority": 2
