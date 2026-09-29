@@ -58,6 +58,7 @@ protože jsou v adrese doplňku. Proto ho pouštěj jen u sebe, viz [Nokturno pr
 | Co | Jak dlouho |
 |---|---|
 | profil instalace (ID, verze, platforma, zapnuté zdroje) | 90 dní od posledního hlášení |
+| zhlédnuté tituly u náhodného ID instalace | bez časového omezení |
 | log, který pošleš | 30 dní |
 | hlášení o pádu | 90 dní od posledního výskytu chyby |
 | zpráva, kterou ti pošleme do doplňku | 90 dní |
