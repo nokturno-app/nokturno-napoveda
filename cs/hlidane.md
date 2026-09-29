@@ -77,7 +77,7 @@ další už znovu nekontroluje, a oznámení přijde na každé. Nastavení sync
 
 ## Home Assistant
 V kartě Nokturno:
-- **Domů → Hlídané:** tituly se stavem (lze pustit, kontrolovat dál, jen torrent, hlídá se, zatím ne).
+- **Domů → Hlídané:** tituly se stavem (lze pustit, kontrolovat dál, hlídá se, zatím ne).
   Vlaječka u titulu se streamy zapne nebo vypne Kontrolovat dál. Titul, který jde pustit,
   přesuneš tlačítkem **Přesunout do Mého seznamu**.
 - **Knihovna → Hlídané seriály:** u každého seriálu nový díl, nebo poslední díl ke sledování.

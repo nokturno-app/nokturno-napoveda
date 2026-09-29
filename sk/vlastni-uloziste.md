@@ -39,15 +39,14 @@ Súbor, ktorý k titulu patrí, sa zobrazí **medzi streamami ako prvý**.
 Potom daj **Nastavenia → Pokročilé → Overiť zdroje** (v starších verziách **Otestovať zdroje**).
 
 ## Stremio
-Na stránke nastavenia doplnku ([nokturno.stream/configure](https://nokturno.stream/configure)) vyplň kartu
+V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) vyplň kartu
 **Vlastné úložisko** a daj **Overiť úložisko**. Potom doplnok pridaj znova tlačidlom **Pridať do Stremia**.
 
 V Stremiu platia dve veci navyše:
-- Úložisko musí byť dosiahnuteľné **zo servera doplnku** (ten v ňom hľadá súbory) **aj zo zariadenia**, kde prehrávaš.
-  Adresa v domácej sieti preto s doplnkom na `nokturno.stream` nefunguje.
+- Úložisko musí byť dosiahnuteľné **zo zariadenia, kde beží aplikácia Nokturno** (tá v ňom hľadá súbory), **aj zo zariadenia**,
+  kde prehrávaš. Keď je oboje doma, stačí adresa z domácej siete.
 - Súbor z úložiska sa **neprehrá vo webovom Stremiu** v prehliadači, len v aplikácii (Stremio pre počítač,
-  Android a Android TV, alebo Nuvio). Pri takom streame je upozornenie „⚠️ Vo webovom prehrávači sa neprehrá – len v aplikácii“
-  (pri niektorých adresách doplnku po česky „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“).
+  Android a Android TV, alebo Nuvio). Pri takom streame je upozornenie „⚠️ Vo webovom prehrávači sa neprehrá – len v aplikácii“.
 
 ## Hlásenia
 | Kde | Hlásenie | Čo urobiť |

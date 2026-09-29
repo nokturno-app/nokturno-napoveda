@@ -6,18 +6,20 @@ products: [stremio]
 priority: 1
 templates:
   stremio: |
-    Nokturno pre Stremio sa pridáva zo stránky nokturno.stream/configure.
-    Vyplň úložisko alebo účty, daj Overiť účet a potom Pridať do Stremia (alebo Nuvia).
+    Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases
+    Potom otvor http://<IP zariadenia s aplikáciou>:7140/configure, vyplň úložisko alebo účty, daj Overiť a Pridať do Stremia.
     Na TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.
 ---
 
 # Ako pridať Nokturno do Stremia alebo Nuvia
 
-Doplnok pre Stremio beží na serveri `nokturno.stream`. Tvoje nastavenie je zakódované v adrese doplnku,
-ktorú si vyrobíš na stránke nastavenia.
+Doplnok pre Stremio beží v aplikácii **Nokturno pre Stremio** u teba doma. Ako ju stiahnuť a spustiť, je v článku
+[Nokturno pre Stremio – aplikácia](stremio-aplikace.md). Tvoje nastavenie je zakódované v adrese doplnku,
+ktorú si vyrobíš na stránke nastavenia v aplikácii.
 
 ## 1. Vyplň nastavenie
-Otvor [nokturno.stream/configure](https://nokturno.stream/configure) (po slovensky sa zobrazí podľa jazyka prehliadača):
+Otvor v prehliadači `http://<IP adresa zariadenia s aplikáciou>:7140/configure` (na tom istom zariadení
+`http://127.0.0.1:7140/configure`, po slovensky sa zobrazí podľa jazyka prehliadača):
 1. **Vlastné úložisko a zdroje** – vlastné úložisko a voliteľne účty zdrojov. Pri každom daj **Overiť účet**
    (pri úložisku **Overiť úložisko**).
 2. **Predvoľby** – jazyk zvuku, radenie, katalógy. Tento krok sa dá preskočiť.
@@ -32,6 +34,10 @@ Otvor [nokturno.stream/configure](https://nokturno.stream/configure) (po slovens
 | **Nuvio** | **Pridať do Nuvia**. Na TV: **Skopírovať adresu**, potom v Nuviu Nastavenia → Doplnky → vložiť adresu → Inštalovať. |
 | **Streamlet** | **Skopírovať adresu**, v Streamlete pridaj doplnok Stremia a adresu vlož. |
 
+Keď stránku otvoríš cez IP adresu, dostane doplnok adresu `https://…my.local-ip.co:7141`. Tú Stremio prijme
+aj z iného zariadenia v sieti, pozri [Nokturno pre Stremio – aplikácia](stremio-aplikace.md).
+Doplnok funguje len vtedy, keď aplikácia beží.
+
 Adresa doplnku obsahuje tvoje účty. Nikomu ju neposielaj.
 
 ## Zmena nastavenia
@@ -40,8 +46,8 @@ V Stremiu **Doplnky → Nokturno → ozubené koliesko**. Otvorí sa stránka s 
 Nokturno bude dvakrát.
 
 ## Nokturno mám v Stremiu dvakrát
-Je to starý a nový doplnok s iným nastavením. V Stremiu **Doplnky** odinštaluj ten, ktorý nechceš. Keď nevieš
-ktorý, odinštaluj oba a pridaj doplnok znova z [nokturno.stream/configure](https://nokturno.stream/configure).
+Je to starý a nový doplnok s iným nastavením. V Stremiu **Doplnky** odinštaluj ten, ktorý nechceš. Doplnok
+s adresou `nokturno.stream` odinštaluj vždy, ten od 30. 9. 2026 nefunguje.
 
 ---
 [Všetky návody](./) · [Česky](../cs/stremio-instalace)

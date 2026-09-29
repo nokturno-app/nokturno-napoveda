@@ -6,7 +6,7 @@ Nahoře je vyhledávací pole s tlačítkem **Hledat** – jedno hledání pro f
 
 - **Domů**
   - **Pokračovat ve sledování** – rozkoukané filmy a seriály ze všech Kodi. Karta si pamatuje poslední známý stav, takže nezůstane prázdná, když zrovna žádné Kodi neběží.
-  - **Hlídané** – hlídané tituly a díly se stavem (lze pustit, jen torrent, hlídá se, zatím bez streamu), viz [Hlídané](#hlidane) níž.
+  - **Hlídané** – hlídané tituly a díly se stavem (lze pustit, hlídá se, zatím bez streamu), viz [Hlídané](#hlidane) níž.
 - **Knihovna**
   - **Můj seznam** – uložené tituly, sdílené s Kodi.
   - **Hlídané seriály** – seriály, u kterých se hlídají nové díly. Nový díl je zvýrazněný.
@@ -36,8 +36,6 @@ Titul se pustí v Kodi přes doplněk Nokturno, takže si Kodi vede rozkoukanost
 ### Když automatické hledání nestačí
 
 Dole v seznamu streamů je tlačítko **Zkusit fulltext na …** (vyjmenuje zapnuté fulltextové zdroje – WebShare, HellSpy, Sledujteto, FastShare). Spustí uvolněnější hledání, které najde i soubory s neobvyklým názvem. Takové výsledky mají u sebe otazník – jde o neověřenou shodu, jestli soubor k titulu patří, posuď podle názvu.
-
-Máš-li nastavený Prowlarr a qBittorrent, je tam i **Hledat torrenty**. Torrent se stáhne přes qBittorrent a přehrát jde, až se stáhne.
 
 ## Soubory z vlastního úložiště
 

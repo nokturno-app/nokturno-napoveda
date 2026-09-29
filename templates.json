@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T10:11:35Z",
+  "generated": "2026-09-29T14:17:05Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -79,11 +79,31 @@
       "priority": 0
     },
     {
+      "id": "stremio-aplikace",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Nokturno pro Stremio – aplikace",
+      "text": "Nokturno pro Stremio je od 30. 9. 2026 aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).\nStáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
+      "when": {},
+      "priority": 0
+    },
+    {
+      "id": "stremio-aplikace",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Nokturno pre Stremio – aplikácia",
+      "text": "Nokturno pre Stremio je od 30. 9. 2026 aplikácia, ktorú si spustíš u seba (PC, NAS, Android TV box).\nStiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
+      "when": {},
+      "priority": 0
+    },
+    {
       "id": "stremio-stara-adresa",
       "lang": "cs",
       "product": "stremio",
-      "title": "Stremio: „Adresa doplňku je zastaralá“",
-      "text": "Vidíš u filmu „Adresa doplňku je zastaralá“? Otevři ve Stremiu Doplňky → Nokturno → ozubené kolo.\nStránka vytvoří novou adresu, dej Přidat do Stremia.\nPak starý doplněk Nokturno odinstaluj, ať ho nemáš dvakrát.",
+      "title": "Stremio: doplněk z nokturno.stream nefunguje",
+      "text": "Doplněk Nokturno z adresy nokturno.stream od 30. 9. 2026 nefunguje, veřejný server skončil.\nNokturno pro Stremio je teď aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-stara-adresa",
       "when": {},
       "priority": 0
@@ -92,8 +112,8 @@
       "id": "stremio-stara-adresa",
       "lang": "sk",
       "product": "stremio",
-      "title": "Stremio: „Adresa doplnku je zastaraná“",
-      "text": "Vidíš pri filme „Adresa doplnku je zastaraná“? Otvor v Stremiu Doplnky → Nokturno → ozubené koliesko.\nStránka vytvorí novú adresu, daj Pridať do Stremia.\nPotom starý doplnok Nokturno odinštaluj, nech ho nemáš dvakrát.",
+      "title": "Stremio: doplnok z nokturno.stream nefunguje",
+      "text": "Doplnok Nokturno z adresy nokturno.stream od 30. 9. 2026 nefunguje, verejný server skončil.\nNokturno pre Stremio je teraz aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-stara-adresa",
       "when": {},
       "priority": 0
@@ -309,7 +329,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Jak přidat Nokturno do Stremia nebo Nuvia",
-      "text": "Nokturno pro Stremio se přidává ze stránky nokturno.stream/configure.\nVyplň úložiště nebo účty, dej Ověřit účet a pak Přidat do Stremia (nebo Nuvia).\nNa TV se doplněk objeví sám, když ho přidáš na telefonu pod stejným účtem Stremio.",
+      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases\nPak otevři http://<IP zařízení s aplikací>:7140/configure, vyplň úložiště nebo účty, dej Ověřit a Přidat do Stremia.\nNa TV se doplněk objeví sám, když ho přidáš na telefonu pod stejným účtem Stremio.",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-instalace",
       "when": {},
       "priority": 1
@@ -319,7 +339,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Ako pridať Nokturno do Stremia alebo Nuvia",
-      "text": "Nokturno pre Stremio sa pridáva zo stránky nokturno.stream/configure.\nVyplň úložisko alebo účty, daj Overiť účet a potom Pridať do Stremia (alebo Nuvia).\nNa TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.",
+      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nPotom otvor http://<IP zariadenia s aplikáciou>:7140/configure, vyplň úložisko alebo účty, daj Overiť a Pridať do Stremia.\nNa TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace",
       "when": {},
       "priority": 1
@@ -557,7 +577,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "FastShare s účtem ze Sdilej.cz",
-      "text": "Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.\nNa nokturno.stream/configure v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz a dej Ověřit účet.\nPak doplněk přidej znovu tlačítkem Přidat do Stremia a starý odinstaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
+      "text": "Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.\nV nastavení doplňku (Doplňky → Nokturno → ozubené kolo) v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz a dej Ověřit účet.\nPak doplněk přidej znovu tlačítkem Přidat do Stremia a starý odinstaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz",
       "when": {
         "fastshare": [
@@ -571,7 +591,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "FastShare s účtom zo Sdilej.cz",
-      "text": "Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.\nNa nokturno.stream/configure v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.\nPotom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
+      "text": "Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.\nV nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.\nPotom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz",
       "when": {
         "fastshare": [
@@ -890,8 +910,8 @@
       "id": "stremio-polozky-nokturno",
       "lang": "cs",
       "product": "stremio",
-      "title": "Položky „📢 Nokturno“ a „⛔ Nokturno“",
-      "text": "„⛔ Nokturno“ místo streamů znamená, že z tvé adresy doplňku přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, a zkus to znovu. Nic nastavovat nemusíš.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
+      "title": "Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“",
+      "text": "„⛔ Nokturno“ místo streamů znamená, že na doplněk přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, nebo aplikaci Nokturno restartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "when": {},
       "priority": 3
@@ -900,8 +920,8 @@
       "id": "stremio-polozky-nokturno",
       "lang": "sk",
       "product": "stremio",
-      "title": "Položky „📢 Nokturno“ a „⛔ Nokturno“",
-      "text": "„⛔ Nokturno“ namiesto streamov znamená, že z tvojej adresy doplnku prišlo naraz príliš veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, a skús to znova. Nič nastavovať nemusíš.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
+      "title": "Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“",
+      "text": "„⛔ Nokturno“ namiesto streamov znamená, že na doplnok prišlo naraz veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, alebo aplikáciu Nokturno reštartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "when": {},
       "priority": 3

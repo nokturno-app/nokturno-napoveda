@@ -43,9 +43,12 @@ HACS kontroluje nové verzie len raz za 48 hodín. Keď novú verziu nevidíš:
 3. V mobilnej aplikácii Home Assistant aplikáciu úplne zavri a znova otvor, nech sa načíta nová karta.
 
 ## Stremio
-Doplnok pre Stremio beží na serveri a aktualizuje sa sám, robiť nemusíš nič. Musíš ale mať adresu doplnku
-z `nokturno.stream`. Keď v Stremiu vidíš „Adresa doplnku je zastaraná“, pokračuj článkom
-[Stremio: „Adresa doplnku je zastaraná“](stremio-stara-adresa.md).
+Aplikácia Nokturno pre Stremio sa aktualizuje sama, pri štarte a potom každých 6 hodín. Robiť nemusíš nič,
+len ju nechaj bežať. Verziu ukazuje stránka nastavenia doplnku. Podrobnosti v článku
+[Nokturno pre Stremio – aplikácia](stremio-aplikace.md#aktualizacie).
+
+Doplnok s adresou `nokturno.stream` od 30. 9. 2026 nefunguje, pozri
+[Stremio: doplnok z nokturno.stream nefunguje](stremio-stara-adresa.md).
 
 ---
 [Všetky návody](./) · [Česky](../cs/aktualizace)

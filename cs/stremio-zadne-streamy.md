@@ -15,10 +15,12 @@ templates:
 
 ## Nejdřív zkontroluj
 1. **Počkej pár sekund.** Stremio ukazuje streamy postupně, jak doplňky odpovídají.
-2. **Je u filmu položka ⚠️ Nokturno?** Pak máš starou adresu doplňku, viz
-   [Stremio: „Adresa doplňku je zastaralá“](stremio-stara-adresa.md).
-3. **Je tam položka ⛔ Nokturno?** Přes tvůj doplněk přišlo příliš mnoho požadavků za sebou a server ho na chvíli
-   zastavil („Příliš mnoho požadavků…“ na pár minut, „…přístup na hodinu zablokovaný“ na hodinu). Zkus to později.
+2. **Běží aplikace Nokturno?** Doplněk funguje jen ve chvíli, kdy aplikace běží, viz
+   [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
+3. **Máš doplněk z `nokturno.stream`, nebo je u filmu položka ⚠️ Nokturno?** Ten od 30. 9. 2026 nefunguje, viz
+   [Stremio: doplněk z nokturno.stream nefunguje](stremio-stara-adresa.md).
+4. **Je tam položka ⛔ Nokturno?** Přišlo příliš mnoho požadavků za sebou, viz
+   [Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“](stremio-polozky-nokturno.md).
 
 ## Ověř účty
 Ve Stremiu otevři **Doplňky → Nokturno → ozubené kolo** a u každého zdroje dej **Ověřit účet**.
@@ -33,7 +35,7 @@ Zdroj, který neodpověděl, se přeskočí a streamy přijdou z ostatních. Zku
 ## Účty jsou v pořádku, a stejně nic
 - **Titul na zdrojích nemusí vůbec být**, hlavně úplné novinky a málo známé seriály.
 - Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, díl). Podobné, ale jiné filmy záměrně vynechá.
-- **Vlastní úložiště:** adresa v domácí síti s doplňkem na `nokturno.stream` nefunguje, viz
+- **Vlastní úložiště:** musí na něj dosáhnout zařízení s aplikací Nokturno i zařízení, kde přehráváš, viz
   [Jak připojit vlastní úložiště](vlastni-uloziste.md).
 
 ## Stream je vidět, ale nepřehraje se

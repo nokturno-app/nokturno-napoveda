@@ -60,13 +60,6 @@ Sekce **Vlastní úložiště (WebDAV)** – až tři složky s vlastními soubo
 
 Úložiště musí být dosažitelné **z Home Assistantu** – Home Assistant soubory prochází a přehrávačům je předává. Jak soubory pojmenovat, aby se přiřadily k titulům (rok u filmu, `S01E02` u dílu), je v [návodu pro Kodi → Vlastní úložiště](../kodi/vlastni-uloziste.md) a platí i tady.
 
-## Torrenty
-
-Nepovinné. Torrenty se nabízejí jen na vyžádání (tlačítko **Hledat torrenty** v detailu titulu), když streamy nestačí.
-
-- **Prowlarr – adresa (hledání torrentů)**, **API klíč** – Prowlarr sdružuje torrentové indexery. Bez něj se torrenty nevyhledávají.
-- **qBittorrent – adresa** (včetně portu, výchozí 8080), **jméno** (jen když webové rozhraní vyžaduje přihlášení), **heslo** – kam se torrenty posílají ke stažení.
-
 ## Stahování a odkazy
 
 - **Složka pro stahování** – složka na disku Home Assistantu, např. `/media/nokturno`. Musí existovat a být zapisovatelná. Přerušené stahování (restart, výpadek) naváže tam, kde skončilo; zdroj, který přestane posílat data, se po 2 minutách ticha vzdá a stahování jde zkusit znovu.

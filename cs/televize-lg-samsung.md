@@ -23,9 +23,10 @@ Tady je Kodi v obchodu Google Play a všechno funguje jako na Android TV boxu. L
 adresa je pak `http://127.0.0.1:7126`.
 
 ## Místo Kodi Stremio
-Stremio je pro LG a Samsung v obchodě s aplikacemi. Nokturno do něj přidáš podle
-[Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md): na telefonu pod stejným účtem Stremio,
-na TV se doplněk objeví sám.
+Stremio je pro LG a Samsung v obchodě s aplikacemi. Nokturno pro Stremio je aplikace, která musí běžet
+na jiném zařízení v síti (počítač, NAS), viz [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
+Doplněk pak přidej podle [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md): na telefonu pod
+stejným účtem Stremio, na TV se objeví sám.
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/televize-lg-samsung)

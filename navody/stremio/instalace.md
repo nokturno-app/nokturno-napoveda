@@ -1,43 +1,60 @@
 # Instalace
 
-Doplněk se přidává adresou, kterou vyrobí **formulář nastavení** – **[nokturno.stream/configure](https://nokturno.stream/configure)**. Formulář provede třemi kroky: zdroje a účty, předvolby a přidání do aplikace.
+## 1. Stáhni a spusť aplikaci
+
+Z [vydání na GitHubu](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest) stáhni soubor pro svoje
+zařízení (Windows, macOS s čipem Apple nebo Intel, Linux amd64/arm64/arm/386, APK pro Android a Android TV) a spusť ho.
+Postup pro každý systém včetně hlášek Windows a macOS je v článku [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md).
+
+Aplikace poslouchá na portu **7140** (nastavení a doplněk přes http) a **7141** (HTTPS pro Stremio z jiného zařízení v síti).
+Musí běžet, kdykoli se díváš – nejlíp na zařízení, které je pořád zapnuté, nebo přímo na tom, kde Stremio pouštíš.
+
+## 2. Otevři formulář nastavení
+
+- Na zařízení, kde aplikace běží: `http://127.0.0.1:7140/configure`.
+- Z telefonu nebo počítače ve stejné síti: `http://<IP adresa zařízení s aplikací>:7140/configure`. IP adresu vypíše
+  aplikace při startu, na Androidu je na hlavní obrazovce.
 
 ![Formulář nastavení doplňku, karta Vlastní úložiště](images/stremio-formular.jpg)
 
-## 1. Vyplň zdroje
+Formulář provede třemi kroky: zdroje a účty, předvolby a přidání do aplikace.
 
-Stačí jeden zdroj, víc zdrojů najde víc streamů. U každého je rozbalovací návod (registrace, co vyplnit) a tlačítko, které účet rovnou ověří – **Ověřit účet**, u vlastního úložiště **Ověřit úložiště**, u CZtoru **Spárovat CZtor**. Řekne, jestli přihlášení prošlo a jestli máš VIP, Premium nebo kredit, bez kterého se nedá plynule přehrávat. Podrobnosti ke zdrojům jsou na stránce [Zdroje a nastavení](zdroje-a-nastaveni.md).
+### Zdroje
+Stačí jeden zdroj, víc zdrojů najde víc streamů. U každého je rozbalovací návod (registrace, co vyplnit) a tlačítko,
+které účet rovnou ověří – **Ověřit účet**, u vlastního úložiště **Ověřit úložiště**, u CZtoru **Spárovat CZtor**.
+Podrobnosti ke zdrojům jsou na stránce [Zdroje a nastavení](zdroje-a-nastaveni.md).
 
-## 2. Předvolby (nepovinné)
+### Předvolby (nepovinné)
+Jazyk zvuku (čeština, slovenština, angličtina, maďarština), řazení streamů, skrytí SD, upřednostnění zvuku 5.1
+a [katalogy](zdroje-a-nastaveni.md#katalogy). Výchozí nastavení sedí většině lidí.
 
-Jazyk zvuku (čeština, slovenština, angličtina, maďarština), řazení streamů, skrytí SD, upřednostnění zvuku 5.1 a [katalogy](zdroje-a-nastaveni.md#katalogy). Výchozí nastavení sedí většině lidí.
-
-## 3. Přidat do aplikace
+## 3. Přidej doplněk do aplikace
 
 - **Počítač** – klikni na **Přidat do Stremia**, prohlížeč se zeptá, jestli otevřít Stremio, a ve Stremiu potvrď **Instalovat**.
-- **Telefon** – otevři formulář v telefonu, kde máš Stremio, a postupuj stejně. Když se aplikace neotevře, použij **Zkopírovat adresu** a vlož ji ručně: *Doplňky → pole nahoře → Instalovat*.
+- **Telefon** – otevři formulář v telefonu, kde máš Stremio, a postupuj stejně. Když se aplikace neotevře, použij
+  **Zkopírovat adresu** a vlož ji ručně: *Doplňky → pole nahoře → Instalovat*.
 - **Nuvio** (telefon i TV) – klikni na **Přidat do Nuvia**. Nuvio na TV bez prohlížeče: **Zkopírovat adresu** a vlož ji v Nuviu mezi doplňky.
 - **Streamlet** – odkaz pro přidání doplňku nemá. Použij **Zkopírovat adresu** a vlož ji ve Streamletu jako doplněk Stremia.
-- **Televize** – nainstaluj doplněk na počítači nebo telefonu **pod stejným účtem Stremio**. Doplňky se mezi zařízeními synchronizují samy a na TV se objeví do minuty.
+- **Televize** – nainstaluj doplněk na počítači nebo telefonu **pod stejným účtem Stremio**. Doplňky se mezi zařízeními
+  synchronizují samy a na TV se objeví do minuty.
 
-Soubory z vlastního úložiště a FastShare se přehrávají přímo ze zdroje, takže je webový přehrávač Stremia v prohlížeči nepustí – použij aplikaci Stremio nebo Nuvio.
+Když formulář otevřeš přes IP adresu, dostane doplněk adresu `https://<IP s pomlčkami>.my.local-ip.co:7141`.
+Stremio totiž z jiného zařízení přijme jen HTTPS. Jméno přeloží služba local-ip.co zpátky na tvoji domácí IP,
+data tečou jen po tvé síti. Aby adresa platila i po restartu routeru, nastav zařízení s aplikací v routeru pevnou IP.
 
 > Adresa doplňku obsahuje tvoje účty. Není zašifrovaná, jen zakódovaná – kdo ji má, přehrává přes tvoje účty. Nikomu ji neposílej.
 
 ## Změna nastavení
 
-Ve Stremiu **Doplňky → Nokturno → ozubené kolo (Konfigurovat)** otevře formulář s tvým současným nastavením. Po úpravě znovu klikni na **Přidat do Stremia** (nebo Nuvia). Změněné nastavení je nová adresa – starou verzi doplňku pak odinstaluj, ať nemáš Nokturno dvakrát.
+Ve Stremiu **Doplňky → Nokturno → ozubené kolo (Konfigurovat)** otevře formulář s tvým současným nastavením. Po úpravě
+znovu klikni na **Přidat do Stremia** (nebo Nuvia). Změněné nastavení je nová adresa – starou verzi doplňku pak odinstaluj,
+ať nemáš Nokturno dvakrát.
 
-## Doplněk přidaný ze staré adresy
+## Aktualizace
 
-Doplněk dnes běží na `nokturno.stream`. Kdo ho přidal dřív ze staré adresy, tomu přestal fungovat a musí ho přidat znovu:
+Aplikace se aktualizuje sama, při startu a pak každých 6 hodin. Když nová verze nenaběhne, vrátí předchozí.
 
-1. Ve Stremiu doplněk Nokturno odinstaluj.
-2. Otevři **[nokturno.stream/configure](https://nokturno.stream/configure)**, vyplň účty a předvolby znovu.
-3. Přidej doplněk do aplikace podle kroku 3 výš.
+## Doplněk z nokturno.stream
 
-Stará adresa nese nastavení, proto se nedá na novou převést automaticky.
-
-## Identita v adrese
-
-Formulář do adresy vkládá podepsanou **identitu**. Získá se krátkým výpočtem přímo v prohlížeči (na počítači kolem sekundy, na telefonu pár sekund) – stránka mezitím funguje a identita se do adresy dopíše po dokončení. Identita je jen náhodné číslo podepsané serverem, nenese žádné osobní údaje. Adresa bez identity a bez účtů se nepřijímá. Místo streamů pak uvidíš položku **⚠️ Nokturno** s textem „Adresa doplňku je zastaralá.“ Otevři nastavení doplňku (ozubené kolo), vytvoří se nová adresa. Pak starý doplněk odeber a nový přidej.
+Doplněk přidaný z adresy `nokturno.stream` od 30. 9. 2026 nefunguje. Ve Stremiu ho odinstaluj, spusť aplikaci a nastavení
+vyplň znovu – staré se převést nedá.

@@ -138,7 +138,7 @@ Katalogy **Filmy** a **Seriály** a hledání titulů fungují vždy, i bez jedi
 3. **Veřejný katalog Sosáče** – české názvy a žánry, ale bez popisu.
 4. **Cinemeta** – funguje vždy, ale jen anglicky.
 
-Každá další se zkusí, jen když předchozí nic nevrátila. S klíčem TMDB jsou české popisy i v katalozích ze Sosáče (Nově přidané s CZ/SK dabingem a titulky).
+Každá další se zkusí, jen když předchozí nic nevrátila. S klíčem TMDB jsou české popisy i v katalozích ze Sosáče.
 
 **API klíč TMDB** je zdarma a patří jen tobě:
 

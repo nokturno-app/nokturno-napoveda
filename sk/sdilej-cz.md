@@ -15,7 +15,7 @@ templates:
     Tím Nokturno
   stremio: |
     Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.
-    Na nokturno.stream/configure v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.
+    V nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.
     Potom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz
     Tím Nokturno
@@ -44,7 +44,7 @@ Sprievodca prvým nastavením sa spýta sám („Máš účet FastShare alebo Sd
 - používateľ a heslo pre **FastShare / Sdilej.cz** z vybraného webu.
 
 ## Stremio
-Na stránke [nokturno.stream/configure](https://nokturno.stream/configure) v karte **FastShare / Sdilej.cz**:
+V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) v karte **FastShare / Sdilej.cz**:
 1. Vyplň **Používateľ** a **Heslo**.
 2. **Účet z:** **FastShare.cz** alebo **Sdilej.cz**.
 3. Daj **Overiť účet**.

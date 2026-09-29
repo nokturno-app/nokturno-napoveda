@@ -21,8 +21,8 @@ Plný text podmínek použití a kontakty pro nahlášení nelegálního obsahu 
 
 | | Kodi | Stremio (a Nuvio, Streamlet) | Home Assistant |
 |---|---|---|---|
-| Co to je | doplněk do Kodi, má nejvíc funkcí | doplněk, který přidává streamy ke Stremiu | integrace a karta na dashboard |
-| Instalace | [Jak nainstalovat Nokturno do Kodi](instalace-kodi.md) | [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md) | přes HACS, viz [Jak zjistit verzi a aktualizovat](aktualizace.md) |
+| Co to je | doplněk do Kodi, má nejvíc funkcí | aplikace u tebe (PC, NAS, Android TV box), která přidává streamy ke Stremiu | integrace a karta na dashboard |
+| Instalace | [Jak nainstalovat Nokturno do Kodi](instalace-kodi.md) | [Nokturno pro Stremio – aplikace](stremio-aplikace.md) | přes HACS, viz [Jak zjistit verzi a aktualizovat](aktualizace.md) |
 | Vlastní úložiště | ano, až tři | ano | ano |
 | Luna | ano | ne (Luna má pro Stremio vlastní doplněk) | ano |
 | Pokračovat ve sledování, Můj seznam, Hlídané | ano | ne | ano |

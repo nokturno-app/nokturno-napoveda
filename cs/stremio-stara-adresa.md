@@ -1,36 +1,30 @@
 ---
 slug: stremio-stara-adresa
 lang: cs
-title: "Stremio: „Adresa doplňku je zastaralá“"
+title: "Stremio: doplněk z nokturno.stream nefunguje"
 products: [stremio]
 priority: 0
 templates:
   stremio: |
-    Vidíš u filmu „Adresa doplňku je zastaralá“? Otevři ve Stremiu Doplňky → Nokturno → ozubené kolo.
-    Stránka vytvoří novou adresu, dej Přidat do Stremia.
-    Pak starý doplněk Nokturno odinstaluj, ať ho nemáš dvakrát.
+    Doplněk Nokturno z adresy nokturno.stream od 30. 9. 2026 nefunguje, veřejný server skončil.
+    Nokturno pro Stremio je teď aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases
+    Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace
 ---
 
-# Stremio: „Adresa doplňku je zastaralá“
+# Stremio: doplněk z nokturno.stream nefunguje
 
-## Co to znamená
-Místo streamů vidíš u filmu položku **⚠️ Nokturno** s textem „Adresa doplňku je zastaralá. Otevři nastavení
-doplňku (ozubené kolo) – vytvoří se nová adresa. Pak tento doplněk odeber a přidej ho znovu.“
-
-Tvoje adresa doplňku je ze staršího formuláře. Nové adresy nesou kód, podle kterého server pozná tvoje
-nastavení a chrání doplněk před přetížením. Se starou adresou už streamy nepřijdou.
+## Co se stalo
+Doplněk Nokturno pro Stremio běžel do 30. 9. 2026 na veřejném serveru `nokturno.stream`. Ten skončil.
+Doplněk s adresou `nokturno.stream` (i starší `nokturno.tailf0014.ts.net`) už neukáže žádné streamy.
+Stejně tak hlášky „Adresa doplňku je zastaralá“ a stránka `nokturno.stream/configure` patří ke starému serveru.
 
 ## Co udělat
-1. Ve Stremiu otevři **Doplňky → Nokturno → ozubené kolo** (Konfigurovat). Nebo klikni přímo na položku
-   ⚠️ Nokturno u filmu.
-2. Otevře se stránka nastavení s tvými údaji. Zkontroluj je a dej **Přidat do Stremia** (nebo **Přidat do Nuvia**).
-3. Ve Stremiu **Doplňky** odinstaluj starý doplněk Nokturno, ať ho nemáš dvakrát.
+1. Ve Stremiu **Doplňky** odinstaluj starý doplněk Nokturno.
+2. Stáhni a spusť aplikaci **Nokturno pro Stremio**, návod je v článku
+   [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
+3. V aplikaci vyplň nastavení a přidej doplněk znovu: [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md).
 
-Když se stránka neotevře, přidej doplněk znovu od začátku: [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md).
-
-## Doplněk vůbec neodpovídá
-Adresy na `nokturno.tailf0014.ts.net` od září 2026 nefungují vůbec, Stremio u nich neukáže nic.
-Doplněk přidej znovu z [nokturno.stream/configure](https://nokturno.stream/configure) a starý odinstaluj.
+Staré nastavení se převést nedá. Účty a úložiště vyplň v aplikaci znovu.
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/stremio-stara-adresa)

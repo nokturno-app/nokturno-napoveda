@@ -18,9 +18,8 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
 
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
-- **Přehrává se přímo z úložiště.** Stream nese adresu souboru a přihlašovací hlavičky, které aplikace pošle úložišti sama; přes server doplňku žádná data neteče. Ve webovém přehrávači Stremia v prohlížeči se proto nepřehraje, jen v aplikaci (Stremio, Nuvio).
-- Úložiště musí být dosažitelné **ze serveru doplňku** (ten v něm hledá soubory) **i ze zařízení, kde přehráváš** (stahuje z něj). Adresa v domácí síti tak na veřejné instanci nefunguje; potřebuješ veřejnou adresu úložiště, nebo vlastní instanci doplňku.
-- Z bezpečnostních důvodů veřejná instance **ignoruje úložiště s adresou na server samotný** (`localhost`, `127.x`) a na link-local adresy (`169.254.x`).
+- **Přehrává se přímo z úložiště.** Stream nese adresu souboru a přihlašovací hlavičky, které aplikace pošle úložišti sama; přes Nokturno žádná data neteče. Ve webovém přehrávači Stremia v prohlížeči se proto nepřehraje, jen v aplikaci (Stremio, Nuvio).
+- Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory) **i ze zařízení, kde přehráváš** (stahuje z něj). Když je obojí doma, stačí adresa z domácí sítě.
 - Jak soubory pojmenovat (rok u filmu, `S01E02` u dílu, **složka s originálním názvem** u filmů s odlišným českým názvem – Stremio zná tituly často jen anglicky) je podrobně v [návodu pro Kodi → Vlastní úložiště](../kodi/vlastni-uloziste.md#jak-pojmenovat-soubory).
 - Nový soubor se objeví nejpozději do hodiny.
 
@@ -56,7 +55,7 @@ Veřejná úschovna, žádný účet, nic nestojí. Volba **Používat HellSpy**
 
 Do formuláře zadáš **svůj účet Přehraj.to** (e-mail a heslo). **Ověřit účet** zkontroluje, že přihlášení funguje a jestli je účet Premium.
 
-Účet je tu **povinný**. Doplněk pro Kodi a integrace pro Home Assistant umí Přehraj.to i bez přihlášení, protože běží u tebe doma, každý za svou adresou. Server doplňku pro Stremio má adresu jednu a anonymní dotazy z ní Přehraj.to odmítá. Bez vyplněného účtu se proto zdroj nenabídne.
+Účet je tu **povinný**, bez vyplněného účtu se zdroj nenabídne. Doplněk pro Kodi a integrace pro Home Assistant umí Přehraj.to i bez přihlášení, jen s nižší kvalitou.
 
 S **Premium** účtem se přehrává původní soubor včetně 4K, bez Premia jen překódovaná verze (nižší kvalita). Soubor hraje **v prohlížeči i v aplikaci** – jde o přímou adresu, která nepotřebuje přihlašovací hlavičky.
 
@@ -69,7 +68,7 @@ Placený katalog [cztor.com](https://cztor.com) se streamy v plné kvalitě vče
 3. Tam se přihlas a PIN zadej. Formulář to za pár vteřin sám pozná.
 4. Adresa doplňku se tím změní – doplněk pak přidej do aplikace znovu.
 
-Do adresy doplňku jde jen náhodný klíč. Server tvoje přihlášení drží zapečetěné tímto klíčem, takže ho bez adresy nepřečte. **Zrušit párování** ho zruší. CZtor hraje i ve webovém přehrávači.
+Do adresy doplňku jde jen náhodný klíč. Aplikace tvoje přihlášení drží zapečetěné tímto klíčem, takže ho bez adresy nikdo nepřečte. **Zrušit párování** ho zruší. CZtor hraje i ve webovém přehrávači.
 
 Podrobně v nápovědě: [CZtor: „zařízení není spárované“](../../cs/cztor.md).
 
@@ -98,11 +97,9 @@ V kroku **Předvolby** je karta **Katalogy** – seznamy filmů a seriálů na d
 | Katalog | Odkud |
 |---|---|
 | Nejsledovanější filmy / seriály tento týden | žebříček z anonymních statistik uživatelů Nokturna |
-| Nově přidané filmy s CZ/SK dabingem, s CZ/SK titulky | Sosáč |
-| Nově přidané seriály s CZ/SK dabingem, s CZ/SK titulky | Sosáč (seriály s novými díly) + ověření jazyka ve zdrojích |
-| Populární, Nejlépe hodnocené (filmy i seriály) | TMDB |
+| Populární, Nejlépe hodnocené (filmy i seriály) | TMDB, jen s vlastním klíčem TMDB v nastavení aplikace (`tmdb_key` v `nokturno.json`) |
 
-Detail titulu a díly seriálů dodá Stremio samo, streamy k nim Nokturno jako u každého jiného titulu. Seznamy jsou pro všechny uživatele společné a obnovují se jednou za 6 hodin – nový film se tedy může objevit s pár hodinovým zpožděním.
+Detail titulu a díly seriálů dodá Stremio samo, streamy k nim Nokturno jako u každého jiného titulu. Seznamy se obnovují jednou za 6 hodin – nový film se tedy může objevit s pár hodinovým zpožděním.
 
 Po zapnutí nebo vypnutí katalogu vznikne nová adresa doplňku – ve Stremiu je potřeba doplněk přidat znovu.
 
@@ -110,4 +107,4 @@ Po zapnutí nebo vypnutí katalogu vznikne nová adresa doplňku – ve Stremiu 
 
 ## Statistiky
 
-Doplněk posílá anonymní statistiky: náhodný identifikátor nastavení, verzi, které zdroje máš zapnuté a u kterých titulů se otevřely streamy – nejvýš jednou za 6 hodin. Žádné účty, hesla ani adresa doplňku.
+Aplikace posílá anonymní statistiky: náhodný identifikátor nastavení, verzi, které zdroje máš zapnuté a u kterých titulů se otevřely streamy – nejvýš jednou za 6 hodin. Žádné účty, hesla ani adresa doplňku. Vypneš je v souboru `nokturno.json` volbou `"stats": false`, hlášení o pádech volbou `"crash_reports": false`, viz [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md).

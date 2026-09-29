@@ -39,7 +39,7 @@ automation:
 
 | Událost | Kdy | Data |
 |---|---|---|
-| `nokturno_new_episode` | nový díl hlídaného seriálu má stream | `id`, `title` (díl), `season`, `episode`, `series_id`, `series_title`, `torrent` |
+| `nokturno_new_episode` | nový díl hlídaného seriálu má stream | `id`, `title` (díl), `season`, `episode`, `series_id`, `series_title` |
 | `nokturno_trakt_available` | hlídaný titul má poprvé stream, nebo mu přibyly streamy | `id`, `title`, `type`, `streams` |
 | `nokturno_download_done` | stahování doběhlo | `name`, `path`, `size` |
 
@@ -69,7 +69,6 @@ Všechny služby najdeš v *Nástroje pro vývojáře → Akce* pod doménou `no
 | `nokturno.send_link` | pošle odkaz na stream do mobilu |
 | `nokturno.share_file` | pošle do mobilu dočasný odkaz na stažený soubor (jen správce) |
 | `nokturno.delete_file` | smaže stažený soubor (jen správce) |
-| `nokturno.torrents`, `nokturno.download_torrent` | torrenty titulu přes Prowlarr; předání torrentu qBittorrentu |
 
 **Hlídané a Můj seznam**
 

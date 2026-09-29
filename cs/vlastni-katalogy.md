@@ -54,7 +54,7 @@ Seriály mají jiný seznam žánrů než filmy (třeba **Sci-fi a fantasy** neb
 ## Ve Stremiu
 Ve Stremiu se vlastní katalogy skládají ve formuláři nastavení doplňku (od verze 8.5.0).
 
-1. Otevři nastavení doplňku: ve Stremiu **Doplňky → Nokturno → Konfigurovat**, nebo stránku https://nokturno.stream/configure.
+1. Otevři nastavení doplňku: ve Stremiu **Doplňky → Nokturno → Konfigurovat**, nebo stránku `http://<IP zařízení s aplikací>:7140/configure`.
 2. V kroku 2 najdi kartu **Vlastní katalogy** a dej **Přidat katalog**.
 3. Vyplň **Název**, **Druh** (Filmy nebo Seriály), žánry (i **Pohádky**), případně **Stačí jeden z vybraných žánrů**,
    **Původní jazyk**, **Od roku**, **Do roku** a **Řadit podle**. Prázdný název se doplní z voleb.

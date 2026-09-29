@@ -23,9 +23,10 @@ Tu je Kodi v obchode Google Play a všetko funguje ako na Android TV boxe. Luna 
 adresa je potom `http://127.0.0.1:7126`.
 
 ## Namiesto Kodi Stremio
-Stremio je pre LG a Samsung v obchode s aplikáciami. Nokturno doň pridáš podľa
-[Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md): na telefóne pod rovnakým účtom Stremio,
-na TV sa doplnok objaví sám.
+Stremio je pre LG a Samsung v obchode s aplikáciami. Nokturno pre Stremio je aplikácia, ktorá musí bežať
+na inom zariadení v sieti (počítač, NAS), pozri [Nokturno pre Stremio – aplikácia](stremio-aplikace.md).
+Doplnok potom pridaj podľa [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md): na telefóne pod
+rovnakým účtom Stremio, na TV sa objaví sám.
 
 ---
 [Všetky návody](./) · [Česky](../cs/televize-lg-samsung)

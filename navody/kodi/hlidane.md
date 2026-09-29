@@ -21,7 +21,7 @@ Položka v hlavním menu hned pod Pokračovat ve sledování. Ukáže se, jen kd
 ![Menu Hlídané: díl s příznakem kontrolovat dál a nový díl](images/kodi-hlidane.jpg)
 
 - **Seriály** jsou nahoře, ty s novým dílem úplně první. U seriálu je číslo dílu (`Seriál · 3x02`) a u nového dílu barevně „nový díl“. Otevření seriálu nový díl zhasne.
-- **Tituly** mají u sebe stav: *lze pustit*, *jen torrent*, *hlídá se*, *zatím ne*, nebo *kontrolovat dál*.
+- **Tituly** mají u sebe stav: *lze pustit*, *hlídá se*, *zatím ne*, nebo *kontrolovat dál*.
 - Díl s příznakem Kontrolovat dál u seriálu, který hlídáš, je na řádku seriálu. Klik na hlídaný díl otevře rovnou výběr streamu.
 - **Zkontrolovat teď** – na konci seznamu a v místní nabídce. Zkontroluje všechno hned, bez čekání na další kolo.
 

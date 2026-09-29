@@ -78,7 +78,7 @@ zapnuté). Sledované sa potom zdieľajú medzi všetkými Kodi aj s Home Assist
 
 ## Home Assistant
 V karte Nokturno:
-- **Domov → Sledované:** tituly so stavom (dá sa pustiť, kontrolovať ďalej, len torrent, sleduje sa, zatiaľ nie).
+- **Domov → Sledované:** tituly so stavom (dá sa pustiť, kontrolovať ďalej, sleduje sa, zatiaľ nie).
   Vlajočka pri titule so streamami zapne alebo vypne Kontrolovať ďalej. Titul, ktorý sa dá pustiť,
   presunieš tlačidlom **Presunúť do Môjho zoznamu**.
 - **Knižnica → Sledované seriály:** pri každom seriáli nový diel alebo posledný diel na sledovanie.

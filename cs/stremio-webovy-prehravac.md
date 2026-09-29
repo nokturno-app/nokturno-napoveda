@@ -29,8 +29,9 @@ Doplněk nepozná, jestli se díváš v prohlížeči, proto má stream v popisu
 Soubory `.mkv`, `.avi` a podobné webový přehrávač často nepřehraje ani z jiných zdrojů. V aplikaci hrají.
 
 ## Vlastní úložiště nehraje ani v aplikaci
-Úložiště musí být dosažitelné ze serveru doplňku (ten ho prochází) **i** ze zařízení, kde přehráváš.
-Adresa jen z domácí sítě (`192.168.…`) nestačí. Viz [Jak připojit vlastní úložiště](vlastni-uloziste.md).
+Úložiště musí být dosažitelné ze zařízení, kde běží aplikace Nokturno (ta v něm hledá soubory), **i** ze zařízení,
+kde přehráváš. Když je aplikace i přehrávač doma, stačí adresa z domácí sítě (`192.168.…`).
+Viz [Jak připojit vlastní úložiště](vlastni-uloziste.md).
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/stremio-webovy-prehravac)

@@ -58,11 +58,12 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Ako poslať log a zistiť ID inštalácie](poslat-log.md)
 
 ## Stremio
+- [Nokturno pre Stremio – aplikácia](stremio-aplikace.md)
 - [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md)
-- [Stremio: „Adresa doplnku je zastaraná“](stremio-stara-adresa.md)
+- [Stremio: doplnok z nokturno.stream nefunguje](stremio-stara-adresa.md)
 - [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md)
 - [„⚠️ Vo webovom prehrávači sa neprehrá“](stremio-webovy-prehravac.md)
-- [Položky „📢 Nokturno“ a „⛔ Nokturno“](stremio-polozky-nokturno.md)
+- [Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“](stremio-polozky-nokturno.md)
 
 ## Home Assistant
 - [Home Assistant: karta a prehrávanie v Kodi](ha-karta.md)

@@ -39,7 +39,6 @@ Obě menu mají:
 - **Pro Tebe** – doporučení podle naposledy zhlédnutých titulů; u každého titulu je napsáno „Doporučeno podle: …“. Počítá se z historie ve tvém Kodi, nikam se neposílá. Ukáže se, až je z čeho doporučovat.
 - **Populární na TMDB**, **Nejlépe hodnocené** – s výběrem žánru.
 - **Nejsledovanější tento týden** – žebříček z anonymních statistik uživatelů Nokturna.
-- **Nově přidané s CZ/SK dabingem**, **Nově přidané s CZ/SK titulky** – nově přidané tituly, u kterých doplněk ověří jazyk ve zdrojích. U Seriálů jsou to celé seriály, jazyk se ověřuje na nejnovějším dílu. Seznam se staví chvíli, proto se napoprvé spouští klepnutím; pak ho doplněk na pozadí udržuje aktuální.
 - **Vlastní katalogy** – katalog si poskládáš sám podle žánrů, původního jazyka, let a řazení (oblíbenost, hodnocení, datum vydání). **Nový katalog** ho založí, místní nabídka ho upraví nebo smaže. Vlastní klíč TMDB není potřeba. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).
 - **Náhodný film** / **Náhodný seriál** – vylosuje titul v žánru, který obvykle sleduješ, a rovnou otevře výběr streamu. Přednost mají tituly s tvým preferovaným jazykem; když takový nenajde, vylosuje jiný a napíše to u něj.
 

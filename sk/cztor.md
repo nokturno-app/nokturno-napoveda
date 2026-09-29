@@ -44,12 +44,12 @@ sa páruje samo.
 Formulár potom ukáže PIN a adresu `cztor.com/activate`. Vypršaný PIN si vyžiadaj znova.
 
 ## Stremio
-Na stránke [nokturno.stream/configure](https://nokturno.stream/configure) je karta **CZtor**:
+V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) je karta **CZtor**:
 1. Klikni na **Spárovať CZtor**. Zobrazí sa PIN a odkaz na `cztor.com/activate`.
 2. Tam sa prihlás a PIN zadaj. Formulár to o pár sekúnd sám spozná a ukáže „✓ Spárované“ s dátumom konca predplatného.
 3. Adresa doplnku sa tým zmení. Doplnok pridaj znova tlačidlom **Pridať do Stremia** a starý odinštaluj.
 
-Heslo sa ani tu nezadáva. Do adresy doplnku ide len náhodný kľúč. Prihlásenie do CZtoru drží server zapečatené
+Heslo sa ani tu nezadáva. Do adresy doplnku ide len náhodný kľúč. Prihlásenie do CZtoru drží aplikácia Nokturno zapečatené
 týmto kľúčom, takže bez tvojej adresy doplnku ho nikto neprečíta. Streamy z CZtoru hrajú aj vo webovom Stremiu.
 
 Po spárovaní má karta tlačidlá **Overiť účet** (stav predplatného) a **Zrušiť párovanie**. Po zrušení párovania
