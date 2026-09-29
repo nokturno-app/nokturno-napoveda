@@ -165,6 +165,12 @@ Aplikácia sa aktualizuje sama: pri štarte a potom každých 6 hodín. Novú ve
 vráti predchádzajúcu. Na Androide sa aktualizácia sťahuje pri spustení aplikácie alebo po zapnutí zariadenia.
 Nový inštalačný súbor sťahovať nemusíš.
 
+Nechceš čakať? Na stránke nastavení (`/configure`) je dole v sekcii *Aplikácia na tomto zariadení*
+tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
+a novšiu hneď stiahne. Rovnako poslúži reštart aplikácie: na počítači ju zavri a spusť znova,
+na VPS `sudo systemctl restart nokturno`, v Home Assistante reštart doplnku, na Androide
+zatvorenie a nové spustenie aplikácie.
+
 ## Časté problémy
 | Čo sa deje | Čo urobiť |
 |---|---|
