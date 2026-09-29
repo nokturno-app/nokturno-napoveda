@@ -21,11 +21,6 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
   **jen v aplikaci** (Stremio, Nuvio), ne ve webovém přehrávači v prohlížeči. Přehraj.to a CZtor hrají i v prohlížeči.
 - **Česky i slovensky.** Formulář je v obou jazycích. Nastavení uložené ve slovenském formuláři má slovensky i hlášky doplňku mezi streamy.
 
-## Veřejný server skončil
-
-Do 30. 9. 2026 běžel doplněk na serveru `nokturno.stream`. Ten skončil a doplněk s touto adresou už nefunguje.
-Odinstaluj ho a použij aplikaci, viz [Instalace](instalace.md).
-
 ## Podmínky použití
 
 Nokturno je přehrávač a vyhledávač nad tvým vlastním úložištěm i nad úložišti třetích stran, které si zapneš. Samo žádný obsah
