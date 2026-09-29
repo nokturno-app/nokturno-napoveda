@@ -6,7 +6,7 @@ products: [stremio]
 priority: 0
 templates:
   stremio: |
-    Nokturno pro Stremio je od 30. 9. 2026 aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).
+    Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).
     Stáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace
 ---
@@ -14,8 +14,7 @@ templates:
 # Nokturno pro Stremio – aplikace
 
 Nokturno pro Stremio a Nuvio je malá aplikace, která běží **u tebe** – na počítači, NASu nebo Android TV boxu.
-Stremio se na ni ptá jako na každý jiný doplněk. Veřejný server `nokturno.stream` doplněk pro Stremio
-od 30. 9. 2026 neposkytuje, stará adresa doplňku přestala fungovat.
+Stremio se na ni ptá jako na každý jiný doplněk.
 
 Aplikace musí běžet, kdykoli se díváš. Nejlíp na zařízení, které je pořád zapnuté (NAS, TV box),
 nebo přímo na tom, kde Stremio pouštíš.

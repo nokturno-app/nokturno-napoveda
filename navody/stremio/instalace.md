@@ -53,8 +53,3 @@ ať nemáš Nokturno dvakrát.
 ## Aktualizace
 
 Aplikace se aktualizuje sama, při startu a pak každých 6 hodin. Když nová verze nenaběhne, vrátí předchozí.
-
-## Doplněk z nokturno.stream
-
-Doplněk přidaný z adresy `nokturno.stream` od 30. 9. 2026 nefunguje. Ve Stremiu ho odinstaluj, spusť aplikaci a nastavení
-vyplň znovu – staré se převést nedá.

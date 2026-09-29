@@ -1,7 +1,7 @@
 ---
 slug: stremio-polozky-nokturno
 lang: sk
-title: Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“
+title: Položka „⛔ Nokturno“
 products: [stremio]
 priority: 3
 templates:
@@ -11,15 +11,9 @@ templates:
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno
 ---
 
-# Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“
+# Položka „⛔ Nokturno“
 
 Hore v zozname streamov sa občas zobrazí položka, ktorá nie je film. Stremio inak správu zobraziť nevie.
-
-## 📢 a ⚠️ Nokturno
-Správy od nás (📢) a upozornenia na zastaranú adresu (⚠️) ukazoval verejný server `nokturno.stream`, ktorý
-30. 9. 2026 skončil. Keď ich vidíš, máš v Stremiu ešte starý doplnok. Odinštaluj ho a použi aplikáciu,
-pozri [Stremio: doplnok z nokturno.stream nefunguje](stremio-stara-adresa.md). Aplikácia u teba žiadne správy
-nezobrazuje, novinky nájdeš na [Discorde](discord.md).
 
 ## ⛔ Nokturno – veľa požiadaviek
 Namiesto streamov je len táto položka. Text hovorí, o čo ide:

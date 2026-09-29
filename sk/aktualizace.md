@@ -47,8 +47,5 @@ Aplikácia Nokturno pre Stremio sa aktualizuje sama, pri štarte a potom každý
 len ju nechaj bežať. Verziu ukazuje stránka nastavenia doplnku. Podrobnosti v článku
 [Nokturno pre Stremio – aplikácia](stremio-aplikace.md#aktualizacie).
 
-Doplnok s adresou `nokturno.stream` od 30. 9. 2026 nefunguje, pozri
-[Stremio: doplnok z nokturno.stream nefunguje](stremio-stara-adresa.md).
-
 ---
 [Všetky návody](./) · [Česky](../cs/aktualizace)

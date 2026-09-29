@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T14:17:05Z",
+  "generated": "2026-09-29T14:50:25Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -83,7 +83,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Nokturno pro Stremio – aplikace",
-      "text": "Nokturno pro Stremio je od 30. 9. 2026 aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).\nStáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
+      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (PC, NAS, Android TV box).\nStáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
       "when": {},
       "priority": 0
@@ -93,28 +93,8 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Nokturno pre Stremio – aplikácia",
-      "text": "Nokturno pre Stremio je od 30. 9. 2026 aplikácia, ktorú si spustíš u seba (PC, NAS, Android TV box).\nStiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
+      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba (PC, NAS, Android TV box).\nStiahni ju z github.com/nokturno-app/nokturno-stremio-app/releases, spusti a otvor http://<IP zariadenia>:7140/configure.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
-      "when": {},
-      "priority": 0
-    },
-    {
-      "id": "stremio-stara-adresa",
-      "lang": "cs",
-      "product": "stremio",
-      "title": "Stremio: doplněk z nokturno.stream nefunguje",
-      "text": "Doplněk Nokturno z adresy nokturno.stream od 30. 9. 2026 nefunguje, veřejný server skončil.\nNokturno pro Stremio je teď aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace",
-      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-stara-adresa",
-      "when": {},
-      "priority": 0
-    },
-    {
-      "id": "stremio-stara-adresa",
-      "lang": "sk",
-      "product": "stremio",
-      "title": "Stremio: doplnok z nokturno.stream nefunguje",
-      "text": "Doplnok Nokturno z adresy nokturno.stream od 30. 9. 2026 nefunguje, verejný server skončil.\nNokturno pre Stremio je teraz aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-aplikace",
-      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-stara-adresa",
       "when": {},
       "priority": 0
     },
@@ -910,7 +890,7 @@
       "id": "stremio-polozky-nokturno",
       "lang": "cs",
       "product": "stremio",
-      "title": "Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“",
+      "title": "Položka „⛔ Nokturno“",
       "text": "„⛔ Nokturno“ místo streamů znamená, že na doplněk přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, nebo aplikaci Nokturno restartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "when": {},
@@ -920,7 +900,7 @@
       "id": "stremio-polozky-nokturno",
       "lang": "sk",
       "product": "stremio",
-      "title": "Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“",
+      "title": "Položka „⛔ Nokturno“",
       "text": "„⛔ Nokturno“ namiesto streamov znamená, že na doplnok prišlo naraz veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, alebo aplikáciu Nokturno reštartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "when": {},

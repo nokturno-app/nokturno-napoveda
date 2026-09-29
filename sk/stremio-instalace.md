@@ -46,8 +46,7 @@ V Stremiu **Doplnky → Nokturno → ozubené koliesko**. Otvorí sa stránka s 
 Nokturno bude dvakrát.
 
 ## Nokturno mám v Stremiu dvakrát
-Je to starý a nový doplnok s iným nastavením. V Stremiu **Doplnky** odinštaluj ten, ktorý nechceš. Doplnok
-s adresou `nokturno.stream` odinštaluj vždy, ten od 30. 9. 2026 nefunguje.
+Je to starý a nový doplnok s iným nastavením. V Stremiu **Doplnky** odinštaluj ten, ktorý nechceš.
 
 ---
 [Všetky návody](./) · [Česky](../cs/stremio-instalace)

@@ -46,8 +46,7 @@ Ve Stremiu **Doplňky → Nokturno → ozubené kolo**. Otevře se stránka s tv
 Nokturno bude dvakrát.
 
 ## Nokturno mám ve Stremiu dvakrát
-Je to starý a nový doplněk s jiným nastavením. Ve Stremiu **Doplňky** odinstaluj ten, který nechceš. Doplněk
-s adresou `nokturno.stream` odinstaluj vždy, ten od 30. 9. 2026 nefunguje.
+Je to starý a nový doplněk s jiným nastavením. Ve Stremiu **Doplňky** odinstaluj ten, který nechceš.
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/stremio-instalace)

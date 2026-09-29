@@ -17,10 +17,8 @@ templates:
 1. **Počkej pár sekund.** Stremio ukazuje streamy postupně, jak doplňky odpovídají.
 2. **Běží aplikace Nokturno?** Doplněk funguje jen ve chvíli, kdy aplikace běží, viz
    [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
-3. **Máš doplněk z `nokturno.stream`, nebo je u filmu položka ⚠️ Nokturno?** Ten od 30. 9. 2026 nefunguje, viz
-   [Stremio: doplněk z nokturno.stream nefunguje](stremio-stara-adresa.md).
-4. **Je tam položka ⛔ Nokturno?** Přišlo příliš mnoho požadavků za sebou, viz
-   [Položky „📢 Nokturno“, „⚠️ Nokturno“ a „⛔ Nokturno“](stremio-polozky-nokturno.md).
+3. **Je tam položka ⛔ Nokturno?** Přišlo příliš mnoho požadavků za sebou, viz
+   [Položka „⛔ Nokturno“](stremio-polozky-nokturno.md).
 
 ## Ověř účty
 Ve Stremiu otevři **Doplňky → Nokturno → ozubené kolo** a u každého zdroje dej **Ověřit účet**.
