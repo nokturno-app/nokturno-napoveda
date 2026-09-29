@@ -6,7 +6,7 @@ products: [stremio]
 priority: 0
 templates:
   stremio: |
-    Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (Android TV box, počítač, Raspberry Pi, NAS).
+    Nokturno pro Stremio je aplikace, kterou si pustíš u sebe (Android TV box, počítač, Home Assistant, Raspberry Pi, NAS).
     Stáhni ji z github.com/nokturno-app/nokturno-stremio-app/releases, spusť a otevři http://<IP zařízení>:7140/configure.
     Doplněk na cizím serveru dostává tvoje přihlašovací údaje ke zdrojům. Když běží u tebe, nedostane je nikdo jiný.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-aplikace
@@ -18,7 +18,7 @@ templates:
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
     (WebShare, FastShare, Přehraj.to…). Jsou totiž v adrese doplňku a s každým požadavkem procházejí přes ten
     server. Jeho provozovatel je tak může vidět a uložit a musíš mu věřit. Jistotu, že je nemá nikdo jiný,
-    máš jen tehdy, když doplněk běží u tebe: na televizi, počítači, Raspberry Pi nebo na vlastním VPS.
+    máš jen tehdy, když doplněk běží u tebe: na televizi, počítači, Home Assistantu, Raspberry Pi nebo na vlastním VPS.
 
 Nokturno pro Stremio a Nuvio je malá aplikace, která běží **u tebe**. Stremio i Nuvio pak jen zadají adresu
 doplňku a ptají se aplikace jako každého jiného doplňku. Aplikace musí běžet, kdykoli se díváš.
@@ -28,7 +28,7 @@ doplňku a ptají se aplikace jako každého jiného doplňku. Aplikace musí b�
 |---|---|---|
 | Android TV, Google TV nebo Android box | přímo na televizi nebo boxu | [Android TV a Android box](#android-tv-a-android-box) |
 | Počítač s Windows, macOS nebo Linuxem | na počítači, doplněk funguje jen, když počítač běží | [Počítač](#pocitac) |
-| Home Assistant | – | [připravujeme](#home-assistant) |
+| Home Assistant (HA OS) | jako doplněk Home Assistantu | [Home Assistant](#home-assistant) |
 | Raspberry Pi, NAS nebo jiný malý linuxový počítač | na něm, běží pořád | [Raspberry Pi a NAS](#raspberry-pi-a-nas) |
 | VPS s vlastní doménou, přístup odkudkoli | na VPS | [Nokturno pro Stremio na VPS s vlastní doménou](stremio-vps.md) |
 
@@ -76,8 +76,19 @@ vypíše aplikace při startu.
 Doplněk funguje jen, když počítač běží a aplikace je spuštěná. Na televizi a telefonu taky.
 
 ## Home Assistant
-Doplněk pro Home Assistant připravujeme. Zatím aplikaci pusť na jiném zařízení v síti, například na Android TV
-boxu nebo Raspberry Pi.
+Nokturno pro Stremio jde nainstalovat jako doplněk Home Assistantu (HA OS nebo Supervised, jen 64bit systémy
+amd64 a aarch64; Raspberry Pi s 32bit systémem ne). Běží pak doma pořád, dokud běží Home Assistant.
+
+1. Přidej úložiště doplňků: [tlačítkem](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fnokturno-app%2Fnokturno-stremio-ha), nebo ručně **Nastavení → Doplňky → Obchod s doplňky → ⋮ →
+   Úložiště** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
+2. Nainstaluj **Nokturno pro Stremio** a dej **Spustit**.
+3. **Otevřít webové rozhraní**, nebo z telefonu či počítače ve stejné síti `http://<IP Home Assistantu>:7140/configure`.
+4. Vyplň úložiště nebo účty, u každého dej **Ověřit**, a pak **Přidat do Stremia** nebo **Přidat do Nuvia**.
+
+Doplněk používá síť hostitele: port **7140** (nastavení a doplněk pro Nuvio) a **7141** (HTTPS přes local-ip.co
+pro Stremio). V záložce **Konfigurace** jde vypnout statistiky (`stats`), hlášení o pádech (`crash_reports`)
+a HTTPS (`enable_https`), zadat vlastní klíč TMDB (`tmdb_key`). Nové verze si doplněk stahuje sám.
+Home Assistantu nastav v routeru pevnou IP.
 
 ## Raspberry Pi a NAS
 Platí pro Raspberry Pi, NAS s Linuxem a jiný malý počítač se systemd. Aplikace na něm běží pořád,
