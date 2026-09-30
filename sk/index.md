@@ -80,6 +80,7 @@ Nokturno pre Stremio si spustíš u seba a len pre seba: [doma](stremio-aplikace
 [mimo domova cez Tailscale alebo VPN](stremio-mimo-domov.md), alebo [na vlastnom VPS](stremio-vps.md).
 
 - [Nokturno pre Stremio – aplikácia](stremio-aplikace.md)
+- [Kde doma spustiť Nokturno pre Stremio – nápady a príklady](stremio-kde-spustit.md)
 - [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md)
 - [Nokturno pre Stremio mimo domova – Tailscale a VPN](stremio-mimo-domov.md)
 - [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md)

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-29T17:23:46Z",
+  "generated": "2026-09-30T19:39:08Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -321,6 +321,26 @@
       "title": "Ako pridať Nokturno do Stremia alebo Nuvia",
       "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nPotom otvor http://<IP zariadenia s aplikáciou>:7140/configure, vyplň úložisko alebo účty, daj Overiť a Pridať do Stremia.\nNa TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "stremio-kde-spustit",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Kde doma pustit Nokturno pro Stremio – nápady a příklady",
+      "text": "Nokturno pro Stremio není náročné, stačí mu cokoli, co doma pořád běží: starý Android telefon, Raspberry Pi, NAS, starý notebook nebo box.\nVideo totiž netěče přes aplikaci, ta jen vrací odkazy, takže zvládne i slabý hardware.\nNápady a postupy: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-kde-spustit",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-kde-spustit",
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "stremio-kde-spustit",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Kde doma spustiť Nokturno pre Stremio – nápady a príklady",
+      "text": "Nokturno pre Stremio nie je náročné, stačí mu čokoľvek, čo doma stále beží: starý Android telefón, Raspberry Pi, NAS, starý notebook alebo box.\nVideo totiž netečie cez aplikáciu, tá len vracia odkazy, takže zvládne aj slabý hardvér.\nNápady a postupy: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-kde-spustit",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-kde-spustit",
       "when": {},
       "priority": 1
     },

@@ -32,6 +32,7 @@ Doma ji pustíš na televizi s Androidem, na počítači, na Raspberry Pi nebo N
 | Počítač s Windows, macOS nebo Linuxem | na počítači, doplněk funguje jen, když počítač běží | [Počítač](#pocitac) |
 | Home Assistant (HA OS) | jako doplněk Home Assistantu | [Home Assistant](#home-assistant) |
 | Raspberry Pi, NAS nebo jiný malý linuxový počítač | na něm, běží pořád | [Raspberry Pi a NAS](#raspberry-pi-a-nas) |
+| Starý Android telefon, Docker na NASu, MikroTik, starý notebook | nápady a příklady, na čem to doma rozjet | [Kde doma pustit Nokturno pro Stremio](stremio-kde-spustit.md) |
 | Mobil nebo TV mimo domov, aplikace zůstane doma | doma, přístup přes Tailscale nebo VPN | [Nokturno pro Stremio mimo domov – Tailscale a VPN](stremio-mimo-domov.md) |
 | VPS s vlastní doménou, přístup odkudkoli bez VPN | na VPS | [Nokturno pro Stremio na VPS s vlastní doménou](stremio-vps.md) |
 
