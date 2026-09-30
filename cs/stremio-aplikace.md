@@ -65,7 +65,8 @@ Z [vydání na GitHubu](https://github.com/nokturno-app/nokturno-stremio-app/rel
 
 Spusť ho:
 - **Windows:** spusť `.exe`. Na hlášku „Systém Windows ochránil váš počítač“ dej **Další informace → Přesto spustit**.
-  Bránu firewall povol pro **soukromé sítě**. Okno s výpisem nech otevřené, jeho zavřením aplikaci vypneš.
+  Bránu firewall povol pro **soukromé sítě**. Od verze 9.3.0 běží bez okna. Najdeš ji jako ikonu měsíce v oznamovací oblasti vpravo dole (případně pod šipkou ^): dvojklik otevře nastavení, **Ukončit** ji vypne.
+  Aby se spouštěla sama po zapnutí počítače, stiskni `Win + R`, napiš `shell:startup` a potvrď. Do otevřené složky vlož zástupce na `.exe` (pravé tlačítko na `.exe` při tažení → **Vytvořit zde zástupce**).
 - **macOS:** v Terminálu `chmod +x nokturno-*-macos-*` a `xattr -d com.apple.quarantine nokturno-*-macos-*`,
   pak `./nokturno-<verze>-macos-arm64`. Bez druhého příkazu spuštění zablokuje Gatekeeper, protože aplikace
   není podepsaná (jde to i přes **Nastavení systému → Soukromí a zabezpečení → Přesto otevřít**).
