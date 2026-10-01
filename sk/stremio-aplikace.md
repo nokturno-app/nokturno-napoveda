@@ -67,10 +67,11 @@ Z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/rele
 Spusti ho:
 - **Windows:** spusti `.exe`. Na hlášku „Systém Windows ochránil váš počítač“ daj **Ďalšie informácie → Napriek tomu spustiť**.
   Bránu firewall povoľ pre **súkromné siete**. Od verzie 9.3.0 beží bez okna. Nájdeš ju ako ikonu mesiaca v oblasti oznámení vpravo dole (prípadne pod šípkou ^): dvojklik otvorí nastavenia, **Ukončiť** ju vypne.
-  Aby sa spúšťala sama po zapnutí počítača, stlač `Win + R`, napíš `shell:startup` a potvrď. Do otvoreného priečinka vlož odkaz na `.exe` (pravé tlačidlo na `.exe` pri ťahaní → **Vytvoriť tu odkaz**).
+  Aby bežala stále, aj po reštarte a bez prihlásenia (od verzie 9.5.0): ukonči aplikáciu v oblasti oznámení, v Príkazovom riadku v priečinku so stiahnutým súborom spusti `nokturno-<verzia>-windows-amd64.exe --install` a potvrď oprávnenie správcu. Aplikácia sa nainštaluje ako služba **Nokturno pro Stremio** (je v `services.msc`), sama si povolí bránu firewall, po páde sa reštartuje a nastavenia prenesie do `C:\ProgramData\Nokturno`. Odinštalovanie: `C:\ProgramData\Nokturno\nokturno.exe --uninstall` (nastavenia zostanú). Bez služby ide dať odkaz na `.exe` do priečinka `shell:startup` (`Win + R`).
 - **macOS:** v Termináli `chmod +x nokturno-*-macos-*` a `xattr -d com.apple.quarantine nokturno-*-macos-*`,
   potom `./nokturno-<verzia>-macos-arm64`. Bez druhého príkazu spustenie zablokuje Gatekeeper, pretože aplikácia
   nie je podpísaná (ide to aj cez **Nastavenia systému → Súkromie a zabezpečenie → Napriek tomu otvoriť**).
+  Aby bežala stále, aj po reštarte a bez prihlásenia (od verzie 9.5.0): `sudo ./nokturno-<verzia>-macos-arm64 --install`. Aplikácia sa nainštaluje ako služba do `/Library/Application Support/Nokturno` a okno Terminálu potom môžeš zavrieť. Odinštalovanie: `sudo "/Library/Application Support/Nokturno/nokturno" --uninstall`.
 - **Linux:** `chmod +x nokturno-*-linux-*` a `./nokturno-<verzia>-linux-amd64`. Ako ju spúšťať ako službu,
   je v časti [Raspberry Pi a NAS](#raspberry-pi-a-nas).
 
@@ -184,6 +185,7 @@ zatvorenie a nové spustenie aplikácie.
 | Nastavenie sa z iného zariadenia neotvorí | obe zariadenia musia byť v rovnakej sieti a aplikácia musí bežať. Na Windows povoľ aplikáciu vo firewalle pre súkromné siete (porty 7140 a 7141). |
 | Stremio doplnok nepridá, adresa s `my.local-ip.co` nefunguje | router blokuje mená, ktoré vedú na domácu IP (ochrana proti DNS rebinding). Povoľ v routeri výnimku pre `local-ip.co`, alebo v zariadení so Stremiom nastav DNS `1.1.1.1`. |
 | Doplnok prestal fungovať po reštarte routera | zmenila sa IP adresa zariadenia s aplikáciou. V routeri mu nastav pevnú IP (rezervácia DHCP) a doplnok pridaj znova. |
+| Na Windows sa po dvojkliku na `.exe` len otvorí nastavenie | Nokturno už beží ako služba (`--install`), ďalšia kópia sa nespúšťa. |
 | Pri štarte „Address already in use“ | port 7140 používa iný program. Spusti aplikáciu s `--port 7150 --https-port 7151`. |
 | Stream s „⚠️ Vo webovom prehrávači sa neprehrá“ | hrá len v aplikácii Stremio alebo Nuvio, pozri [„⚠️ Vo webovom prehrávači sa neprehrá“](stremio-webovy-prehravac.md) |
 | Pri filme nie sú streamy | pozri [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md) |
@@ -195,7 +197,7 @@ Služba local-ip.co také meno preloží späť na tvoju domácu IP, dáta teč�
 Keď nastavenie otvoríš cez IP adresu, formulár dá túto adresu do doplnku sám.
 
 ## Nastavenia aplikácie a štatistiky
-Pri prvom spustení vznikne súbor `nokturno.json` (Windows `%APPDATA%\Nokturno`,
+Pri prvom spustení vznikne súbor `nokturno.json` (Windows `%APPDATA%\Nokturno`, ako služba Windows `C:\ProgramData\Nokturno`, ako služba macOS `/Library/Application Support/Nokturno`,
 macOS `~/Library/Application Support/Nokturno`, Linux `~/.local/share/nokturno`, ako služba v priečinku
 z parametra `--data`). V ňom sa dajú zmeniť porty, vypnúť HTTPS, zadať vlastný kľúč TMDB pre katalógy TMDB
 (`tmdb_key`) a vypnúť anonymné štatistiky (`"stats": false`) a hlásenia o pádoch (`"crash_reports": false`).
