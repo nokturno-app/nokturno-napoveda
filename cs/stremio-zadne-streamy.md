@@ -37,9 +37,8 @@ Zdroj, který neodpověděl, se přeskočí a streamy přijdou z ostatních. Zku
   [Jak připojit vlastní úložiště](vlastni-uloziste.md).
 
 ## Stream je vidět, ale nepřehraje se
-- U streamu je „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“: takový stream (vlastní úložiště,
-  FastShare) jde pustit jen v aplikaci Stremio pro počítač, Android a Android TV, nebo v Nuviu. Ve Stremiu
-  v prohlížeči ne.
+- U streamu je „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“: takový řádek ukazuje jen starší
+  aplikace Nokturno (do verze 9.6.0). Aktualizuj ji, viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md).
 - WebShare občas hlásí, že je soubor dočasně nedostupný. Vyber jiný stream.
 
 ---

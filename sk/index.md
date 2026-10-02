@@ -43,6 +43,7 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Výber streamu: filtre, 3D a posledný filter](vyber-streamu.md)
 - [Sledované: nové diely a Kontrolovať ďalej](hlidane.md)
 - [Vlastné katalógy](vlastni-katalogy.md)
+- [Filmy vo vysokej kvalite](filmy-vysoka-kvalita.md)
 - [Vlastný zoznam](vlastni-seznam.md)
 - [Synchronizácia medzi zariadeniami nefunguje](synchronizace.md)
 - [Sťahovanie zlyhalo](stahovani.md)

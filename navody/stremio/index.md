@@ -22,8 +22,9 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
 - **Bere se jen to, co k titulu patří.** Soubory se filtrují podle názvu, roku a dílu; podobné, ale jiné filmy
   (pokračování, stejnojmenné tituly) se vynechají.
 - **Výpadek zdroje nevadí.** Když jeden zdroj neodpovídá, doplněk ho přeskočí a vrátí streamy z ostatních.
-- **Data tečou přímo.** Soubory z vlastního úložiště a FastShare se přehrávají přímo ze zdroje. Přehrají se proto
-  **jen v aplikaci** (Stremio, Nuvio), ne ve webovém přehrávači v prohlížeči. Přehraj.to a CZtor hrají i v prohlížeči.
+- **Většina dat teče přímo.** WebShare, HellSpy, Přehraj.to, CZtor, Sledujteto a Sosáč se přehrávají přímo ze zdroje.
+  Soubory z vlastního úložiště a FastShare (i Sdilej.cz) přehrávači od verze 9.6.1 předává aplikace Nokturno a data tečou přes ni.
+  Ve webovém přehrávači v prohlížeči záleží na formátu souboru: `.mkv`, `.avi` a podobné nepřehraje, v aplikaci (Stremio, Nuvio) hrají.
 - **Česky i slovensky.** Formulář je v obou jazycích. Nastavení uložené ve slovenském formuláři má slovensky i hlášky doplňku mezi streamy.
 
 ## Podmínky použití

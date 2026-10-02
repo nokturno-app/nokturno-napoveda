@@ -188,7 +188,7 @@ zavření a nové spuštění aplikace.
 | Doplněk přestal fungovat po restartu routeru | změnila se IP adresa zařízení s aplikací. V routeru mu nastav pevnou IP (rezervace DHCP) a doplněk přidej znovu. |
 | Na Windows se po dvojkliku na `.exe` jen otevře nastavení | Nokturno už běží jako služba (`--install`), další kopie se nespouští. |
 | Při startu „Address already in use“ | port 7140 používá jiný program. Spusť aplikaci s `--port 7150 --https-port 7151`. |
-| Stream s „⚠️ Ve webovém přehrávači se nepřehraje“ | hraje jen v aplikaci Stremio nebo Nuvio, viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md) |
+| Stream s „⚠️ Ve webovém přehrávači se nepřehraje“ | řádek ukazuje jen starší aplikace (do 9.6.0), aktualizuj ji; ve webovém přehrávači záleží na formátu souboru, viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md) |
 | U filmu nejsou streamy | viz [U filmu nejsou streamy Nokturna](stremio-zadne-streamy.md) |
 
 ## Proč adresa `https://…my.local-ip.co`

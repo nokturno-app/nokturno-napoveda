@@ -18,8 +18,8 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
 
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
-- **Přehrává se přímo z úložiště.** Stream nese adresu souboru a přihlašovací hlavičky, které aplikace pošle úložišti sama; přes Nokturno žádná data neteče. Ve webovém přehrávači Stremia v prohlížeči se proto nepřehraje, jen v aplikaci (Stremio, Nuvio).
-- Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory) **i ze zařízení, kde přehráváš** (stahuje z něj). Když je obojí doma, stačí adresa z domácí sítě.
+- **Soubor přehrávači předává aplikace Nokturno** (od verze 9.6.1), přihlášení k úložišti do Stremia neodchází a data tečou přes aplikaci. Ve webovém přehrávači Stremia v prohlížeči záleží na formátu souboru (`.mkv`, `.avi` a podobné nepřehraje), v aplikaci (Stremio, Nuvio) hrají.
+- Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory a předává je přehrávači). Přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
 - Jak soubory pojmenovat (rok u filmu, `S01E02` u dílu, **složka s originálním názvem** u filmů s odlišným českým názvem – Stremio zná tituly často jen anglicky) je podrobně v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md#jak-pojmenovat-soubory).
 - Nový soubor se objeví nejpozději do hodiny.
 
@@ -45,7 +45,7 @@ Rozlišení, počet kanálů a kodek zvuku se berou přímo z rozhraní Sledujte
 
 Vyplň uživatelské jméno a heslo z fastshare.cz. Účet ze **Sdilej.cz** funguje taky – soubory jsou stejné, jen přepni **Účet z** na *Sdilej.cz* ([FastShare s účtem ze Sdilej.cz](../../cs/sdilej-cz.md)). Hledá se i bez účtu, **přehrání jde z kreditu** (podle přenesených dat) nebo s neomezeným stahováním. **Ověřit účet** ukáže zbývající kredit.
 
-Soubor se přehrává **přímo** – doplněk k němu předá přihlášení v hlavičkách, které aplikace (Stremio, Nuvio) pošle sama. Ve webovém přehrávači v prohlížeči se proto nepřehraje. Zvukové stopy se z hlavičky souboru čtou jen s neomezeným stahováním; na kredit je jazyk jen odhadem z názvu.
+Soubor přehrávači předává **aplikace Nokturno** (od verze 9.6.1), přihlášení do Stremia neodchází. Ve webovém přehrávači v prohlížeči záleží na formátu souboru. Zvukové stopy se z hlavičky souboru čtou jen s neomezeným stahováním; na kredit je jazyk jen odhadem z názvu.
 
 ### HellSpy
 

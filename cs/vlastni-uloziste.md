@@ -55,10 +55,10 @@ V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, n
 **Vlastní úložiště** a dej **Ověřit úložiště**. Pak doplněk přidej znovu tlačítkem **Přidat do Stremia**.
 
 Ve Stremiu platí dvě věci navíc:
-- Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory), **i ze zařízení**,
-  kde přehráváš. Když je obojí doma, stačí adresa z domácí sítě.
-- Soubor z úložiště se **nepřehraje ve webovém Stremiu** v prohlížeči, jen v aplikaci (Stremio pro počítač,
-  Android a Android TV, nebo Nuvio). U takového streamu je upozornění „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“.
+- Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno**. Ta v něm hledá soubory a od verze 9.6.1
+  je přehrávači i předává, přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
+- Ve Stremiu v prohlížeči se soubory `.mkv`, `.avi` a podobné nepřehrají, o přehrání rozhoduje formát souboru.
+  V aplikaci Stremio nebo Nuvio hrají. Viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md).
 
 ## Jak pojmenovat soubory
 Nokturno soubor k titulu přiřazuje **podle názvu souboru a podle složek nad ním** – stejně přísně jako fulltext

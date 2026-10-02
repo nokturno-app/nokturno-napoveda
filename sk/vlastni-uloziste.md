@@ -43,10 +43,10 @@ V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, 
 **Vlastné úložisko** a daj **Overiť úložisko**. Potom doplnok pridaj znova tlačidlom **Pridať do Stremia**.
 
 V Stremiu platia dve veci navyše:
-- Úložisko musí byť dosiahnuteľné **zo zariadenia, kde beží aplikácia Nokturno** (tá v ňom hľadá súbory), **aj zo zariadenia**,
-  kde prehrávaš. Keď je oboje doma, stačí adresa z domácej siete.
-- Súbor z úložiska sa **neprehrá vo webovom Stremiu** v prehliadači, len v aplikácii (Stremio pre počítač,
-  Android a Android TV, alebo Nuvio). Pri takom streame je upozornenie „⚠️ Vo webovom prehrávači sa neprehrá – len v aplikácii“.
+- Úložisko musí byť dosiahnuteľné **zo zariadenia, kde beží aplikácia Nokturno**. Tá v ňom hľadá súbory a od verzie 9.6.1
+  ich odovzdáva aj prehrávaču, prehrávač potrebuje dosiahnuť len na aplikáciu. Keď je aplikácia doma, stačí adresa z domácej siete.
+- V Stremiu v prehliadači sa súbory `.mkv`, `.avi` a podobné neprehrajú, o prehraní rozhoduje formát súboru.
+  V aplikácii Stremio alebo Nuvio hrajú. Pozri [„⚠️ Vo webovom prehrávači sa neprehrá“](stremio-webovy-prehravac.md).
 
 ## Hlásenia
 | Kde | Hlásenie | Čo urobiť |

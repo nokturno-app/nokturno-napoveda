@@ -50,8 +50,8 @@ V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, n
 3. Dej **Ověřit účet**.
 4. Doplněk přidej znovu tlačítkem **Přidat do Stremia** a starý odinstaluj.
 
-Soubory z FastShare i Sdilej.cz se nepřehrají ve webovém Stremiu v prohlížeči, jen v aplikaci,
-viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md).
+Soubory z FastShare i Sdilej.cz od verze 9.6.1 přehrávači předává aplikace Nokturno, hrají tedy i ve Stremiu pro Android.
+Ve webovém přehrávači v prohlížeči záleží na formátu souboru, viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md).
 
 ## Hlášky
 | Hláška | Co udělat |

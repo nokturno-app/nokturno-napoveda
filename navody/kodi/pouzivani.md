@@ -40,6 +40,7 @@ Obě menu mají:
 - **Populární na TMDB**, **Nejlépe hodnocené** – s výběrem žánru.
 - **Nejsledovanější tento týden** – žebříček z anonymních statistik uživatelů Nokturna.
 - **Vlastní katalogy** – katalog si poskládáš sám podle žánrů, původního jazyka, let a řazení (oblíbenost, hodnocení, datum vydání). **Nový katalog** ho založí, místní nabídka ho upraví nebo smaže. Vlastní klíč TMDB není potřeba. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).
+- **Filmy ve vysoké kvalitě** (jen v menu Filmy, od verze 9.8.0) – seznam filmů, ke kterým je stream podle tvých parametrů (kvalita, kanály zvuku, jazyk zvuku, titulky). Plní se na pozadí. Podrobně v nápovědě: [Filmy ve vysoké kvalitě](../../cs/filmy-vysoka-kvalita.md).
 - **Náhodný film** / **Náhodný seriál** – vylosuje titul v žánru, který obvykle sleduješ, a rovnou otevře výběr streamu. Přednost mají tituly s tvým preferovaným jazykem; když takový nenajde, vylosuje jiný a napíše to u něj.
 
 U seriálu je v seznamu dílů značkou `»` označený první nezhlédnutý díl po posledním zhlédnutém.

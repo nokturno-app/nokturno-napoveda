@@ -6,32 +6,33 @@ products: [stremio]
 priority: 2
 templates:
   stremio: |
-    Stream s riadkom „⚠️ Vo webovom prehrávači sa neprehrá“ (vlastné úložisko, FastShare) prehrá len aplikácia Stremio alebo Nuvio.
-    Stremio v prehliadači (web.stremio.com) ho odmietne.
+    Od verzie 9.6.1 riadok „⚠️ Vo webovom prehrávači sa neprehrá“ pri streamoch nie je. Ak ho vidíš, máš staršiu aplikáciu Nokturno, aktualizuj ju.
+    Súbory z vlastného úložiska a FastShare teraz prehrávaču odovzdáva aplikácia Nokturno.
+    Stremio v prehliadači (web.stremio.com) neprehrá súbory .mkv, .avi a podobné, v aplikácii Stremio alebo Nuvio hrajú.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac
 ---
 
 # „⚠️ Vo webovom prehrávači sa neprehrá“
 
 ## Čo to znamená
-Streamy z **vlastného úložiska** a z **FastShare** potrebujú prihlásenie. Prehrávač si súbor sťahuje priamo
-zo zdroja a prihlasovacie údaje posiela sám. To vie **aplikácia** Stremio (Android, Windows, Mac, Linux)
-a **Nuvio**. Stremio v prehliadači to nevie a taký stream odmietne.
+Od verzie 9.6.1 tento riadok pri streamoch **nie je**. Súbory z **vlastného úložiska** a z **FastShare** (aj Sdilej.cz)
+teraz prehrávaču odovzdáva aplikácia Nokturno, prihlásenie do Stremia neodchádza.
 
-Doplnok nespozná, či pozeráš v prehliadači, preto má stream v popise riadok
-**„⚠️ Vo webovom prehrávači sa neprehrá – len v aplikácii“** (pri niektorých adresách doplnku po česky
-„⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“).
+Ak riadok pri streame stále vidíš, máš **staršiu aplikáciu** (do verzie 9.6.0). Aplikácia sa aktualizuje sama,
+alebo ju stiahni znova, pozri [Aplikácia Nokturno](stremio-aplikace.md).
+
+## Webový prehrávač a formát súboru
+Stremio v prehliadači (web.stremio.com) neprehrá súbory `.mkv`, `.avi`, `.ts`, `.m2ts`, `.wmv` a `.flv`
+(označí ich, že nie sú pre web). V aplikácii Stremio alebo Nuvio hrajú. O prehraní vo webovom prehrávači
+teda rozhoduje formát súboru, nie zdroj.
 
 ## Čo urobiť
 - Spusti stream v aplikácii Stremio alebo Nuvio.
 - V prehliadači vyber iný stream, napríklad z WebShare alebo HellSpy.
 
-## Webový prehrávač neprehrá ani niektoré iné súbory
-Súbory `.mkv`, `.avi` a podobné webový prehrávač často neprehrá ani z iných zdrojov. V aplikácii hrajú.
-
 ## Vlastné úložisko nehrá ani v aplikácii
-Úložisko musí byť dosiahnuteľné zo zariadenia, kde beží aplikácia Nokturno (tá v ňom hľadá súbory), **aj** zo zariadenia,
-kde prehrávaš. Keď je aplikácia aj prehrávač doma, stačí adresa z domácej siete (`192.168.…`).
+Úložisko musí byť dosiahnuteľné zo zariadenia, kde beží aplikácia Nokturno (tá v ňom hľadá súbory a odovzdáva ich prehrávaču).
+Prehrávač potrebuje dosiahnuť len na aplikáciu. Keď je aplikácia doma, stačí adresa z domácej siete (`192.168.…`).
 Pozri [Ako pripojiť vlastné úložisko](vlastni-uloziste.md).
 
 ---

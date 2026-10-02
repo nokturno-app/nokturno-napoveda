@@ -20,8 +20,8 @@ alebo inú VPN, pozri [Nokturno pre Stremio mimo domova – Tailscale a VPN](str
 Keď chceš doplnok na mobile alebo televízore bez VPN, spusti aplikáciu na vlastnom VPS s vlastnou doménou.
 Stremio aj Nuvio potom len zadajú adresu `https://<tvoja doména>/…`.
 
-Inštancia na VPS je **osobná**: je pre teba a tvoju domácnosť. Adresu doplnku ani doménu nikomu nedávaj
-a prevádzku pre cudzích ľudí nerob.
+Inštancia na VPS je v predvolenom stave **osobná**: je pre teba a tvoju domácnosť. Adresu doplnku ani doménu nikomu nedávaj
+a prevádzku pre cudzích ľudí nerob. Výnimku tvorí sekcia „Nastavenie pre kamarátov“ nižšie, ktorú zapneš len vedome.
 
 Postup počíta s tým, že vieš pracovať v príkazovom riadku Linuxu cez SSH.
 
@@ -38,8 +38,8 @@ poskytovateľov, ceny sú orientačné, over ich na webe poskytovateľa. S niký
 | WEDOS (VPS ON), Forpsi | podľa konfigurácie | české, s administráciou a podporou v češtine |
 
 ### Stačí najlacnejší VPS?
-Áno, s veľkou rezervou. Dáta filmu cez VPS netečú, prehrávač si súbor sťahuje priamo zo zdroja. Server len hľadá
-a vracia zoznam streamov. Z merania: aplikácia si berie zhruba 250 MB RAM a na jednom jadre zvládla aj tisíce hľadaní
+Áno, s veľkou rezervou. Dáta filmu cez VPS pri väčšine zdrojov netečú, prehrávač si súbor sťahuje priamo zo zdroja. Server hľadá
+a vracia zoznam streamov. Súbory z vlastného úložiska a FastShare však tečú cez VPS, počítaj preto s jeho prenosom dát. Z merania: aplikácia si berie zhruba 250 MB RAM a na jednom jadre zvládla aj tisíce hľadaní
 denne pri zhruba 5 % vyťažení procesora. Pre teba a tvoju domácnosť je to viac než dosť.
 
 Obmedzenie je inde než vo výkone: všetko hľadanie ide z jednej IP adresy VPS a zdroje môžu IP, z ktorej prichádza
@@ -175,11 +175,12 @@ Keď má poskytovateľ VPS vlastný firewall v administrácii, povoľ v ňom tie
 
 ## Pridanie do Stremia a Nuvia
 1. Otvor `https://nokturno.tvoja-domena.sk/configure`.
-2. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
-3. **Pridať do Stremia** alebo **Pridať do Nuvia**. Adresa doplnku začína `https://nokturno.tvoja-domena.sk/c/…`.
+2. Založ profil s názvom, pozri [Nastavenie a pridanie do Stremia](stremio-instalace.md).
+3. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
+4. **Pridať do Stremia** alebo **Pridať do Nuvia**. Adresa doplnku začína `https://nokturno.tvoja-domena.sk/c/p…`.
    Na televízore sa doplnok objaví sám, keď ho pridáš na telefóne alebo počítači pod rovnakým účtom Stremio.
 
-Vlastné úložisko doma musí byť dosiahnuteľné z VPS aj zo zariadenia, kde prehrávaš, teda cez verejnú adresu
+Vlastné úložisko doma musí byť dosiahnuteľné z VPS (prehrávač ide cez VPS), teda cez verejnú adresu
 alebo VPN. Adresa v domácej sieti (`192.168.…`) z VPS nefunguje.
 
 ## Aktualizácie a logy
@@ -189,9 +190,25 @@ alebo VPN. Adresa v domácej sieti (`192.168.…`) z VPS nefunguje.
 - Výpis aplikácie: `journalctl -u nokturno -f`, výpis Caddy: `journalctl -u caddy -f`.
 - Systém VPS aktualizuj ako obvykle (`sudo apt update && sudo apt upgrade`).
 
+## Nastavenie pre kamarátov
+Od verzie 9.7.0 sa na inštancii s verejnou adresou dá sprístupniť stránka nastavení aj z internetu. Kamarát si potom
+na `https://<tvoja doména>/configure` založí **vlastný profil so svojimi účtami** a doplnok pridá do svojho Stremia.
+Vidí aj výber profilov (otvoriť, premenovať, zmazať). Povoľovanie zariadení a aktualizácie zostávajú len z domácej siete.
+
+Zapneš to voľbou `"sdilena": true` v `nokturno.json` (vedľa `"port"`, `"stats"` a ďalších; `/opt/nokturno/data`
+pri inštalácii skriptom, `/var/lib/nokturno` pri ručnej inštalácii). Potom aplikáciu reštartuj:
+`sudo systemctl restart nokturno`. Predvolená hodnota je `false`.
+
+Skôr ako to zapneš, počítaj s týmto:
+- **Bez prihlásenia.** Kto pozná doménu, vidí **všetky profily** a môže ich otvoriť, premenovať alebo zmazať.
+  Dávaj ju len ľuďom, ktorým veríš.
+- **Jedna IP.** Všetko hľadanie ide z IP tvojho VPS, zdroje môžu IP s množstvom dotazov obmedziť.
+- **Prenos dát.** Súbory z vlastného úložiska a FastShare tečú cez VPS.
+
 ## Bezpečnosť a súkromie
-- **Adresa doplnku obsahuje tvoje nastavenia a účty.** Nie je zašifrovaná, len zakódovaná. Nikomu ju neposielaj.
-- **Inštancia je len pre teba.** Neprevádzkuj ju ako verejnú službu pre cudzích ľudí. Kto pozná adresu tvojej domény,
+- **Adresa doplnku neobsahuje heslá ani nastavenia**, len náhodný kľúč profilu (`/c/p<kľúč>/manifest.json`).
+  Kto adresu má a dostane sa k aplikácii, aj tak používa tvoje účty, preto ju ďalej nikomu neposielaj.
+- **Inštancia je v predvolenom stave len pre teba.** Neprevádzkuj ju ako verejnú službu pre cudzích ľudí (výnimka pozri vyššie). Kto pozná adresu tvojej domény,
   môže si vo formulári vyrobiť vlastný doplnok a hľadať cez tvoj server, preto doménu nikde nezverejňuj.
 - **Heslo na celú doménu** (basic auth v Caddy) nedávaj. Stremio ani Nuvio sme s doplnkom za heslom
   neoverovali a doplnok by pravdepodobne prestal fungovať.

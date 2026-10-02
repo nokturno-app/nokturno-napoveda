@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-02T09:56:58Z",
+  "generated": "2026-10-02T15:10:19Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -445,6 +445,26 @@
       "priority": 2
     },
     {
+      "id": "filmy-vysoka-kvalita",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Filmy ve vysoké kvalitě",
+      "text": "Ahoj, na to je v Nokturnu pro Kodi položka Filmy ve vysoké kvalitě (od verze 9.8.0).\n1. V menu Filmy otevři Filmy ve vysoké kvalitě.\n2. Dej Nastavit a vyber minimální kvalitu, kanály zvuku, jazyk zvuku a titulky.\n3. Seznam se plní na pozadí, první naplnění trvá hodiny. Spustit dávku nyní to urychlí.\n4. Když tam film chybí, zkus u parametrů Libovolné.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/filmy-vysoka-kvalita\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/filmy-vysoka-kvalita",
+      "when": {},
+      "priority": 2
+    },
+    {
+      "id": "filmy-vysoka-kvalita",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Filmy vo vysokej kvalite",
+      "text": "Ahoj, na toto je v Nokturne pre Kodi položka Filmy vo vysokej kvalite (od verzie 9.8.0).\n1. V menu Filmy otvor Filmy vo vysokej kvalite.\n2. Daj Nastaviť a vyber minimálnu kvalitu, kanály zvuku, jazyk zvuku a titulky.\n3. Zoznam sa plní na pozadí, prvé naplnenie trvá hodiny. Spustiť dávku teraz to urýchli.\n4. Ak tam film chýba, skús pri parametroch Ľubovoľné.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/filmy-vysoka-kvalita\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/filmy-vysoka-kvalita",
+      "when": {},
+      "priority": 2
+    },
+    {
       "id": "hlidane",
       "lang": "cs",
       "product": "kodi",
@@ -759,7 +779,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "„⚠️ Ve webovém přehrávači se nepřehraje“",
-      "text": "Stream s řádkem „⚠️ Ve webovém přehrávači se nepřehraje“ (vlastní úložiště, FastShare) přehraje jen aplikace Stremio nebo Nuvio.\nStremio v prohlížeči (web.stremio.com) ho odmítne.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-webovy-prehravac",
+      "text": "Od verze 9.6.1 řádek „⚠️ Ve webovém přehrávači se nepřehraje“ u streamů není. Když ho vidíš, máš starší aplikaci Nokturno, aktualizuj ji.\nSoubory z vlastního úložiště a FastShare teď přehrávači předává aplikace Nokturno.\nStremio v prohlížeči (web.stremio.com) nepřehraje soubory .mkv, .avi a podobné, v aplikaci Stremio nebo Nuvio hrají.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-webovy-prehravac",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-webovy-prehravac",
       "when": {},
       "priority": 2
@@ -769,7 +789,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "„⚠️ Vo webovom prehrávači sa neprehrá“",
-      "text": "Stream s riadkom „⚠️ Vo webovom prehrávači sa neprehrá“ (vlastné úložisko, FastShare) prehrá len aplikácia Stremio alebo Nuvio.\nStremio v prehliadači (web.stremio.com) ho odmietne.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac",
+      "text": "Od verzie 9.6.1 riadok „⚠️ Vo webovom prehrávači sa neprehrá“ pri streamoch nie je. Ak ho vidíš, máš staršiu aplikáciu Nokturno, aktualizuj ju.\nSúbory z vlastného úložiska a FastShare teraz prehrávaču odovzdáva aplikácia Nokturno.\nStremio v prehliadači (web.stremio.com) neprehrá súbory .mkv, .avi a podobné, v aplikácii Stremio alebo Nuvio hrajú.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-webovy-prehravac",
       "when": {},
       "priority": 2

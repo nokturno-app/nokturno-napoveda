@@ -20,8 +20,8 @@ nebo jinou VPN, viz [Nokturno pro Stremio mimo domov – Tailscale a VPN](stremi
 Když chceš doplněk na mobilu nebo televizi bez VPN, pusť aplikaci na vlastním VPS s vlastní doménou.
 Stremio i Nuvio pak jen zadají adresu `https://<tvoje doména>/…`.
 
-Instance na VPS je **osobní**: je pro tebe a tvou domácnost. Adresu doplňku ani doménu nikomu nedávej
-a provoz pro cizí lidi nedělej.
+Instance na VPS je ve výchozím stavu **osobní**: je pro tebe a tvou domácnost. Adresu doplňku ani doménu nikomu nedávej
+a provoz pro cizí lidi nedělej. Výjimku tvoří sekce „Nastavení pro kamarády“ níž, kterou zapneš jen vědomě.
 
 Postup počítá s tím, že umíš pracovat v příkazové řádce Linuxu přes SSH.
 
@@ -38,8 +38,8 @@ poskytovatelů, ceny jsou orientační, ověř je na webu poskytovatele. S žád
 | WEDOS (VPS ON), Forpsi | podle konfigurace | české, s administrací a podporou v češtině |
 
 ### Stačí nejlevnější VPS?
-Ano, s velkou rezervou. Data filmu přes VPS neteče, přehrávač si soubor stahuje přímo ze zdroje. Server jen hledá
-a vrací seznam streamů. Z měření: aplikace si bere zhruba 250 MB RAM a na jednom jádře zvládla i tisíce hledání
+Ano, s velkou rezervou. Data filmu přes VPS u většiny zdrojů neteče, přehrávač si soubor stahuje přímo ze zdroje. Server hledá
+a vrací seznam streamů. Soubory z vlastního úložiště a FastShare ale tečou přes VPS, počítej proto s jeho přenosem dat. Z měření: aplikace si bere zhruba 250 MB RAM a na jednom jádře zvládla i tisíce hledání
 denně při zhruba 5 % vytížení procesoru. Pro tebe a tvou domácnost je to víc než dost.
 
 Omezení je jinde než ve výkonu: všechno hledání jde z jedné IP adresy VPS a zdroje můžou IP, ze které přichází
@@ -175,11 +175,12 @@ Když má poskytovatel VPS vlastní firewall v administraci, povol v něm taky p
 
 ## Přidání do Stremia a Nuvia
 1. Otevři `https://nokturno.tvoje-domena.cz/configure`.
-2. Vyplň [vlastní úložiště](vlastni-uloziste.md) a případně účty zdrojů, u každého dej **Ověřit**.
-3. **Přidat do Stremia** nebo **Přidat do Nuvia**. Adresa doplňku začíná `https://nokturno.tvoje-domena.cz/c/…`.
+2. Založ profil s názvem, viz [Nastavení a přidání do Stremia](stremio-instalace.md).
+3. Vyplň [vlastní úložiště](vlastni-uloziste.md) a případně účty zdrojů, u každého dej **Ověřit**.
+4. **Přidat do Stremia** nebo **Přidat do Nuvia**. Adresa doplňku začíná `https://nokturno.tvoje-domena.cz/c/p…`.
    Na televizi se doplněk objeví sám, když ho přidáš na telefonu nebo počítači pod stejným účtem Stremio.
 
-Vlastní úložiště doma musí být dosažitelné z VPS i ze zařízení, kde přehráváš, tedy přes veřejnou adresu
+Vlastní úložiště doma musí být dosažitelné z VPS (přehrávač jde přes VPS), tedy přes veřejnou adresu
 nebo VPN. Adresa v domácí síti (`192.168.…`) z VPS nefunguje.
 
 ## Aktualizace a logy
@@ -189,9 +190,25 @@ nebo VPN. Adresa v domácí síti (`192.168.…`) z VPS nefunguje.
 - Výpis aplikace: `journalctl -u nokturno -f`, výpis Caddy: `journalctl -u caddy -f`.
 - Systém VPS aktualizuj jako obvykle (`sudo apt update && sudo apt upgrade`).
 
+## Nastavení pro kamarády
+Od verze 9.7.0 jde na instanci s veřejnou adresou zpřístupnit stránku nastavení i z internetu. Kamarád si pak
+na `https://<tvoje doména>/configure` založí **vlastní profil se svými účty** a doplněk přidá do svého Stremia.
+Vidí i výběr profilů (otevřít, přejmenovat, smazat). Povolování zařízení a aktualizace zůstávají jen z domácí sítě.
+
+Zapneš to volbou `"sdilena": true` v `nokturno.json` (vedle `"port"`, `"stats"` a dalších; `/opt/nokturno/data`
+při instalaci skriptem, `/var/lib/nokturno` při ruční instalaci). Pak aplikaci restartuj:
+`sudo systemctl restart nokturno`. Výchozí hodnota je `false`.
+
+Než to zapneš, počítej s tímhle:
+- **Bez přihlášení.** Kdo zná doménu, vidí **všechny profily** a může je otevřít, přejmenovat nebo smazat.
+  Dávej ji jen lidem, kterým věříš.
+- **Jedna IP.** Všechno hledání jde z IP tvého VPS, zdroje mohou IP s mnoha dotazy omezit.
+- **Přenos dat.** Soubory z vlastního úložiště a FastShare tečou přes VPS.
+
 ## Bezpečnost a soukromí
-- **Adresa doplňku obsahuje tvoje nastavení a účty.** Není zašifrovaná, jen zakódovaná. Nikomu ji neposílej.
-- **Instance je jen pro tebe.** Neprovozuj ji jako veřejnou službu pro cizí lidi. Kdo zná adresu tvé domény,
+- **Adresa doplňku neobsahuje hesla ani nastavení**, jen náhodný klíč profilu (`/c/p<klíč>/manifest.json`).
+  Kdo adresu má a dostane se k aplikaci, přesto používá tvoje účty, proto ji dál nikomu neposílej.
+- **Instance je ve výchozím stavu jen pro tebe.** Neprovozuj ji jako veřejnou službu pro cizí lidi (výjimka viz výš). Kdo zná adresu tvé domény,
   může si ve formuláři vyrobit vlastní doplněk a hledat přes tvůj server, proto doménu nikde nezveřejňuj.
 - **Heslo na celou doménu** (basic auth v Caddy) nedávej. Stremio ani Nuvio jsme s doplňkem za heslem
   neověřovali a doplněk by nejspíš přestal fungovat.
