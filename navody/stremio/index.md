@@ -17,7 +17,7 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
 - **Vlastní úložiště** – až tři WebDAV složky s vlastními soubory, mezi streamy jako první. Viz [Zdroje a nastavení](zdroje-a-nastaveni.md#vlastni-uloziste).
 - **Volitelně i další zdroje.** K titulu, který si otevřeš, Nokturno dohledá soubory i u zdrojů, které si zapneš.
   Názvy, plakáty a popisy má Stremio samo; Nokturno volitelně přidá vlastní [katalogy](zdroje-a-nastaveni.md#katalogy).
-- **Každý má vlastní nastavení.** Účty jsou zakódované v adrese doplňku, kterou ti vyrobí formulář nastavení v aplikaci.
+- **Každý má vlastní nastavení.** Od verze 9.6.0 je uložené v aplikaci jako pojmenovaný profil a adresa doplňku nese jen jeho klíč. Změny platí bez nového přidání doplňku, viz [Jak přidat Nokturno do Stremia nebo Nuvia](../../cs/stremio-instalace.md).
   Adresu proto nikomu neposílej.
 - **Bere se jen to, co k titulu patří.** Soubory se filtrují podle názvu, roku a dílu; podobné, ale jiné filmy
   (pokračování, stejnojmenné tituly) se vynechají.

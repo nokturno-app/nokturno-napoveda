@@ -50,7 +50,8 @@ kde Stremio spúšťaš.
 4. Otvor nastavenie: na televízore priamo v aplikácii Nokturno (bez prehliadača sa formulár otvorí v nej), alebo
    pohodlnejšie z telefónu v rovnakej sieti na `http://<IP adresa televízora>:7140/configure`. IP adresu ukazuje
    hlavná obrazovka aplikácie.
-5. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
+5. Založ profil (napíš jeho názov a daj **Založiť nový profil**), potom vyplň [vlastné úložisko](vlastni-uloziste.md)
+   a prípadne účty zdrojov a daj **✓ Overiť všetky účty**. Postup je v článku [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 6. **Pridať do Stremia** alebo **Pridať do Nuvia**. Na tom istom televízore to ide rovno z formulára v aplikácii,
    na ostatných zariadeniach v sieti z formulára otvoreného cez IP adresu.
 
@@ -89,7 +90,7 @@ amd64 a aarch64; Raspberry Pi s 32bit systémom nie). Beží potom doma stále, 
    Úložiská** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
 2. Nainštaluj **Nokturno pro Stremio** a daj **Spustiť**.
 3. **Otvoriť webové rozhranie**, alebo z telefónu či počítača v rovnakej sieti `http://<IP Home Assistantu>:7140/configure`.
-4. Vyplň úložisko alebo účty, pri každom daj **Overiť**, a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
+4. Založ profil s názvom, vyplň úložisko alebo účty, daj **✓ Overiť všetky účty** a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
 
 Doplnok používa sieť hostiteľa: port **7140** (nastavenie a doplnok pre Nuvio) a **7141** (HTTPS cez local-ip.co
 pre Stremio). V záložke **Konfigurácia** sa dajú vypnúť štatistiky (`stats`), hlásenia o pádoch (`crash_reports`)
@@ -165,7 +166,7 @@ cez Tailscale alebo inú VPN. Postup krok za krokom je v článku
 Adresa cez local-ip.co funguje len v domácej sieti. Kto chce doplnok aj na mobile mimo domova alebo na televízore
 u rodičov, spustí aplikáciu na VPS s vlastnou doménou: [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md).
 
-Adresa doplnku obsahuje tvoje účty. Nikomu ju neposielaj. Podrobnosti o pridaní v článku
+Adresu doplnku nikomu neposielaj: heslá v nej od verzie 9.6.0 nie sú, ale kto ju má a dostane sa k aplikácii, používa tvoje účty. Podrobnosti o pridaní v článku
 [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 
 ## Aktualizácie

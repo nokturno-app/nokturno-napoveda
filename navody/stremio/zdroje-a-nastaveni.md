@@ -29,7 +29,7 @@ Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními
 
 Vyplň uživatelské jméno (nebo e-mail) a heslo z webshare.cz. Bez **VIP** WebShare stahování zpomalí natolik, že se film nedá plynule přehrávat. **Ověřit účet** ukáže, jestli přihlášení prošlo a kolik dní VIP zbývá.
 
-Nechceš mít heslo v adrese čitelné? Místo hesla jde vložit 40znakový „salted hash“, který používají i jiné doplňky WebShare.
+Nechceš mít heslo v nastavení čitelné? Místo hesla jde vložit 40znakový „salted hash“, který používají i jiné doplňky WebShare.
 
 ### Sosáč (přes Streamuj.tv)
 
@@ -101,7 +101,7 @@ V kroku **Předvolby** je karta **Katalogy** – seznamy filmů a seriálů na d
 
 Detail titulu a díly seriálů dodá Stremio samo, streamy k nim Nokturno jako u každého jiného titulu. Seznamy se obnovují jednou za 6 hodin – nový film se tedy může objevit s pár hodinovým zpožděním.
 
-Po zapnutí nebo vypnutí katalogu vznikne nová adresa doplňku – ve Stremiu je potřeba doplněk přidat znovu.
+Stremio si seznam katalogů pamatuje – po zapnutí nebo vypnutí katalogu proto dej **Uložit změny** a doplněk ve Stremiu odinstaluj a přidej znovu. Účty a předvolby platí hned i bez toho.
 
 **Sezónní a tematické katalogy** (třeba vánoční filmy nebo Film pro dnešní den) přidáváme sami. Nezapínají se ve formuláři – jsou v doplňku vždy, na začátku seznamu katalogů, a sezónní po sezóně zase zmizí. Stremio si seznam katalogů pamatuje, nový katalog proto někdy uvidíš až po obnovení doplňku.
 

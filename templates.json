@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-09-30T19:39:08Z",
+  "generated": "2026-10-02T09:56:58Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -309,7 +309,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Jak přidat Nokturno do Stremia nebo Nuvia",
-      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases\nPak otevři http://<IP zařízení s aplikací>:7140/configure, vyplň úložiště nebo účty, dej Ověřit a Přidat do Stremia.\nNa TV se doplněk objeví sám, když ho přidáš na telefonu pod stejným účtem Stremio.",
+      "text": "Nokturno pro Stremio je aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases\nPak otevři http://<IP zařízení s aplikací>:7140/configure, založ profil s názvem, vyplň úložiště nebo účty a dej Přidat do Stremia.\nOd verze 9.6.0 se nastavení ukládá v aplikaci, změny pak stačí uložit tlačítkem Uložit změny, doplněk se znovu nepřidává.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-instalace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-instalace",
       "when": {},
       "priority": 1
@@ -319,7 +319,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Ako pridať Nokturno do Stremia alebo Nuvia",
-      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nPotom otvor http://<IP zariadenia s aplikáciou>:7140/configure, vyplň úložisko alebo účty, daj Overiť a Pridať do Stremia.\nNa TV sa doplnok objaví sám, keď ho pridáš na telefóne pod rovnakým účtom Stremio.",
+      "text": "Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases\nPotom otvor http://<IP zariadenia s aplikáciou>:7140/configure, založ profil s názvom, vyplň úložisko alebo účty a daj Pridať do Stremia.\nOd verzie 9.6.0 sa nastavenie ukladá v aplikácii, zmeny potom stačí uložiť tlačidlom Uložiť zmeny, doplnok sa znova nepridáva.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace",
       "when": {},
       "priority": 1
