@@ -20,7 +20,8 @@ templates:
 Trakt.tv vedie prehľad pozretých filmov a seriálov a zoznam titulov na pozretie. Nokturno s ním vie:
 - počas prehrávania dať Traktu vedieť, čo sleduješ; dopozeraný titul sa na Trakte označí ako pozretý,
 - v Kodi prepísať na Trakt aj ručné označenie pozreté a nepozreté,
-- tituly zo zoznamu na pozretie na Trakte zaradiť medzi [Sledované](hlidane.md) a ohlásiť, keď sa budú dať pustiť.
+- tituly zo zoznamu na pozretie na Trakte zaradiť medzi [Sledované](hlidane.md) a ohlásiť, keď sa budú dať pustiť,
+- stiahnuť z Traktu pozreté a rozpozerané tituly z iných aplikácií (Stremio, Nuvio).
 
 Vlastnú aplikáciu na Trakte zakladať nemusíš, Nokturno má svoju. Prihlásiš sa kódom, heslo k Traktu sa do Nokturna
 nezadáva. Ide to aj s bezplatným účtom.
@@ -55,9 +56,14 @@ a na Trakte budeš mať jednu spoločnú históriu zo všetkých zariadení.
 - **Stremio:** Nastavenia → **Trakt Scrobbling** → **Authenticate**.
 - **Nuvio:** Nastavenia → **Trakt**.
 
-Kodi a Home Assistant históriu na Trakt len posielajú. Späť si z Traktu berú len zoznam na pozretie
-(do Sledovaných), nie pozreté a rozpozerané tituly. Čo dopozeráš v Stremiu, sa v Kodi ako pozreté neoznačí.
-Medzi Kodi a Home Assistantom drží pozreté a rozpozerané [synchronizácia](synchronizace.md).
+Od verzie 9.11 si Kodi aj Home Assistant z Traktu sťahujú pozreté a rozpozerané tituly. Čo dopozeráš alebo
+rozpozeráš v Stremiu či Nuviu, sa do 15 minút objaví v **Naposledy pozreté** a v **Pokračovať v sledovaní**.
+- Kodi: voľba **Sťahovať pozreté a rozpozerané z Traktu** v skupine **Trakt.tv** (predvolene zapnutá).
+- Home Assistant sťahuje sám, hneď ako je prepojený s Traktom. [Synchronizáciou](synchronizace.md) to potom dostanú
+  aj Kodi v skupine, ktoré k Traktu prihlásené nie sú.
+
+Prvýkrát sa berú pozretia za posledných 90 dní. Keď na Trakte pozretie zmažeš, v Nokturne zostane.
+Rozpozeraný titul bez známej stopáže (pri niektorých dieloch ju Trakt nevedie) sa neprenesie.
 
 Každá pripojená aplikácia sa počíta do limitu bezplatného účtu (pozri nižšie).
 

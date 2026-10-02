@@ -20,7 +20,8 @@ templates:
 Trakt.tv vede přehled zhlédnutých filmů a seriálů a seznam titulů ke zhlédnutí. Nokturno s ním umí:
 - během přehrávání dát Traktu vědět, co sleduješ; dokoukaný titul se na Traktu označí jako zhlédnutý,
 - v Kodi propsat na Trakt i ruční označení zhlédnuto a nezhlédnuto,
-- tituly ze seznamu ke zhlédnutí na Traktu zařadit do [Hlídaných](hlidane.md) a ohlásit, až půjdou pustit.
+- tituly ze seznamu ke zhlédnutí na Traktu zařadit do [Hlídaných](hlidane.md) a ohlásit, až půjdou pustit,
+- stáhnout z Traktu zhlédnuté a rozkoukané tituly z jiných aplikací (Stremio, Nuvio).
 
 Vlastní aplikaci na Traktu zakládat nemusíš, Nokturno má svou. Přihlásíš se kódem, heslo k Traktu se do Nokturna
 nezadává. Jde to i s bezplatným účtem.
@@ -55,9 +56,14 @@ a na Traktu budeš mít jednu společnou historii ze všech zařízení.
 - **Stremio:** Nastavení → **Trakt Scrobbling** → **Authenticate**.
 - **Nuvio:** Nastavení → **Trakt**.
 
-Kodi a Home Assistant historii na Trakt jen posílají. Zpátky si z Traktu berou jen seznam ke zhlédnutí
-(do Hlídaných), ne zhlédnuté a rozkoukané tituly. Co dokoukáš ve Stremiu, se v Kodi jako zhlédnuté neoznačí.
-Mezi Kodi a Home Assistantem drží zhlédnuté a rozkoukané [synchronizace](synchronizace.md).
+Od verze 9.11 si Kodi i Home Assistant z Traktu stahují zhlédnuté a rozkoukané tituly. Co dokoukáš nebo
+rozkoukáš ve Stremiu či Nuviu, se do 15 minut objeví v **Naposledy zhlédnuté** a v **Pokračovat ve sledování**.
+- Kodi: volba **Stahovat zhlédnuté a rozkoukané z Traktu** ve skupině **Trakt.tv** (výchozí zapnutá).
+- Home Assistant stahuje sám, jakmile je propojený s Traktem. [Synchronizací](synchronizace.md) to pak dostanou
+  i Kodi ve skupině, která k Traktu přihlášená nejsou.
+
+Napoprvé se berou zhlédnutí za posledních 90 dní. Když na Traktu zhlédnutí smažeš, v Nokturnu zůstane.
+Rozkoukaný titul bez známé stopáže (u některých dílů ji Trakt nevede) se nepřenese.
 
 Každá připojená aplikace se počítá do limitu bezplatného účtu (viz níž).
 
