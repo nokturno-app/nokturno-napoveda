@@ -2,7 +2,7 @@
 slug: trakt
 lang: sk
 title: "Trakt.tv: prihlásenie kódom"
-products: [kodi, ha]
+products: [kodi, ha, stremio]
 priority: 2
 templates:
   kodi: |
@@ -48,6 +48,18 @@ Prihlásenie do Traktu sa nesynchronizuje a neprenáša ho ani prenos nastavení
 3. Na `trakt.tv/activate` kód zadaj a pripojenie potvrď. Príde upozornenie „Účet je propojený.“ (po česky).
 
 Polia **Trakt.tv – vlastné Client ID** a Client Secret v sekcii **Ostatné** nechaj prázdne.
+
+## Stremio a Nuvio
+Stremio aj Nuvio vedia Trakt samy, bez Nokturna. Pripoj ich k rovnakému účtu na Trakte ako Kodi a Home Assistant
+a na Trakte budeš mať jednu spoločnú históriu zo všetkých zariadení.
+- **Stremio:** Nastavenia → **Trakt Scrobbling** → **Authenticate**.
+- **Nuvio:** Nastavenia → **Trakt**.
+
+Kodi a Home Assistant históriu na Trakt len posielajú. Späť si z Traktu berú len zoznam na pozretie
+(do Sledovaných), nie pozreté a rozpozerané tituly. Čo dopozeráš v Stremiu, sa v Kodi ako pozreté neoznačí.
+Medzi Kodi a Home Assistantom drží pozreté a rozpozerané [synchronizácia](synchronizace.md).
+
+Každá pripojená aplikácia sa počíta do limitu bezplatného účtu (pozri nižšie).
 
 ## Bezplatný účet: najviac dve aplikácie
 Bezplatný účet na Trakte môže mať pripojené len **dve aplikácie tretích strán naraz**. Keď už dve iné máš,
