@@ -25,7 +25,8 @@ Doplněk pro Stremio běží v aplikaci **Nokturno pro Stremio** u tebe doma. Ja
 
 ## 1. Založ profil
 Otevři v prohlížeči `http://<IP adresa zařízení s aplikací>:7140/configure` (na tomtéž zařízení
-`http://127.0.0.1:7140/configure`). Stránka ukáže kartu **Profily**:
+`http://127.0.0.1:7140/configure`). Při úplně prvním otevření stránka chce nejdřív
+[heslo správce](stremio-aplikace.md#heslo-spravce-a-profily-kamaradu) (od verze 9.12.0). Pak ukáže kartu **Profily**:
 - **Uložené profily** – seznam profilů, které už máš. Klik na název otevře jeho nastavení, **Smazat** ho odstraní.
 - **Název nového profilu** a **Založit nový profil** – napiš název (třeba *Obývák* nebo *Mobil*) a založ profil.
   Bez názvu profil nevznikne.

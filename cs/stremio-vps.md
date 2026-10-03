@@ -174,7 +174,8 @@ sudo ufw enable
 Když má poskytovatel VPS vlastní firewall v administraci, povol v něm taky porty 80 a 443.
 
 ## Přidání do Stremia a Nuvia
-1. Otevři `https://nokturno.tvoje-domena.cz/configure`.
+1. Otevři `https://nokturno.tvoje-domena.cz/configure` hned po instalaci a nastav
+   [heslo správce](stremio-aplikace.md#heslo-spravce-a-profily-kamaradu). Kdo stránku otevře první, stane se správcem.
 2. Založ profil s názvem, viz [Nastavení a přidání do Stremia](stremio-instalace.md).
 3. Vyplň [vlastní úložiště](vlastni-uloziste.md) a případně účty zdrojů, u každého dej **Ověřit**.
 4. **Přidat do Stremia** nebo **Přidat do Nuvia**. Adresa doplňku začíná `https://nokturno.tvoje-domena.cz/c/p…`.
@@ -193,15 +194,16 @@ nebo VPN. Adresa v domácí síti (`192.168.…`) z VPS nefunguje.
 ## Nastavení pro kamarády
 Od verze 9.7.0 jde na instanci s veřejnou adresou zpřístupnit stránku nastavení i z internetu. Kamarád si pak
 na `https://<tvoje doména>/configure` založí **vlastní profil se svými účty** a doplněk přidá do svého Stremia.
-Vidí i výběr profilů (otevřít, přejmenovat, smazat). Povolování zařízení a aktualizace zůstávají jen z domácí sítě.
+Od verze 9.12.0 vidí jen profily, které si uložil ve svém prohlížeči. Všechny profily, povolování zařízení
+a aktualizace vidí jen [správce](stremio-aplikace.md#heslo-spravce-a-profily-kamaradu) přihlášený heslem.
 
 Zapneš to volbou `"sdilena": true` v `nokturno.json` (vedle `"port"`, `"stats"` a dalších; `/opt/nokturno/data`
 při instalaci skriptem, `/var/lib/nokturno` při ruční instalaci). Pak aplikaci restartuj:
 `sudo systemctl restart nokturno`. Výchozí hodnota je `false`.
 
 Než to zapneš, počítej s tímhle:
-- **Bez přihlášení.** Kdo zná doménu, vidí **všechny profily** a může je otevřít, přejmenovat nebo smazat.
-  Dávej ji jen lidem, kterým věříš.
+- **Bez přihlášení kamarádů.** Kamarád heslo nepotřebuje. Kdo zná doménu, může si založit profil a hledat přes tvůj
+  server. Cizí profily od verze 9.12.0 neuvidí. Doménu dávej jen lidem, kterým věříš.
 - **Jedna IP.** Všechno hledání jde z IP tvého VPS, zdroje mohou IP s mnoha dotazy omezit.
 - **Přenos dat.** Soubory z vlastního úložiště a FastShare tečou přes VPS.
 

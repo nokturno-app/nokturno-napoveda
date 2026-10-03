@@ -169,13 +169,46 @@ u rodičov, spustí aplikáciu na VPS s vlastnou doménou: [Nokturno pre Stremio
 Adresu doplnku nikomu neposielaj: heslá v nej od verzie 9.6.0 nie sú, ale kto ju má a dostane sa k aplikácii, používa tvoje účty. Podrobnosti o pridaní v článku
 [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 
+## Heslo správcu a profily kamarátov
+Od verzie 9.12.0 aplikácia spozná svojho majiteľa podľa **hesla správcu**, nie podľa siete. Funguje tak rovnako
+doma, na VPS aj za vlastnou doménou.
+
+**Prvé spustenie.** Keď heslo ešte nie je nastavené, stránka nastavení (`/configure`) ukáže len kartu
+**Heslo správcu**. Zadaj heslo (aspoň 6 znakov) dvakrát a daj **Nastaviť heslo správcu**. Kto stránku otvorí
+prvý, stane sa správcom. Na verejnej adrese (VPS, vlastná doména) ju preto otvor hneď po inštalácii.
+
+**Čo vidí správca:**
+- všetky profily v aplikácii, aj tie, ktoré si založili kamaráti,
+- sekciu **⚙ Aplikácia**: prepínač profilov, zmena hesla správcu, odhlásenie a kontrola aktualizácií,
+- povoľovanie zariadení.
+
+**Čo vidia ostatní** (kamarát na zdieľanej inštancii, druhý člen domácnosti v inom prehliadači):
+- heslo nepotrebujú, profil si založia a doplnok pridajú ako predtým,
+- v zozname vidia len profily, ktoré si sami uložili v tomto prehliadači,
+- sekciu Aplikácia ani cudzie profily neuvidia.
+
+Doplnok v Stremiu ani v Nuviu heslo nechce, adresa doplnku sa nemení.
+
+**Prihlásenie v inom prehliadači.** Dole na stránke nastavení rozbaľ **Si správca aplikácie? Prihlás sa**
+a zadaj heslo. Prihlásenie vydrží rok.
+
+**Zmena hesla.** V sekcii **⚙ Aplikácia** vyplň **Nové heslo správcu** a daj **Uložiť voľby aplikácie**.
+Ostatné prihlásenia správcu tým skončia.
+
+**Zabudnuté heslo.** V dátovom priečinku aplikácie otvor súbor `aplikace.json`, zmaž z neho položku
+`spravce` a aplikáciu reštartuj. Potom ide heslo nastaviť znova. Dátový priečinok nájdeš v sekcii
+[Nastavenia aplikácie a štatistiky](#nastavenia-aplikacie-a-statistiky), pri aplikácii pre Android sa k súboru
+dostaneš len cez zmazanie dát aplikácie (zmiznú tým aj profily).
+
+Po 20 zlých heslách za 10 minút aplikácia ďalšie pokusy na chvíľu odmieta.
+
 ## Aktualizácie
 Aplikácia sa aktualizuje sama: pri štarte a potom každých 6 hodín. Novú verziu overí a keď nenabehne,
 vráti predchádzajúcu. Na Androide sa aktualizácia sťahuje pri spustení aplikácie alebo po zapnutí zariadenia.
 Nový inštalačný súbor sťahovať nemusíš.
 
-Nechceš čakať? Na stránke nastavení (`/configure`) je dole v sekcii *Aplikácia na tomto zariadení*
-tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
+Nechceš čakať? Na stránke nastavení (`/configure`) je dole v sekcii **⚙ Aplikácia** (od verzie 9.12.0 ju vidí len
+[správca](#heslo-spravcu-a-profily-kamaratov)) tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
 a novšiu hneď stiahne. Rovnako poslúži reštart aplikácie: na počítači ju zavri a spusť znova,
 na VPS `sudo systemctl restart nokturno`, v Home Assistante reštart doplnku, na Androide
 zatvorenie a nové spustenie aplikácie.

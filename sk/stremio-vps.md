@@ -174,7 +174,8 @@ sudo ufw enable
 Keď má poskytovateľ VPS vlastný firewall v administrácii, povoľ v ňom tiež porty 80 a 443.
 
 ## Pridanie do Stremia a Nuvia
-1. Otvor `https://nokturno.tvoja-domena.sk/configure`.
+1. Otvor `https://nokturno.tvoja-domena.sk/configure` hneď po inštalácii a nastav
+   [heslo správcu](stremio-aplikace.md#heslo-spravcu-a-profily-kamaratov). Kto stránku otvorí prvý, stane sa správcom.
 2. Založ profil s názvom, pozri [Nastavenie a pridanie do Stremia](stremio-instalace.md).
 3. Vyplň [vlastné úložisko](vlastni-uloziste.md) a prípadne účty zdrojov, pri každom daj **Overiť**.
 4. **Pridať do Stremia** alebo **Pridať do Nuvia**. Adresa doplnku začína `https://nokturno.tvoja-domena.sk/c/p…`.
@@ -193,15 +194,16 @@ alebo VPN. Adresa v domácej sieti (`192.168.…`) z VPS nefunguje.
 ## Nastavenie pre kamarátov
 Od verzie 9.7.0 sa na inštancii s verejnou adresou dá sprístupniť stránka nastavení aj z internetu. Kamarát si potom
 na `https://<tvoja doména>/configure` založí **vlastný profil so svojimi účtami** a doplnok pridá do svojho Stremia.
-Vidí aj výber profilov (otvoriť, premenovať, zmazať). Povoľovanie zariadení a aktualizácie zostávajú len z domácej siete.
+Od verzie 9.12.0 vidí len profily, ktoré si uložil vo svojom prehliadači. Všetky profily, povoľovanie zariadení
+a aktualizácie vidí len [správca](stremio-aplikace.md#heslo-spravcu-a-profily-kamaratov) prihlásený heslom.
 
 Zapneš to voľbou `"sdilena": true` v `nokturno.json` (vedľa `"port"`, `"stats"` a ďalších; `/opt/nokturno/data`
 pri inštalácii skriptom, `/var/lib/nokturno` pri ručnej inštalácii). Potom aplikáciu reštartuj:
 `sudo systemctl restart nokturno`. Predvolená hodnota je `false`.
 
 Skôr ako to zapneš, počítaj s týmto:
-- **Bez prihlásenia.** Kto pozná doménu, vidí **všetky profily** a môže ich otvoriť, premenovať alebo zmazať.
-  Dávaj ju len ľuďom, ktorým veríš.
+- **Bez prihlásenia kamarátov.** Kamarát heslo nepotrebuje. Kto pozná doménu, môže si založiť profil a hľadať cez tvoj
+  server. Cudzie profily od verzie 9.12.0 neuvidí. Doménu dávaj len ľuďom, ktorým veríš.
 - **Jedna IP.** Všetko hľadanie ide z IP tvojho VPS, zdroje môžu IP s množstvom dotazov obmedziť.
 - **Prenos dát.** Súbory z vlastného úložiska a FastShare tečú cez VPS.
 
