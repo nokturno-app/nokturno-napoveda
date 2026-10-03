@@ -24,7 +24,8 @@ templates:
 Vlastný katalóg je zoznam filmov alebo seriálov, ktorý si poskladáš sám: podľa žánrov, tém, krajiny pôvodu, rokov a radenia.
 Od verzie 10.0 vie katalóg navyše **overovať streamy** – ukáže len tituly, ku ktorým Nokturno našlo stream
 v požadovanej kvalite, s dabingom alebo titulkami a napríklad s 5.1. Tituly vyberá server Nokturna, vlastný kľúč TMDB
-na to nepotrebuješ.
+na to nepotrebuješ. Keď ho máš (od verzie 10.0.1), katalógy sa berú priamo z TMDB a server je len záloha:
+fungujú aj pri jeho výpadku a server nevidí tvoje filtre.
 
 Funguje v Kodi a v Stremiu. Home Assistant katalógy nezakladá, ale vie ich [overovať za ostatných](#home-assistant).
 

@@ -24,7 +24,8 @@ templates:
 Vlastní katalog je seznam filmů nebo seriálů, který si poskládáš sám: podle žánrů, témat, země původu, let a řazení.
 Od verze 10.0 umí katalog navíc **ověřovat streamy** – ukáže jen tituly, ke kterým Nokturno našlo stream
 v požadované kvalitě, s dabingem nebo titulky a třeba s 5.1. Tituly vybírá server Nokturna, vlastní klíč TMDB
-k tomu nepotřebuješ.
+k tomu nepotřebuješ. Když ho máš (od verze 10.0.1), katalogy se berou přímo z TMDB a server je jen záloha:
+fungují i při jeho výpadku a server nevidí tvoje filtry.
 
 Funguje v Kodi a ve Stremiu. Home Assistant katalogy nezakládá, ale umí je [ověřovat za ostatní](#home-assistant).
 
