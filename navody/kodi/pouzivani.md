@@ -16,6 +16,7 @@ Položky shora dolů. Některé se ukážou, jen když mají co nabídnout – n
 | **Hlídané** | když něco hlídáš | hlídané seriály a tituly, u nového dílu i jejich počet – viz [Hlídané](../../cs/hlidane.md) |
 | **Filmy**, **Seriály** | vždy | katalogy včetně vlastních, viz [Filmy a Seriály](#filmy-a-serialy) |
 | sezónní katalogy | jen v sezóně | občas přidáme katalog na určité období, třeba vánoční filmy |
+| **Koncerty** | vždy | záznamy koncertů interpretů z tvých hudebních žánrů, viz [Koncerty](../../cs/koncerty.md) |
 | **TV program** | vždy | česká a slovenská televize spárovaná s databází filmů |
 | **Můj seznam** | když v něm něco máš nebo už máš něco zhlédnuté | uložené tituly, **Naposledy zhlédnuté** a **Synchronizovat teď** |
 | **SyncWatch** | vždy | společné sledování, viz [SyncWatch](syncwatch.md) |
@@ -37,11 +38,11 @@ Občas vám pošleme krátkou zprávu (novinka, výpadek zdroje, odpověď na na
 Obě menu mají:
 
 - **Pro Tebe** – doporučení podle naposledy zhlédnutých titulů; u každého titulu je napsáno „Doporučeno podle: …“. Počítá se z historie ve tvém Kodi, nikam se neposílá. Ukáže se, až je z čeho doporučovat.
-- **Populární na TMDB**, **Nejlépe hodnocené** – s výběrem žánru.
 - **Nejsledovanější tento týden** – žebříček z anonymních statistik uživatelů Nokturna.
-- **Vlastní katalogy** – katalog si poskládáš sám podle žánrů, původního jazyka, let a řazení (oblíbenost, hodnocení, datum vydání). **Nový katalog** ho založí, místní nabídka ho upraví nebo smaže. Vlastní klíč TMDB není potřeba. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).
-- **Filmy ve vysoké kvalitě** (jen v menu Filmy, od verze 9.8.0) – seznam filmů, ke kterým je stream podle tvých parametrů (kvalita, kanály zvuku, jazyk zvuku, titulky). Plní se na pozadí. Podrobně v nápovědě: [Filmy ve vysoké kvalitě](../../cs/filmy-vysoka-kvalita.md).
+- **Vlastní katalogy** – katalogy, které si poskládáš sám: ze šablony (Populární, Nejlépe hodnocené, Nové s CZ dabingem, Filmy ve 4K s CZ dabingem, Pohádky s CZ dabingem…) nebo podle žánrů, témat, země původu, let a řazení. Režim **Jen tituly se streamem** na pozadí ověří, že titul jde přehrát v požadované kvalitě, jazyce zvuku a titulků. **Nový katalog** ho založí (nejlépe přes mobil), místní nabídka ho upraví nebo smaže. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).
 - **Náhodný film** / **Náhodný seriál** – vylosuje titul v žánru, který obvykle sleduješ, a rovnou otevře výběr streamu. Přednost mají tituly s tvým preferovaným jazykem; když takový nenajde, vylosuje jiný a napíše to u něj.
+
+Od verze 10.0 už v menu nejsou pevné položky Populární na TMDB, Nejlépe hodnocené a Filmy ve vysoké kvalitě. Stejné katalogy si založíš ze šablony ve Vlastních katalozích.
 
 U seriálu je v seznamu dílů značkou `»` označený první nezhlédnutý díl po posledním zhlédnutém.
 
@@ -80,6 +81,8 @@ Dole v dialogu jsou tyto položky:
 
 - **Zobrazit všechny streamy** – rozbalí sloučené kopie.
 - **Hledat volněji podle názvu souboru** (ve starších verzích Zkusit uvolněný fulltext) – hledání ve WebShare, HellSpy, Sledujteto a FastShare, které najde i soubory s neobvyklým názvem. Neověřené shody mají oranžovou značku **`?`** – jestli soubor opravdu patří k titulu, posuď podle názvu.
+
+Znovu puštěný stream si pamatuje zvukovou stopu a titulky z minulého sledování, viz [jazyk zvuku](../../cs/jazyk-zvuku.md#znovu-pusteny-stream-si-pamatuje-zvuk-a-titulky).
 
 ## Místní nabídka titulu
 

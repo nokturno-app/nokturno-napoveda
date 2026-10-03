@@ -52,7 +52,7 @@ Nový soubor se v úložišti objeví nejpozději do hodiny, viz [Jak připojit 
 Integrace hlídá na pozadí dvě věci a pošle oznámení, až se dá opravdu dívat:
 
 - **Hlídané seriály** – kontrola každých 6 hodin. Nový díl se ohlásí, až **má stream**, ne jen když byl odvysílaný. Díly bez data vydání se nehlídají (teprve se natáčejí). Když ve zdrojích chybí díly uprostřed série, kontrola zkusí i nejnovější sérii.
-- **Hlídané tituly** – vlastní seznam a propojený watchlist Trakt.tv. Kontrola jednou denně ohlásí **první nalezený stream** i to, že **přibyl další zdroj** (třeba lepší kvalita nebo další jazyk). Titul, který zatím nikde není, se hlídá, dokud se neobjeví.
+- **Hlídané tituly** – vlastní seznam (Watchlist z Trakt.tv je od 10.0 v Mém seznamu). Kontrola jednou denně ohlásí **první nalezený stream** i to, že **přibyl další zdroj** (třeba lepší kvalita nebo další jazyk). Titul, který zatím nikde není, se hlídá, dokud se neobjeví.
 
 **Kontrolovat dál (vlaječka)** – titul nebo díl má streamy, ale ne takové, jaké chceš (třeba bez českých titulků nebo bez 5.1). Vlaječkou ho označíš a kontrola se ozve, až streamů přibude. U hlídaného seriálu je vlaječka pro poslední dostupný díl přímo v Knihovně; díl se v kartě ukáže jako `Seriál · 2x02`.
 

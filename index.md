@@ -44,7 +44,8 @@ nehostuje a za to, co přehráváš, odpovídáš ty. Více v článku [Co je No
 - [Výběr streamu: filtry, 3D a poslední filtr](cs/vyber-streamu.md)
 - [Hlídané: nové díly a Kontrolovat dál](cs/hlidane.md)
 - [Vlastní katalogy](cs/vlastni-katalogy.md)
-- [Filmy ve vysoké kvalitě](cs/filmy-vysoka-kvalita.md)
+- [Koncerty](cs/koncerty.md)
+- [Kam zmizely Filmy ve vysoké kvalitě](cs/filmy-vysoka-kvalita.md)
 - [Vlastní seznam](cs/vlastni-seznam.md)
 - [Synchronizace mezi zařízeními nefunguje](cs/synchronizace.md)
 - [Stahování selhalo](cs/stahovani.md)
@@ -98,6 +99,8 @@ Nokturno pro Stremio si pustíš u sebe a jen pro sebe: [doma](cs/stremio-aplika
 
 ## Stremio › Nastavení
 - [Zdroje a nastavení](navody/stremio/zdroje-a-nastaveni.md)
+- [Vlastní katalogy](cs/vlastni-katalogy.md#stremio)
+- [Koncerty](cs/koncerty.md#stremio)
 
 ## Stremio › Když něco nejde
 - [U filmu nejsou streamy Nokturna](cs/stremio-zadne-streamy.md)

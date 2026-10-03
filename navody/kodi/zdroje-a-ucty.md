@@ -21,7 +21,8 @@ Pohodlnější než ovladač je [Nastavit z mobilu](nastaveni.md#nastavit-z-mobi
 | **Luna** | streamy s poznanou kvalitou a jazykem, katalogy, české popisy | běžící server Luna a účet **WebShare VIP** |
 | **OpenSubtitles** | české a slovenské titulky, když je zdroje nemají | nic (5 za den), s účtem 20 za den |
 | **TMDB API** | české popisy (i v katalozích ze Sosáče), herci a katalogy i bez Luny | vlastní klíč zdarma (nepovinné) |
-| **Trakt.tv** | zhlédnuté i na Traktu, hlídání titulů z watchlistu | účet Trakt.tv (stačí free) |
+| **Trakt.tv** | zhlédnuté a rozkoukané oběma směry, Watchlist = Můj seznam | účet Trakt.tv (stačí free) |
+| **Last.fm** | interpreti pro [Koncerty](../../cs/koncerty.md) | vlastní API klíč zdarma |
 
 Co zdroj zrovna dělá, ukazuje řádek nahoře v hlavním menu se jménem zdroje a problémem, třeba „Luna: server neodpovídá“ – objeví se, jen když je co řešit (viz [Používání](pouzivani.md#stav-zdroju)). Všechny zapnuté zdroje naráz ověří *Nastavení → Pokročilé → Ověřit zdroje* (ve starších verzích Otestovat zdroje).
 
@@ -147,10 +148,22 @@ Každá další se zkusí, jen když předchozí nic nevrátila. S klíčem TMDB
 3. **Request an API Key → Developer** → krátký formulář, jako název aplikace stačí „Nokturno“.
 4. Zkopíruj **API Key (v3 auth)** – ne delší „API Read Access Token“.
 5. Vlož ho do pole **API klíč TMDB**.
+6. Tlačítko **Ověřit klíč** zkontroluje, že ho TMDB přijímá: „Klíč TMDB je v pořádku.“, „Klíč TMDB neplatí.“
+   (překlep nebo zkopírovaný token místo klíče), „TMDB se nepodařilo zeptat. Zkus to později.“ S prázdným polem
+   řekne, že se TMDB ptá přes server Nokturna.
+
+## Last.fm
+
+Klíč je potřeba jen pro [Koncerty](../../cs/koncerty.md): z Last.fm se berou nejposlouchanější interpreti tvých hudebních žánrů.
+
+- **Last.fm API klíč** – zdarma na [last.fm/api/account/create](https://www.last.fm/api/account/create) (stačí účet na Last.fm, název aplikace libovolný), zkopíruj **API key**, ne „Shared secret“.
+- **Ověřit klíč** – zkontroluje, že ho Last.fm přijímá.
+
+Klíč se vyplní i přes **Koncerty → Nastavit koncerty** a se zapnutou synchronizací účtů se dostane do ostatních Kodi ve skupině.
 
 ## Trakt.tv
 
-Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Tituly z tvého watchlistu na Traktu doplněk hlídá stejně jako [Hlídané](../../cs/hlidane.md).
+Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Volba **Synchronizovat s Traktem: zhlédnuté, rozkoukané a Watchlist** (výchozí zapnutá) navíc každých 15 minut stáhne, co jsi dokoukal nebo rozkoukal jinde (Stremio, Nuvio), a Watchlist na Traktu drží stejný jako **Můj seznam** – oběma směry. Podrobně v nápovědě: [Trakt.tv](../../cs/trakt.md).
 
 - **Používat Trakt.tv**
 - **Přihlásit se k Traktu (kódem zařízení)** – na TV se ukáže kód, zadáš ho na `trakt.tv/activate`. Vlastní aplikaci na Traktu zakládat nemusíš. Stačí free účet; ten může mít připojené dvě aplikace naráz.

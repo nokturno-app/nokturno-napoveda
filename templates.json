@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-02T15:10:19Z",
+  "generated": "2026-10-03T16:17:44Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -448,8 +448,8 @@
       "id": "filmy-vysoka-kvalita",
       "lang": "cs",
       "product": "kodi",
-      "title": "Filmy ve vysoké kvalitě",
-      "text": "Ahoj, na to je v Nokturnu pro Kodi položka Filmy ve vysoké kvalitě (od verze 9.8.0).\n1. V menu Filmy otevři Filmy ve vysoké kvalitě.\n2. Dej Nastavit a vyber minimální kvalitu, kanály zvuku, jazyk zvuku a titulky.\n3. Seznam se plní na pozadí, první naplnění trvá hodiny. Spustit dávku nyní to urychlí.\n4. Když tam film chybí, zkus u parametrů Libovolné.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/filmy-vysoka-kvalita\nTým Nokturno",
+      "title": "Kam zmizely Filmy ve vysoké kvalitě",
+      "text": "Ahoj, Filmy ve vysoké kvalitě od verze 10.0 nahradily vlastní katalogy, které umí totéž a víc.\n1. Filmy → Vlastní katalogy → Nový katalog → Nastavit přes mobil.\n2. Vyber šablonu Filmy ve 4K s CZ dabingem (nebo si nastav kvalitu, jazyk zvuku, titulky a 5.1 sám) a ulož.\n3. Na otázku Spustit ověření streamů nyní dej Ano.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-katalogy\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/filmy-vysoka-kvalita",
       "when": {},
       "priority": 2
@@ -458,8 +458,8 @@
       "id": "filmy-vysoka-kvalita",
       "lang": "sk",
       "product": "kodi",
-      "title": "Filmy vo vysokej kvalite",
-      "text": "Ahoj, na toto je v Nokturne pre Kodi položka Filmy vo vysokej kvalite (od verzie 9.8.0).\n1. V menu Filmy otvor Filmy vo vysokej kvalite.\n2. Daj Nastaviť a vyber minimálnu kvalitu, kanály zvuku, jazyk zvuku a titulky.\n3. Zoznam sa plní na pozadí, prvé naplnenie trvá hodiny. Spustiť dávku teraz to urýchli.\n4. Ak tam film chýba, skús pri parametroch Ľubovoľné.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/filmy-vysoka-kvalita\nTím Nokturno",
+      "title": "Kam zmizli Filmy vo vysokej kvalite",
+      "text": "Ahoj, Filmy vo vysokej kvalite od verzie 10.0 nahradili vlastné katalógy, ktoré vedia to isté a viac.\n1. Filmy → Vlastné katalógy → Nový katalóg → Nastaviť cez mobil.\n2. Vyber šablónu Filmy v 4K s CZ dabingom (alebo si nastav kvalitu, jazyk zvuku, titulky a 5.1 sám) a ulož.\n3. Na otázku Spustiť overenie streamov teraz daj Áno.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-katalogy\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/filmy-vysoka-kvalita",
       "when": {},
       "priority": 2
@@ -967,6 +967,46 @@
       "priority": 3
     },
     {
+      "id": "koncerty",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Koncerty",
+      "text": "Ahoj, Koncerty jsou od verze 10.0 v hlavním menu Nokturna. Potřebují vlastní API klíč Last.fm, je zdarma.\n1. Klíč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, název aplikace libovolný) a zkopíruj API key.\n2. V Kodi otevři Koncerty → Nastavit koncerty, vlož klíč a vyber hudební žánry.\n3. Hledání běží na pozadí a seznam se plní postupně, první dávka prohledá 40 interpretů hned.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "koncerty",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Koncerty",
+      "text": "Ahoj, Koncerty sú od verzie 10.0 v hlavnom menu Nokturna. Potrebujú vlastný API kľúč Last.fm, je zadarmo.\n1. Kľúč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, názov aplikácie ľubovoľný) a skopíruj API key.\n2. V Kodi otvor Koncerty → Nastaviť koncerty, vlož kľúč a vyber hudobné žánre.\n3. Hľadanie beží na pozadí a zoznam sa plní postupne, prvá dávka prehľadá 40 interpretov hneď.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "koncerty",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Koncerty",
+      "text": "Ahoj, Koncerty zapneš v nastavení doplňku, karta Koncerty: zaškrtni hudební žánry a vlož Last.fm API klíč (zdarma na https://www.last.fm/api/account/create).\nPak dej Uložit změny a doplněk ve Stremiu přidej znovu. Seznam se plní postupně, dokud aplikace běží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "koncerty",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Koncerty",
+      "text": "Ahoj, Koncerty zapneš v nastaveniach doplnku, karta Koncerty: zaškrtni hudobné žánre a vlož Last.fm API kľúč (zadarmo na https://www.last.fm/api/account/create).\nPotom daj Uložiť zmeny a doplnok v Stremiu pridaj znova. Zoznam sa plní postupne, kým aplikácia beží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty",
+      "when": {},
+      "priority": 3
+    },
+    {
       "id": "soukromi",
       "lang": "cs",
       "product": "kodi",
@@ -1003,6 +1043,46 @@
       "title": "Položka „⛔ Nokturno“",
       "text": "„⛔ Nokturno“ namiesto streamov znamená, že na doplnok prišlo naraz veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, alebo aplikáciu Nokturno reštartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vlastni-katalogy",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Vlastní katalogy",
+      "text": "Ahoj, od verze 10.0 si katalog poskládáš sám a Nokturno ti v něm může nechat jen tituly, ke kterým je stream podle tvých požadavků.\n1. Filmy nebo Seriály → Vlastní katalogy → Nový katalog.\n2. Zvol Nastavit přes mobil (doporučujeme), naskenuj QR kód a vyber šablonu, třeba Filmy ve 4K s CZ dabingem.\n3. Režim Jen tituly se streamem ověřuje tituly na pozadí, první dávka prověří 40 titulů hned.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-katalogy\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-katalogy",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vlastni-katalogy",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Vlastné katalógy",
+      "text": "Ahoj, od verzie 10.0 si katalóg poskladáš sám a Nokturno ti v ňom môže nechať len tituly, ku ktorým je stream podľa tvojich požiadaviek.\n1. Filmy alebo Seriály → Vlastné katalógy → Nový katalóg.\n2. Zvoľ Nastaviť cez mobil (odporúčame), naskenuj QR kód a vyber šablónu, napríklad Filmy v 4K s CZ dabingom.\n3. Režim Len tituly so streamom overuje tituly na pozadí, prvá dávka preverí 40 titulov hneď.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-katalogy\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-katalogy",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vlastni-katalogy",
+      "lang": "cs",
+      "product": "stremio",
+      "title": "Vlastní katalogy",
+      "text": "Ahoj, vlastní katalogy (až 20) jsou v nastavení doplňku, karta Vlastní katalogy → Přidat katalog. Začít jde ze šablony.\nPo změně katalogů doplněk ve Stremiu přidej znovu, ať je aplikace načte.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-katalogy\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-katalogy",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vlastni-katalogy",
+      "lang": "sk",
+      "product": "stremio",
+      "title": "Vlastné katalógy",
+      "text": "Ahoj, vlastné katalógy (až 20) sú v nastaveniach doplnku, karta Vlastné katalógy → Pridať katalóg. Začať sa dá zo šablóny.\nPo zmene katalógov doplnok v Stremiu pridaj znova, nech ich aplikácia načíta.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-katalogy\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-katalogy",
       "when": {},
       "priority": 3
     },

@@ -9,7 +9,7 @@ Integrace a karta **Nokturno** pro Home Assistant. Je to především přehráva
 - **Vlastní úložiště** – až tři WebDAV složky. Soubory, které k titulu patří, jsou mezi streamy první a pustí se v Kodi i na jiném přehrávači. Viz [Nastavení](nastaveni.md#vlastni-uloziste) a [Používání](pouzivani.md#soubory-z-vlastniho-uloziste).
 - **Karta na dashboardu** – hledání, výběr streamu, přehrání, stažení a poslání do mobilu bez dálkového ovladače.
 - **Stahování do Home Assistantu** i s titulky a **odkazy do mobilu**.
-- **Hlídané** – kontrola nových dílů hlídaných seriálů (každých 6 hodin) a dostupnosti hlídaných titulů (jednou denně, i z watchlistu Trakt.tv). Oznámení přijde, až se dá opravdu dívat. Kontrola je společná s Kodi, takže se na každém zařízení neopakuje. Podrobně v nápovědě: [Hlídané: nové díly a Kontrolovat dál](../../cs/hlidane.md).
+- **Hlídané** – kontrola nových dílů hlídaných seriálů (každých 6 hodin) a dostupnosti hlídaných titulů (jednou denně). Oznámení přijde, až se dá opravdu dívat. Kontrola je společná s Kodi, takže se na každém zařízení neopakuje. Podrobně v nápovědě: [Hlídané: nové díly a Kontrolovat dál](../../cs/hlidane.md).
 - **Stav zdrojů** – senzor, který hlásí, který zdroj potřebuje zásah; hodí se na automatizaci.
 - **Synchronizace s Kodi** – zhlédnuté, rozkoukané, Můj seznam, historie hledání a Hlídané, doma přes klíč a kdekoli přes skupinu.
 - **Česky, slovensky i anglicky** podle jazyka Home Assistantu.

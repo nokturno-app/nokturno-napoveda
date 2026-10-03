@@ -58,7 +58,7 @@ Když přibyl nový díl, je to vidět rovnou v menu („Hlídané · 1 nový d�
 
 Díl s **Kontrolovat dál** u seriálu, který hlídáš, je přímo na řádku seriálu („Cizinka · 2x02 · kontrolovat dál“).
 
-Máš přihlášený [Trakt.tv](trakt.md)? Tituly z tvého seznamu ke zhlédnutí na Traktu se v Hlídaných objeví samy.
+Watchlist z [Trakt.tv](trakt.md) je od verze 10.0 v **Mém seznamu**, ne v Hlídaných. Titul z něj, na který chceš čekat, si přidej do Hlídaných ručně.
 
 ### Kdy Nokturno kontroluje
 - Seriál nejvýš jednou za 6 hodin, titul jednou denně. Hned to spustí **Zkontrolovat teď**
@@ -89,7 +89,7 @@ Oznámení do mobilu: v nastavení integrace, sekce **Stahování a odkazy**, vy
 (třeba `notify.mobile_app_telefon`). Prázdné pole = oznámení jen v Home Assistantu.
 
 Hned zkontrolovat jde v **Nástroje pro vývojáře → Akce**: seriály akcí **Zkontrolovat nové díly** (`nokturno.check_series`),
-hlídané tituly akcí **Trakt – seznam ke zhlédnutí** (`nokturno.trakt_watchlist`, funguje i bez Traktu).
+hlídané tituly akcí **Hlídané – zkontrolovat teď** (`nokturno.trakt_watchlist`).
 
 Synchronizace s Kodi: sekce **Synchronizace s Kodi → Synchronizovat Hlídané**.
 

@@ -40,8 +40,9 @@ Každý okruh jde zapnout zvlášť:
 - **Synchronizovat Můj seznam**
 - **Synchronizovat historii hledání**
 - **Synchronizovat Hlídané** – viz [Hlídané](../../cs/hlidane.md)
+- **Synchronizovat vlastní katalogy** – definice [vlastních katalogů](../../cs/vlastni-katalogy.md), jejich mazání a výsledky ověřování. Výsledky si převezme jen zařízení se stejnými zapnutými zdroji; zařízení s jinými zdroji (třeba mobil bez Luny) si katalog ověří samo. Zařízení ve skupině ověřují nejdřív různé tituly. Je-li ve skupině Home Assistant, ověřuje on a ostatní zařízení jen zobrazují. U [Koncertů](../../cs/koncerty.md) se přenáší jen vybrané žánry.
 - **Synchronizovat nastavení doplňku** (výchozí vypnuto) – preferovaný jazyk, řazení streamů, zapnuté zdroje a podobně.
-- **Synchronizovat účty ke zdrojům** (výchozí vypnuto) – přihlášení ke zdrojům, vlastnímu úložišti a klíč TMDB. Hesla jdou zašifrovaná a server je nepřečte, ale kdo má kód skupiny, přečte je – kód patří jen tvým zařízením.
+- **Synchronizovat účty ke zdrojům** (výchozí vypnuto) – přihlášení ke zdrojům, vlastnímu úložišti, klíče TMDB a Last.fm a hlavičky [vlastních seznamů](../../cs/vlastni-seznam.md). Hesla jdou zašifrovaná a server je nepřečte, ale kdo má kód skupiny, přečte je – kód patří jen tvým zařízením.
 
 Nikdy se nesdílí složka pro stahování, samotné nastavení synchronizace a přihlášení k CZtoru a Traktu – ta se párují na každém zařízení zvlášť.
 

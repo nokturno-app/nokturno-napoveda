@@ -30,7 +30,7 @@ jen anglicky (katalog Sosáče popis nemá vůbec).
 5. **Nastavení → Pokročilé → Vymazat cache (katalogy, hledání, streamy)**, ať se popisy načtou znovu.
 
 **Nastavení → Pokročilé → Ověřit zdroje** (ve starších verzích **Otestovat zdroje**) ověří i klíč.
-Hláška „neplatný TMDB API klíč“ znamená překlep, nebo zkopírovaný dlouhý token místo klíče.
+Tlačítko **Ověřit klíč** hned pod polem zkontroluje, že ho TMDB přijímá. „Klíč TMDB neplatí.“ znamená překlep, nebo zkopírovaný dlouhý token místo klíče.
 
 ## Detail filmu z TMDb Helperu je anglicky
 TMDb Helper má vlastní nastavení jazyka a jazyk Kodi nepřebírá. V jeho nastavení přepni jazyk na češtinu.

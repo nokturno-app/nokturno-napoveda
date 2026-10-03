@@ -90,18 +90,26 @@ Titulky z **OpenSubtitles** má zatím jen doplněk pro Kodi.
 
 Vlevo kvalita (a značky jako HDR/DV), vpravo název souboru, jazyky zvuku jako vlaječky s počtem kanálů a kodekem (např. `🇨🇿 5.1 AC3`), titulky, velikost, datový tok, délka a zdroj. Vlnovka (`~Full HD`) znamená odhad, ne údaj ze zdroje nebo ze souboru.
 
-## Katalogy
+## Vlastní katalogy
 
-V kroku **Předvolby** je karta **Katalogy** – seznamy filmů a seriálů na domovské stránce Stremia (a v Nuviu). Každý si zapneš zvlášť, ve výchozím stavu jsou vypnuté:
+Karta **Vlastní katalogy** – až 20 seznamů filmů a seriálů na domovské stránce Stremia (a v Nuviu). **Přidat katalog** založí nový, každý má vlastní záložku.
 
-| Katalog | Odkud |
-|---|---|
-| Nejsledovanější filmy / seriály tento týden | žebříček z anonymních statistik uživatelů Nokturna |
-| Populární, Nejlépe hodnocené (filmy i seriály) | TMDB, jen s vlastním klíčem TMDB v nastavení aplikace (`tmdb_key` v `nokturno.json`) |
+- **Ze šablony** – Populární, Nejlépe hodnocené, Nové s CZ dabingem, Filmy ve 4K s CZ dabingem, České filmy a seriály, Pohádky s CZ dabingem. Šablonu jde dál upravit.
+- **Katalog z TMDB** ukáže hned všechny tituly podle filtrů. **Jen tituly se streamem** ověřuje na pozadí, dokud aplikace běží, a ukáže jen to, co jde přehrát v požadované kvalitě, jazyce zvuku a titulků a s 5.1.
+- Filtry: žánry, témata (Pohádky, Vánoce, Podle skutečné události… nejvýš 3), země původu (nejvýš 5), roky (od–do, posledních X let) a řazení.
+- **Název** do 40 znaků se vyplní sám, přepsat ho jde.
 
-Detail titulu a díly seriálů dodá Stremio samo, streamy k nim Nokturno jako u každého jiného titulu. Seznamy se obnovují jednou za 6 hodin – nový film se tedy může objevit s pár hodinovým zpožděním.
+Ověřuje se 1 titul za minutu napříč všemi ověřovanými katalogy, nový katalog dostane úvodní dávku 40 titulů. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).
 
-Stremio si seznam katalogů pamatuje – po zapnutí nebo vypnutí katalogu proto dej **Uložit změny** a doplněk ve Stremiu odinstaluj a přidej znovu. Účty a předvolby platí hned i bez toho.
+Dřívější karta Katalogy (Populární, Nejlépe hodnocené) zmizela, zapnuté katalogy se samy převedly na vlastní katalogy.
+
+## Koncerty
+
+Karta **Koncerty** – zaškrtni hudební žánry a vyplň **Last.fm API klíč** (zdarma na [last.fm/api/account/create](https://www.last.fm/api/account/create)). Ve Stremiu přibude druh **Koncerty** se seznamy **Nově přidané** a **Podle abecedy** (s výběrem žánru). Hledá se na pozadí, dokud aplikace běží. Podrobně: [Koncerty](../../cs/koncerty.md).
+
+## Po změně katalogů
+
+Stremio si seznam katalogů pamatuje – po změně vlastních katalogů nebo koncertů dej **Uložit změny** a doplněk ve Stremiu odinstaluj a přidej znovu. Účty a předvolby platí hned i bez toho.
 
 **Sezónní a tematické katalogy** (třeba vánoční filmy nebo Film pro dnešní den) přidáváme sami. Nezapínají se ve formuláři – jsou v doplňku vždy, na začátku seznamu katalogů, a sezónní po sezóně zase zmizí. Stremio si seznam katalogů pamatuje, nový katalog proto někdy uvidíš až po obnovení doplňku.
 

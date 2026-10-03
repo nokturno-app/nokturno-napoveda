@@ -26,18 +26,22 @@ Plný text podmínek použití a kontakty pro nahlášení nelegálního obsahu 
 | Vlastní úložiště | ano, až tři | ano | ano |
 | Luna | ano | ne (Luna má pro Stremio vlastní doplněk) | ano |
 | Pokračovat ve sledování, Můj seznam, Hlídané | ano | ne | ano |
+| Vlastní katalogy | ano | ano | ověřuje katalogy z Kodi |
+| Koncerty | ano | ano | ne |
 
 ## Co umí doplněk pro Kodi
 - hledání a katalogy filmů a seriálů, žebříček „Nejsledovanější tento týden“, tipy „Pro Tebe“,
-- [vlastní katalogy](vlastni-katalogy.md) podle žánrů, původního jazyka, let a řazení,
+- [vlastní katalogy](vlastni-katalogy.md) ze šablon i podle žánrů, témat, země původu a let, s ověřením, že tituly jde
+  přehrát v požadované kvalitě a jazyce,
+- [koncerty](koncerty.md) interpretů z tvých oblíbených hudebních žánrů,
 - [výběr streamu](vyber-streamu.md) v dialogu s odznaky kvality, filtr, řazení podle jazyka zvuku a volba Skrýt 3D streamy,
 - Pokračovat ve sledování, Můj seznam a [Hlídané](hlidane.md): nový díl seriálu, film, který zatím nikde není,
   a Kontrolovat dál u titulu, který streamy má, ale ne takové, jaké chceš,
-- FastShare i s [účtem ze Sdilej.cz](sdilej-cz.md), [Trakt.tv](trakt.md) s přihlášením kódem, i s bezplatným účtem,
+- FastShare i s [účtem ze Sdilej.cz](sdilej-cz.md), [Trakt.tv](trakt.md) s přihlášením kódem, i s bezplatným účtem (zhlédnuté oběma směry, Watchlist = Můj seznam),
 - synchronizace mezi více Kodi a přenos nastavení do dalšího Kodi,
 - Nastavit z mobilu přes QR kód, stahování, titulky z OpenSubtitles, TV program, SyncWatch (společné sledování).
 
-Home Assistant umí taky Hlídané, Trakt.tv a účet ze Sdilej.cz, doplněk pro Stremio účet ze Sdilej.cz a CZtor.
+Home Assistant umí taky Hlídané, Trakt.tv, účet ze Sdilej.cz a ověřování vlastních katalogů, doplněk pro Stremio účet ze Sdilej.cz, CZtor, vlastní katalogy a koncerty.
 
 Co dělat, když něco nejde: [Kde hledat pomoc](kde-hledat-pomoc.md).
 

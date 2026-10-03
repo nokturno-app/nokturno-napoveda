@@ -10,6 +10,7 @@ Integrace vytváří čtyři senzory a řadu služeb, na které jde navázat aut
 | **Nové díly** | počet hlídaných seriálů s novým dílem | `series` – hlídané seriály, poslední dostupný a nový díl |
 | **Hlídané** | počet hlídaných titulů, které už mají stream | `items` – hlídané tituly a jejich stav, `favourites` – Můj seznam |
 | **Stav zdrojů** | počet zdrojů, které potřebují zásah (`0` = vše v pořádku) | `sources`, `problems` |
+| **Katalogy** | počet ověřovaných vlastních katalogů | `paused`, `catalogs` – u každého `name`, `kind`, `verified`, `matched`, `total`, `last_check` |
 
 ### Stav zdrojů
 
@@ -78,9 +79,19 @@ Všechny služby najdeš v *Nástroje pro vývojáře → Akce* pod doménou `no
 | `nokturno.check_series` | hned zkontroluje hlídané seriály |
 | `nokturno.mark_seen` | zhasne označení nového dílu |
 | `nokturno.want_to_watch` | přidá titul do Hlídaných; bez ID stačí název, s `flag` rovnou s příznakem Kontrolovat dál |
-| `nokturno.trakt_watchlist` | hned zkontroluje hlídané tituly a watchlist Trakt.tv |
+| `nokturno.trakt_watchlist` | hned zkontroluje hlídané tituly (Watchlist z Trakt.tv je od 10.0 v Mém seznamu) |
 | `nokturno.trakt_flag` | přepne příznak Kontrolovat dál |
 | `nokturno.favourite_toggle`, `nokturno.favourite_add` | přidá nebo odebere titul v Mém seznamu; přesune ho z hlídaných |
+
+**Vlastní katalogy**
+
+Katalogy zakládáš v Kodi, do Home Assistantu přijdou synchronizací. Home Assistant je pak ověřuje (1 titul za minutu, katalogy se střídají) a výsledky posílá zpátky – Kodi samo neověřuje, dokud má od něj čerstvé výsledky. Viz [Vlastní katalogy](../../cs/vlastni-katalogy.md).
+
+| Služba | Co dělá |
+|---|---|
+| `nokturno.catalogs` | vrátí stav ověřovaných katalogů |
+| `nokturno.catalog_verify` | hned ověří `count` titulů (1–50, výchozí 10) katalogu `id`; bez `id` další v pořadí |
+| `nokturno.catalog_pause` | `paused: true` zastaví ověřování na tomto Home Assistantu, `false` ho pustí |
 
 **Trakt.tv a údržba**
 

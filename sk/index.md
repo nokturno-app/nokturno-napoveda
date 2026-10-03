@@ -43,7 +43,8 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Výber streamu: filtre, 3D a posledný filter](vyber-streamu.md)
 - [Sledované: nové diely a Kontrolovať ďalej](hlidane.md)
 - [Vlastné katalógy](vlastni-katalogy.md)
-- [Filmy vo vysokej kvalite](filmy-vysoka-kvalita.md)
+- [Koncerty](koncerty.md)
+- [Kam zmizli Filmy vo vysokej kvalite](filmy-vysoka-kvalita.md)
 - [Vlastný zoznam](vlastni-seznam.md)
 - [Synchronizácia medzi zariadeniami nefunguje](synchronizace.md)
 - [Sťahovanie zlyhalo](stahovani.md)
@@ -85,6 +86,10 @@ Nokturno pre Stremio si spustíš u seba a len pre seba: [doma](stremio-aplikace
 - [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md)
 - [Nokturno pre Stremio mimo domova – Tailscale a VPN](stremio-mimo-domov.md)
 - [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md)
+
+## Stremio › Nastavenie
+- [Vlastné katalógy](vlastni-katalogy.md#stremio)
+- [Koncerty](koncerty.md#stremio)
 
 ## Stremio › Keď niečo nejde
 - [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md)

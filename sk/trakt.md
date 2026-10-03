@@ -20,7 +20,7 @@ templates:
 Trakt.tv vedie prehľad pozretých filmov a seriálov a zoznam titulov na pozretie. Nokturno s ním vie:
 - počas prehrávania dať Traktu vedieť, čo sleduješ; dopozeraný titul sa na Trakte označí ako pozretý,
 - v Kodi prepísať na Trakt aj ručné označenie pozreté a nepozreté,
-- tituly zo zoznamu na pozretie na Trakte zaradiť medzi [Sledované](hlidane.md) a ohlásiť, keď sa budú dať pustiť,
+- synchronizovať Watchlist na Trakte s **Mojím zoznamom** v Nokturne, a to oboma smermi,
 - stiahnuť z Traktu pozreté a rozpozerané tituly z iných aplikácií (Stremio, Nuvio).
 
 Vlastnú aplikáciu na Trakte zakladať nemusíš, Nokturno má svoju. Prihlásiš sa kódom, heslo k Traktu sa do Nokturna
@@ -58,7 +58,7 @@ a na Trakte budeš mať jednu spoločnú históriu zo všetkých zariadení.
 
 Od verzie 9.11 si Kodi aj Home Assistant z Traktu sťahujú pozreté a rozpozerané tituly. Čo dopozeráš alebo
 rozpozeráš v Stremiu či Nuviu, sa do 15 minút objaví v **Naposledy pozreté** a v **Pokračovať v sledovaní**.
-- Kodi: voľba **Sťahovať pozreté a rozpozerané z Traktu** v skupine **Trakt.tv** (predvolene zapnutá).
+- Kodi: voľba **Synchronizovať s Traktom: pozreté, rozpozerané a Watchlist** v skupine **Trakt.tv** (predvolene zapnutá).
 - Home Assistant sťahuje sám, hneď ako je prepojený s Traktom. [Synchronizáciou](synchronizace.md) to potom dostanú
   aj Kodi v skupine, ktoré k Traktu prihlásené nie sú.
 
@@ -66,6 +66,17 @@ Prvýkrát sa berú pozretia za posledných 90 dní. Keď na Trakte pozretie zma
 Rozpozeraný titul bez známej stopáže (pri niektorých dieloch ju Trakt nevedie) sa neprenesie.
 
 Každá pripojená aplikácia sa počíta do limitu bezplatného účtu (pozri nižšie).
+
+## Watchlist = Môj zoznam
+Od verzie 10.0 je Watchlist na Trakte to isté ako **Môj zoznam** v Nokturne (Kodi aj Home Assistant):
+- čo si pridáš na Trakte (napríklad v Stremiu alebo v aplikácii Trakt), sa objaví v Mojom zozname,
+- čo pridáš do Môjho zoznamu alebo z neho odoberieš, sa hneď prepíše na Trakt,
+- prvé porovnanie obe strany len zlúči a nič nezmaže, ďalšie kolá prenášajú aj odobratie,
+- kontroluje sa každých 15 minút, nie pri prehrávaní a nie bez siete,
+- na Trakt idú len filmy a seriály, nie jednotlivé diely ani súbory.
+
+Tituly z Watchlistu už nie sú v [Sledovaných](hlidane.md). Keď chceš vedieť, kedy sa niektorý dá pustiť, zapni pri ňom
+stráženie ručne.
 
 ## Bezplatný účet: najviac dve aplikácie
 Bezplatný účet na Trakte môže mať pripojené len **dve aplikácie tretích strán naraz**. Keď už dve iné máš,

@@ -34,6 +34,16 @@ Jazyk zvukovej stopy sa číta z **hlavičky súboru**. Pri každom streame to c
 - V dialógu výberu streamu je **Filter streamov**: vyberieš napríklad len zvuk SK alebo len titulky SK.
 - **Automaticky prepnúť zvuk na preferovaný jazyk**: keď má súbor viac stôp, prehrávanie začne tou tvojou.
 
+## Znova pustený stream si pamätá zvuk a titulky
+Od verzie 10.0 si Nokturno pri každom titule pamätá zvukovú stopu a titulky, ktoré si mal zapnuté naposledy.
+Keď pustíš **ten istý stream** znova (pokračovanie v rozpozeranom, ďalší večer), prepne sa na ne samo.
+
+- Ukladá sa počas prehrávania, od 90 sekúnd sledovania. Pamätá sa posledných 300 titulov.
+- Obnoví sa len pri **tom istom súbore** a len keď je v ňom stopa s rovnakým číslom aj jazykom.
+  Vypnuté titulky zostanú vypnuté.
+- Predvoľby z nastavení (**Preferovaný jazyk zvuku**, **Automaticky prepnúť zvuk**, titulky) sa potom nepoužijú.
+  Platia len pre nový alebo iný stream.
+
 ## Zoznam streamov ukazuje len názov filmu
 Streamy sa vyberajú v dialógu na dva riadky. Keď ho skin kreslí orezane, uprav v **Nastavenia → Výber streamu →
 Čo a v akom poradí ukazovať pri streame**, čo má byť na prvom riadku.

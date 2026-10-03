@@ -32,7 +32,7 @@ S kľúčom TMDB sú popisy, žánre aj herci po česky.
 5. **Nastavenia → Pokročilé → Vymazať cache (katalógy, hľadanie, streamy)**, nech sa popisy načítajú znova.
 
 **Nastavenia → Pokročilé → Overiť zdroje** (v starších verziách **Otestovať zdroje**) overí aj kľúč.
-Hlásenie „neplatný TMDB API klíč“ (po česky) znamená preklep, alebo skopírovaný dlhý token namiesto kľúča.
+Tlačidlo **Overiť kľúč** hneď pod poľom skontroluje, že ho TMDB prijíma. „Kľúč TMDB neplatí.“ znamená preklep, alebo skopírovaný dlhý token namiesto kľúča.
 
 ## Detail filmu z TMDb Helpera je po anglicky
 TMDb Helper má vlastné nastavenie jazyka a jazyk Kodi nepreberá. V jeho nastaveniach prepni jazyk na slovenčinu.

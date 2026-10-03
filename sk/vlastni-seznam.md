@@ -15,16 +15,19 @@ zodpovedáš ty.
 ## Nastavenie v Kodi
 1. **Nastavenia → Zdroje a účty → Vlastný zoznam** (ďalšie dva zoznamy sú v skupinách **Vlastný zoznam 2**
    a **Vlastný zoznam 3**).
-2. **Adresa zoznamu (JSON)**: adresa súboru, musí začínať `http://` alebo `https://`.
-3. **Ikona v menu**: ikona položky v hlavnom menu. Ponúkajú sa len ikony, ktoré dodáva vzhľad Kodi (zoznam videí,
+2. **Používať tento zoznam** (predvolene zapnuté): vypnutý zoznam zostane vyplnený, len sa v menu neukáže.
+3. **Adresa zoznamu (JSON)**: adresa súboru, musí začínať `http://` alebo `https://`.
+4. **Ikona v menu**: ikona položky v hlavnom menu. Ponúkajú sa len ikony, ktoré dodáva vzhľad Kodi (zoznam videí,
    filmy, seriály, hudobné videá, hudobné albumy, hudba, obľúbené, novo pridané, žánre, rok, herci, priečinok).
    Predvolená je **Zoznam videí**.
-4. **Miesto v menu**: kde sa položka ukáže – **Hore**, **Pod Sledovanými**, **Pod Filmami a Seriálmi** (predvolené)
+5. **Miesto v menu**: kde sa položka ukáže – **Hore**, **Pod Sledovanými**, **Pod Filmami a Seriálmi** (predvolené)
    alebo **Dole** nad Nastaveniami. Viac zoznamov na rovnakom mieste ide podľa svojho čísla.
-5. **Hlavička požiadavky 1** a **2**: nepovinné, v tvare `Názov: hodnota`, napríklad `X-Key: tajny-kluc`. Pošlú sa
+6. **Hlavička požiadavky 1** a **2**: nepovinné, v tvare `Názov: hodnota`, napríklad `X-Key: tajny-kluc`. Pošlú sa
    pri každom načítaní zoznamu. Hodí sa, keď je súbor za prihlásením. Hodnota sa v nastaveniach nezobrazuje.
+   So zapnutou [synchronizáciou](synchronizace.md) sa hlavičky prenášajú s účtami k zdrojom (**Synchronizovať účty k zdrojom**),
+   nie s ostatným nastavením.
 
-Každý zoznam s vyplnenou adresou je v hlavnom menu samostatná položka. Volá sa podľa `title` v súbore, kým sa súbor
+Každý zapnutý zoznam s vyplnenou adresou je v hlavnom menu samostatná položka. Volá sa podľa `title` v súbore, kým sa súbor
 raz nenačíta, tak **Vlastný zoznam**, **Vlastný zoznam 2** a **Vlastný zoznam 3**.
 
 ## Tvar súboru

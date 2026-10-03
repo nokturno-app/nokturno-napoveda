@@ -20,7 +20,7 @@ templates:
 Trakt.tv vede přehled zhlédnutých filmů a seriálů a seznam titulů ke zhlédnutí. Nokturno s ním umí:
 - během přehrávání dát Traktu vědět, co sleduješ; dokoukaný titul se na Traktu označí jako zhlédnutý,
 - v Kodi propsat na Trakt i ruční označení zhlédnuto a nezhlédnuto,
-- tituly ze seznamu ke zhlédnutí na Traktu zařadit do [Hlídaných](hlidane.md) a ohlásit, až půjdou pustit,
+- synchronizovat Watchlist na Traktu s **Mým seznamem** v Nokturnu, a to oběma směry,
 - stáhnout z Traktu zhlédnuté a rozkoukané tituly z jiných aplikací (Stremio, Nuvio).
 
 Vlastní aplikaci na Traktu zakládat nemusíš, Nokturno má svou. Přihlásíš se kódem, heslo k Traktu se do Nokturna
@@ -58,7 +58,7 @@ a na Traktu budeš mít jednu společnou historii ze všech zařízení.
 
 Od verze 9.11 si Kodi i Home Assistant z Traktu stahují zhlédnuté a rozkoukané tituly. Co dokoukáš nebo
 rozkoukáš ve Stremiu či Nuviu, se do 15 minut objeví v **Naposledy zhlédnuté** a v **Pokračovat ve sledování**.
-- Kodi: volba **Stahovat zhlédnuté a rozkoukané z Traktu** ve skupině **Trakt.tv** (výchozí zapnutá).
+- Kodi: volba **Synchronizovat s Traktem: zhlédnuté, rozkoukané a Watchlist** ve skupině **Trakt.tv** (výchozí zapnutá).
 - Home Assistant stahuje sám, jakmile je propojený s Traktem. [Synchronizací](synchronizace.md) to pak dostanou
   i Kodi ve skupině, která k Traktu přihlášená nejsou.
 
@@ -66,6 +66,17 @@ Napoprvé se berou zhlédnutí za posledních 90 dní. Když na Traktu zhlédnut
 Rozkoukaný titul bez známé stopáže (u některých dílů ji Trakt nevede) se nepřenese.
 
 Každá připojená aplikace se počítá do limitu bezplatného účtu (viz níž).
+
+## Watchlist = Můj seznam
+Od verze 10.0 je Watchlist na Traktu totéž co **Můj seznam** v Nokturnu (Kodi i Home Assistant):
+- co si přidáš na Traktu (třeba ve Stremiu nebo v aplikaci Trakt), se objeví v Mém seznamu,
+- co přidáš do Mého seznamu nebo z něj odebereš, se hned propíše na Trakt,
+- první srovnání obě strany jen sloučí a nic nesmaže, další kola přenáší i odebrání,
+- kontroluje se každých 15 minut, ne při přehrávání a ne bez sítě,
+- na Trakt jdou jen filmy a seriály, ne jednotlivé díly ani soubory.
+
+Tituly z Watchlistu už nejsou v [Hlídaných](hlidane.md). Když chceš vědět, až nějaký půjde pustit, zapni u něj
+hlídání ručně.
 
 ## Bezplatný účet: nejvýš dvě aplikace
 Bezplatný účet na Traktu může mít připojené jen **dvě aplikace třetích stran naráz**. Když už dvě jiné máš,
