@@ -93,6 +93,7 @@ Místní nabídka katalogu (dlouhý stisk OK, nebo tlačítko menu na ovladači)
 - **Upravit katalog** – projde stejné dialogy, předvybrané jsou uložené volby. Název, který jsi přepsal, zůstane.
 - **Upravit na mobilu** – QR kód jako při zakládání.
 - **Smazat katalog** – ještě se zeptá „Smazat katalog …?“.
+- **Zobrazit v hlavním menu** – katalog se ukáže přímo ve Filmech nebo Seriálech, nad položkou Vlastní katalogy (od verze 10.1). **Odebrat z hlavního menu** ho vrátí jen pod Vlastní katalogy.
 
 ## Nastavení přes mobil
 1. Na televizi zvol **Nastavit přes mobil (doporučujeme)** (u nového katalogu), nebo **Upravit na mobilu**

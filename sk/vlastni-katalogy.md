@@ -93,6 +93,7 @@ Miestna ponuka katalógu (dlhé podržanie OK, alebo tlačidlo menu na ovládač
 - **Upraviť katalóg** – prejde rovnaké dialógy, predvybrané sú uložené voľby. Názov, ktorý si prepísal, zostane.
 - **Upraviť na mobile** – QR kód ako pri zakladaní.
 - **Zmazať katalóg** – ešte sa opýta „Zmazať katalóg …?“.
+- **Zobraziť v hlavnom menu** – katalóg sa ukáže priamo vo Filmoch alebo Seriáloch, nad položkou Vlastné katalógy (od verzie 10.1). **Odobrať z hlavného menu** ho vráti len pod Vlastné katalógy.
 
 ## Nastavenie cez mobil
 1. Na televízore zvoľ **Nastaviť cez mobil (odporúčame)** (pri novom katalógu), alebo **Upraviť na mobile**
