@@ -69,7 +69,7 @@ Keď ich chceš, založ si ich zo šablóny – a môžeš si ich rovno upraviť
 | **Žánre (nič = všetky)** | jeden alebo viac žánrov. Seriály majú iný zoznam (napríklad **Sci-fi a fantasy**, **Dětský**). |
 | **Témy (stačí jedna, najviac 3)** | Rozprávky, Vianoce, Halloween, Silvester, Podľa skutočnej udalosti, Podľa knihy, Životopisný, Superhrdinovia, Sériový vrah, 2. svetová vojna, Bojové umenia, Šport, Mimozemšťania, Cestovanie v čase, Zombie, Duchovia, Upíri, Postapokalypsa, Lúpež, Špionáž, Prežitie, Psy, Dinosaury |
 | **Tituly musia mať** | len pri dvoch a viac žánroch: **všetky vybrané žánre**, alebo **aspoň jeden vybraný žáner** |
-| **Krajiny pôvodu (najviac 5)** | Česko, Slovensko, USA, Veľká Británia, Francúzsko, Nemecko, Taliansko, Španielsko, Poľsko, Maďarsko, Južná Kórea, Japonsko, Dánsko, Švédsko, Nórsko |
+| **Krajiny pôvodu (najviac 5)** | Česko, Slovensko, Československo, USA, Veľká Británia, Francúzsko, Nemecko, Taliansko, Španielsko, Poľsko, Maďarsko, Južná Kórea, Japonsko, Dánsko, Švédsko, Nórsko |
 | **Roky** | **Bez obmedzenia**, **Od–do** (rok od a do, prázdne = bez obmedzenia), alebo **Posledných X rokov** (1–50, predvolené 5) |
 | **Radiť podľa** | **Obľúbenosti**, **Hodnotenia na TMDB** (len tituly s dosť hlasmi), **Dátumu vydania** (najnovšie prvé), **Abecedy** (obľúbené tituly podľa názvu) |
 | **Jazyk zvuku** * | Ľubovoľné, Čeština, Slovenčina, Čeština alebo slovenčina, Angličtina, Maďarčina |
@@ -177,7 +177,7 @@ V Stremiu sa katalógy skladajú vo formulári nastavení doplnku.
 ## Tipy
 | Chceš | Nastav |
 |---|---|
-| české a slovenské rozprávky, ktoré sa dajú pustiť | Filmy, téma **Rozprávky**, krajina **Česko** a **Slovensko**, režim **Len tituly so streamom** |
+| české a slovenské rozprávky, ktoré sa dajú pustiť | Filmy, téma **Rozprávky**, krajina **Česko**, **Slovensko** a **Československo** (staršie rozprávky vedie TMDB pod Československom), režim **Len tituly so streamom** |
 | 4K filmy s dabingom (namiesto doterajších Filmov vo vysokej kvalite) | šablóna **Filmy v 4K s CZ dabingom** |
 | novinky posledného roka s titulkami | **Posledných X rokov** = 1, **Titulky** Čeština alebo slovenčina, **Zobraziť zoradené podľa** Najnovšie vydanie |
 | vianočné komédie | žáner **Komedie**, téma **Vianoce** |

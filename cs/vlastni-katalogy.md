@@ -69,7 +69,7 @@ Když je chceš, založ si je ze šablony – a můžeš si je rovnou upravit, t
 | **Žánry (nic = všechny)** | jeden nebo víc žánrů. Seriály mají jiný seznam (třeba **Sci-fi a fantasy**, **Dětský**). |
 | **Témata (stačí jedno, nejvýš 3)** | Pohádky, Vánoce, Halloween, Silvestr, Podle skutečné události, Podle knihy, Životopisný, Superhrdinové, Sériový vrah, 2. světová válka, Bojová umění, Sport, Mimozemšťané, Cestování časem, Zombie, Duchové, Upíři, Postapokalypsa, Loupež, Špionáž, Přežití, Psi, Dinosauři |
 | **Tituly musí mít** | jen při dvou a víc žánrech: **všechny vybrané žánry**, nebo **aspoň jeden vybraný žánr** |
-| **Země původu (nejvýš 5)** | Česko, Slovensko, USA, Velká Británie, Francie, Německo, Itálie, Španělsko, Polsko, Maďarsko, Jižní Korea, Japonsko, Dánsko, Švédsko, Norsko |
+| **Země původu (nejvýš 5)** | Česko, Slovensko, Československo, USA, Velká Británie, Francie, Německo, Itálie, Španělsko, Polsko, Maďarsko, Jižní Korea, Japonsko, Dánsko, Švédsko, Norsko |
 | **Roky** | **Bez omezení**, **Od–do** (rok od a do, prázdné = bez omezení), nebo **Posledních X let** (1–50, výchozí 5) |
 | **Řadit podle** | **Oblíbenosti**, **Hodnocení na TMDB** (jen tituly s dost hlasy), **Data vydání** (nejnovější první), **Abecedy** (oblíbené tituly podle názvu) |
 | **Jazyk zvuku** * | Libovolné, Čeština, Slovenština, Čeština nebo slovenština, Angličtina, Maďarština |
@@ -177,7 +177,7 @@ Ve Stremiu se katalogy skládají ve formuláři nastavení doplňku.
 ## Tipy
 | Chceš | Nastav |
 |---|---|
-| české a slovenské pohádky, které jdou pustit | Filmy, téma **Pohádky**, země **Česko** a **Slovensko**, režim **Jen tituly se streamem** |
+| české a slovenské pohádky, které jdou pustit | Filmy, téma **Pohádky**, země **Česko**, **Slovensko** a **Československo** (starší pohádky vede TMDB pod Československem), režim **Jen tituly se streamem** |
 | 4K filmy s dabingem (místo dřívějších Filmů ve vysoké kvalitě) | šablona **Filmy ve 4K s CZ dabingem** |
 | novinky posledního roku s titulky | **Posledních X let** = 1, **Titulky** Čeština nebo slovenština, **Zobrazit seřazené podle** Nejnovější vydání |
 | vánoční komedie | žánr **Komedie**, téma **Vánoce** |
