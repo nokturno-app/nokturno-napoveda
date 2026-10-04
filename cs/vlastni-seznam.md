@@ -9,7 +9,8 @@ priority: 3
 # Vlastní seznam
 
 Vlastní seznam je soubor JSON na adrese, kterou zadáš v nastavení. Nokturno z něj udělá položku v hlavním menu
-se složkami a videi a videa přehraje přes zdroje a účty, které máš v doplňku nastavené. Za obsah seznamu
+se složkami a videi. Videa přehraje z tvého vlastního úložiště, z přímých adres nebo přes volitelné zdroje
+třetích stran, které máš v doplňku nastavené. Za obsah seznamu
 odpovídáš ty.
 
 ## Nastavení v Kodi
@@ -52,7 +53,7 @@ soubor jednou nenačte, tak **Vlastní seznam**, **Vlastní seznam 2** a **Vlast
       "plot": "Krátký popis.",
       "thumb": "https://example.com/video.jpg",
       "duration": 5400,
-      "refs": ["hs:123456:a1b2c3", "https://example.com/moje-video.mp4"]
+      "refs": ["dav:1:Filmy/moje-video.mkv", "https://example.com/moje-video.mp4"]
     }
   ]
 }
@@ -73,21 +74,22 @@ soubor jednou nenačte, tak **Vlastní seznam**, **Vlastní seznam 2** a **Vlast
 Neznámé klíče se ignorují. Složka bez videí a bez podsložek se v menu nezobrazí, video bez platného odkazu taky.
 
 ## Odkazy v `refs`
-Odkaz je vnitřní odkaz Nokturna ve tvaru `zdroj:údaje`. Přehraje se přes účet a nastavení doplňku, takže daný zdroj
+Odkaz je přímá adresa `https://…` nebo vnitřní odkaz Nokturna ve tvaru `zdroj:údaje`. Nejjistější je odkaz do tvého
+vlastního úložiště (`dav:`) nebo přímá adresa. Vnitřní odkaz se přehraje přes účet a nastavení doplňku, takže daný zdroj
 musí být v Nokturnu zapnutý a u zdrojů s účtem i přihlášený. Když první odkaz nejde přehrát (smazaný soubor,
 vypršelý účet), zkusí se další. Jedno video může mít nejvýš 10 odkazů.
 
 | Tvar | Zdroj |
 |---|---|
-| `ws:<ident>` | WebShare |
-| `hs:<id>:<hash>` | HellSpy |
+| `dav:<číslo úložiště>:<cesta>` | tvoje vlastní úložiště 1–3 z nastavení, cesta ve složce úložiště |
+| `https://…` | přímá adresa souboru, přehraje se tak, jak je |
+| `ws:<ident>` | WebShare (volitelný zdroj třetí strany) |
+| `hs:<id>:<hash>` | HellSpy (volitelný zdroj třetí strany) |
 | `fs:<id>:<server>[:<velikost v bajtech>]` | FastShare nebo Sdilej.cz, podle volby **Účet z**; server je `data`, `data1` apod. |
 | `pt:<id>:<slug>:<hash>` | Přehraj.to |
 | `st:<id videa>` | Sledujteto (přehrávání chce Premium) |
 | `cz:m:<id>:<id streamu>`, `cz:e:<id>:<id streamu>` | CZtor, `m` film, `e` díl |
-| `dav:<číslo úložiště>:<cesta>` | tvoje vlastní úložiště 1–3 z nastavení, cesta ve složce úložiště |
 | `streamuj:<adresa>` | Sosáč (chce účet Streamuj) |
-| `https://…` | přímá adresa souboru, přehraje se tak, jak je |
 
 Odkaz má nejvýš 500 znaků a nesmí obsahovat mezeru. Hodnoty v tabulce jsou jen ukázka tvaru.
 

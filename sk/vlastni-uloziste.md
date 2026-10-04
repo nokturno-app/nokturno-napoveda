@@ -19,7 +19,8 @@ templates:
 # Ako pripojiť vlastné úložisko
 
 Vlastné úložisko je hlavná funkcia Nokturna: prehráva tvoje súbory z NAS, Nextcloudu alebo iného servera s WebDAV.
-Súbor, ktorý k titulu patrí, sa zobrazí **medzi streamami ako prvý**.
+Súbor, ktorý k titulu patrí, sa zobrazí **medzi streamami ako prvý**. Zdroje tretích strán (WebShare, HellSpy a ďalšie)
+sú len voliteľné doplnenie, pri novej inštalácii sú všetky vypnuté.
 
 ## Čo je potrebné
 - priečinok dostupný cez **WebDAV** (`http://` alebo `https://`, tvar `davs://` z Kodi funguje tiež),
@@ -39,8 +40,9 @@ Súbor, ktorý k titulu patrí, sa zobrazí **medzi streamami ako prvý**.
 Potom daj **Nastavenia → Pokročilé → Overiť zdroje** (v starších verziách **Otestovať zdroje**).
 
 ## Stremio
-V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) vyplň kartu
-**Vlastné úložisko** a daj **Overiť úložisko**. Potom doplnok pridaj znova tlačidlom **Pridať do Stremia**.
+V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) vyplň v sekcii
+**Vlastné úložisko a zdroje** prvú kartu **Vlastné úložisko** a daj **Overiť úložisko**. Potom ulož zmeny. Keď už doplnok
+v Stremiu máš, zmeny platia hneď a znova ho pridávať nemusíš.
 
 V Stremiu platia dve veci navyše:
 - Úložisko musí byť dosiahnuteľné **zo zariadenia, kde beží aplikácia Nokturno**. Tá v ňom hľadá súbory a od verzie 9.6.1

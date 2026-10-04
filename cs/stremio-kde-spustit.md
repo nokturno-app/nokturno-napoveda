@@ -15,7 +15,7 @@ templates:
 
 Nokturno pro Stremio je malá aplikace, která musí běžet, kdykoli se díváš. Není náročná: **video přes ni
 u většiny zdrojů neteče**. Aplikace Stremiu vrací seznam streamů s odkazy a přehrávač si soubor stahuje přímo ze zdroje.
-Výjimkou jsou soubory z vlastního úložiště a FastShare, které přehrávači předává aplikace (stačí domácí síť; slabý hardware
+Výjimkou jsou soubory z tvého vlastního úložiště (a z FastShare), které přehrávači předává aplikace (stačí domácí síť; slabý hardware
 nebo Wi-Fi může u 4K brzdit).
 Stačí jí proto skoro jakýkoli starý hardware, hlavně ať je **pořád zapnutý**, připojený k domácí síti
 a má **pevnou IP adresu** (rezervace v routeru).

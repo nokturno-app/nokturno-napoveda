@@ -1,8 +1,8 @@
 # Nastavení
 
-Všechna pole jsou v **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**. Stejný formulář vyplňuješ i při prvním přidání integrace. Nic není povinné – vyplň jen zdroje, které opravdu používáš. U každého pole je pod ním krátká nápověda.
+Všechna pole jsou v **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**. Nastavení je menu s kroky **Přehrávání**, **Vlastní úložiště**, **Zdroje a účty**, **Stahování**, **Synchronizace** a **Ostatní**, popsanými níž v tomto pořadí. Změny se uloží až volbou **Uložit a zavřít**, zavření křížkem je zahodí. Nic není povinné. U každého pole je pod ním krátká nápověda.
 
-Formulář má sedm sbalitelných sekcí, popsaných níž v tomto pořadí. Co jednotlivé volitelné zdroje dělají a co potřebují, je podrobně v [návodu pro Kodi, stránka Zdroje a účty](../kodi/zdroje-a-ucty.md) – platí i tady.
+Začni vlastním úložištěm, zdroje třetích stran jsou volitelné. Co jednotlivé volitelné zdroje dělají a co potřebují, je podrobně v [návodu pro Kodi, stránka Zdroje a účty](../kodi/zdroje-a-ucty.md) – platí i tady.
 
 ## Přehrávání
 
@@ -18,9 +18,21 @@ Formulář má sedm sbalitelných sekcí, popsaných níž v tomto pořadí. Co 
 - **Max. datový tok (Mb/s, 0 = bez omezení)**
 - **Řazení streamů** – *Pořadí od zdroje* / *Nejlepší kvalita napřed* / *Od největšího souboru* / *Od nejmenšího souboru*. Rozhoduje, když je jazyk i zvuk shodný.
 
+## Vlastní úložiště
+
+Hlavní funkce Nokturna. Krok **Vlastní úložiště** – až tři složky s vlastními soubory (NAS, Nextcloud, server). Nalezené soubory se nabídnou mezi streamy jako první. Každé úložiště (1–3) má vlastní krok s přepínačem **Používat …** (vypnuté úložiště si údaje nechá) a s poli:
+
+| Pole | K čemu |
+|---|---|
+| **Úložiště N – adresa složky (WebDAV)** | např. `https://nas.example.cz:5006/video/` nebo `https://cloud.example.cz/remote.php/dav/files/jmeno/Video/`. Prázdné = úložiště vypnuté. |
+| **Úložiště N – uživatel**, **heslo** | přihlášení k úložišti (HTTP Basic); bez hesla nech prázdné |
+| **Úložiště N – název u streamů** | např. `NAS` – ukáže se v kartě na zeleném štítku u streamu |
+
+Úložiště musí být dosažitelné **z Home Assistantu** – Home Assistant soubory prochází a přehrávačům je předává. Jak soubory pojmenovat, aby se přiřadily k titulům (rok u filmu, `S01E02` u dílu), je v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md) a platí i tady.
+
 ## Zdroje a účty
 
-Prázdné pole = zdroj se nepoužívá. Hesla zůstávají v Home Assistantu a odcházejí jen zdroji, kterému patří.
+Zdroje třetích stran jsou volitelné. Každý má v menu vlastní krok s přepínačem **Používat …**: vypnutý zdroj si údaje nechá, jen se v něm nehledá. Při přidání integrace se vybírají v kroku **Volitelné zdroje**, kde ve výchozím stavu není vybraný žádný. Hesla zůstávají v Home Assistantu a odcházejí jen zdroji, kterému patří.
 
 | Pole | K čemu |
 |---|---|
@@ -30,13 +42,13 @@ Prázdné pole = zdroj se nepoužívá. Hesla zůstávají v Home Assistantu a o
 | **FastShare / Sdilej.cz – uživatel**, **heslo** | Hledá se i bez účtu, přehrání jde z kreditu nebo s neomezeným tarifem. Mimo Kodi (mobil, jiný přehrávač, stažení) jde soubor přes Home Assistant, protože potřebuje přihlášení. |
 | **FastShare – účet z** | *FastShare.cz* nebo *Sdilej.cz*. Oba weby mají stejné soubory, účty jsou oddělené – vyber ten, kde máš účet a kredit. Podrobně v nápovědě: [FastShare s účtem ze Sdilej.cz](../../cs/sdilej-cz.md). |
 | **Používat HellSpy** | HellSpy účet nepotřebuje. Když odmítne dotazy (HTTP 429), integrace ho 10 minut vynechá. HTTP 429 u HellSpy obvykle znamená, že odmítá celou síť (VPN, mobilní data). |
-| **Používat Přehraj.to** | Zapnuté ve výchozím stavu, funguje i bez účtu (první strana výsledků, překódovaný soubor v 1080p). |
+| **Používat Přehraj.to** | Funguje i bez účtu (první strana výsledků, překódovaný soubor v 1080p). U nové integrace není vybraný. |
 | **Přehraj.to – e-mail**, **heslo (nepovinné)** | S Premium přibude stránkování a původní soubor včetně 4K. Přehraj.to počítá každé přihlášení jako zařízení, proto se integrace přihlašuje jen jednou za pár hodin. |
 | **Používat CZtor** | Placený katalog cztor.com. Zapnutí otevře krok s PINem, viz [CZtor](#cztor). |
 | **Luna – adresa serveru**, **token (nebo celá instalační URL)** | Adresa serveru Luny (`http://IP:7126`) a token ze stránky `/setup` Luny. Stačí vložit celou instalační adresu, token se z ní načte. Luna může běžet jako doplněk tohoto Home Assistantu, ale i na počítači, NAS nebo přímo na Android TV boxu; vždy potřebuje WebShare VIP. Postup je v [návodu pro Kodi](../kodi/nastaveni-luny.md). |
 | **Upozornit N dní před koncem předplatného WebShare (0 = vypnuto)** | Kdy přijde upozornění na konec VIP. |
 
-Bez jediného zdroje katalog a hledání fungují dál (přes veřejné databáze filmů, s klíčem TMDB i česky). K přehrání je potřeba vlastní úložiště nebo aspoň jeden zdroj.
+Bez jediného zdroje katalog a hledání fungují dál (přes veřejné databáze filmů, s klíčem TMDB i česky). K přehrání je potřeba hlavně vlastní úložiště, zdroje třetích stran jsou volitelné.
 
 ### CZtor
 
@@ -47,18 +59,6 @@ Po zapnutí **Používat CZtor** se otevře krok se spárováním:
 3. Nepotvrzený PIN hlásí chybu (nejdřív ho potvrď na webu); vypršelý PIN je potřeba vyžádat znovu. Vypnutím přepínače se CZtor vypne a formulář se uloží bez spárování.
 
 Heslo k účtu integrace nikdy nevidí, uloží se jen přístupové tokeny. Jestli je účet spárovaný, ukáže senzor [Stav zdrojů](sluzby-a-senzory.md#stav-zdroju). Podrobně v nápovědě: [CZtor: „zařízení není spárované“](../../cs/cztor.md).
-
-## Vlastní úložiště
-
-Sekce **Vlastní úložiště (WebDAV)** – až tři složky s vlastními soubory (NAS, Nextcloud, server). Prohledávají se spolu se zdroji a nalezené soubory se nabídnou mezi streamy jako první. Pro každé úložiště (1–3):
-
-| Pole | K čemu |
-|---|---|
-| **Úložiště N – adresa složky (WebDAV)** | např. `https://nas.example.cz:5006/video/` nebo `https://cloud.example.cz/remote.php/dav/files/jmeno/Video/`. Prázdné = úložiště vypnuté. |
-| **Úložiště N – uživatel**, **heslo** | přihlášení k úložišti (HTTP Basic); bez hesla nech prázdné |
-| **Úložiště N – název u streamů** | např. `NAS` – ukáže se v kartě na zeleném štítku u streamu |
-
-Úložiště musí být dosažitelné **z Home Assistantu** – Home Assistant soubory prochází a přehrávačům je předává. Jak soubory pojmenovat, aby se přiřadily k titulům (rok u filmu, `S01E02` u dílu), je v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md) a platí i tady.
 
 ## Stahování a odkazy
 

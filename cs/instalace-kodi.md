@@ -31,10 +31,12 @@ a pojmenuj ho `Nokturno`.
 
 ## 5. První spuštění
 Doplněk se zeptá na souhlas s podmínkami použití (**Souhlasím**) a nabídne průvodce nastavením:
-účty můžeš vyplnit **z mobilu přes QR kód**, projít krátkého průvodce ovladačem, nebo to přeskočit.
+vlastní úložiště a případné účty můžeš vyplnit **z mobilu přes QR kód**, projít krátkého průvodce ovladačem,
+nebo to přeskočit. Průvodce se jako první ptá na vlastní úložiště.
 Průvodce kdykoli spustíš znovu v **Nastavení → Pokročilé → Průvodce nastavením**.
 
-K přehrávání potřebuješ [vlastní úložiště](vlastni-uloziste.md) nebo aspoň jeden zdroj, například WebShare s VIP.
+K přehrávání potřebuješ hlavně [vlastní úložiště](vlastni-uloziste.md). Zdroje třetích stran (například WebShare
+s VIP) jsou volitelné a u nové instalace jsou všechny vypnuté.
 
 ## Když něco nejde
 - **Kodi hlásí, že nemůže nainstalovat doplněk z neznámého zdroje:** vrať se ke kroku 1.

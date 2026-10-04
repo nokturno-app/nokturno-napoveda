@@ -9,7 +9,8 @@ templates:
     Ahoj, když se přehrávání seká, nestíhá internet nebo zdroj.
     1. Vyber menší soubor nebo nižší kvalitu. Full HD potřebuje zhruba 8–15 Mb/s, 4K 25–60 Mb/s.
     2. Nokturno → Nastavení → Přehrávání → Změřit rychlost a nastavit datový tok. Příliš velké soubory se pak nenabídnou.
-    3. WebShare bez VIP stahuje jen pár kB/s, plynule nepřehraje nic.
+    3. U vlastního úložiště přes internet rozhoduje rychlost odesílání (upload) tam, kde úložiště stojí.
+    4. Z volitelných zdrojů: WebShare bez VIP stahuje jen pár kB/s, plynule nepřehraje nic.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/seka-se-to
     Tým Nokturno
   stremio: |
@@ -29,8 +30,9 @@ Orientačně: **Full HD 8–15 Mb/s, 4K 25–60 Mb/s**.
 2. **Omez velikost souborů podle připojení:**
    - **Kodi:** **Nokturno → Nastavení → Přehrávání → Změřit rychlost a nastavit datový tok** (necelá minuta).
      Nebo nastav **Max. datový tok** ručně. Soubory, které by se nestihly načítat, se nenabídnou.
-   - **Stremio:** v nastavení doplňku, sekce **Předvolby** → **Nejvyšší datový tok (Mb/s)**. Pak doplněk přidej znovu.
-3. **Zkontroluj účet.** WebShare bez VIP stahuje rychlostí pár kB/s, viz [Premium, VIP a kredit](premium-a-kredit.md).
+   - **Stremio:** v nastavení doplňku, sekce **Předvolby** → **Nejvyšší datový tok (Mb/s)**. Pak ulož změny.
+3. **Zkontroluj zdroj.** U [vlastního úložiště](#vlastni-uloziste) rozhoduje rychlost linky, kde stojí.
+   Z volitelných zdrojů třetích stran: WebShare bez VIP stahuje rychlostí pár kB/s, viz [Premium, VIP a kredit](premium-a-kredit.md).
 4. **Síť doma:** kabel místo Wi-Fi, nebo box blíž k routeru.
 
 ## Vlastní úložiště

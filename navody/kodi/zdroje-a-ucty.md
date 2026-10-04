@@ -2,7 +2,7 @@
 
 Hlavní funkcí Nokturna je [vlastní úložiště](../../cs/vlastni-uloziste.md). Vše na této stránce jsou **volitelné vyhledávače třetích stran** – zapneš si je jen ty, se svým účtem, doplněk sám žádný obsah nehostuje (viz [Právní upozornění](index.md#pravni-upozorneni)).
 
-Všechno je v jedné kategorii nastavení **Zdroje a účty**. Každý zdroj má vlastní skupinu, pořadí na této stránce odpovídá pořadí v nastavení. Zapnout můžeš jeden zdroj, několik, nebo všechny – navzájem se neruší, jejich výsledky se sloučí do jednoho seznamu streamů.
+U nové instalace jsou všechny zdroje třetích stran vypnuté, dřívější instalace si svoje nastavení nechávají. Všechno je v jedné kategorii nastavení **Zdroje a účty**. Každý zdroj má vlastní skupinu, pořadí na této stránce odpovídá pořadí v nastavení. Zapnout můžeš jeden zdroj, několik, nebo všechny – navzájem se neruší, jejich výsledky se sloučí do jednoho seznamu streamů.
 
 Pohodlnější než ovladač je [Nastavit z mobilu](nastaveni.md#nastavit-z-mobilu): účty vyplníš v prohlížeči telefonu.
 
@@ -44,7 +44,7 @@ Soubory, které uživatelé WebShare hodnotí převážně záporně, se v běž
 
 Hledání a přehrávání na [prehraj.to](https://prehraj.to). Je to jiná služba než Sledujteto, s vlastními účty – Premium na jedné na druhé neplatí.
 
-- **Používat Přehraj.to** – zapnuté už ve výchozím stavu, funguje i bez účtu.
+- **Používat Přehraj.to** – u nové instalace vypnuté, po zapnutí funguje i bez účtu.
 - **E-mail**, **Heslo** – nepovinné. **Bez účtu** je vidět jen první strana výsledků (32 souborů) a hraje se překódovaný soubor v 1080p. **S účtem Premium** přibude stránkování a hraje se původní soubor včetně 4K. Velikost souboru se u streamu ukáže jen s účtem.
 - Bez účtu Přehraj.to hlídá počet dotazů (HTTP 429). Po první odmítnuté odpovědi doplněk zdroj na 10 minut přeskočí. S účtem se toto omezení netýká.
 
@@ -60,7 +60,7 @@ Bez účtu Streamuj.tv katalog a hledání fungují dál, jen ze Sosáče nic ne
 
 ## HellSpy
 
-Fulltextové hledání přímo na [HellSpy](https://hellspy.to) a přehrávání původních souborů. **Účet není potřeba**, stačí přepínač **Používat HellSpy**.
+Fulltextové hledání přímo na [HellSpy](https://hellspy.to) a přehrávání původních souborů. **Účet není potřeba**, stačí zapnout přepínač **Používat HellSpy** (u nové instalace je vypnutý).
 
 Když HellSpy odpoví chybou HTTP 429, **neodmítá dotazy, ale celou síť**, ze které přicházejí – typicky VPN, mobilní data nebo sdílenou adresu poskytovatele. Stav zdrojů pak hlásí „odmítá síť“ a doplněk HellSpy 10 minut přeskočí. Čekání obvykle nepomůže; pomůže vypnout VPN nebo zkusit jinou síť.
 
@@ -163,7 +163,7 @@ Klíč se vyplní i přes **Koncerty → Nastavit koncerty** a se zapnutou synch
 
 ## Trakt.tv
 
-Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Volba **Synchronizovat s Traktem: zhlédnuté, rozkoukané a Watchlist** (výchozí zapnutá) navíc každých 15 minut stáhne, co jsi dokoukal nebo rozkoukal jinde (Stremio, Nuvio), a Watchlist na Traktu drží stejný jako **Můj seznam** – oběma směry. Podrobně v nápovědě: [Trakt.tv](../../cs/trakt.md).
+Co sleduješ a co označíš jako zhlédnuté, se zapisuje i na [Trakt.tv](https://trakt.tv). Volba **Synchronizovat s Traktem: zhlédnuté, rozkoukané a Watchlist** (výchozí zapnutá) navíc každých 15 minut stáhne, co se dokoukalo nebo rozkoukalo jinde (Stremio, Nuvio), a Watchlist na Traktu drží stejný jako **Můj seznam** – oběma směry. Podrobně v nápovědě: [Trakt.tv](../../cs/trakt.md).
 
 - **Používat Trakt.tv**
 - **Přihlásit se k Traktu (kódem zařízení)** – na TV se ukáže kód, zadáš ho na `trakt.tv/activate`. Vlastní aplikaci na Traktu zakládat nemusíš. Stačí free účet; ten může mít připojené dvě aplikace naráz.

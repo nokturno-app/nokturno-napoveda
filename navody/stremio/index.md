@@ -2,7 +2,7 @@
 
 !!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
-    (WebShare, FastShare, Přehraj.to…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
+    (vlastní úložiště, WebShare, FastShare…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
     a uložit a musíš mu věřit. Jistotu máš jen s doplňkem, který běží u tebe.
 
 **Nokturno pro Stremio** je aplikace, která běží u tebe – na počítači, NASu, Android TV boxu nebo jako doplněk Home Assistantu – a přidá k filmům
@@ -16,7 +16,7 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
   pro Windows, macOS, Linux nebo Android a sama se aktualizuje. Doplněk funguje, jen když aplikace běží. Viz [Nokturno pro Stremio – aplikace](../../cs/stremio-aplikace.md).
 - **Vlastní úložiště** – až tři WebDAV složky s vlastními soubory, mezi streamy jako první. Viz [Zdroje a nastavení](zdroje-a-nastaveni.md#vlastni-uloziste).
 - **Volitelně i další zdroje.** K titulu, který si otevřeš, Nokturno dohledá soubory i u zdrojů, které si zapneš.
-  Názvy, plakáty a popisy má Stremio samo; Nokturno volitelně přidá vlastní [katalogy](zdroje-a-nastaveni.md#katalogy).
+  Názvy, plakáty a popisy má Stremio samo; Nokturno volitelně přidá vlastní [katalogy](zdroje-a-nastaveni.md#vlastni-katalogy).
 - **Každý má vlastní nastavení.** Od verze 9.6.0 je uložené v aplikaci jako pojmenovaný profil a adresa doplňku nese jen jeho klíč. Změny platí bez nového přidání doplňku, viz [Jak přidat Nokturno do Stremia nebo Nuvia](../../cs/stremio-instalace.md).
   Adresu proto nikomu neposílej.
 - **Bere se jen to, co k titulu patří.** Soubory se filtrují podle názvu, roku a dílu; podobné, ale jiné filmy
@@ -29,7 +29,7 @@ Přehraj.to a CZtor**. Tituly hledáš ve Stremiu jako obvykle, streamy Nokturna
 
 ## Podmínky použití
 
-Nokturno je přehrávač a vyhledávač nad tvým vlastním úložištěm i nad úložišti třetích stran, které si zapneš. Samo žádný obsah
+Nokturno je přehrávač a vyhledávač nad tvým vlastním úložištěm a volitelně i nad úložišti třetích stran, které si zapneš. Samo žádný obsah
 nehostuje a neověřuje, jestli je soubor na cizím úložišti legální. Používej ho jen k obsahu, ke kterému máš právo.
 Plné znění podmínek je na [nokturno.stream/terms](https://nokturno.stream/terms).
 

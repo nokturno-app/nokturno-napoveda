@@ -6,9 +6,9 @@ products: [stremio]
 priority: 1
 templates:
   stremio: |
-    U filmu nevidíš streamy Nokturna? Ve Stremiu otevři Doplňky → Nokturno → ozubené kolo a u každého zdroje dej Ověřit účet.
-    Nejčastěji jde o překlep v hesle nebo vypršelé VIP na WebShare.
-    Po opravě dej Přidat do Stremia a starý doplněk odinstaluj.
+    U filmu nevidíš streamy Nokturna? Ve Stremiu otevři Doplňky → Nokturno → ozubené kolo.
+    Nejdřív na kartě Vlastní úložiště dej Ověřit úložiště: aplikace Nokturno na něj musí dosáhnout. Pak dej ✓ Ověřit všechny účty u volitelných zdrojů třetích stran, které máš zapnuté.
+    Nejčastěji jde o nedosažitelné úložiště, překlep v hesle nebo vypršelé VIP na WebShare. Po opravě ulož změny.
 ---
 
 # U filmu nejsou streamy Nokturna
@@ -20,12 +20,18 @@ templates:
 3. **Je tam položka ⛔ Nokturno?** Přišlo příliš mnoho požadavků za sebou, viz
    [Položka „⛔ Nokturno“](stremio-polozky-nokturno.md).
 
+## Ověř vlastní úložiště
+Ve Stremiu otevři **Doplňky → Nokturno → ozubené kolo**, na kartě **Vlastní úložiště** dej **Ověřit úložiště**.
+Musí na něj dosáhnout zařízení s aplikací Nokturno, viz [Jak připojit vlastní úložiště](vlastni-uloziste.md).
+Soubor se k titulu přiřadí podle názvu, viz [Jak pojmenovat soubory](vlastni-uloziste.md#jak-pojmenovat-soubory).
+
 ## Ověř účty
-Ve Stremiu otevři **Doplňky → Nokturno → ozubené kolo** a u každého zdroje dej **Ověřit účet**.
+Zdroje třetích stran jsou volitelné a v novém profilu vypnuté. U těch, které máš zapnuté, dej **Ověřit účet**
+(nebo **✓ Ověřit všechny účty**).
 - „Přihlášení neprošlo – zkontroluj jméno a heslo.“ (u některých zdrojů „e-mail a heslo“): viz [Zdroj hlásí „nesedí jméno nebo heslo“](prihlaseni.md).
 - WebShare bez VIP, Sledujteto bez Premium, FastShare bez kreditu: viz [Premium, VIP a kredit](premium-a-kredit.md).
 
-Po opravě dej **Přidat do Stremia** a starý doplněk odinstaluj.
+Po opravě dej **Uložit změny**. Když už doplněk ve Stremiu máš, platí hned.
 
 ## Jeden zdroj nefunguje, ostatní ano
 Zdroj, který neodpověděl, se přeskočí a streamy přijdou z ostatních. Zkus to za chvíli znovu.
@@ -33,8 +39,6 @@ Zdroj, který neodpověděl, se přeskočí a streamy přijdou z ostatních. Zku
 ## Účty jsou v pořádku, a stejně nic
 - **Titul na zdrojích nemusí vůbec být**, hlavně úplné novinky a málo známé seriály.
 - Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, díl). Podobné, ale jiné filmy záměrně vynechá.
-- **Vlastní úložiště:** musí na něj dosáhnout zařízení s aplikací Nokturno i zařízení, kde přehráváš, viz
-  [Jak připojit vlastní úložiště](vlastni-uloziste.md).
 
 ## Stream je vidět, ale nepřehraje se
 - U streamu je „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“: takový řádek ukazuje jen starší

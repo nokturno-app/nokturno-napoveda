@@ -10,7 +10,7 @@ priority: 1
 
 ## Čo to znamená
 Keď niektorý zapnutý zdroj potrebuje zásah, zobrazí sa **úplne hore v hlavnom menu** Nokturna riadok s menom
-zdroja a krátkym popisom, napríklad „Luna: server neodpovedá“ alebo „WebShare: zostáva dní: 3“. Keď je problémov viac,
+zdroja a krátkym popisom, napríklad „Úložisko: neodpovedá“ alebo „WebShare: zostáva dní: 3“. Keď je problémov viac,
 za textom je „+1“, „+2“…
 
 Keď je všetko v poriadku, riadok v menu vôbec nie je.
@@ -27,6 +27,7 @@ pravým tlačidlom na jeho riadok a zvoľ **Uspať zdroj** (10 minút, 1 hodina,
 ## Čo jednotlivé stavy znamenajú
 | Vo výpise | Čo to znamená | Návod |
 |---|---|---|
+| Úložisko: neodpovedá | vlastné úložisko | [Ako pripojiť vlastné úložisko](vlastni-uloziste.md) |
 | neodpovedá | zdroj alebo server nie je dosiahnuteľný | [„<Zdroj> neodpovedá“](zdroj-neodpovida.md) |
 | nesedí meno alebo heslo | zdroj odmietol prihlásenie | [Zdroj hlási „nesedí meno alebo heslo“](prihlaseni.md) |
 | predplatné vypršalo, do konca predplatného zostáva dní: N | WebShare, CZtor alebo Přehraj.to | [Premium, VIP a kredit](premium-a-kredit.md) |
@@ -36,7 +37,6 @@ pravým tlačidlom na jeho riadok a zvoľ **Uspať zdroj** (10 minút, 1 hodina,
 | zariadenie nie je spárované | CZtor | klikni na riadok a spáruj PIN kódom, pozri [CZtor](cztor.md) |
 | odmieta túto sieť (HTTP 429) – VPN alebo mobilné dáta? | HellSpy odmieta tvoju sieť, typicky VPN alebo mobilné dáta | [„Odmieta túto sieť (HTTP 429)“](sit-odmitnuta-429.md) |
 | server neodpovedá, beží, ale chýba token… | Luna | [Čo znamenajú hlásenia Luny](luna-hlasky.md) |
-| Úložisko: neodpovedá | vlastné úložisko | [Ako pripojiť vlastné úložisko](vlastni-uloziste.md) |
 
 ## Stav sa po oprave nezmenil
 Stav sa obnovuje na pozadí po niekoľkých hodinách. Hneď ho prepíše **Overiť zdroje** vo výpise

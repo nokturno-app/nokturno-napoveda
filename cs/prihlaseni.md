@@ -26,25 +26,29 @@ U Sledujteto, Přehraj.to a FastShare / Sdilej.cz Nokturno po odmítnutém přih
 **hodinu nezkouší**, aby účet nezablokoval. Když heslo opravíš, zkusí ho hned.
 
 ## Co udělat
-1. **Ověř údaje na webu zdroje.** Přihlas se na webu (webshare.cz, sledujteto.cz, fastshare.cz nebo sdilej.cz,
+1. **Ověř údaje na webu zdroje.** U vlastního úložiště se přihlas přímo k NAS nebo Nextcloudu. U zdrojů třetích
+   stran se přihlas na webu (webshare.cz, sledujteto.cz, fastshare.cz nebo sdilej.cz,
    prehraj.to) stejným jménem a heslem. Když nejde ani tam, obnov si heslo na webu.
 2. **Vyplň je v Nokturnu znovu.**
-   - **Kodi:** **Nokturno → Nastavení → Zdroje a účty**, skupina zdroje. Pozor na mezeru na konci
+   - **Kodi:** vlastní úložiště v **Nokturno → Nastavení → Vlastní úložiště**, zdroje třetích stran
+     v **Nokturno → Nastavení → Zdroje a účty**, skupina zdroje. Pozor na mezeru na konci
      a na velká písmena. Pohodlněji to jde z mobilu: **Nastavit z mobilu a přenos → Nastavit z mobilu**.
    - **Stremio:** v nastavení doplňku (ozubené kolo u Nokturna ve Stremiu) oprav údaje, dej **Ověřit účet**
-     a pak doplněk přidej znovu. Změněné nastavení je nová adresa, starý doplněk ve Stremiu odinstaluj.
-   - **Home Assistant:** **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**, sekce **Zdroje a účty**.
+     a ulož změny. S profilem platí hned. Ve starém režimu bez profilů je změněné nastavení nová adresa:
+     doplněk přidej znovu a starý ve Stremiu odinstaluj.
+   - **Home Assistant:** **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**, krok **Vlastní úložiště**
+     nebo **Zdroje a účty**.
      Formulář hlásí „Špatný e-mail nebo heslo.“
 3. **Ověř.** V Kodi **Nastavení → Pokročilé → Ověřit zdroje** (ve starších verzích **Otestovat zdroje**),
    ve Stremiu **Ověřit účet**.
 
 ## Tipy k jednotlivým zdrojům
+- **Vlastní úložiště:** jméno a heslo jsou k tvému úložišti, ne k Nokturnu.
 - **WebShare:** místo hesla jde vložit i 40znakový „salted hash“, Nokturno ho pozná samo.
 - **FastShare / Sdilej.cz:** účty jsou oddělené. Kdo má účet na Sdilej.cz, zvolí v Kodi u FastShare
   **Účet z: Sdilej.cz** (ve Stremiu a HA stejná volba).
 - **Sosáč** se přihlašuje účtem **Streamuj.tv**, ne WebShare. Streamuj přihlášení dopředu neověří,
   špatné heslo se pozná až při přehrání.
-- **Vlastní úložiště:** jméno a heslo jsou k tvému úložišti, ne k Nokturnu.
 - **CZtor** heslo nechce vůbec, zařízení se páruje PINem, viz [CZtor](cztor.md).
 
 ---

@@ -9,7 +9,7 @@ Nokturno rozlišuje dvě věci, které se snadno pletou:
 1. **Odkud je titul (metadata)** – název, plakát, popis, obsazení, katalogy Filmy a Seriály. O ně se stará **databáze filmů**: TMDB (s vlastním klíčem), Luna, veřejný katalog Sosáče a Cinemeta, v tomto pořadí. Každá další se zkusí, jen když předchozí nic nevrátila.
 2. **Odkud se titul přehraje (stream)** – samotný video soubor. O ten se starají **zdroje streamů**: vlastní úložiště a volitelně WebShare, Přehraj.to, Sosáč, HellSpy, Sledujteto, FastShare, CZtor a Luna.
 
-Katalog a hledání proto fungují **i bez jediného účtu**. K přehrání ale potřebuješ aspoň jeden zdroj streamů.
+Katalog a hledání proto fungují **i bez jediného účtu**. K přehrání ale potřebuješ zdroj streamů – hlavně vlastní úložiště, zdroje třetích stran jsou volitelné a u nové instalace vypnuté.
 
 ## Právní upozornění
 

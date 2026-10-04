@@ -9,13 +9,13 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 | **Sosáč** | české filmy a seriály s dabingem a titulky, po dílech | účet **Streamuj.tv** (přehrává se odtamtud) |
 | **Sledujteto** | velký výběr filmů a seriálů, rozlišení a zvuk posílá přímo jejich rozhraní | účet Sledujteto, k přehrání **Premium** |
 | **FastShare / Sdilej.cz** | velký výběr filmů a seriálů, rozlišení posílá přímo jejich rozhraní | hledání nic, k přehrání účet s **kreditem** nebo neomezeným stahováním |
-| **HellSpy** | veřejné původní soubory zdarma | nic – stačí nechat zapnuté |
+| **HellSpy** | veřejné původní soubory zdarma | nic – stačí ho zapnout (v novém profilu je vypnutý) |
 | **Přehraj.to** | velký výběr, hraje v prohlížeči i v aplikaci | účet Přehraj.to, s **Premium** původní soubor |
 | **CZtor** | placený katalog, plná kvalita včetně 4K a dabingu, hraje i v prohlížeči | předplatné cztor.com, spárování PINem |
 
 ## Vlastní úložiště
 
-Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
+Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní úložiště** – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
 
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
 - **Soubor přehrávači předává aplikace Nokturno** (od verze 9.6.1), přihlášení k úložišti do Stremia neodchází a data tečou přes aplikaci. Ve webovém přehrávači Stremia v prohlížeči záleží na formátu souboru (`.mkv`, `.avi` a podobné nepřehraje), v aplikaci (Stremio, Nuvio) hrají.
@@ -24,6 +24,9 @@ Karta **Vlastní úložiště** ve formuláři – až tři složky s vlastními
 - Nový soubor se objeví nejpozději do hodiny.
 
 ## Volitelné zdroje
+
+Zdroje třetích stran jsou na dalších kartách sekce **Vlastní úložiště a zdroje**. Všechny jsou volitelné a v novém
+profilu vypnuté.
 
 ### WebShare
 
@@ -49,7 +52,7 @@ Soubor přehrávači předává **aplikace Nokturno** (od verze 9.6.1), přihlá
 
 ### HellSpy
 
-Veřejná úschovna, žádný účet, nic nestojí. Volba **Používat HellSpy** je ve výchozím nastavení zapnutá.
+Veřejná úschovna, žádný účet, nic nestojí. Volba **Používat HellSpy** je v novém profilu vypnutá, zapni ji, když ho chceš používat.
 
 ### Přehraj.to
 

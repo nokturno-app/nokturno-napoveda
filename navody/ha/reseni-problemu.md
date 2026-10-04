@@ -4,6 +4,10 @@ Návody k nejčastějším problémům jsou v **[nápovědě Nokturna](../../ind
 
 Problémy se zdroji (chybějící jazyk zvuku, nabídnutý jiný titul, anglické popisy) platí stejně jako v Kodi – viz [nápověda](../../index.md). Stav zdrojů ukazuje senzor [Stav zdrojů](sluzby-a-senzory.md#stav-zdroju).
 
+## Soubory z vlastního úložiště se nenabízejí
+
+Úložiště musí být dosažitelné z Home Assistantu a soubory pojmenované podle titulu (rok u filmu, `S01E02` u dílu). Zkontroluj krok **Vlastní úložiště** v nastavení integrace a senzor [Stav zdrojů](sluzby-a-senzory.md#stav-zdroju). Podrobně: [Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md).
+
 ## Integrace hlásí „vyžaduje opravu“
 
 WebShare odmítl přihlášení. Jak ho opravit: [Zdroj hlásí „nesedí jméno nebo heslo“](../../cs/prihlaseni.md).

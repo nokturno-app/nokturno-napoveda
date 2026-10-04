@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
-    (WebShare, FastShare, Přehraj.to…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
+    (vlastní úložiště, WebShare, FastShare…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
     a uložit a musíš mu věřit. Jistotu máš jen s doplňkem, který běží u tebe: doma, přes VPN nebo na vlastním VPS.
 
 Aplikace Nokturno pro Stremio zůstane doma (na televizi, počítači, Raspberry Pi, NAS nebo v Home Assistantu)

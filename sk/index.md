@@ -8,7 +8,7 @@ lang: sk
 Návody k funkciám Nokturna pre Kodi, Stremio a Home Assistant aj riešenie najčastejších problémov.
 Keď niečo nejde, nájdi hlásenie, ktoré vidíš na obrazovke. [Česky](../)
 
-Nokturno je prehrávač a vyhľadávač nad tvojím vlastným úložiskom aj úložiskami tretích strán. Samo žiadny
+Nokturno je prehrávač a vyhľadávač nad tvojím vlastným úložiskom a voliteľne aj nad úložiskami tretích strán. Samo žiadny
 obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo je Nokturno a čo vie](co-je-nokturno.md).
 
 !!! tip "Opýtaj sa na Discorde"
@@ -21,13 +21,13 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Súkromie a dáta](soukromi.md)
 
 ## Zdroje a účty
+- [Ako pripojiť vlastné úložisko](vlastni-uloziste.md)
 - [Zdroj hlási „nesedí meno alebo heslo“](prihlaseni.md)
 - [„Účet bez Premium“, „účet bez VIP“, „minul sa kredit“](premium-a-kredit.md)
 - [„<Zdroj> neodpovedá“](zdroj-neodpovida.md)
 - [„Odmieta túto sieť (HTTP 429)“](sit-odmitnuta-429.md)
 - [CZtor: „zariadenie nie je spárované“](cztor.md)
 - [FastShare s účtom zo Sdilej.cz](sdilej-cz.md)
-- [Ako pripojiť vlastné úložisko](vlastni-uloziste.md)
 - [Trakt.tv: prihlásenie kódom](trakt.md)
 
 ## Aktualizácie
@@ -75,7 +75,7 @@ Sledované, synchronizácia, sťahovanie a CZtor fungujú v Home Assistante rovn
 ## Stremio › Začíname
 !!! danger "Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje"
     Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
-    (WebShare, FastShare, Přehraj.to…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
+    (vlastné úložisko, WebShare, FastShare…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
     a uložiť a musíš mu veriť. Istotu máš len s doplnkom, ktorý beží u teba.
 
 Nokturno pre Stremio si spustíš u seba a len pre seba: [doma](stremio-aplikace.md) (aj ako doplnok Home Assistantu),

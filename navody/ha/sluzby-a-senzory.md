@@ -14,7 +14,7 @@ Integrace vytváří čtyři senzory a řadu služeb, na které jde navázat aut
 
 ### Stav zdrojů
 
-Senzor hlásí, které zdroje potřebují zásah: vypršelé předplatné WebShare, účet bez VIP nebo Premium, HellSpy, který odmítá síť, Luna, která neběží, došlý kredit FastShare, nespárovaný CZtor, omezení Přehraj.to, nedostupné úložiště.
+Senzor hlásí, které zdroje potřebují zásah: nedostupné vlastní úložiště, a u volitelných zdrojů třetích stran vypršelé předplatné WebShare, účet bez VIP nebo Premium, HellSpy, který odmítá síť, Luna, která neběží, došlý kredit FastShare, nespárovaný CZtor nebo omezení Přehraj.to.
 
 - Hodnota je počet takových zdrojů. Na automatizaci stačí jedno porovnání: stav > 0.
 - Atribut `sources` má u každého zapnutého zdroje úroveň (`ok` / `warn` / `fail`), kód příčiny a podrobnosti; `problems` je seznam zdrojů s problémem.

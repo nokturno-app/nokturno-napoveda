@@ -26,8 +26,8 @@ templates:
 Když je zvuk v preferovaném jazyce, titulky se vypnou.
 
 ## Odkud titulky jsou
-1. Z **videa samotného** (titulky uvnitř souboru).
-2. Ze **zdroje**, například soubor s titulky vedle videa na WebShare. K dílu seriálu se přiřadí, jen když
+1. Z **videa samotného** (titulky uvnitř souboru, i u souborů z vlastního úložiště).
+2. Z volitelného **zdroje třetí strany**, například soubor s titulky vedle videa na WebShare. K dílu seriálu se přiřadí, jen když
    číslo dílu sedí i v názvu souboru s titulky.
 3. Z **OpenSubtitles**, když stream žádné jiné titulky nemá. Hledá se podle IMDb id filmu nebo dílu,
    titulky se stáhnou až při přehrání.

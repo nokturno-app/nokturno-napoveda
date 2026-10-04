@@ -7,7 +7,7 @@ priority: 1
 templates:
   stremio: |
     Nokturno pre Stremio je aplikácia, ktorú si spustíš u seba: github.com/nokturno-app/nokturno-stremio-app/releases
-    Potom otvor http://<IP zariadenia s aplikáciou>:7140/configure, založ profil s názvom, vyplň úložisko alebo účty a daj Pridať do Stremia.
+    Potom otvor http://<IP zariadenia s aplikáciou>:7140/configure, založ profil s názvom, vyplň vlastné úložisko, prípadne voliteľné účty zdrojov a daj Pridať do Stremia.
     Od verzie 9.6.0 sa nastavenie ukladá v aplikácii, zmeny potom stačí uložiť tlačidlom Uložiť zmeny, doplnok sa znova nepridáva.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-instalace
 ---
@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje"
     Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
-    (WebShare, FastShare, Přehraj.to…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
+    (vlastné úložisko, WebShare, FastShare…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
     a uložiť a musíš mu veriť. Istotu máš len s doplnkom, ktorý beží u teba: doma, cez VPN alebo na vlastnom VPS.
 
 Doplnok pre Stremio beží v aplikácii **Nokturno pre Stremio** u teba doma. Ako ju stiahnuť a spustiť, je v článku
@@ -36,7 +36,8 @@ Po založení sa otvorí formulár s nastavením nového profilu. Hore je jeho n
 
 ## 2. Vyplň nastavenie
 1. **Vlastné úložisko a zdroje** – každý zdroj má vlastnú záložku (Vlastné úložisko, WebShare, Sosáč, Sledujteto,
-   FastShare, Přehraj.to, CZtor, HellSpy). Vyplnený zdroj má na záložke zelenú bodku. Účet overíš tlačidlom
+   FastShare, Přehraj.to, CZtor, HellSpy). Začni prvou záložkou **Vlastné úložisko**. Zdroje tretích strán sú voliteľné
+   a v novom profile sú všetky vypnuté, HellSpy tiež. Vyplnený zdroj má na záložke zelenú bodku. Účet overíš tlačidlom
    **Overiť účet** v jeho záložke, alebo všetky naraz tlačidlom **✓ Overiť všetky účty** vedľa záložiek –
    výsledok sa ukáže v modrom rámčeku, klik na riadok otvorí záložku zdroja. Rámček zavrieš krížikom, sám zmizne po 10 s.
 2. **Predvoľby** – jazyk zvuku, radenie, katalógy. Tento krok sa dá preskočiť.

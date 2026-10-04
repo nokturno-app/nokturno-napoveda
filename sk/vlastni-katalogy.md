@@ -125,7 +125,7 @@ Pod riadkom sú len vyhovujúce tituly. Prázdny katalóg hlási „Katalóg sa 
 - pri seriáli sa hľadá stream k poslednému odvysielanému dielu,
 - zoznam kandidátov sa obnovuje po 6 hodinách, takže nové tituly pribúdajú samy.
 
-Overuje sa cez zdroje zapnuté v tomto zariadení. Na pozadí sa vynechá FastShare bez kreditu, Prehraj.to bez Premium
+Overuje sa cez vlastné úložisko a voliteľné zdroje tretích strán zapnuté v tomto zariadení. Na pozadí sa vynechá FastShare bez kreditu, Prehraj.to bez Premium
 a HellSpy v pauze po chybe 429 – overovanie by im len uberalo kredit alebo limit.
 
 Overovaných katalógov môže byť najviac 20. Keď je ich viac, Kodi nový katalóg uloží ako **Katalóg z TMDB**
@@ -190,7 +190,7 @@ V Stremiu sa katalógy skladajú vo formulári nastavení doplnku.
 | „Katalóg sa nepodarilo načítať. Skús to neskôr.“ | server Nokturna práve neodpovedá. Skús to o chvíľu. |
 | katalóg z TMDB je prázdny | filtre nič nenechali. Uber žáner alebo tému, zvoľ **aspoň jeden vybraný žáner**, alebo rozšír roky. |
 | „Katalóg sa pripravuje – tituly sa overujú na pozadí.“ | overovanie ešte beží. Otvor katalóg a daj **spustiť dávku teraz**, alebo počkaj. |
-| overený katalóg má málo titulov | požiadavky sú prísne (napríklad 4K + 5.1 + slovenský zvuk). Uvoľni kvalitu alebo jazyk, alebo zapni ďalší zdroj. |
+| overený katalóg má málo titulov | požiadavky sú prísne (napríklad 4K + 5.1 + slovenský zvuk). Uvoľni kvalitu alebo jazyk, doplň tituly do vlastného úložiska, prípadne zapni voliteľný zdroj tretej strany. |
 | na mobile je katalóg iný ako na televízore | mobil má iné zdroje, a tak si katalóg overuje sám. Je to v poriadku. |
 | v Stremiu sa zmena katalógu neprejavila | doplnok v Stremiu odinštaluj a pridaj znova. |
 

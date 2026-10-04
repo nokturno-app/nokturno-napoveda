@@ -9,7 +9,7 @@ Položky shora dolů. Některé se ukážou, jen když mají co nabídnout – n
 | Položka | Kdy se ukáže | Co v ní je |
 |---|---|---|
 | řádek se jménem zdroje a problémem, třeba **Luna: server neodpovídá** | jen když je u některého zdroje co řešit | výpis **Stav zdrojů**, viz [níž](#stav-zdroju) |
-| **Průvodce nastavením** | dokud nemáš nastavený žádný zdroj | [průvodce prvním nastavením](instalace.md#pruvodce-prvnim-nastavenim) |
+| **Průvodce nastavením** | dokud nemáš nastavené vlastní úložiště ani žádný zdroj | [průvodce prvním nastavením](instalace.md#pruvodce-prvnim-nastavenim) |
 | **Novinky ve verzi** | po aktualizaci, dokud je nepřečteš | co přinesla nová verze |
 | **Hledat** | vždy | jedno hledání ve všech zapnutých zdrojích, pro filmy i seriály naráz |
 | **Pokračovat ve sledování** | když máš něco rozkoukaného | rozkoukané filmy a další díly rozkoukaných seriálů (jen díly, které už vyšly) |
@@ -28,7 +28,7 @@ Občas vám pošleme krátkou zprávu (novinka, výpadek zdroje, odpověď na na
 
 ## Stav zdrojů
 
-Řádek úplně nahoře v menu se ukáže, jen když je co řešit: končí předplatné WebShare, Luna neodpovídá, účet nemá Premium, CZtor není spárovaný, HellSpy odmítá tvoji síť a podobně. Nese jméno zdroje a problém, třeba „Luna: server neodpovídá“; když je problémů víc, přibude „+N“. Klik otevře výpis **Stav zdrojů** s řádkem pro každý zapnutý zdroj; každý řádek vede tam, kde se to opravuje.
+Řádek úplně nahoře v menu se ukáže, jen když je co řešit: nedostupné vlastní úložiště, končí předplatné WebShare, Luna neodpovídá, účet nemá Premium, CZtor není spárovaný, HellSpy odmítá tvoji síť a podobně. Nese jméno zdroje a problém, třeba „Luna: server neodpovídá“; když je problémů víc, přibude „+N“. Klik otevře výpis **Stav zdrojů** s řádkem pro každý zapnutý zdroj; každý řádek vede tam, kde se to opravuje.
 
 - **Ověřit zdroje** (ve starších verzích Otestovat zdroje) na konci výpisu ověří všechny zdroje znovu hned.
 - **Uspat zdroj** (místní nabídka na řádku zdroje) – zdroj se na 10 minut, 1 hodinu nebo 12 hodin přestane používat. Hodí se, když má zdroj výpadek a zdržuje hledání. **Zrušit uspání** ho vrátí.

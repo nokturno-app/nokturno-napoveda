@@ -43,16 +43,16 @@ Při prvním otevření se doplněk zeptá na souhlas s podmínkami použití (*
 
 Po souhlasu se nabídne **průvodce nastavením** se třemi možnostmi:
 
-- **Z mobilu** – na TV se ukáže QR kód, v mobilu vyplníš účty v pohodlném formuláři (viz [Nastavit z mobilu](nastaveni.md#nastavit-z-mobilu)).
-- **Průvodce ovladačem** – série otázek ano/ne: WebShare, Sosáč (účet Streamuj.tv), Luna, HellSpy, Sledujteto, FastShare nebo Sdilej.cz, CZtor, klíč TMDB. Kde je potřeba účet, vyplníš jméno a heslo.
+- **Z mobilu** – na TV se ukáže QR kód, v mobilu vyplníš vlastní úložiště a případné účty v pohodlném formuláři (viz [Nastavit z mobilu](nastaveni.md#nastavit-z-mobilu)).
+- **Průvodce ovladačem** – nejdřív se zeptá na **vlastní úložiště** (adresa, jméno, heslo). Pak připomene, že zdroje třetích stran jsou volitelné, a teprve potom nabídne sérii otázek ano/ne: WebShare, Sosáč (účet Streamuj.tv), Luna, HellSpy, Sledujteto, FastShare nebo Sdilej.cz, CZtor, klíč TMDB. Kde je potřeba účet, vyplníš jméno a heslo.
 - **Přeskočit** – všechno jde doplnit později v nastavení.
 
 Na konci se průvodce zeptá, jestli **změřit rychlost internetu** a podle ní nastavit nejvyšší datový tok. Když máš doplněk **TMDb Helper**, nabídne i nastavení Nokturna jako přehrávače pro tlačítko Přehrát v detailu filmu a **přepnutí jazyka TMDb Helperu** na jazyk Kodi (TMDb Helper ho z Kodi nepřebírá, detail filmu by jinak byl anglicky).
 
 **Lunu průvodce najde v síti sám** a rovnou ukáže, kde si vyzvednout token. Podrobný postup je na stránce [Nastavení Luny krok za krokem](nastaveni-luny.md).
 
-Po aktualizaci ze starší verze se průvodce sám nenabídne, pokud už máš nějaký zdroj zapnutý. Ručně ho spustíš v **Nastavení → Pokročilé → Průvodce nastavením**. Dokud nemáš nastavený žádný zdroj, je průvodce v hlavním menu jako první položka.
+Po aktualizaci ze starší verze se průvodce sám nenabídne, pokud už máš nějaký zdroj zapnutý. Ručně ho spustíš v **Nastavení → Pokročilé → Průvodce nastavením**. Dokud nemáš nastavené vlastní úložiště ani žádný zdroj, je průvodce v hlavním menu jako první položka.
 
 ## Co dál
 
-Katalog a hledání fungují hned i bez nastavení. K přehrání potřebuješ vlastní úložiště nebo aspoň jeden volitelný zdroj: pokračuj na [Vlastní úložiště](../../cs/vlastni-uloziste.md) nebo [Zdroje a účty](zdroje-a-ucty.md). Nastavení z jednoho Kodi do dalšího přeneseš podle stránky [Synchronizace a přenos](synchronizace.md#prenos-nastaveni-do-dalsiho-kodi).
+Katalog a hledání fungují hned i bez nastavení. K přehrání potřebuješ hlavně vlastní úložiště: pokračuj na [Vlastní úložiště](../../cs/vlastni-uloziste.md). Zdroje třetích stran jsou volitelné a u nové instalace jsou všechny vypnuté, viz [Zdroje a účty](zdroje-a-ucty.md). Nastavení z jednoho Kodi do dalšího přeneseš podle stránky [Synchronizace a přenos](synchronizace.md#prenos-nastaveni-do-dalsiho-kodi).

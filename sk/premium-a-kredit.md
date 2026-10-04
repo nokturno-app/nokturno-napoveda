@@ -9,7 +9,7 @@ templates:
   kodi: |
     Ahoj, {zdroj} u teba nemá aktívne predplatné alebo kredit, preto z neho prehrávanie nejde alebo je pomalé.
     1. Na webe zdroja skontroluj predplatné (WebShare VIP, Sledujteto a Přehraj.to Premium, FastShare / Sdilej.cz kredit).
-    2. Keď ho mať nechceš, v Nokturno → Nastavenia → Zdroje a účty zdroj vypni. Ostatné zdroje fungujú ďalej.
+    2. Keď ho mať nechceš, v Nokturno → Nastavenia → Zdroje a účty zdroj vypni. Zdroje tretích strán sú voliteľné, vlastné úložisko a ostatné zdroje fungujú ďalej.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/premium-a-kredit
     Tím Nokturno
 ---
@@ -33,9 +33,9 @@ hore v menu, vo výpise **Stav zdrojov** a v **Overiť zdroje**.
 Nokturno žiadne účty nepredáva a k predplatnému zdrojov nemá prístup. Kupuje sa vždy na webe daného zdroja.
 
 ## Nechcem platiť
-Zdroj vypni: v Kodi **Nokturno → Nastavenia → Zdroje a účty**, prepínač **Používať …** v skupine zdroja.
-V Stremiu nechaj jeho kartu prázdnu a doplnok pridaj znova. Ostatné zdroje a [vlastné úložisko](vlastni-uloziste.md)
-fungujú ďalej.
+Zdroje tretích strán sú voliteľné. Hlavné je tvoje [vlastné úložisko](vlastni-uloziste.md), ktoré nič nestojí
+a funguje ďalej. Zdroj vypni: v Kodi **Nokturno → Nastavenia → Zdroje a účty**, prepínač **Používať …** v skupine
+zdroja. V Stremiu nechaj jeho kartu prázdnu a ulož zmeny. Ostatné zdroje fungujú ďalej.
 
 ## Stremio
 V Stremiu ukáže stav účtu tlačidlo **Overiť účet** pri každom zdroji v nastavení doplnku.

@@ -11,9 +11,16 @@
 
 **Nastavení → Zařízení a služby → Přidat integraci → Nokturno.**
 
-1. **Právní upozornění** – první krok. Bez souhlasu integraci přidat nejde.
-2. **Formulář** – rozdělený do sbalitelných sekcí (Přehrávání, Zdroje a účty, Vlastní úložiště, Stahování a odkazy, Synchronizace s Kodi, Ostatní). Vyplň, co máš, klidně i nic – katalog a hledání fungují i bez jediného zdroje. Jednotlivá pole popisuje [Nastavení](nastaveni.md).
-3. **CZtor – spárování** – jen když zapneš CZtor, viz [Nastavení](nastaveni.md#cztor).
+Průvodce jde krok po kroku:
+
+1. **Právní upozornění** – bez souhlasu integraci přidat nejde.
+2. **Přehrávání** – přehrávače Kodi a předvolby streamů.
+3. **Vlastní úložiště** – adresa WebDAV složky (NAS, Nextcloud), jméno a heslo. Krok jde přeskočit a úložiště doplnit později.
+4. **Volitelné zdroje** – výběr zdrojů třetích stran. Ve výchozím stavu není vybraný žádný.
+5. **Údaje vybraných zdrojů** – jen pro zdroje vybrané v předchozím kroku.
+6. **CZtor – spárování** – jen když vybereš CZtor, viz [Nastavení](nastaveni.md#cztor).
+
+Katalog a hledání fungují i bez úložiště a bez jediného zdroje. Stahování, synchronizace a další úložiště se nastavují až v Nastavení integrace, jednotlivá pole popisuje [Nastavení](nastaveni.md).
 
 Po dokončení integrace zaregistruje kartu `custom:nokturno-card` do zdrojů Lovelace sama (když dashboard běží v režimu UI, ne v YAML).
 

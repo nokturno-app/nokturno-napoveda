@@ -20,7 +20,8 @@ templates:
 
 Vlastní úložiště je hlavní funkce Nokturna: přehrává **tvoje vlastní soubory** z NAS, Nextcloudu nebo jiného serveru
 s WebDAV. Soubor, který k titulu patří, se ukáže **mezi streamy jako první** a pustí se stejně jako ostatní.
-Nastavit jde až **tři úložiště**.
+Nastavit jde až **tři úložiště**. Zdroje třetích stran (WebShare, HellSpy a další) jsou jen volitelné doplnění,
+u nové instalace jsou všechny vypnuté.
 
 Stejná úložiště umí i [integrace pro Home Assistant](../navody/ha/nastaveni.md#vlastni-uloziste)
 a [Nokturno pro Stremio](../navody/stremio/zdroje-a-nastaveni.md#vlastni-uloziste).
@@ -51,8 +52,9 @@ Pak dej **Nastavení → Pokročilé → Ověřit zdroje** (ve starších verzí
 ukáže, jestli se přihlášení povedlo, nebo `NAS neodpovídá` / `NAS: špatné jméno nebo heslo`.
 
 ## Stremio
-V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo `http://<IP zařízení s aplikací>:7140/configure`) vyplň kartu
-**Vlastní úložiště** a dej **Ověřit úložiště**. Pak doplněk přidej znovu tlačítkem **Přidat do Stremia**.
+V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo `http://<IP zařízení s aplikací>:7140/configure`) vyplň v sekci
+**Vlastní úložiště a zdroje** první kartu **Vlastní úložiště** a dej **Ověřit úložiště**. Pak ulož změny. Když už doplněk
+ve Stremiu máš, změny platí hned a znovu ho přidávat nemusíš.
 
 Ve Stremiu platí dvě věci navíc:
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno**. Ta v něm hledá soubory a od verze 9.6.1
@@ -61,8 +63,8 @@ Ve Stremiu platí dvě věci navíc:
   V aplikaci Stremio nebo Nuvio hrají. Viz [„⚠️ Ve webovém přehrávači se nepřehraje“](stremio-webovy-prehravac.md).
 
 ## Jak pojmenovat soubory
-Nokturno soubor k titulu přiřazuje **podle názvu souboru a podle složek nad ním** – stejně přísně jako fulltext
-WebShare, aby se k titulu nepřimíchal jiný. Na struktuře složek jinak nezáleží, prochází se celé úložiště.
+Nokturno soubor k titulu přiřazuje **podle názvu souboru a podle složek nad ním** – přísně, aby se k titulu
+nepřimíchal jiný. Na struktuře složek jinak nezáleží, prochází se celé úložiště.
 
 ### Filmy
 ```

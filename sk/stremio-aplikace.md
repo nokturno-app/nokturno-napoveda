@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje"
     Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
-    (WebShare, FastShare, Přehraj.to…). Sú totiž v adrese doplnku a s každou požiadavkou prechádzajú cez ten
+    (vlastné úložisko, WebShare, FastShare…). Sú totiž v adrese doplnku a s každou požiadavkou prechádzajú cez ten
     server. Jeho prevádzkovateľ ich tak môže vidieť a uložiť a musíš mu veriť. Istotu, že ich nemá nikto iný,
     máš len vtedy, keď doplnok beží u teba: na televízore, počítači, Home Assistante, Raspberry Pi alebo na vlastnom VPS.
 
@@ -76,7 +76,7 @@ Spusti ho:
 - **Linux:** `chmod +x nokturno-*-linux-*` a `./nokturno-<verzia>-linux-amd64`. Ako ju spúšťať ako službu,
   je v časti [Raspberry Pi a NAS](#raspberry-pi-a-nas).
 
-Potom otvor `http://127.0.0.1:7140/configure`, vyplň úložisko alebo účty a daj **Pridať do Stremia** alebo
+Potom otvor `http://127.0.0.1:7140/configure`, vyplň vlastné úložisko, prípadne voliteľné účty zdrojov a daj **Pridať do Stremia** alebo
 **Pridať do Nuvia**. Ostatné zariadenia v sieti otvoria `http://<IP adresa počítača>:7140/configure`, IP adresu
 vypíše aplikácia pri štarte.
 
@@ -90,7 +90,7 @@ amd64 a aarch64; Raspberry Pi s 32bit systémom nie). Beží potom doma stále, 
    Úložiská** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
 2. Nainštaluj **Nokturno pro Stremio** a daj **Spustiť**.
 3. **Otvoriť webové rozhranie**, alebo z telefónu či počítača v rovnakej sieti `http://<IP Home Assistantu>:7140/configure`.
-4. Založ profil s názvom, vyplň úložisko alebo účty, daj **✓ Overiť všetky účty** a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
+4. Založ profil s názvom, vyplň vlastné úložisko, prípadne voliteľné účty zdrojov, daj **✓ Overiť všetky účty** a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
 
 Doplnok používa sieť hostiteľa: port **7140** (nastavenie a doplnok pre Nuvio) a **7141** (HTTPS cez local-ip.co
 pre Stremio). V záložke **Konfigurácia** sa dajú vypnúť štatistiky (`stats`), hlásenia o pádoch (`crash_reports`)

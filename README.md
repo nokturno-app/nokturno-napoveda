@@ -4,7 +4,7 @@ Nápověda k Nokturnu pro Kodi, Home Assistant a Stremio, česky a slovensky.
 
 **Čti ji tady:** https://nokturno-app.github.io/nokturno-napoveda/ · slovensky https://nokturno-app.github.io/nokturno-napoveda/sk/
 
-Nokturno je přehrávač a vyhledávač nad tvým vlastním úložištěm (WebDAV, NAS) i úložišti třetích stran. Samo žádný
+Nokturno je přehrávač a vyhledávač nad tvým vlastním úložištěm (WebDAV, NAS) a volitelně i nad úložišti třetích stran. Samo žádný
 obsah nehostuje a za to, co přehráváš, odpovídáš ty.
 
 ## Pro autory

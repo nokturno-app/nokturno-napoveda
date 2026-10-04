@@ -125,7 +125,7 @@ Pod řádkem jsou jen vyhovující tituly. Prázdný katalog hlásí „Katalog 
 - u seriálu se hledá stream k poslednímu odvysílanému dílu,
 - seznam kandidátů se obnovuje po 6 hodinách, takže nové tituly přibývají samy.
 
-Ověřuje se přes zdroje zapnuté v tomto zařízení. Na pozadí se vynechá FastShare bez kreditu, Přehraj.to bez Premium
+Ověřuje se přes vlastní úložiště a volitelné zdroje třetích stran zapnuté v tomto zařízení. Na pozadí se vynechá FastShare bez kreditu, Přehraj.to bez Premium
 a HellSpy v pauze po chybě 429 – ověřování by jim jen ubíralo kredit nebo limit.
 
 Ověřovaných katalogů může být nejvýš 20. Když je jich víc, Kodi nový katalog uloží jako **Katalog z TMDB**
@@ -190,7 +190,7 @@ Ve Stremiu se katalogy skládají ve formuláři nastavení doplňku.
 | „Katalog se nepodařilo načíst. Zkus to později.“ | server Nokturna zrovna neodpovídá. Zkus to za chvíli. |
 | katalog z TMDB je prázdný | filtry nic nenechaly. Uber žánr nebo téma, zvol **aspoň jeden vybraný žánr**, nebo rozšiř roky. |
 | „Katalog se připravuje – tituly se ověřují na pozadí.“ | ověřování teprve běží. Otevři katalog a dej **spustit dávku nyní**, nebo počkej. |
-| ověřený katalog má málo titulů | požadavky jsou přísné (třeba 4K + 5.1 + slovenský zvuk). Uvolni kvalitu nebo jazyk, nebo zapni další zdroj. |
+| ověřený katalog má málo titulů | požadavky jsou přísné (třeba 4K + 5.1 + slovenský zvuk). Uvolni kvalitu nebo jazyk, doplň tituly do vlastního úložiště, případně zapni volitelný zdroj třetí strany. |
 | na mobilu je katalog jiný než na televizi | mobil má jiné zdroje, a tak si katalog ověřuje sám. Je to v pořádku. |
 | ve Stremiu se změna katalogu neprojevila | doplněk ve Stremiu odinstaluj a přidej znovu. |
 

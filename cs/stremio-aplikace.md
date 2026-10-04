@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
-    (WebShare, FastShare, Přehraj.to…). Jsou totiž v adrese doplňku a s každým požadavkem procházejí přes ten
+    (vlastní úložiště, WebShare, FastShare…). Jsou totiž v adrese doplňku a s každým požadavkem procházejí přes ten
     server. Jeho provozovatel je tak může vidět a uložit a musíš mu věřit. Jistotu, že je nemá nikdo jiný,
     máš jen tehdy, když doplněk běží u tebe: na televizi, počítači, Home Assistantu, Raspberry Pi nebo na vlastním VPS.
 
@@ -76,7 +76,7 @@ Spusť ho:
 - **Linux:** `chmod +x nokturno-*-linux-*` a `./nokturno-<verze>-linux-amd64`. Jak ji pouštět jako službu,
   je v části [Raspberry Pi a NAS](#raspberry-pi-a-nas).
 
-Pak otevři `http://127.0.0.1:7140/configure`, vyplň úložiště nebo účty a dej **Přidat do Stremia** nebo
+Pak otevři `http://127.0.0.1:7140/configure`, vyplň vlastní úložiště, případně volitelné účty zdrojů a dej **Přidat do Stremia** nebo
 **Přidat do Nuvia**. Ostatní zařízení v síti otevřou `http://<IP adresa počítače>:7140/configure`, IP adresu
 vypíše aplikace při startu.
 
@@ -90,7 +90,7 @@ amd64 a aarch64; Raspberry Pi s 32bit systémem ne). Běží pak doma pořád, d
    Úložiště** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
 2. Nainstaluj **Nokturno pro Stremio** a dej **Spustit**.
 3. **Otevřít webové rozhraní**, nebo z telefonu či počítače ve stejné síti `http://<IP Home Assistantu>:7140/configure`.
-4. Založ profil s názvem, vyplň úložiště nebo účty, dej **✓ Ověřit všechny účty** a pak **Přidat do Stremia** nebo **Přidat do Nuvia**.
+4. Založ profil s názvem, vyplň vlastní úložiště, případně volitelné účty zdrojů, dej **✓ Ověřit všechny účty** a pak **Přidat do Stremia** nebo **Přidat do Nuvia**.
 
 Doplněk používá síť hostitele: port **7140** (nastavení a doplněk pro Nuvio) a **7141** (HTTPS přes local-ip.co
 pro Stremio). V záložce **Konfigurace** jde vypnout statistiky (`stats`), hlášení o pádech (`crash_reports`)

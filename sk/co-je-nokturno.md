@@ -8,10 +8,11 @@ priority: 1
 
 # Čo je Nokturno a čo vie
 
-Nokturno je prehrávač a vyhľadávač pre Kodi a Home Assistant. Prehráva súbory z tvojho vlastného úložiska
-(WebDAV, NAS) aj z úložísk a katalógov tretích strán, ktoré si v nastaveniach zapneš (WebShare, Sosáč, HellSpy,
-Sledujteto, FastShare / Sdilej.cz, Přehraj.to, CZtor, Luna), titulky hľadá na OpenSubtitles. Doplní popisy
-a pamätá si, kde si skončil. Samo žiadny obsah nehostí ani nešíri a neoveruje, či je súbor na cudzom úložisku
+Nokturno je prehrávač a vyhľadávač pre Kodi, Home Assistant a Stremio. Predovšetkým prehráva súbory z tvojho
+vlastného úložiska (WebDAV, NAS, Nextcloud) a priame odkazy z vlastných zoznamov. Voliteľne vie hľadať aj na úložiskách
+a v katalógoch tretích strán, ktoré si v nastaveniach zapneš (WebShare, Sosáč, HellSpy, Sledujteto, FastShare /
+Sdilej.cz, Přehraj.to, CZtor, Luna) – pri novej inštalácii sú všetky vypnuté. Titulky hľadá na OpenSubtitles.
+Doplní popisy a pamätá si, kde prehrávanie skončilo. Samo žiadny obsah nehostí ani nešíri a neoveruje, či je súbor na cudzom úložisku
 legálny. Za to, čo prehrávaš, zodpovedáš ty – používaj ho len na obsah, ku ktorému máš právo.
 
 Plný text podmienok použitia a kontakty na nahlásenie nelegálneho obsahu pri jednotlivých zdrojoch:
@@ -30,6 +31,7 @@ Plný text podmienok použitia a kontakty na nahlásenie nelegálneho obsahu pri
 | Koncerty | áno | áno | nie |
 
 ## Čo vie doplnok pre Kodi
+- prehrávanie z [vlastného úložiska](vlastni-uloziste.md) (až tri WebDAV, NAS, Nextcloud) a z [vlastných zoznamov](vlastni-seznam.md) priamych odkazov,
 - hľadanie a katalógy filmov a seriálov, rebríček najsledovanejších za týždeň, tipy „Pre Teba“,
 - [vlastné katalógy](vlastni-katalogy.md) zo šablón aj podľa žánrov, tém, krajiny pôvodu a rokov, s overením, že tituly ide
   prehrať v požadovanej kvalite a jazyku,

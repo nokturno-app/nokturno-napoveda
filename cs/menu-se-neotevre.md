@@ -26,8 +26,10 @@ Při prvním spuštění se Nokturno zeptá „Souhlasíš s podmínkami použit
 Z widgetu nebo z Home Assistantu se dialog neukáže, přijde jen oznámení. Nokturno proto jednou otevři přímo.
 
 ## Menu je skoro prázdné
-Katalogy a hledání fungují i bez účtů. Když chybí nebo nic nepřehrají, nemáš zapnutý žádný zdroj:
-- dokud nemáš nastavený žádný zdroj, je v menu jako první položka **Průvodce nastavením**,
+Katalogy a hledání fungují i bez účtů. Když chybí nebo nic nepřehrají, nemáš nastavené vlastní úložiště
+ani zapnutý žádný volitelný zdroj třetí strany (u nové instalace jsou všechny vypnuté):
+- dokud nemáš nastavené vlastní úložiště ani žádný zdroj, je v menu jako první položka **Průvodce nastavením**,
+  který se jako první ptá na vlastní úložiště,
 - průvodce spustíš i v **Nastavení → Pokročilé → Průvodce nastavením**,
 - viz [První nastavení: průvodce a Nastavit z mobilu](prvni-nastaveni.md).
 

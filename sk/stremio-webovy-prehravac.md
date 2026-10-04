@@ -28,7 +28,7 @@ teda rozhoduje formát súboru, nie zdroj.
 
 ## Čo urobiť
 - Spusti stream v aplikácii Stremio alebo Nuvio.
-- V prehliadači vyber iný stream, napríklad z WebShare alebo HellSpy.
+- V prehliadači vyber iný stream, napríklad súbor `.mp4` z vlastného úložiska, alebo z voliteľného zdroja (WebShare, HellSpy).
 
 ## Vlastné úložisko nehrá ani v aplikácii
 Úložisko musí byť dosiahnuteľné zo zariadenia, kde beží aplikácia Nokturno (tá v ňom hľadá súbory a odovzdáva ich prehrávaču).

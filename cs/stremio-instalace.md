@@ -7,7 +7,7 @@ priority: 1
 templates:
   stremio: |
     Nokturno pro Stremio je aplikace, kterou si pustíš u sebe: github.com/nokturno-app/nokturno-stremio-app/releases
-    Pak otevři http://<IP zařízení s aplikací>:7140/configure, založ profil s názvem, vyplň úložiště nebo účty a dej Přidat do Stremia.
+    Pak otevři http://<IP zařízení s aplikací>:7140/configure, založ profil s názvem, vyplň vlastní úložiště, případně volitelné účty zdrojů a dej Přidat do Stremia.
     Od verze 9.6.0 se nastavení ukládá v aplikaci, změny pak stačí uložit tlačítkem Uložit změny, doplněk se znovu nepřidává.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-instalace
 ---
@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplněk na cizím serveru dostává tvoje přihlašovací údaje"
     Každý doplněk pro Stremio, který běží na cizím serveru, dostává tvoje přihlašovací údaje ke zdrojům
-    (WebShare, FastShare, Přehraj.to…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
+    (vlastní úložiště, WebShare, FastShare…). Jsou v adrese doplňku, provozovatel serveru je proto může vidět
     a uložit a musíš mu věřit. Jistotu máš jen s doplňkem, který běží u tebe: doma, přes VPN nebo na vlastním VPS.
 
 Doplněk pro Stremio běží v aplikaci **Nokturno pro Stremio** u tebe doma. Jak ji stáhnout a spustit, je v článku
@@ -39,6 +39,8 @@ Po založení se otevře formulář s nastavením nového profilu. Nahoře je je
    FastShare, Přehraj.to, CZtor, HellSpy). Vyplněný zdroj má na záložce zelenou tečku. Účet ověříš tlačítkem
    **Ověřit účet** v jeho záložce, nebo všechny naráz tlačítkem **✓ Ověřit všechny účty** vedle záložek –
    výsledek se ukáže v modrém rámečku, klik na řádek otevře záložku zdroje. Rámeček zavřeš křížkem, sám zmizí po 10 s.
+   Začni první záložkou **Vlastní úložiště**. Zdroje třetích stran jsou volitelné a v novém profilu jsou všechny
+   vypnuté, HellSpy taky.
 2. **Předvolby** – jazyk zvuku, řazení, katalogy. Tento krok se dá přeskočit.
 3. Potvrď souhlas s podmínkami použití.
 
