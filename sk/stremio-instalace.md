@@ -47,7 +47,7 @@ Po založení sa otvorí formulár s nastavením nového profilu. Hore je jeho n
 |---|---|
 | **Počítač** | **Pridať do Stremia**, prehliadač sa opýta, či otvoriť Stremio, potvrď. V Stremiu **Inštalovať**. |
 | **Telefón** | **QR pre mobil** na počítači a naskenuj kód telefónom. Otvorí sa stránka s tlačidlami **Pridať do Stremia**, **Pridať do Nuvia** a **Skopírovať adresu**. Telefón musí byť v rovnakej sieti ako aplikácia. Ide to aj bez QR: otvor `/configure` priamo v telefóne. |
-| **Televízor** | Pridaj doplnok na telefóne alebo počítači **pod rovnakým účtom Stremio**. Na TV sa objaví do minúty. Ručne: Stremio → Doplnky → pole hore → vložiť adresu → Inštalovať. |
+| **Televízor** | Pridaj doplnok na telefóne alebo počítači **pod rovnakým účtom Stremio**. Na TV sa objaví do minúty. Ručne: Stremio → Doplnky → pole hore → vložiť adresu → Inštalovať. Keď aplikácia beží na telefóne, adresa z neho (`127-0-0-1…`) na TV nefunguje – otvor na TV alebo počítači `http://<IP telefónu>:7140/configure` a pridaj doplnok odtiaľ. |
 | **Nuvio** | **Pridať do Nuvia**. Na TV: **Skopírovať adresu**, potom v Nuviu Nastavenia → Doplnky → vložiť adresu → Inštalovať. |
 | **Streamlet** | **Skopírovať adresu**, v Streamlete pridaj doplnok Stremia a adresu vlož. |
 
@@ -88,6 +88,7 @@ Je to starý a nový doplnok, alebo dva rôzne profily. V Stremiu **Doplnky** od
 | „Tohle nastavení už v aplikaci není“ (hláška je po česky) | profil bol zmazaný. Otvor `/configure`, založ nový profil a doplnok pridaj znova. |
 | QR kód sa v telefóne neotvorí | telefón nie je v rovnakej sieti ako aplikácia. Pripoj ho na domácu Wi-Fi, alebo použi [Tailscale alebo VPN](stremio-mimo-domov.md). |
 | Zmena sa v Stremiu neprejavila | pri účtoch a predvoľbách otvor titul znova. Pri katalógoch doplnok odinštaluj a pridaj znova. |
+| „Unable to resolve host …my.local-ip.co“ alebo *Failed to fetch* | DNS zahodilo adresu doplnku (ochrana proti DNS rebinding). Android: Nastavenia → Pripojenia → Ďalšie nastavenia pripojenia → Súkromné DNS → `one.one.one.one`. Router alebo Pi-hole: výnimka pre `my.local-ip.co` (`rebind-domain-ok=/my.local-ip.co/`). |
 
 ---
 [Všetky návody](./) · [Česky](../cs/stremio-instalace)

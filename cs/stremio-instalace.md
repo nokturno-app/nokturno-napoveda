@@ -47,7 +47,7 @@ Po založení se otevře formulář s nastavením nového profilu. Nahoře je je
 |---|---|
 | **Počítač** | **Přidat do Stremia**, prohlížeč se zeptá, jestli otevřít Stremio, potvrď. Ve Stremiu **Instalovat**. |
 | **Telefon** | **QR pro mobil** na počítači a naskenuj kód telefonem. Otevře se stránka s tlačítky **Přidat do Stremia**, **Přidat do Nuvia** a **Zkopírovat adresu**. Telefon musí být ve stejné síti jako aplikace. Jde to i bez QR: otevři `/configure` přímo v telefonu. |
-| **Televize** | Přidej doplněk na telefonu nebo počítači **pod stejným účtem Stremio**. Na TV se objeví do minuty. Ručně: Stremio → Doplňky → pole nahoře → vložit adresu → Instalovat. |
+| **Televize** | Přidej doplněk na telefonu nebo počítači **pod stejným účtem Stremio**. Na TV se objeví do minuty. Ručně: Stremio → Doplňky → pole nahoře → vložit adresu → Instalovat. Když aplikace běží na telefonu, adresa z něj (`127-0-0-1…`) na TV nefunguje – otevři na TV nebo počítači `http://<IP telefonu>:7140/configure` a přidej doplněk odtud. |
 | **Nuvio** | **Přidat do Nuvia**. Na TV: **Zkopírovat adresu**, pak v Nuviu Nastavení → Doplňky → vložit adresu → Instalovat. |
 | **Streamlet** | **Zkopírovat adresu**, ve Streamletu přidej doplněk Stremia a adresu vlož. |
 
@@ -88,6 +88,7 @@ Je to starý a nový doplněk, nebo dva různé profily. Ve Stremiu **Doplňky**
 | „Tohle nastavení už v aplikaci není“ | profil byl smazaný. Otevři `/configure`, založ nový profil a doplněk přidej znovu. |
 | QR kód se v telefonu neotevře | telefon není ve stejné síti jako aplikace. Připoj ho na domácí Wi-Fi, nebo použij [Tailscale nebo VPN](stremio-mimo-domov.md). |
 | Změna se ve Stremiu neprojevila | u účtů a předvoleb otevři titul znovu. U katalogů doplněk odinstaluj a přidej znovu. |
+| „Unable to resolve host …my.local-ip.co“ nebo *Failed to fetch* | DNS zahodilo adresu doplňku (ochrana proti DNS rebinding). Android: Nastavení → Připojení → Další nastavení připojení → Soukromé DNS → `one.one.one.one`. Router nebo Pi-hole: výjimka pro `my.local-ip.co` (`rebind-domain-ok=/my.local-ip.co/`). |
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/stremio-instalace)
