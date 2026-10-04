@@ -154,7 +154,7 @@ Každá další se zkusí, jen když předchozí nic nevrátila. S klíčem TMDB
 
 ## Last.fm
 
-Klíč je potřeba jen pro [Koncerty](../../cs/koncerty.md): z Last.fm se berou nejposlouchanější interpreti tvých hudebních žánrů.
+Klíč je potřeba jen pro [Koncerty](../../cs/koncerty.md): z Last.fm se berou nejposlouchanější interpreti tvých hudebních žánrů. Koncerty se pak hledají ve tvém vlastním úložišti a volitelně v úložištích třetích stran, která máš povolená a nastavená.
 
 - **Last.fm API klíč** – zdarma na [last.fm/api/account/create](https://www.last.fm/api/account/create) (stačí účet na Last.fm, název aplikace libovolný), zkopíruj **API key**, ne „Shared secret“.
 - **Ověřit klíč** – zkontroluje, že ho Last.fm přijímá.

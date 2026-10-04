@@ -105,7 +105,7 @@ Dřívější karta Katalogy (Populární, Nejlépe hodnocené) zmizela, zapnut�
 
 ## Koncerty
 
-Karta **Koncerty** – zaškrtni hudební žánry a vyplň **Last.fm API klíč** (zdarma na [last.fm/api/account/create](https://www.last.fm/api/account/create)). Ve Stremiu přibude druh **Koncerty** se seznamy **Nově přidané** a **Podle abecedy** (s výběrem žánru). Hledá se na pozadí, dokud aplikace běží. Podrobně: [Koncerty](../../cs/koncerty.md).
+Koncerty se hledají ve tvém vlastním úložišti a volitelně v úložištích třetích stran, která máš povolená a nastavená. Karta **Koncerty** – zaškrtni hudební žánry a vyplň **Last.fm API klíč** (zdarma na [last.fm/api/account/create](https://www.last.fm/api/account/create)). Ve Stremiu přibude druh **Koncerty** se seznamy **Nově přidané** a **Podle abecedy** (s výběrem žánru). Hledá se na pozadí, dokud aplikace běží. Podrobně: [Koncerty](../../cs/koncerty.md).
 
 ## Po změně katalogů
 

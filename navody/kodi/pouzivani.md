@@ -16,7 +16,7 @@ Položky shora dolů. Některé se ukážou, jen když mají co nabídnout – n
 | **Hlídané** | když něco hlídáš | hlídané seriály a tituly, u nového dílu i jejich počet – viz [Hlídané](../../cs/hlidane.md) |
 | **Filmy**, **Seriály** | vždy | katalogy včetně vlastních, viz [Filmy a Seriály](#filmy-a-serialy) |
 | sezónní katalogy | jen v sezóně | občas přidáme katalog na určité období, třeba vánoční filmy |
-| **Koncerty** | vždy | záznamy koncertů interpretů z tvých hudebních žánrů, viz [Koncerty](../../cs/koncerty.md) |
+| **Koncerty** | vždy | koncerty z tvého vlastního úložiště a volitelně z úložišť třetích stran, která máš povolená a nastavená, viz [Koncerty](../../cs/koncerty.md) |
 | **TV program** | vždy | česká a slovenská televize spárovaná s databází filmů |
 | **Můj seznam** | když v něm něco máš nebo už máš něco zhlédnuté | uložené tituly, **Naposledy zhlédnuté** a **Synchronizovat teď** |
 | **SyncWatch** | vždy | společné sledování, viz [SyncWatch](syncwatch.md) |

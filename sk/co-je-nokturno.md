@@ -33,7 +33,7 @@ Plný text podmienok použitia a kontakty na nahlásenie nelegálneho obsahu pri
 - hľadanie a katalógy filmov a seriálov, rebríček najsledovanejších za týždeň, tipy „Pre Teba“,
 - [vlastné katalógy](vlastni-katalogy.md) zo šablón aj podľa žánrov, tém, krajiny pôvodu a rokov, s overením, že tituly ide
   prehrať v požadovanej kvalite a jazyku,
-- [koncerty](koncerty.md) interpretov z tvojich obľúbených hudobných žánrov,
+- [koncerty](koncerty.md) z tvojho vlastného úložiska, voliteľne aj z úložísk tretích strán, ktoré máš povolené a nastavené, s interpretmi podľa tvojich obľúbených hudobných žánrov,
 - [výber streamu](vyber-streamu.md) v dialógu s odznakmi kvality, filter, radenie podľa jazyka zvuku a voľba Skryť 3D streamy,
 - Pokračovať v sledovaní, Môj zoznam a [Sledované](hlidane.md): nový diel seriálu, film, ktorý zatiaľ nikde nie je,
   a Kontrolovať ďalej pri titule, ktorý streamy má, ale nie také, aké chceš,

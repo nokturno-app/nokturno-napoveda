@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-03T16:17:44Z",
+  "generated": "2026-10-04T12:29:11Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -971,7 +971,7 @@
       "lang": "cs",
       "product": "kodi",
       "title": "Koncerty",
-      "text": "Ahoj, Koncerty jsou od verze 10.0 v hlavním menu Nokturna. Potřebují vlastní API klíč Last.fm, je zdarma.\n1. Klíč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, název aplikace libovolný) a zkopíruj API key.\n2. V Kodi otevři Koncerty → Nastavit koncerty, vlož klíč a vyber hudební žánry.\n3. Hledání běží na pozadí a seznam se plní postupně, první dávka prohledá 40 interpretů hned.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
+      "text": "Ahoj, Koncerty jsou od verze 10.0 v hlavním menu Nokturna. Hledají koncerty ve tvém vlastním úložišti a volitelně v úložištích třetích stran, která máš povolená a nastavená. Potřebují vlastní API klíč Last.fm, je zdarma.\n1. Klíč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, název aplikace libovolný) a zkopíruj API key.\n2. V Kodi otevři Koncerty → Nastavit koncerty, vlož klíč a vyber hudební žánry.\n3. Hledání běží na pozadí a seznam se plní postupně, první dávka prohledá 40 interpretů hned.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty",
       "when": {},
       "priority": 3
@@ -981,7 +981,7 @@
       "lang": "sk",
       "product": "kodi",
       "title": "Koncerty",
-      "text": "Ahoj, Koncerty sú od verzie 10.0 v hlavnom menu Nokturna. Potrebujú vlastný API kľúč Last.fm, je zadarmo.\n1. Kľúč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, názov aplikácie ľubovoľný) a skopíruj API key.\n2. V Kodi otvor Koncerty → Nastaviť koncerty, vlož kľúč a vyber hudobné žánre.\n3. Hľadanie beží na pozadí a zoznam sa plní postupne, prvá dávka prehľadá 40 interpretov hneď.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
+      "text": "Ahoj, Koncerty sú od verzie 10.0 v hlavnom menu Nokturna. Hľadajú koncerty v tvojom vlastnom úložisku a voliteľne v úložiskách tretích strán, ktoré máš povolené a nastavené. Potrebujú vlastný API kľúč Last.fm, je zadarmo.\n1. Kľúč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, názov aplikácie ľubovoľný) a skopíruj API key.\n2. V Kodi otvor Koncerty → Nastaviť koncerty, vlož kľúč a vyber hudobné žánre.\n3. Hľadanie beží na pozadí a zoznam sa plní postupne, prvá dávka prehľadá 40 interpretov hneď.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty",
       "when": {},
       "priority": 3
@@ -991,7 +991,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Koncerty",
-      "text": "Ahoj, Koncerty zapneš v nastavení doplňku, karta Koncerty: zaškrtni hudební žánry a vlož Last.fm API klíč (zdarma na https://www.last.fm/api/account/create).\nPak dej Uložit změny a doplněk ve Stremiu přidej znovu. Seznam se plní postupně, dokud aplikace běží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
+      "text": "Ahoj, Koncerty hledají koncerty ve tvém vlastním úložišti a volitelně v úložištích třetích stran, která máš povolená a nastavená. Zapneš je v nastavení doplňku, karta Koncerty: zaškrtni hudební žánry a vlož Last.fm API klíč (zdarma na https://www.last.fm/api/account/create).\nPak dej Uložit změny a doplněk ve Stremiu přidej znovu. Seznam se plní postupně, dokud aplikace běží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/koncerty",
       "when": {},
       "priority": 3
@@ -1001,7 +1001,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Koncerty",
-      "text": "Ahoj, Koncerty zapneš v nastaveniach doplnku, karta Koncerty: zaškrtni hudobné žánre a vlož Last.fm API kľúč (zadarmo na https://www.last.fm/api/account/create).\nPotom daj Uložiť zmeny a doplnok v Stremiu pridaj znova. Zoznam sa plní postupne, kým aplikácia beží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
+      "text": "Ahoj, Koncerty hľadajú koncerty v tvojom vlastnom úložisku a voliteľne v úložiskách tretích strán, ktoré máš povolené a nastavené. Zapneš ich v nastaveniach doplnku, karta Koncerty: zaškrtni hudobné žánre a vlož Last.fm API kľúč (zadarmo na https://www.last.fm/api/account/create).\nPotom daj Uložiť zmeny a doplnok v Stremiu pridaj znova. Zoznam sa plní postupne, kým aplikácia beží.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty",
       "when": {},
       "priority": 3

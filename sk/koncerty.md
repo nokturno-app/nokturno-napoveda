@@ -6,14 +6,14 @@ products: [kodi, stremio]
 priority: 3
 templates:
   kodi: |
-    Ahoj, Koncerty sú od verzie 10.0 v hlavnom menu Nokturna. Potrebujú vlastný API kľúč Last.fm, je zadarmo.
+    Ahoj, Koncerty sú od verzie 10.0 v hlavnom menu Nokturna. Hľadajú koncerty v tvojom vlastnom úložisku a voliteľne v úložiskách tretích strán, ktoré máš povolené a nastavené. Potrebujú vlastný API kľúč Last.fm, je zadarmo.
     1. Kľúč si založ na https://www.last.fm/api/account/create (stačí účet na Last.fm, názov aplikácie ľubovoľný) a skopíruj API key.
     2. V Kodi otvor Koncerty → Nastaviť koncerty, vlož kľúč a vyber hudobné žánre.
     3. Hľadanie beží na pozadí a zoznam sa plní postupne, prvá dávka prehľadá 40 interpretov hneď.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty
     Tím Nokturno
   stremio: |
-    Ahoj, Koncerty zapneš v nastaveniach doplnku, karta Koncerty: zaškrtni hudobné žánre a vlož Last.fm API kľúč (zadarmo na https://www.last.fm/api/account/create).
+    Ahoj, Koncerty hľadajú koncerty v tvojom vlastnom úložisku a voliteľne v úložiskách tretích strán, ktoré máš povolené a nastavené. Zapneš ich v nastaveniach doplnku, karta Koncerty: zaškrtni hudobné žánre a vlož Last.fm API kľúč (zadarmo na https://www.last.fm/api/account/create).
     Potom daj Uložiť zmeny a doplnok v Stremiu pridaj znova. Zoznam sa plní postupne, kým aplikácia beží.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/koncerty
     Tím Nokturno
@@ -21,11 +21,25 @@ templates:
 
 # Koncerty
 
-Koncerty sú záznamy koncertov interpretov z hudobných žánrov, ktoré si vyberieš. Nokturno si od verzie 10.0 skladá
-zoznam samo: z [Last.fm](https://www.last.fm) zoberie najpočúvanejších interpretov tvojich žánrov a pri každom hľadá
-záznamy koncertov na tvojich zdrojoch (WebShare, HellSpy, FastShare). Zoznam sa plní na pozadí a stále rastie.
+Koncerty hľadajú záznamy koncertov v tvojom [vlastnom úložisku](vlastni-uloziste.md) a skladajú z nich katalóg.
+Voliteľne hľadajú aj v úložiskách tretích strán, ktoré máš povolené a nastavené (WebShare, HellSpy, FastShare).
+Interpretov berie Nokturno od verzie 10.0 z [Last.fm](https://www.last.fm): najpočúvanejších interpretov hudobných
+žánrov, ktoré si vyberieš. Zoznam sa plní na pozadí a stále rastie.
 
 Funguje v Kodi a v Stremiu. Home Assistant koncerty sám nezobrazuje, ale s vyplneným kľúčom Last.fm (Nastavenie integrácie → Ostatné) ich hľadá na pozadí a zdieľajú sa so skupinou.
+
+## Koncerty vo vlastnom úložisku
+Nokturno prejde celé úložisko a zoberie súbory, v ktorých ceste je meno interpreta a koncertné slovo
+(koncert, live, concert, unplugged, tour…). Stačí, keď je slovo v priečinku. Súbor menší ako 250 MB sa vynechá.
+Napríklad takto:
+
+```
+Koncerty/Kabát/Kabát - Live v Aréně (2014).mkv
+Koncerty/Lucie Bílá/Vánoční koncert 2019.mkv
+```
+
+Interpret sa musí objaviť v zozname (žánre alebo **Hľadať interpreta**). Súbory z vlastného úložiska sa
+nesynchronizujú, každé zariadenie ich hľadá vo svojom úložisku.
 
 ## Kľúč Last.fm
 Koncerty potrebujú vlastný **API kľúč Last.fm**. Je zadarmo a patrí len tebe.
@@ -54,7 +68,7 @@ ostatných Kodi v skupine.
 | **Podľa žánru** | žánre, v ktorých už je nejaký nález → interpreti s počtom koncertov |
 | **Podľa abecedy** | písmená (čísla a ostatné znaky pod „#“) → interpreti |
 | **Prehľadané X interpretov, ďalší pribúdajú – načítať teraz** | priebeh. Klik prehľadá hneď ďalších 20 interpretov. |
-| **Hľadať interpreta** | napíšeš meno a vyberieš interpreta z výsledkov (s kľúčom Last.fm aj podobné mená: Lucie → Lucie, Lucie Bílá). Výber ho hneď prehľadá vo tvojich zdrojoch a pridá do zoznamu – aj bez žánrov. |
+| **Hľadať interpreta** | napíšeš meno a vyberieš interpreta z výsledkov (s kľúčom Last.fm aj podobné mená: Lucie → Lucie, Lucie Bílá). Výber ho hneď prehľadá v tvojom úložisku a zapnutých zdrojoch a pridá do zoznamu – aj bez žánrov. |
 | **Nastaviť koncerty** | zmena žánrov alebo kľúča |
 
 Pri interpretovi sú koncerty od najnovšieho roku. Koncert má náhľad zo zdroja, dĺžku a veľkosť súboru. Na konci je **Znovu prehľadať** s dátumom posledného hľadania.
@@ -67,12 +81,13 @@ Klik ho prehrá. Keď prvý súbor nejde, Nokturno skúsi ďalšiu kópiu.
   [vlastnými katalógmi](vlastni-katalogy.md), ktoré sa overujú.
 - Interpret s nálezom sa kontroluje každý týždeň, bez nálezu za 3 dni. Kto nemá nič ani na tretí pokus, skúsi sa
   znova až za 30 dní.
-- Staré odkazy sa overujú. Zmazaný súbor zo zoznamu zmizne.
+- Staré odkazy sa overujú. Zmazaný súbor zo zoznamu zmizne, aj vo vlastnom úložisku.
 
 ### Synchronizácia
-So zapnutým okruhom **Synchronizovať koncerty** (Nastavenia → Synchronizácia) sa nájdené koncerty zdieľajú so skupinou, teda s ďalšími Kodi
-aj s Home Assistantom. Každé zariadenie ukáže len súbory zo zdrojov, ktoré má samo zapnuté. Zariadenia s rovnakými zdrojmi
-rovnakého interpreta znova neprehľadávajú.
+So zapnutým okruhom **Synchronizovať koncerty** (Nastavenia → Synchronizácia) sa koncerty nájdené v úložiskách tretích
+strán zdieľajú so skupinou, teda s ďalšími Kodi aj s Home Assistantom. Každé zariadenie ukáže len súbory zo zdrojov, ktoré
+má samo zapnuté. Zariadenia s rovnakými zdrojmi rovnakého interpreta znova neprehľadávajú. Súbory z vlastného úložiska
+zostávajú len na zariadení, ktoré ich našlo.
 
 ### Zmena žánrov
 Žánre zmeníš cez **Nastaviť koncerty**. Keď žáner **pridáš**, interpreti, ktorých už máš, zostanú a pribudnú noví.
@@ -84,7 +99,7 @@ Keď žáner **odoberieš**, zmiznú interpreti, ktorí nepatria do žiadneho z 
 3. Daj **Uložiť zmeny** a doplnok v Stremiu **pridaj znova**, nech Stremio načíta nové katalógy.
 
 V Stremiu pribudne druh **Koncerty** so zoznamami **Nové pridané** a **Podľa abecedy** (s výberom žánru). Interpret
-je plagát, jeho koncerty sú ako diely. V zozname **Podľa abecedy** sa dá hľadať menom interpreta, neznámeho doplnok prehľadá v zdrojoch a pridá. Hľadá aplikácia na pozadí, kým beží, takže sa zoznam zapĺňa postupne.
+je plagát, jeho koncerty sú ako diely. V zozname **Podľa abecedy** sa dá hľadať menom interpreta, neznámeho doplnok prehľadá v úložisku a zapnutých zdrojoch a pridá. Hľadá aplikácia na pozadí, kým beží, takže sa zoznam zapĺňa postupne.
 
 ## Keď niečo nejde
 | Čo vidíš | Čo urobiť |
@@ -92,8 +107,9 @@ je plagát, jeho koncerty sú ako diely. V zozname **Podľa abecedy** sa dá hľ
 | „Kľúč Last.fm neplatí.“ | preklep, alebo skopírovaný „Shared secret“ namiesto API key. Skopíruj kľúč znova. |
 | „Last.fm sa nepodarilo opýtať. Skús to neskôr.“ | Last.fm práve neodpovedá, skús to o chvíľu. |
 | „Katalóg sa pripravuje – interpreti sa prehľadávajú na pozadí.“ | hľadanie ešte beží. Daj **načítať teraz** alebo počkaj. |
-| interpret v zozname chýba | ešte naňho neprišiel rad, alebo na tvojich zdrojoch žiadny koncert nie je. |
-| málo nálezov | zapni viac zdrojov (WebShare, HellSpy, FastShare). FastShare bez kreditu sa na pozadí preskakuje. |
+| interpret v zozname chýba | ešte naňho neprišiel rad, alebo v tvojom úložisku ani zapnutých zdrojoch žiadny koncert nie je. |
+| koncert z úložiska chýba | v ceste k súboru chýba meno interpreta alebo koncertné slovo (koncert, live…), alebo má súbor menej ako 250 MB. Pozri [Koncerty vo vlastnom úložisku](#koncerty-vo-vlastnom-ulozisku). |
+| málo nálezov | pridaj koncerty do vlastného úložiska, prípadne zapni úložiská tretích strán (WebShare, HellSpy, FastShare). FastShare bez kreditu sa na pozadí preskakuje. |
 
 ---
 [Všetky návody](./) · [Česky](../cs/koncerty)
