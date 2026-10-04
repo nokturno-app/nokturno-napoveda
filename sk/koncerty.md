@@ -54,10 +54,10 @@ ostatných Kodi v skupine.
 | **Podľa žánru** | žánre, v ktorých už je nejaký nález → interpreti s počtom koncertov |
 | **Podľa abecedy** | písmená (čísla a ostatné znaky pod „#“) → interpreti |
 | **Prehľadané X interpretov, ďalší pribúdajú – načítať teraz** | priebeh. Klik prehľadá hneď ďalších 20 interpretov. |
-| **Hľadať interpreta** | napíšeš meno, Nokturno ho hneď prehľadá vo tvojich zdrojoch a pridá do zoznamu – aj bez žánrov a kľúča Last.fm |
+| **Hľadať interpreta** | napíšeš meno a vyberieš interpreta z výsledkov (s kľúčom Last.fm aj podobné mená: Lucie → Lucie, Lucie Bílá). Výber ho hneď prehľadá vo tvojich zdrojoch a pridá do zoznamu – aj bez žánrov. |
 | **Nastaviť koncerty** | zmena žánrov alebo kľúča |
 
-Pri interpretovi sú koncerty od najnovšieho roku. Koncert má náhľad zo zdroja, dĺžku a veľkosť súboru.
+Pri interpretovi sú koncerty od najnovšieho roku. Koncert má náhľad zo zdroja, dĺžku a veľkosť súboru. Na konci je **Znovu prehľadať** s dátumom posledného hľadania.
 Klik ho prehrá. Keď prvý súbor nejde, Nokturno skúsi ďalšiu kópiu.
 
 ### Ako zoznam rastie
