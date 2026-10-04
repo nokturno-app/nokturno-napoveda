@@ -25,7 +25,7 @@ Koncerty jsou záznamy koncertů interpretů z hudebních žánrů, které si vy
 seznam samo: z [Last.fm](https://www.last.fm) vezme nejposlouchanější interprety tvých žánrů a u každého hledá
 záznamy koncertů na tvých zdrojích (WebShare, HellSpy, FastShare). Seznam se plní na pozadí a pořád roste.
 
-Funguje v Kodi a ve Stremiu. V Home Assistantu Koncerty nejsou.
+Funguje v Kodi a ve Stremiu. Home Assistant koncerty sám nezobrazuje, ale s vyplněným klíčem Last.fm (Nastavení integrace → Ostatní) je hledá na pozadí a sdílí se skupinou.
 
 ## Klíč Last.fm
 Koncerty potřebují vlastní **API klíč Last.fm**. Je zdarma a patří jen tobě.
@@ -54,6 +54,7 @@ ostatních Kodi ve skupině.
 | **Podle žánru** | žánry, ve kterých už je nějaký nález → interpreti s počtem koncertů |
 | **Podle abecedy** | písmena (čísla a ostatní znaky pod „#“) → interpreti |
 | **Prohledáno X interpretů, další přibývají – načíst teď** | průběh. Klik prohledá hned dalších 20 interpretů. |
+| **Hledat interpreta** | napíšeš jméno, Nokturno ho hned prohledá ve tvých zdrojích a přidá do seznamu – i bez žánrů a klíče Last.fm |
 | **Nastavit koncerty** | změna žánrů nebo klíče |
 
 U interpreta jsou koncerty od nejnovějšího roku. Koncert má náhled ze zdroje, stopáž a velikost souboru.
@@ -68,6 +69,11 @@ Klik ho přehraje. Když první soubor nejde, Nokturno zkusí další kopii.
   znovu až za 30 dní.
 - Staré odkazy se ověřují. Smazaný soubor ze seznamu zmizí.
 
+### Synchronizace
+Se zapnutým okruhem **Synchronizovat koncerty** (Nastavení → Synchronizace) se nalezené koncerty sdílí se skupinou, tedy s dalšími Kodi
+i s Home Assistantem. Každé zařízení ukáže jen soubory ze zdrojů, které má samo zapnuté. Zařízení se stejnými zdroji
+stejného interpreta znovu neprohledává.
+
 ### Změna žánrů
 Žánry změníš přes **Nastavit koncerty**. Když žánr **přidáš**, interpreti, které už máš, zůstanou a přibudou noví.
 Když žánr **odebereš**, zmizí interpreti, kteří do žádného z vybraných žánrů nepatří.
@@ -78,7 +84,7 @@ Když žánr **odebereš**, zmizí interpreti, kteří do žádného z vybranýc
 3. Dej **Uložit změny** a doplněk ve Stremiu **přidej znovu**, ať Stremio načte nové katalogy.
 
 Ve Stremiu přibude druh **Koncerty** se seznamy **Nově přidané** a **Podle abecedy** (s výběrem žánru). Interpret
-je plakát, jeho koncerty jsou jako díly. Hledá aplikace na pozadí, dokud běží, takže se seznam zaplňuje postupně.
+je plakát, jeho koncerty jsou jako díly. V seznamu **Podle abecedy** jde hledat jménem interpreta, neznámého doplněk prohledá ve zdrojích a přidá. Hledá aplikace na pozadí, dokud běží, takže se seznam zaplňuje postupně.
 
 ## Když něco nejde
 | Co vidíš | Co udělat |
