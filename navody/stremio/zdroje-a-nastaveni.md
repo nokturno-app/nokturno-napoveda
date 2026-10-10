@@ -86,12 +86,14 @@ Titulky z **OpenSubtitles** má zatím jen doplněk pro Kodi.
 - **Preferovaný jazyk zvuku** – čeština, slovenština, angličtina, maďarština, nebo *nezáleží*. Streamy s touto řečí jdou nahoru.
 - **Řazení streamů** – nejlepší kvalita / největší / nejmenší soubory nahoře / podle zdroje. Ve Stremiu je bez posouvání vidět jen pár prvních řádků, proto na řazení záleží.
 - **Skrýt streamy v SD kvalitě** – vynechá nahrávky pod 720p.
+- **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – vynechá streamy, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru (u prvních streamů výpisu), u ostatních jen podle označení P5 v názvu.
+- **Skrýt AV1** – vynechá streamy s kodekem AV1, pro přehrávače, které ho neumí (starší Shield, Apple TV).
 - **Upřednostnit prostorový zvuk 5.1**
 - **Nejvyšší datový tok (Mb/s)** – pro pomalejší internet; orientačně Full HD 8–15 Mb/s, 4K 25–60 Mb/s.
 
 ## Co se u streamu zobrazuje
 
-Vlevo kvalita (a značky jako HDR/DV), vpravo název souboru, jazyky zvuku jako vlaječky s počtem kanálů a kodekem (např. `🇨🇿 5.1 AC3`), titulky, velikost, datový tok, délka a zdroj. Vlnovka (`~Full HD`) znamená odhad, ne údaj ze zdroje nebo ze souboru.
+Vlevo kvalita (a značky jako HDR10, DV nebo DV only, které poznáváme z hlavičky souboru u prvních streamů výpisu, jinak podle názvu), vpravo název souboru, jazyky zvuku jako vlaječky s počtem kanálů a kodekem (např. `🇨🇿 5.1 AC3`), titulky, velikost, datový tok, délka a zdroj. Vlnovka (`~Full HD`) znamená odhad, ne údaj ze zdroje nebo ze souboru.
 
 ## Vlastní katalogy
 

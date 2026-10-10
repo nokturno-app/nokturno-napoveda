@@ -32,6 +32,8 @@ Ve stejné kategorii je **Přenos nastavení** (Odeslat do jiného Kodi, Načís
 - **Titulky** – *Nechat na Kodi* / *Když chybí zvuk v preferovaném jazyce* / *Vždy v preferovaném jazyce*. Ve výchozím stavu se titulky zapnou, když zvuk v preferovaném jazyce není (čeština a slovenština se navzájem zastoupí), a vypnou se, když zvuk v preferovaném jazyce je.
 - **Skrýt SD streamy** – streamy pod 720p se ze seznamu úplně vyřadí.
 - **Skrýt 3D streamy** – 3D soubory (podle názvu nebo hlavičky souboru) se nezobrazí nikdy, ani když jiný stream není. Podrobně v nápovědě: [Výběr streamu: filtry, 3D a poslední filtr](../../cs/vyber-streamu.md).
+- **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – streamy, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru (u prvních streamů výpisu), u ostatních jen podle označení P5 v názvu.
+- **Skrýt AV1** – streamy s kodekem AV1, pro přehrávače, které ho neumí (starší Shield, Apple TV).
 - **Max. datový tok (Mb/s, 0 = bez omezení)** – přepočítá se na velikost souboru podle stopáže otevřeného titulu. Tlačítko **Změřit rychlost a nastavit datový tok** změří připojení a limit nastaví samo.
 - **Řazení streamů** – *Jak přišly* / *Nejdřív nejlepší kvalita* / *Nejdřív největší* / *Nejdřív nejmenší*.
 - **Zjišťovat zvuk ze souboru (kolik streamů)** – u kolika streamů od začátku seznamu doplněk přečte začátek souboru a zjistí jazyk a počet kanálů tam, kde je zdroj neřekl. Výsledek si pamatuje měsíc. 0 = nezjišťovat.
