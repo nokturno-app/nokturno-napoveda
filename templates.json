@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-04T13:39:56Z",
+  "generated": "2026-10-13T12:41:35Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -1103,6 +1103,26 @@
       "title": "Výber streamu: filtre, 3D a posledný filter",
       "text": "Ahoj, 3D verzie sa dajú skryť.\n1. Nokturno → Nastavenia → Prehrávanie: zapni Skryť 3D streamy. 3D súbory sa potom nezobrazia nikdy, ani keď iný stream nie je.\n2. Chceš mať výber rovno s filtrom (napríklad len CZ zvuk)? V Nastavenia → Výber streamu zapni Automaticky použiť posledný filter.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vyber-streamu\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vyber-streamu",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vzhled-estuary-nokturno",
+      "lang": "cs",
+      "product": "kodi",
+      "title": "Vzhled Estuary Nokturno",
+      "text": "Ahoj, Estuary Nokturno je vzhled pro Kodi 21, který dává Nokturno na domovskou obrazovku: nahoře nabídka Nokturna, pod ní řady Pokračovat ve sledování, Nejsledovanější, Můj seznam a katalogy s popisem vybraného titulu.\n1. Aktualizuj Nokturno aspoň na verzi 10.14.0.\n2. Nastavení → Rozhraní → Vzhled → Vzhled → Získat další → Estuary Nokturno.\nŘady vybereš v Nastavení vzhledu → Položky hlavní nabídky. Zpět na původní vzhled přepneš tamtéž na Estuary.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vzhled-estuary-nokturno\nTým Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vzhled-estuary-nokturno",
+      "when": {},
+      "priority": 3
+    },
+    {
+      "id": "vzhled-estuary-nokturno",
+      "lang": "sk",
+      "product": "kodi",
+      "title": "Vzhľad Estuary Nokturno",
+      "text": "Ahoj, Estuary Nokturno je vzhľad pre Kodi 21, ktorý dáva Nokturno na domovskú obrazovku: hore ponuka Nokturna, pod ňou rady Pokračovať v sledovaní, Najsledovanejšie, Môj zoznam a katalógy s popisom vybraného titulu.\n1. Aktualizuj Nokturno aspoň na verziu 10.14.0.\n2. Nastavenia → Rozhranie → Vzhľad → Vzhľad → Získať ďalšie → Estuary Nokturno.\nRady vyberieš v Nastaveniach vzhľadu → Položky hlavnej ponuky. Späť na pôvodný vzhľad prepneš tamtiež na Estuary.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vzhled-estuary-nokturno\nTím Nokturno",
+      "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vzhled-estuary-nokturno",
       "when": {},
       "priority": 3
     }

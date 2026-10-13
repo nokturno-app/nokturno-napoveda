@@ -48,6 +48,7 @@ obsah nehostí a za to, čo prehrávaš, zodpovedáš ty. Viac v článku [Čo j
 - [Vlastný zoznam](vlastni-seznam.md)
 - [Synchronizácia medzi zariadeniami nefunguje](synchronizace.md)
 - [Sťahovanie zlyhalo](stahovani.md)
+- [Vzhľad Estuary Nokturno](vzhled-estuary-nokturno.md)
 
 ## Kodi › Luna
 - [Luna: „server neodpovedá“](luna-neodpovida.md)

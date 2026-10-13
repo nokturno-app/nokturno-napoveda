@@ -50,6 +50,7 @@ nehostuje a za to, co přehráváš, odpovídáš ty. Více v článku [Co je No
 - [Synchronizace mezi zařízeními nefunguje](cs/synchronizace.md)
 - [Stahování selhalo](cs/stahovani.md)
 - [SyncWatch – společné sledování](navody/kodi/syncwatch.md)
+- [Vzhled Estuary Nokturno](cs/vzhled-estuary-nokturno.md)
 
 ## Kodi › Luna
 - [Luna: „server neodpovídá“](cs/luna-neodpovida.md)
