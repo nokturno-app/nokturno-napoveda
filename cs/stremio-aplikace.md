@@ -169,38 +169,62 @@ u rodičů, pustí aplikaci na VPS s vlastní doménou: [Nokturno pro Stremio na
 Adresu doplňku nikomu neposílej: hesla v ní od verze 9.6.0 nejsou, ale kdo ji má a dostane se k aplikaci, používá tvoje účty. Podrobnosti o přidání v článku
 [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md).
 
-## Heslo správce a profily kamarádů
-Od verze 9.12.0 aplikace pozná svého majitele podle **hesla správce**, ne podle sítě. Funguje tak stejně
-doma, na VPS i za vlastní doménou.
-
-**První spuštění.** Když heslo ještě není nastavené, stránka nastavení (`/configure`) ukáže jen kartu
-**Heslo správce**. Zadej heslo (aspoň 6 znaků) dvakrát a dej **Nastavit heslo správce**. Kdo stránku otevře
-první, stane se správcem. Na veřejné adrese (VPS, vlastní doména) ji proto otevři hned po instalaci.
-
-**Co vidí správce:**
-- všechny profily v aplikaci, i ty, které si založili kamarádi,
-- sekci **⚙ Aplikace**: přepínač profilů, změna hesla správce, odhlášení a kontrola aktualizací,
-- povolování zařízení.
-
-**Co vidí ostatní** (kamarád na sdílené instanci, druhý člen domácnosti v jiném prohlížeči):
-- heslo nepotřebují, profil si založí a doplněk přidají jako dřív,
-- v seznamu vidí jen profily, které si sami uložili v tomhle prohlížeči,
-- sekci Aplikace ani cizí profily neuvidí.
-
+## Správce, režimy a účty
+Aplikace pozná správce podle jména a hesla, ne podle sítě. Funguje tak stejně doma, na VPS i za vlastní doménou.
 Doplněk ve Stremiu ani v Nuviu heslo nechce, adresa doplňku se nemění.
 
-**Přihlášení v jiném prohlížeči.** Dole na stránce nastavení rozbal **Jsi správce aplikace? Přihlas se**
-a zadej heslo. Přihlášení vydrží rok.
+**První spuštění.** Dokud aplikace nemá správce, stránka nastavení (`/configure`) ukáže jen kartu **Správce aplikace**:
+jméno, heslo (aspoň 6 znaků) dvakrát a e-mail. E-mail uvidí každý na přihlašovací stránce jako kontakt pro zapomenuté
+heslo, aplikace e-maily neposílá. Když stránku neotevřeš přes adresu z domácí sítě (`127.0.0.1`, `192.168.…`), ale
+přes doménu nebo proxy, chce navíc kód, který aplikace při startu vypíše do výpisu na řádek „Aplikace zatím nemá správce“ (`journalctl`, `docker logs`). Na VPS
+otevři `/configure` hned po instalaci, ještě než aplikaci pustíš ven: nginx s holým `proxy_pass` vypadá jako
+požadavek z téhož počítače a kód nechce.
 
-**Změna hesla.** V sekci **⚙ Aplikace** vyplň **Nové heslo správce** a dej **Uložit volby aplikace**.
-Ostatní přihlášení správce tím skončí.
+**Obnovovací kód.** Po založení správce se jednou ukáže obnovovací kód. Ulož si ho do správce hesel nebo na papír.
+S ním si na přihlašovací stránce v **Obnovovací kód správce** nastavíš nové heslo. Každé použití vydá nový kód.
 
-**Zapomenuté heslo.** V datové složce aplikace otevři soubor `aplikace.json`, smaž z něj položku
-`spravce` a aplikaci restartuj. Pak jde heslo nastavit znovu. Datovou složku najdeš v sekci
-[Nastavení aplikace a statistiky](#nastaveni-aplikace-a-statistiky), u aplikace pro Android se k souboru
-dostaneš jen přes smazání dat aplikace (zmizí tím i profily).
+**Správce z verze před 11.0.0** se přihlásí jen heslem a hned potom doplní jméno a e-mail. Dostane přitom
+obnovovací kód.
 
-Po 20 špatných heslech za 10 minut aplikace další pokusy na chvíli odmítá.
+### Tři režimy
+Režim vybírá správce v sekci **⚙ Aplikace**:
+- **Bez profilů – nastavení v adrese.** Jako před verzí 9.6.0: adresa doplňku nese celé nastavení včetně hesel
+  a kdo ji má, hesla zná. Po každé změně se doplněk přidává znovu.
+- **Profily** (výchozí). Nastavení je uložené v aplikaci, adresa nese jen klíč profilu. Profily zakládá, upravuje
+  a maže jen správce. Kdo zná adresu, jen přehrává.
+- **Uživatelské účty.** Správce zakládá uživatele (jméno a heslo), každý se přihlásí a spravuje jen svoje profily.
+  Správce vidí všechny profily a u každého vybere, komu patří.
+
+Po aktualizaci zůstává dosavadní režim a nic nepřestane hrát. Klíče profilů se při přepnutí nemění. Při přechodu
+na účty patří stávající profily správci, ten je předá uživatelům výběrem v seznamu profilů.
+
+**Vypnout staré adresy s nastavením.** Adresy, které nesou celé nastavení (`/c/eyJ…`), jde v sekci Aplikace
+vypnout. Nikdo si pak nesestaví adresu s vlastními účty a nebude aplikaci používat bez profilu. V režimu s účty je
+volba zapnutá hned po přepnutí. Ve Stremiu se místo streamů ukáže řádek s odkazem na uložení profilu.
+
+### Hesla ve formuláři
+Uložená hesla se do stránky nastavení nikdy nevrací, ani správci. Pole zůstane prázdné s poznámkou **Uloženo – nech
+prázdné, pokud ho neměníš**. Když u účtu změníš jméno, e-mail nebo adresu úložiště, uložené heslo se nepoužije a pole
+ukáže **Účet se změnil – zadej heslo znovu**. Tak si nikdo s adresou doplňku nepřesměruje úložiště na svůj server,
+aby mu aplikace heslo poslala. Totéž platí pro **Ověřit účet**.
+
+### Uživatelé
+V sekci **⚙ Aplikace → Uživatelé** správce přidává uživatele a u každého vidí počet profilů, poslední aktivitu a počet
+přehrání za 7 a 30 dní, bez názvů titulů. Může změnit heslo, zablokovat (přestanou fungovat i adresy profilů
+uživatele) nebo smazat i s profily. Zapomenuté heslo uživatele mění správce, přihlašovací stránka ukazuje jeho e-mail.
+
+### Přihlášení a zapomenuté heslo
+- **Přihlášení** vydrží rok. V režimu bez profilů je nad formulářem volba **Jsi správce aplikace? Přihlas se**.
+- **Změna hesla správce:** sekce **⚙ Aplikace** → **Nové heslo správce** → **Uložit volby aplikace**. Ostatní
+  přihlášení správce tím skončí.
+- **Zapomenuté heslo správce bez kódu:** v datové složce aplikace otevři `aplikace.json`, smaž položku `spravce`
+  a aplikaci restartuj. Pak jde správce založit znovu, uživatelé i profily zůstanou. Datovou složku najdeš v sekci
+  [Nastavení aplikace a statistiky](#nastaveni-aplikace-a-statistiky), u aplikace pro Android se k souboru dostaneš
+  jen přes smazání dat aplikace (zmizí tím i profily).
+- **Tovární nastavení** v sekci Aplikace smaže správce, uživatele i profily (potvrzuje se opsáním slova SMAZAT).
+  Statistiky a hlášení pádů zůstanou.
+
+Po 20 špatných heslech nebo kódech z jedné adresy za 10 minut aplikace další pokusy z ní na chvíli odmítá.
 
 ## Aktualizace
 Aplikace se aktualizuje sama: při startu a pak každých 6 hodin. Novou verzi ověří a když nenaběhne,
@@ -208,7 +232,7 @@ vrátí předchozí. Na Androidu se aktualizace stahuje při spuštění aplikac
 Nový instalační soubor stahovat nemusíš.
 
 Nechceš čekat? Na stránce nastavení (`/configure`) je dole v sekci **⚙ Aplikace** (od verze 9.12.0 ji vidí jen
-[správce](#heslo-spravce-a-profily-kamaradu)) tlačítko **Zkontrolovat aktualizace** (od verze 9.0.7). Ukáže nainstalovanou a nejnovější verzi
+[správce](#spravce-rezimy-a-ucty)) tlačítko **Zkontrolovat aktualizace** (od verze 9.0.7). Ukáže nainstalovanou a nejnovější verzi
 a novější hned stáhne. Stejně poslouží restart aplikace: na počítači ji zavři a spusť znovu,
 na VPS `sudo systemctl restart nokturno`, v Home Assistantu restart doplňku, na Androidu
 zavření a nové spuštění aplikace.

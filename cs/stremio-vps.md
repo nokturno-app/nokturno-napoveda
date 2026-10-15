@@ -174,8 +174,9 @@ sudo ufw enable
 Když má poskytovatel VPS vlastní firewall v administraci, povol v něm taky porty 80 a 443.
 
 ## Přidání do Stremia a Nuvia
-1. Otevři `https://nokturno.tvoje-domena.cz/configure` hned po instalaci a nastav
-   [heslo správce](stremio-aplikace.md#heslo-spravce-a-profily-kamaradu). Kdo stránku otevře první, stane se správcem.
+1. Otevři `https://nokturno.tvoje-domena.cz/configure` hned po instalaci a založ
+   [správce aplikace](stremio-aplikace.md#spravce-rezimy-a-ucty): jméno, heslo, e-mail a kód z výpisu aplikace
+   (`journalctl -u nokturno | grep "nemá správce"`). Ulož si obnovovací kód, který se pak jednou ukáže.
 2. Založ profil s názvem, viz [Nastavení a přidání do Stremia](stremio-instalace.md).
 3. Vyplň [vlastní úložiště](vlastni-uloziste.md) a případně účty zdrojů, u každého dej **Ověřit**.
 4. **Přidat do Stremia** nebo **Přidat do Nuvia**. Adresa doplňku začíná `https://nokturno.tvoje-domena.cz/c/p…`.
@@ -192,26 +193,32 @@ nebo VPN. Adresa v domácí síti (`192.168.…`) z VPS nefunguje.
 - Systém VPS aktualizuj jako obvykle (`sudo apt update && sudo apt upgrade`).
 
 ## Nastavení pro kamarády
-Od verze 9.7.0 jde na instanci s veřejnou adresou zpřístupnit stránku nastavení i z internetu. Kamarád si pak
-na `https://<tvoje doména>/configure` založí **vlastní profil se svými účty** a doplněk přidá do svého Stremia.
-Od verze 9.12.0 vidí jen profily, které si uložil ve svém prohlížeči. Všechny profily, povolování zařízení
-a aktualizace vidí jen [správce](stremio-aplikace.md#heslo-spravce-a-profily-kamaradu) přihlášený heslem.
+Na instanci s veřejnou adresou jde zpřístupnit stránku nastavení i z internetu (od verze 9.7.0). Kamarádům pak
+v sekci **⚙ Aplikace** přepni režim na **Uživatelské účty** a každému přidej účet se jménem a heslem. Kamarád se
+na `https://<tvoje doména>/configure` přihlásí, založí si **vlastní profil se svými účty** a doplněk přidá do svého
+Stremia. Vidí a mění jen svoje profily, uložená hesla se mu do stránky nevrací. Správce vidí, kolik kdo má profilů
+a jak často přehrává (ne co), a může účet zablokovat nebo smazat. Víc v článku
+[Správce, režimy a účty](stremio-aplikace.md#spravce-rezimy-a-ucty).
 
-Zapneš to volbou `"sdilena": true` v `nokturno.json` (vedle `"port"`, `"stats"` a dalších; `/opt/nokturno/data`
-při instalaci skriptem, `/var/lib/nokturno` při ruční instalaci). Pak aplikaci restartuj:
+Stránku nastavení z internetu zapneš volbou `"sdilena": true` v `nokturno.json` (vedle `"port"`, `"stats"` a dalších;
+`/opt/nokturno/data` při instalaci skriptem, `/var/lib/nokturno` při ruční instalaci). Pak aplikaci restartuj:
 `sudo systemctl restart nokturno`. Výchozí hodnota je `false`.
 
 Než to zapneš, počítej s tímhle:
-- **Bez přihlášení kamarádů.** Kamarád heslo nepotřebuje. Kdo zná doménu, může si založit profil a hledat přes tvůj
-  server. Cizí profily od verze 9.12.0 neuvidí. Doménu dávej jen lidem, kterým věříš.
+- **Účty jen pro lidi, kterým věříš.** Profily zakládá jen správce nebo přihlášený uživatel. Kdo zná jen adresu
+  doplňku, přehrává, ale nastavení ani hesla nevidí.
+- **Staré adresy s nastavením vypni.** V režimu s účty je volba **Vypnout staré adresy s nastavením** zapnutá hned
+  po přepnutí. Jinak si kdokoli se znalostí domény sestaví adresu s vlastními účty a hledá přes tvůj server.
 - **Jedna IP.** Všechno hledání jde z IP tvého VPS, zdroje mohou IP s mnoha dotazy omezit.
 - **Přenos dat.** Soubory z vlastního úložiště a FastShare tečou přes VPS.
 
 ## Bezpečnost a soukromí
 - **Adresa doplňku neobsahuje hesla ani nastavení**, jen náhodný klíč profilu (`/c/p<klíč>/manifest.json`).
-  Kdo adresu má a dostane se k aplikaci, přesto používá tvoje účty, proto ji dál nikomu neposílej.
+  Kdo adresu má a dostane se k aplikaci, přesto používá tvoje účty, proto ji dál nikomu neposílej. Nastavení
+  profilu ani uložená hesla s ní ale nezíská a profil nezmění (od verze 11.0.0).
 - **Instance je ve výchozím stavu jen pro tebe.** Neprovozuj ji jako veřejnou službu pro cizí lidi (výjimka viz výš). Kdo zná adresu tvé domény,
-  může si ve formuláři vyrobit vlastní doplněk a hledat přes tvůj server, proto doménu nikde nezveřejňuj.
+  může si sestavit adresu s vlastním nastavením a hledat přes tvůj server, dokud v sekci **⚙ Aplikace** nevypneš
+  staré adresy s nastavením. Doménu proto nikde nezveřejňuj.
 - **Heslo na celou doménu** (basic auth v Caddy) nedávej. Stremio ani Nuvio jsme s doplňkem za heslem
   neověřovali a doplněk by nejspíš přestal fungovat.
 - **Statistiky** vypneš v `nokturno.json` (`/opt/nokturno/data` při instalaci skriptem, `/var/lib/nokturno`

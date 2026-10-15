@@ -169,38 +169,63 @@ u rodičov, spustí aplikáciu na VPS s vlastnou doménou: [Nokturno pre Stremio
 Adresu doplnku nikomu neposielaj: heslá v nej od verzie 9.6.0 nie sú, ale kto ju má a dostane sa k aplikácii, používa tvoje účty. Podrobnosti o pridaní v článku
 [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 
-## Heslo správcu a profily kamarátov
-Od verzie 9.12.0 aplikácia spozná svojho majiteľa podľa **hesla správcu**, nie podľa siete. Funguje tak rovnako
-doma, na VPS aj za vlastnou doménou.
+## Správca, režimy a účty
+Aplikácia spozná správcu podľa mena a hesla, nie podľa siete. Funguje tak rovnako doma, na VPS aj za vlastnou
+doménou. Doplnok v Stremiu ani v Nuviu heslo nechce, adresa doplnku sa nemení.
 
-**Prvé spustenie.** Keď heslo ešte nie je nastavené, stránka nastavení (`/configure`) ukáže len kartu
-**Heslo správcu**. Zadaj heslo (aspoň 6 znakov) dvakrát a daj **Nastaviť heslo správcu**. Kto stránku otvorí
-prvý, stane sa správcom. Na verejnej adrese (VPS, vlastná doména) ju preto otvor hneď po inštalácii.
+**Prvé spustenie.** Kým aplikácia nemá správcu, stránka nastavení (`/configure`) ukáže len kartu **Správca aplikácie**:
+meno, heslo (aspoň 6 znakov) dvakrát a e-mail. E-mail uvidí každý na prihlasovacej stránke ako kontakt pre zabudnuté
+heslo, aplikácia e-maily neposiela. Keď stránku neotvoríš cez adresu z domácej siete (`127.0.0.1`, `192.168.…`),
+ale cez doménu alebo proxy, chce navyše kód, ktorý aplikácia pri štarte vypíše do výpisu na riadok „Aplikace zatím nemá správce“ (`journalctl`, `docker logs`).
+Na VPS otvor `/configure` hneď po inštalácii, ešte predtým, ako aplikáciu pustíš von: nginx s holým `proxy_pass`
+vyzerá ako požiadavka z toho istého počítača a kód nechce.
 
-**Čo vidí správca:**
-- všetky profily v aplikácii, aj tie, ktoré si založili kamaráti,
-- sekciu **⚙ Aplikácia**: prepínač profilov, zmena hesla správcu, odhlásenie a kontrola aktualizácií,
-- povoľovanie zariadení.
+**Obnovovací kód.** Po založení správcu sa raz ukáže obnovovací kód. Ulož si ho do správcu hesiel alebo na papier.
+S ním si na prihlasovacej stránke v **Obnovovací kód správcu** nastavíš nové heslo. Každé použitie vydá nový kód.
 
-**Čo vidia ostatní** (kamarát na zdieľanej inštancii, druhý člen domácnosti v inom prehliadači):
-- heslo nepotrebujú, profil si založia a doplnok pridajú ako predtým,
-- v zozname vidia len profily, ktoré si sami uložili v tomto prehliadači,
-- sekciu Aplikácia ani cudzie profily neuvidia.
+**Správca z verzie pred 11.0.0** sa prihlási len heslom a hneď potom doplní meno a e-mail. Dostane pritom
+obnovovací kód.
 
-Doplnok v Stremiu ani v Nuviu heslo nechce, adresa doplnku sa nemení.
+### Tri režimy
+Režim vyberá správca v sekcii **⚙ Aplikácia**:
+- **Bez profilov – nastavenie v adrese.** Ako pred verziou 9.6.0: adresa doplnku nesie celé nastavenie vrátane hesiel
+  a kto ju má, heslá pozná. Po každej zmene sa doplnok pridáva znova.
+- **Profily** (predvolené). Nastavenie je uložené v aplikácii, adresa nesie len kľúč profilu. Profily zakladá,
+  upravuje a maže len správca. Kto pozná adresu, len prehráva.
+- **Používateľské účty.** Správca zakladá používateľov (meno a heslo), každý sa prihlási a spravuje len svoje profily.
+  Správca vidí všetky profily a pri každom vyberie, komu patrí.
 
-**Prihlásenie v inom prehliadači.** Dole na stránke nastavení rozbaľ **Si správca aplikácie? Prihlás sa**
-a zadaj heslo. Prihlásenie vydrží rok.
+Po aktualizácii zostáva doterajší režim a nič neprestane hrať. Kľúče profilov sa pri prepnutí nemenia. Pri prechode
+na účty patria existujúce profily správcovi, ten ich odovzdá používateľom výberom v zozname profilov.
 
-**Zmena hesla.** V sekcii **⚙ Aplikácia** vyplň **Nové heslo správcu** a daj **Uložiť voľby aplikácie**.
-Ostatné prihlásenia správcu tým skončia.
+**Vypnúť staré adresy s nastavením.** Adresy, ktoré nesú celé nastavenie (`/c/eyJ…`), sa dajú v sekcii Aplikácia
+vypnúť. Nikto si potom nezostaví adresu s vlastnými účtami a nebude aplikáciu používať bez profilu. V režime s účtami
+je voľba zapnutá hneď po prepnutí. V Stremiu sa namiesto streamov ukáže riadok s odkazom na uloženie profilu.
 
-**Zabudnuté heslo.** V dátovom priečinku aplikácie otvor súbor `aplikace.json`, zmaž z neho položku
-`spravce` a aplikáciu reštartuj. Potom ide heslo nastaviť znova. Dátový priečinok nájdeš v sekcii
-[Nastavenia aplikácie a štatistiky](#nastavenia-aplikacie-a-statistiky), pri aplikácii pre Android sa k súboru
-dostaneš len cez zmazanie dát aplikácie (zmiznú tým aj profily).
+### Heslá vo formulári
+Uložené heslá sa do stránky nastavení nikdy nevracajú, ani správcovi. Pole zostane prázdne s poznámkou **Uložené –
+nechaj prázdne, ak ho nemeníš**. Keď pri účte zmeníš meno, e-mail alebo adresu úložiska, uložené heslo sa nepoužije
+a pole ukáže **Účet sa zmenil – zadaj heslo znova**. Tak si nikto s adresou doplnku nepresmeruje úložisko na svoj
+server, aby mu aplikácia heslo poslala. To isté platí pre **Overiť účet**.
 
-Po 20 zlých heslách za 10 minút aplikácia ďalšie pokusy na chvíľu odmieta.
+### Používatelia
+V sekcii **⚙ Aplikácia → Používatelia** správca pridáva používateľov a pri každom vidí počet profilov, poslednú
+aktivitu a počet prehratí za 7 a 30 dní, bez názvov titulov. Môže zmeniť heslo, zablokovať (prestanú fungovať aj
+adresy profilov používateľa) alebo zmazať aj s profilmi. Zabudnuté heslo používateľa mení správca, prihlasovacia
+stránka ukazuje jeho e-mail.
+
+### Prihlásenie a zabudnuté heslo
+- **Prihlásenie** vydrží rok. V režime bez profilov je nad formulárom voľba **Si správca aplikácie? Prihlás sa**.
+- **Zmena hesla správcu:** sekcia **⚙ Aplikácia** → **Nové heslo správcu** → **Uložiť voľby aplikácie**. Ostatné
+  prihlásenia správcu tým skončia.
+- **Zabudnuté heslo správcu bez kódu:** v dátovom priečinku aplikácie otvor `aplikace.json`, zmaž položku `spravce`
+  a aplikáciu reštartuj. Potom sa dá správca založiť znova, používatelia aj profily zostanú. Dátový priečinok nájdeš
+  v sekcii [Nastavenia aplikácie a štatistiky](#nastavenia-aplikacie-a-statistiky), pri aplikácii pre Android sa
+  k súboru dostaneš len cez zmazanie dát aplikácie (zmiznú tým aj profily).
+- **Výrobné nastavenia** v sekcii Aplikácia zmažú správcu, používateľov aj profily (potvrdzuje sa opísaním slova
+  ZMAZAŤ). Štatistiky a hlásenia pádov zostanú.
+
+Po 20 zlých heslách alebo kódoch z jednej adresy za 10 minút aplikácia ďalšie pokusy z nej na chvíľu odmieta.
 
 ## Aktualizácie
 Aplikácia sa aktualizuje sama: pri štarte a potom každých 6 hodín. Novú verziu overí a keď nenabehne,
@@ -208,7 +233,7 @@ vráti predchádzajúcu. Na Androide sa aktualizácia sťahuje pri spustení apl
 Nový inštalačný súbor sťahovať nemusíš.
 
 Nechceš čakať? Na stránke nastavení (`/configure`) je dole v sekcii **⚙ Aplikácia** (od verzie 9.12.0 ju vidí len
-[správca](#heslo-spravcu-a-profily-kamaratov)) tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
+[správca](#spravca-rezimy-a-ucty)) tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
 a novšiu hneď stiahne. Rovnako poslúži reštart aplikácie: na počítači ju zavri a spusť znova,
 na VPS `sudo systemctl restart nokturno`, v Home Assistante reštart doplnku, na Androide
 zatvorenie a nové spustenie aplikácie.
