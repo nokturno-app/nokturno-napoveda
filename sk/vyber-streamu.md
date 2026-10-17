@@ -16,7 +16,8 @@ templates:
 # Výber streamu: filtre, 3D a posledný filter
 
 Po kliknutí na film alebo diel (aj po **Prehrať** v detaile) sa otvorí dialóg **Vyber stream**. Kedykoľvek ho vyvoláš
-aj z kontextového menu filmu alebo dielu: **Vybrať stream**.
+aj z kontextového menu filmu alebo dielu: **Vybrať stream**. **Vybrať stream** vždy hľadá znova a neberie výsledok uložený
+z minulosti, takže uvidíš aktuálnu ponuku.
 
 ## Čo je v dialógu
 - Každý stream má dva riadky, vľavo obrázok kvality. Čo a v akom poradí sa ukazuje, sa dá nastaviť (nižšie).
@@ -50,9 +51,13 @@ v zátvorke je počet streamov, ktoré nechá.
 | **Skryť SD streamy** | streamy pod 720p sa vyradia. Keby nezostal žiadny, zobrazia sa všetky |
 | **Skryť 3D streamy** | 3D súbory sa nezobrazia nikdy, ani keď iný stream nie je |
 | **Skryť Dolby Vision bez záložnej vrstvy (profil 5)** | streamy, ktoré televízor bez Dolby Vision zobrazí zelene a fialovo. Spoznáme ich z hlavičky súboru, pri ostatných len podľa označenia P5 v názve |
+| **Skryť Dolby Vision streamy** | súbory Dolby Vision sa nezobrazia nikdy, ani keď iný stream nie je. Pre televízory a prehrávače, ktoré Dolby Vision nevedia (fialový alebo zelený obraz) |
+| **Skryť HDR streamy** | súbory HDR vrátane Dolby Vision sa nezobrazia nikdy. Pre televízory, kde je HDR obraz tmavý alebo vyblednutý |
 | **Skryť AV1** | streamy s kodekom AV1, pre prehrávače, ktoré ho nevedia (staršie Shield, Apple TV) |
 | **Max. dátový tok (Mb/s, 0 = bez obmedzenia)** | streamy s vyšším tokom sa vyradia. Keď sa nezmestí žiadny, zostane najmenší súbor. Hodnotu nastaví aj **Zmerať rýchlosť a nastaviť dátový tok** |
 | **Radenie streamov** | **Ako prišli**, **Najprv najlepšia kvalita**, **Najprv najväčšie**, **Najprv najmenšie** |
+
+Rovnaké voľby (Skryť 3D, Skryť Dolby Vision, Skryť HDR) má aj integrácia pre Home Assistant a nastavenia aplikácie pre Stremio.
 
 **Nokturno → Nastavenia → Výber streamu:**
 

@@ -29,6 +29,7 @@ Hotové a rozťahané videá sú v menu **Stiahnuté**.
    a do sieťového priečinka (do 7.9.6).
 2. **Skontroluj priečinok.** Musí byť zapisovateľný a musí na ňom byť miesto. Na televízoroch bez vlastného úložiska
    použi USB disk alebo sieťový priečinok (`smb://…`).
+   Rovnaký zdieľaný priečinok môžeš mať aj ako [vlastné úložisko](vlastni-uloziste.md) a prehrávať z neho.
 3. **Skontroluj zdroj.** Sťahovanie potrebuje rovnaký účet ako prehrávanie (Premium, VIP, kredit).
    Pozri [Premium, VIP a kredit](premium-a-kredit.md).
 4. V menu **Stiahnuté** daj pri položke **Skúsiť znova**.

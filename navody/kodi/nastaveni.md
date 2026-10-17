@@ -6,7 +6,7 @@ Nastavení otevřeš položkou **Nastavení** na konci hlavního menu doplňku, 
 
 | Kategorie | Co v ní je |
 |---|---|
-| **Vlastní úložiště** | až tři WebDAV složky s tvými soubory, viz [Vlastní úložiště](../../cs/vlastni-uloziste.md) |
+| **Vlastní úložiště** | až tři složky s tvými soubory, WebDAV nebo sdílená složka SMB (`smb://server/složka`), viz [Vlastní úložiště](../../cs/vlastni-uloziste.md) |
 | **Zdroje a účty** | volitelné zdroje, OpenSubtitles, TMDB a Trakt.tv, viz [Zdroje a účty](zdroje-a-ucty.md) |
 | **Nastavit z mobilu a přenos** | vyplnění nastavení v telefonu a přenos do dalšího Kodi |
 | **Přehrávání** | jazyk, titulky, kvalita, řazení streamů, stahování |
@@ -33,7 +33,9 @@ Ve stejné kategorii je **Přenos nastavení** (Odeslat do jiného Kodi, Načís
 - **Skrýt SD streamy** – streamy pod 720p se ze seznamu úplně vyřadí.
 - **Skrýt 3D streamy** – 3D soubory (podle názvu nebo hlavičky souboru) se nezobrazí nikdy, ani když jiný stream není. Podrobně v nápovědě: [Výběr streamu: filtry, 3D a poslední filtr](../../cs/vyber-streamu.md).
 - **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – streamy, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru (u prvních streamů výpisu), u ostatních jen podle označení P5 v názvu.
+- **Skrýt Dolby Vision streamy** a **Skrýt HDR streamy** – takové soubory se nezobrazí nikdy, pro televize, které Dolby Vision nebo HDR neumí ([Výběr streamu](../../cs/vyber-streamu.md)).
 - **Skrýt AV1** – streamy s kodekem AV1, pro přehrávače, které ho neumí (starší Shield, Apple TV).
+- **Odebírat zhlédnuté z Mého seznamu** (výchozí zapnuto) – film zmizí z Mého seznamu, jakmile ho dokoukáš, seriál až po zhlédnutí všech dosud vydaných dílů; nový díl ho zpátky nepřidá.
 - **Max. datový tok (Mb/s, 0 = bez omezení)** – přepočítá se na velikost souboru podle stopáže otevřeného titulu. Tlačítko **Změřit rychlost a nastavit datový tok** změří připojení a limit nastaví samo.
 - **Řazení streamů** – *Jak přišly* / *Nejdřív nejlepší kvalita* / *Nejdřív největší* / *Nejdřív nejmenší*.
 - **Zjišťovat zvuk ze souboru (kolik streamů)** – u kolika streamů od začátku seznamu doplněk přečte začátek souboru a zjistí jazyk a počet kanálů tam, kde je zdroj neřekl. Výsledek si pamatuje měsíc. 0 = nezjišťovat.
@@ -43,7 +45,7 @@ Stejné verze souboru (kvalita, zvuk, titulky a velikost do 10 %) doplněk vždy
 
 ### Stahování
 
-**Složka pro stahování** – kam se ukládají stažená videa a jejich titulky. Může to být i síťová složka (například `smb://`); do ní se ale přerušené stahování nenavazuje a začne znovu. Bez nastavené složky se v menu neukáže položka **Stažené**.
+**Složka pro stahování** – kam se ukládají stažená videa a jejich titulky. Může to být i síťová složka (například `smb://`); do ní se ale přerušené stahování nenavazuje a začne znovu. Stejnou sdílenou složku můžeš mít i jako vlastní úložiště. Bez nastavené složky se v menu neukáže položka **Stažené**.
 
 ## Výběr streamu
 

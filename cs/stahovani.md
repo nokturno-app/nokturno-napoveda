@@ -29,6 +29,7 @@ Hotová a rozstahovaná videa jsou v menu **Stažené**.
    a do síťové složky (do 7.9.6).
 2. **Zkontroluj složku.** Musí být zapisovatelná a musí na ní být místo. Na televizích bez vlastního úložiště
    použij USB disk nebo síťovou složku (`smb://…`).
+   Stejnou sdílenou složku můžeš mít i jako [vlastní úložiště](vlastni-uloziste.md) a přehrávat z ní.
 3. **Zkontroluj zdroj.** Stahování potřebuje stejný účet jako přehrávání (Premium, VIP, kredit).
    Viz [Premium, VIP a kredit](premium-a-kredit.md).
 4. V menu **Stažené** dej u položky **Zkusit znovu**.

@@ -8,7 +8,7 @@ when: {storage: [unreachable, bad_login]}
 templates:
   kodi: |
     Ahoj, Nokturno se nemůže spojit s tvým vlastním úložištěm.
-    1. Nokturno → Nastavení → Vlastní úložiště: zkontroluj Adresu složky, uživatelské jméno a heslo.
+    1. Nokturno → Nastavení → Vlastní úložiště: zkontroluj Adresu složky, uživatelské jméno a heslo. Adresa může být WebDAV (https://…) nebo sdílená složka SMB (smb://server/složka), SMB jen v domácí síti.
     2. Adresa v domácí síti (například 192.168.…) funguje jen doma. Mimo domov je potřeba veřejná adresa nebo VPN.
     3. Úložiště, které nepoužíváš, vypni volbou Používat toto úložiště. Zůstane vyplněné, jen se v něm nebude hledat.
     4. Pak dej Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).
@@ -18,9 +18,10 @@ templates:
 
 # Jak připojit vlastní úložiště
 
-Vlastní úložiště je hlavní funkce Nokturna: přehrává **tvoje vlastní soubory** z NAS, Nextcloudu nebo jiného serveru
-s WebDAV. Soubor, který k titulu patří, se ukáže **mezi streamy jako první** a pustí se stejně jako ostatní.
-Nastavit jde až **tři úložiště**. Zdroje třetích stran (WebShare, HellSpy a další) jsou jen volitelné doplnění,
+Vlastní úložiště je hlavní funkce Nokturna: přehrává **tvoje vlastní soubory** z NAS, Nextcloudu, domácího počítače nebo jiného serveru –
+přes **WebDAV** (adresa `http://` nebo `https://`) nebo ze **sdílené složky SMB** (adresa `smb://`, tedy Windows nebo Samba na NAS).
+Soubor, který k titulu patří, se ukáže **mezi streamy jako první** a pustí se stejně jako ostatní.
+Nastavit jde až **tři úložiště**, každé může být jiného druhu. Zdroje třetích stran (WebShare, HellSpy a další) jsou jen volitelné doplnění,
 u nové instalace jsou všechny vypnuté.
 
 Stejná úložiště umí i [integrace pro Home Assistant](../navody/ha/nastaveni.md#vlastni-uloziste)
@@ -30,6 +31,7 @@ a [Nokturno pro Stremio](../navody/stremio/zdroje-a-nastaveni.md#vlastni-ulozist
 - Složka dostupná přes **WebDAV** (`http://` nebo `https://`, tvar `davs://` z Kodi jde taky). Umí to Synology a QNAP
   (balíček WebDAV Server), Nextcloud, ownCloud i obyčejný Apache nebo nginx. Stačí i server, který umí jen **výpis
   složky** v HTML.
+- **Nebo** sdílená složka **SMB** (Samba) – Windows, Synology, QNAP, router s diskem, Raspberry Pi se Sambou. Adresa má tvar `smb://server/sdílená-složka/podsložka`, třeba `smb://nas/video/` nebo `smb://192.168.1.10/filmy/`. SMB funguje jen v domácí síti, viz [SMB (sdílená složka)](#smb-sdilena-slozka).
 - Jméno a heslo, pokud je úložiště chráněné (HTTP Basic). Bez hesla nech pole prázdná.
 - Úložiště musí být **dosažitelné ze zařízení, na kterém přehráváš**. Adresa v domácí síti funguje jen doma,
   mimo domov je potřeba veřejná adresa nebo VPN.
@@ -44,19 +46,27 @@ Do úložiště se nic nezapisuje a nic se v něm nevytváří – žádné `.nf
 | Pole | K čemu | Příklad |
 |---|---|---|
 | **Používat toto úložiště** (dřív **Použít toto úložiště**) | vypnuté úložiště zůstane vyplněné, jen se v něm nehledá a v menu se neukáže | |
-| **Adresa složky** | WebDAV složka s filmy a seriály, prázdné = úložiště vypnuté | `https://nas.example.cz:5006/video/` · `https://cloud.example.cz/remote.php/dav/files/jmeno/Video/` |
+| **Adresa složky** | WebDAV nebo SMB složka s filmy a seriály, prázdné = úložiště vypnuté | `https://nas.example.cz:5006/video/` · `https://cloud.example.cz/remote.php/dav/files/jmeno/Video/` · `smb://nas/video/` |
 | **Uživatelské jméno**, **Heslo** | přihlášení k úložišti | |
 | **Název** | ukáže se u streamů, ať je jasné, odkud soubor je; prázdné = jméno serveru | `NAS` |
 
 Pak dej **Nastavení → Pokročilé → Ověřit zdroje** (ve starších verzích **Otestovat zdroje**). U každého úložiště
 ukáže, jestli se přihlášení povedlo, nebo `NAS neodpovídá` / `NAS: špatné jméno nebo heslo`.
 
+## SMB (sdílená složka)
+Do **Adresy složky** napiš `smb://server/sdílená-složka`, případně i s podsložkou (`smb://nas/video/filmy/`). Jméno a heslo vyplň, když je sdílená složka chráněná; u veřejné složky bez hesla je nech prázdné. Pak dej **Nastavení → Pokročilé → Ověřit zdroje**.
+- SMB funguje v **domácí síti**. Na sdílenou složku musí dosáhnout zařízení, kde Nokturno běží: Kodi, Home Assistant, nebo počítač či telefon s aplikací Nokturno pro Stremio. Přes internet se SMB nepoužívá – mimo domov potřebuješ WebDAV s veřejnou adresou nebo VPN.
+- Cestu piš normálně, s mezerami a diakritikou, ne `%20`.
+- Filmy, seriály, vlastní katalogy i koncerty fungují stejně jako u WebDAV a soubor se přehrává přímo, nic se předem nestahuje.
+- Jazyk zvuku se u souborů ze SMB bere jen z **názvu souboru** (hlavička souboru se nečte). Dej proto do názvu `CZ`, `SK` a podobně, viz [Jak pojmenovat soubory](#jak-pojmenovat-soubory).
+
 ## Stremio
 V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo `http://<IP zařízení s aplikací>:7140/configure`) vyplň v sekci
 **Vlastní úložiště a zdroje** první kartu **Vlastní úložiště** a dej **Ověřit úložiště**. Pak ulož změny. Když už doplněk
 ve Stremiu máš, změny platí hned a znovu ho přidávat nemusíš.
 
-Ve Stremiu platí dvě věci navíc:
+Ve Stremiu platí tři věci navíc:
+- Úložiště může být WebDAV i SMB (`smb://server/složka`). SMB čte aplikace Nokturno, takže počítač nebo telefon s aplikací musí být ve stejné síti jako sdílená složka. Na VPS ani přes internet SMB nefunguje (hláška „SMB jen z domácí sítě“).
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno**. Ta v něm hledá soubory a od verze 9.6.1
   je přehrávači i předává, přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
 - Ve Stremiu v prohlížeči se soubory `.mkv`, `.avi` a podobné nepřehrají, o přehrání rozhoduje formát souboru.
@@ -82,7 +92,7 @@ Seriály/Okresní přebor/Okresní přebor S01E02 - Nábor.mkv
 Seriály/Hospoda/Hospoda S02E04 - Úraz.avi
 ```
 
-- **Značka dílu `S01E02` je nutná** (jde i `1x02`). Bez ní Nokturno nepozná, o který díl jde – soubory pojmenované jen `1. Závěť.avi` se nenabídnou.
+- **Nejjistější je značka dílu `S01E02`** (jde i `1x02`). Soubor bez ní se ale taky najde, když je v jeho názvu **název dílu** (`1. Závěť.avi`) nebo **datum vysílání** (`07.03.2025`, `2025-03-07`) a sedí s katalogem. Samotné číslo dílu bez názvu nestačí. Pro jistotu dej značku dílu do názvu.
 - Název seriálu může být v názvu souboru, nebo jen ve složce nad ním (`Seriály/Sherlock/Season 1/S01E02.mkv` taky projde).
 - Číslo série a dílu musí sedět na katalog (TMDB). Když má seriál v katalogu dvě série po 26 dílech, je 27. díl `S02E01`.
 
@@ -108,7 +118,10 @@ rychleji, ulož do kořene složky soubor `.nokturno-rev` a po každé změně v
 | nahoře v menu | „Úložiště: nesedí jméno nebo heslo“ | přihlašovací údaje k úložišti, ne k Nokturnu |
 | při hledání | „<název>: špatné jméno nebo heslo“, „<název>: složka neexistuje“ | oprav jméno, heslo nebo cestu ke složce |
 | soubor se u titulu nenabídne | – | zkontroluj [pojmenování](#jak-pojmenovat-soubory); nový soubor se ukáže nejpozději do hodiny |
-| díly seriálu se nenabídnou, film ano | – | soubory nemají značku dílu, nebo nesedí číslování sérií s katalogem |
+| díly seriálu se nenabídnou, film ano | – | soubory nemají značku dílu (`S01E02`) ani název dílu nebo datum vysílání, nebo nesedí číslování sérií s katalogem |
+| Stremio, Ověřit úložiště | „SMB jen z domácí sítě“ | aplikace pro Stremio dostala požadavek z internetu (VPS, přístup mimo domov). SMB jde jen v domácí síti, mimo ni použij WebDAV. |
+| Ověřit zdroje | „v adrese chybí sdílená složka (smb://server/složka)“ | adresa končí jménem serveru. Doplň název sdílené složky, třeba `smb://nas/video/`. |
+| Ověřit zdroje, WebDAV | chyba přesměrování nebo „HTTP 301“ | server adresu přesměrovává (třeba z http na https). Aktuální Nokturno přesměrování sleduje samo; když to přesto nejde, zadej rovnou konečnou adresu tak, jak ji ukáže prohlížeč (obvykle `https://…/` s lomítkem na konci). |
 | stream se nabídne, ale nepřehraje | – | úložiště vrací soubor pomalu nebo přeruší přenos; zkus soubor stáhnout prohlížečem. U 4K přes internet rozhoduje hlavně rychlost linky. |
 
 ---

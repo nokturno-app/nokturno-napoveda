@@ -10,7 +10,7 @@ Pohodlnější než ovladač je [Nastavit z mobilu](nastaveni.md#nastavit-z-mobi
 
 | Zdroj | Co dává | Co potřebuje |
 |---|---|---|
-| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV složky, případně jméno a heslo |
+| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV nebo SMB složky (`smb://server/složka`), případně jméno a heslo |
 | **WebShare** | fulltextové hledání a přehrávání | účet WebShare (k přehrání VIP) |
 | **Přehraj.to** | fulltextové hledání a přehrávání | nic; s účtem Premium další strany výsledků a původní soubor |
 | **Sosáč** | katalogy, CZ dabing a titulky, streamy | katalogy bez účtu, k přehrání účet Streamuj.tv |

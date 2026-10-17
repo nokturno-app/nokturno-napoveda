@@ -15,7 +15,7 @@ Průvodce jde krok po kroku:
 
 1. **Právní upozornění** – bez souhlasu integraci přidat nejde.
 2. **Přehrávání** – přehrávače Kodi a předvolby streamů.
-3. **Vlastní úložiště** – adresa WebDAV složky (NAS, Nextcloud), jméno a heslo. Krok jde přeskočit a úložiště doplnit později.
+3. **Vlastní úložiště** – adresa složky – WebDAV nebo sdílená složka SMB (NAS, Nextcloud, Windows), jméno a heslo. Krok jde přeskočit a úložiště doplnit později.
 4. **Volitelné zdroje** – výběr zdrojů třetích stran. Ve výchozím stavu není vybraný žádný.
 5. **Údaje vybraných zdrojů** – jen pro zdroje vybrané v předchozím kroku.
 6. **CZtor – spárování** – jen když vybereš CZtor, viz [Nastavení](nastaveni.md#cztor).

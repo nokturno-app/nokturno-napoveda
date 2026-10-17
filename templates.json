@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-13T12:41:35Z",
+  "generated": "2026-10-17T21:02:59Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -369,7 +369,7 @@
       "lang": "cs",
       "product": "kodi",
       "title": "Jak připojit vlastní úložiště",
-      "text": "Ahoj, Nokturno se nemůže spojit s tvým vlastním úložištěm.\n1. Nokturno → Nastavení → Vlastní úložiště: zkontroluj Adresu složky, uživatelské jméno a heslo.\n2. Adresa v domácí síti (například 192.168.…) funguje jen doma. Mimo domov je potřeba veřejná adresa nebo VPN.\n3. Úložiště, které nepoužíváš, vypni volbou Používat toto úložiště. Zůstane vyplněné, jen se v něm nebude hledat.\n4. Pak dej Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste\nTým Nokturno",
+      "text": "Ahoj, Nokturno se nemůže spojit s tvým vlastním úložištěm.\n1. Nokturno → Nastavení → Vlastní úložiště: zkontroluj Adresu složky, uživatelské jméno a heslo. Adresa může být WebDAV (https://…) nebo sdílená složka SMB (smb://server/složka), SMB jen v domácí síti.\n2. Adresa v domácí síti (například 192.168.…) funguje jen doma. Mimo domov je potřeba veřejná adresa nebo VPN.\n3. Úložiště, které nepoužíváš, vypni volbou Používat toto úložiště. Zůstane vyplněné, jen se v něm nebude hledat.\n4. Pak dej Nastavení → Pokročilé → Ověřit zdroje (ve starších verzích Otestovat zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste",
       "when": {
         "storage": [
@@ -384,7 +384,7 @@
       "lang": "sk",
       "product": "kodi",
       "title": "Ako pripojiť vlastné úložisko",
-      "text": "Ahoj, Nokturno sa nemôže spojiť s tvojím vlastným úložiskom.\n1. Nokturno → Nastavenia → Vlastné úložisko: skontroluj Adresu priečinka, používateľské meno a heslo.\n2. Adresa v domácej sieti (napríklad 192.168.…) funguje len doma. Mimo domova je potrebná verejná adresa alebo VPN.\n3. Úložisko, ktoré nepoužívaš, vypni voľbou Používať toto úložisko. Zostane vyplnené, len sa v ňom nebude hľadať.\n4. Potom daj Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-uloziste\nTím Nokturno",
+      "text": "Ahoj, Nokturno sa nemôže spojiť s tvojím vlastným úložiskom.\n1. Nokturno → Nastavenia → Vlastné úložisko: skontroluj Adresu priečinka, používateľské meno a heslo. Adresa môže byť WebDAV (https://…) alebo zdieľaný priečinok SMB (smb://server/priečinok), SMB len v domácej sieti.\n2. Adresa v domácej sieti (napríklad 192.168.…) funguje len doma. Mimo domova je potrebná verejná adresa alebo VPN.\n3. Úložisko, ktoré nepoužívaš, vypni voľbou Používať toto úložisko. Zostane vyplnené, len sa v ňom nebude hľadať.\n4. Potom daj Nastavenia → Pokročilé → Overiť zdroje (v starších verziách Otestovať zdroje).\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-uloziste\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/vlastni-uloziste",
       "when": {
         "storage": [

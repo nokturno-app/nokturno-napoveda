@@ -32,6 +32,14 @@ Keď je zvuk v preferovanom jazyku, titulky sa vypnú.
 3. Z **OpenSubtitles**, keď stream žiadne iné titulky nemá. Hľadá sa podľa IMDb id filmu alebo dielu,
    titulky sa stiahnu až pri prehrávaní.
 
+## Dialóg Titulky v prehrávači
+Pri prehrávaní otvor v Kodi dialóg **Titulky** a daj **Stiahnuť**. Medzi službami je **Nokturno**: nájde titulky
+k práve prehrávanému filmu alebo dielu na OpenSubtitles, hľadať sa dá aj ručne podľa názvu. Jazyky sa berú najprv z nastavení
+Nokturna, až potom z Kodi (to má ako predvolenú len angličtinu). OpenSubtitles musí byť zapnuté v **Nastavenia → Zdroje a účty**.
+
+Keď je zoznam prázdny alebo v ňom Nokturno chýba, nastav ho v Kodi ako službu titulkov: v nastaveniach prehrávača Kodi
+v časti **Jazyk** vyber **Nokturno** ako službu titulkov pre filmy aj pre seriály.
+
 ## OpenSubtitles
 **Nokturno → Nastavenia → Zdroje a účty**, skupina **OpenSubtitles**:
 - bez účtu sa dá stiahnuť **5 titulkov denne** pre tvoju internetovú adresu,

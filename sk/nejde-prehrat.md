@@ -36,6 +36,7 @@ Hlásenia zdrojov sú zatiaľ po česky.
 | CZtor: stream už v CZtor není… | súbor medzitým zmizol | vyber iný stream |
 | file_link: File temporarily unavailable | WebShare súbor práve nevydal | vyber iný stream |
 | Jednu alebo viac položiek sa nepodarilo prehrať (hlásenie Kodi) | prehrávanie skončilo bez streamu, napríklad po zrušení výberu | skús to znova a vyber stream |
+| Stream sa nepodarilo prehrať – vyber iný. | stream sa nerozbehol: zdroj práve nič nevydal, alebo súbor zariadenie nevie | otvor pri titule miestnu ponuku → **Vybrať stream** (hľadá vždy znova) a skús iný – inú kvalitu alebo iný zdroj; keď má televízor s obrazom problémy, zapni v **Nastavenia → Prehrávanie** voľby **Skryť Dolby Vision streamy** alebo **Skryť HDR streamy** (pozri [Výber streamu](vyber-streamu.md)) |
 
 ## Prehráva sa, ale seká sa
 - **Vlastné úložisko cez internet:** rozhoduje rýchlosť uploadu tam, kde úložisko stojí.

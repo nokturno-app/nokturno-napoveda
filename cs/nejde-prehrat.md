@@ -34,6 +34,7 @@ až když neprojde žádný z nich.
 | CZtor: stream už v CZtor není… | soubor mezitím zmizel | vyber jiný stream |
 | file_link: File temporarily unavailable | WebShare soubor zrovna nevydal | vyber jiný stream |
 | Jednu nebo více položek se nepodařilo přehrát (hláška Kodi) | přehrání skončilo bez streamu, třeba po zrušení výběru | zkus to znovu a vyber stream |
+| Stream se nepodařilo přehrát – vyber jiný. | stream se nerozjel: zdroj zrovna nic nevydal, nebo soubor zařízení neumí | otevři u titulu místní nabídku → **Vybrat stream** (hledá vždy znovu) a zkus jiný – jinou kvalitu nebo jiný zdroj; když má televize s obrazem potíže, zapni v **Nastavení → Přehrávání** volby **Skrýt Dolby Vision streamy** nebo **Skrýt HDR streamy** (viz [Výběr streamu](vyber-streamu.md)) |
 
 ## Přehrává se, ale seká se
 - **Vlastní úložiště přes internet:** rozhoduje rychlost uploadu tam, kde úložiště stojí.

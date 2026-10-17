@@ -4,7 +4,7 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 
 | Zdroj | Co dává | Co potřebuje |
 |---|---|---|
-| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV složky, případně jméno a heslo |
+| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV nebo SMB složky (`smb://server/složka`, SMB jen v domácí síti), případně jméno a heslo |
 | **WebShare** | největší výběr souborů, všechny kvality až po 4K; přehrává se přímo z WebShare | účet WebShare, pro plynulé přehrávání **VIP** |
 | **Sosáč** | české filmy a seriály s dabingem a titulky, po dílech | účet **Streamuj.tv** (přehrává se odtamtud) |
 | **Sledujteto** | velký výběr filmů a seriálů, rozlišení a zvuk posílá přímo jejich rozhraní | účet Sledujteto, k přehrání **Premium** |
@@ -15,7 +15,7 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 
 ## Vlastní úložiště
 
-Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní úložiště** – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
+Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní úložiště** – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server) nebo na sdílené složce SMB. SMB čte aplikace Nokturno, takže počítač nebo telefon s aplikací musí být ve stejné síti jako sdílená složka; na VPS SMB nefunguje. U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
 
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
 - **Soubor přehrávači předává aplikace Nokturno** (od verze 9.6.1), přihlášení k úložišti do Stremia neodchází a data tečou přes aplikaci. Ve webovém přehrávači Stremia v prohlížeči záleží na formátu souboru (`.mkv`, `.avi` a podobné nepřehraje), v aplikaci (Stremio, Nuvio) hrají.
@@ -49,6 +49,8 @@ Rozlišení, počet kanálů a kodek zvuku se berou přímo z rozhraní Sledujte
 Vyplň uživatelské jméno a heslo z fastshare.cz. Účet ze **Sdilej.cz** funguje taky – soubory jsou stejné, jen přepni **Účet z** na *Sdilej.cz* ([FastShare s účtem ze Sdilej.cz](../../cs/sdilej-cz.md)). Hledá se i bez účtu, **přehrání jde z kreditu** (podle přenesených dat) nebo s neomezeným stahováním. **Ověřit účet** ukáže zbývající kredit.
 
 Soubor přehrávači předává **aplikace Nokturno** (od verze 9.6.1), přihlášení do Stremia neodchází. Ve webovém přehrávači v prohlížeči záleží na formátu souboru. Zvukové stopy se z hlavičky souboru čtou jen s neomezeným stahováním; na kredit je jazyk jen odhadem z názvu.
+
+**Přehrávat přímo z FastShare** – přehrávač stahuje soubor rovnou z FastShare, ne přes aplikaci. Funguje v Nuviu a ve Stremiu na počítači; Stremio pro Android a webový přehrávač takový stream nepřehrají.
 
 ### HellSpy
 
@@ -87,6 +89,7 @@ Titulky z **OpenSubtitles** má zatím jen doplněk pro Kodi.
 - **Řazení streamů** – nejlepší kvalita / největší / nejmenší soubory nahoře / podle zdroje. Ve Stremiu je bez posouvání vidět jen pár prvních řádků, proto na řazení záleží.
 - **Skrýt streamy v SD kvalitě** – vynechá nahrávky pod 720p.
 - **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – vynechá streamy, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru (u prvních streamů výpisu), u ostatních jen podle označení P5 v názvu.
+- **Skrýt 3D streamy**, **Skrýt Dolby Vision streamy**, **Skrýt HDR streamy** – takové soubory se nezobrazí nikdy.
 - **Skrýt AV1** – vynechá streamy s kodekem AV1, pro přehrávače, které ho neumí (starší Shield, Apple TV).
 - **Upřednostnit prostorový zvuk 5.1**
 - **Nejvyšší datový tok (Mb/s)** – pro pomalejší internet; orientačně Full HD 8–15 Mb/s, 4K 25–60 Mb/s.

@@ -1,6 +1,6 @@
 # Nokturno pro Kodi
 
-Návod k video doplňku **Nokturno** pro Kodi. Nokturno je především přehrávač **vlastního úložiště** – tvých souborů na NAS, v Nextcloudu nebo na serveru s WebDAV. Volitelně umí hledat filmy a seriály i u osmi vyhledávačů třetích stran, které si zapneš se svým účtem. Katalog, plakáty a popisy si doplněk skládá sám, takže funguje i bez jediného nastaveného zdroje.
+Návod k video doplňku **Nokturno** pro Kodi. Nokturno je především přehrávač **vlastního úložiště** – tvých souborů na NAS, v Nextcloudu, na serveru s WebDAV nebo ve sdílené složce SMB. Volitelně umí hledat filmy a seriály i u osmi vyhledávačů třetích stran, které si zapneš se svým účtem. Katalog, plakáty a popisy si doplněk skládá sám, takže funguje i bez jediného nastaveného zdroje.
 
 ## V kostce
 
@@ -13,7 +13,7 @@ Katalog a hledání proto fungují **i bez jediného účtu**. K přehrání ale
 
 ## Právní upozornění
 
-Nokturno je především přehrávač **vlastního úložiště** – obsahu, který si nahraješ a zpřístupníš (třeba přes WebDAV). Vyhledávače třetích stran jsou jen volitelná doplňková služba, Nokturno samo žádný obsah nehostuje. Plné znění podmínek je na [nokturno.stream/terms](https://nokturno.stream/terms).
+Nokturno je především přehrávač **vlastního úložiště** – obsahu, který si nahraješ a zpřístupníš (třeba přes WebDAV nebo sdílenou složku SMB). Vyhledávače třetích stran jsou jen volitelná doplňková služba, Nokturno samo žádný obsah nehostuje. Plné znění podmínek je na [nokturno.stream/terms](https://nokturno.stream/terms).
 
 ## Co je nového
 

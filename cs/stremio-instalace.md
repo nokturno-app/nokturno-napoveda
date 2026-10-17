@@ -89,7 +89,7 @@ Je to starý a nový doplněk, nebo dva různé profily. Ve Stremiu **Doplňky**
 | Co se děje | Co udělat |
 |---|---|
 | „Tohle nastavení už v aplikaci není“ | profil byl smazaný. Otevři `/configure`, založ nový profil a doplněk přidej znovu. |
-| QR kód se v telefonu neotevře | telefon není ve stejné síti jako aplikace. Připoj ho na domácí Wi-Fi, nebo použij [Tailscale nebo VPN](stremio-mimo-domov.md). |
+| QR kód se v telefonu neotevře | telefon není ve stejné síti jako aplikace. Připoj ho na domácí Wi-Fi, nebo použij [Tailscale nebo VPN](stremio-mimo-domov.md). Aplikace v Androidu ukazuje adresu pro ostatní zařízení z Wi-Fi, ne z mobilních dat. Telefon i televize musí být ve stejné Wi-Fi; adresa 127.0.0.1 funguje jen na samotném telefonu. |
 | Změna se ve Stremiu neprojevila | u účtů a předvoleb otevři titul znovu. U katalogů doplněk odinstaluj a přidej znovu. |
 | „Unable to resolve host …my.local-ip.co“ nebo *Failed to fetch* | DNS zahodilo adresu doplňku (ochrana proti DNS rebinding). Android: Nastavení → Připojení → Další nastavení připojení → Soukromé DNS → `one.one.one.one`. Router nebo Pi-hole: výjimka pro `my.local-ip.co` (`rebind-domain-ok=/my.local-ip.co/`). |
 

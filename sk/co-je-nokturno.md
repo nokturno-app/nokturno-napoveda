@@ -9,7 +9,7 @@ priority: 1
 # Čo je Nokturno a čo vie
 
 Nokturno je prehrávač a vyhľadávač pre Kodi, Home Assistant a Stremio. Predovšetkým prehráva súbory z tvojho
-vlastného úložiska (WebDAV, NAS, Nextcloud) a priame odkazy z vlastných zoznamov. Voliteľne vie hľadať aj na úložiskách
+vlastného úložiska (WebDAV alebo zdieľaný priečinok SMB – NAS, Nextcloud, Windows) a priame odkazy z vlastných zoznamov. Voliteľne vie hľadať aj na úložiskách
 a v katalógoch tretích strán, ktoré si v nastaveniach zapneš (WebShare, Sosáč, HellSpy, Sledujteto, FastShare /
 Sdilej.cz, Přehraj.to, CZtor, Luna) – pri novej inštalácii sú všetky vypnuté. Titulky hľadá na OpenSubtitles.
 Doplní popisy a pamätá si, kde prehrávanie skončilo. Samo žiadny obsah nehostí ani nešíri a neoveruje, či je súbor na cudzom úložisku
@@ -31,7 +31,7 @@ Plný text podmienok použitia a kontakty na nahlásenie nelegálneho obsahu pri
 | Koncerty | áno | áno | nie |
 
 ## Čo vie doplnok pre Kodi
-- prehrávanie z [vlastného úložiska](vlastni-uloziste.md) (až tri WebDAV, NAS, Nextcloud) a z [vlastných zoznamov](vlastni-seznam.md) priamych odkazov,
+- prehrávanie z [vlastného úložiska](vlastni-uloziste.md) (až tri, WebDAV alebo zdieľaný priečinok SMB, NAS, Nextcloud) a z [vlastných zoznamov](vlastni-seznam.md) priamych odkazov,
 - hľadanie a katalógy filmov a seriálov, rebríček najsledovanejších za týždeň, tipy „Pre Teba“,
 - [vlastné katalógy](vlastni-katalogy.md) zo šablón aj podľa žánrov, tém, krajiny pôvodu a rokov, s overením, že tituly ide
   prehrať v požadovanej kvalite a jazyku,
@@ -41,7 +41,7 @@ Plný text podmienok použitia a kontakty na nahlásenie nelegálneho obsahu pri
   a Kontrolovať ďalej pri titule, ktorý streamy má, ale nie také, aké chceš,
 - FastShare aj s [účtom zo Sdilej.cz](sdilej-cz.md), [Trakt.tv](trakt.md) s prihlásením kódom, aj s bezplatným účtom (pozreté oboma smermi, Watchlist = Môj zoznam),
 - synchronizácia medzi viacerými Kodi a prenos nastavení do ďalšieho Kodi,
-- Nastaviť z mobilu cez QR kód, sťahovanie, titulky z OpenSubtitles, TV program, SyncWatch (spoločné sledovanie).
+- Nastaviť z mobilu cez QR kód, sťahovanie, titulky z OpenSubtitles, aj v dialógu Titulky pri prehrávaní v Kodi ([Titulky](titulky.md)), TV program, SyncWatch (spoločné sledovanie).
 
 Home Assistant vie tiež Sledované, Trakt.tv, účet zo Sdilej.cz a overovanie vlastných katalógov, doplnok pre Stremio účet zo Sdilej.cz, CZtor, vlastné katalógy a koncerty.
 

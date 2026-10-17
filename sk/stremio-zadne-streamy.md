@@ -40,6 +40,8 @@ Zdroj, ktorý neodpovedal, sa preskočí a streamy prídu z ostatných. Skús to
 ## Účty sú v poriadku, a aj tak nič
 - **Titul na zdrojoch nemusí vôbec byť**, hlavne úplné novinky a málo známe seriály.
 - Nokturno berie len súbory, ktoré k titulu naozaj patria (názov, rok, diel). Podobné, ale iné filmy zámerne vynechá.
+- Pri filme sa neukazujú súbory výrazne kratšie než film (ukážky) a pri filme s premiérou o viac než dva týždne len súbory z vlastného úložiska.
+  Podrobnosti v článku [Žiadny stream](zadny-stream.md#preco-nokturno-neponukne-subor-ktory-na-zdroji-vidim).
 
 ## Stream je vidieť, ale neprehrá sa
 - Pri streame je „⚠️ Vo webovom prehrávači sa neprehrá – len v aplikácii“ (alebo po česky „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“): taký riadok ukazuje len staršia

@@ -12,17 +12,19 @@ Položky shora dolů. Některé se ukážou, jen když mají co nabídnout – n
 | **Průvodce nastavením** | dokud nemáš nastavené vlastní úložiště ani žádný zdroj | [průvodce prvním nastavením](instalace.md#pruvodce-prvnim-nastavenim) |
 | **Novinky ve verzi** | po aktualizaci, dokud je nepřečteš | co přinesla nová verze |
 | **Hledat** | vždy | jedno hledání ve všech zapnutých zdrojích, pro filmy i seriály naráz |
-| **Pokračovat ve sledování** | když máš něco rozkoukaného | rozkoukané filmy a další díly rozkoukaných seriálů (jen díly, které už vyšly) |
+| **Pokračovat ve sledování** | když máš něco rozkoukaného | rozkoukané filmy a další díly rozkoukaných seriálů (jen díly, které už vyšly); seriály se ukazují i bez Luny |
 | **Hlídané** | když něco hlídáš | hlídané seriály a tituly, u nového dílu i jejich počet – viz [Hlídané](../../cs/hlidane.md) |
 | **Filmy**, **Seriály** | vždy | katalogy včetně vlastních, viz [Filmy a Seriály](#filmy-a-serialy) |
 | sezónní katalogy | jen v sezóně | občas přidáme katalog na určité období, třeba vánoční filmy |
 | **Koncerty** | vždy | koncerty z tvého vlastního úložiště a volitelně z úložišť třetích stran, která máš povolená a nastavená, viz [Koncerty](../../cs/koncerty.md) |
 | **TV program** | vždy | česká a slovenská televize spárovaná s databází filmů |
-| **Můj seznam** | když v něm něco máš nebo už máš něco zhlédnuté | uložené tituly, **Naposledy zhlédnuté** a **Synchronizovat teď** |
+| **Můj seznam** | když v něm něco máš nebo už máš něco zhlédnuté | uložené tituly, **Naposledy zhlédnuté** a **Synchronizovat teď**; dokoukaný film ze seznamu sám zmizí, seriál po zhlédnutí všech vydaných dílů (vypíná se v *Nastavení → Přehrávání → Odebírat zhlédnuté z Mého seznamu*) |
 | **SyncWatch** | vždy | společné sledování, viz [SyncWatch](syncwatch.md) |
 | **Moje úložiště** | s nastaveným vlastním úložištěm | procházení tvých souborů, viz [Vlastní úložiště](../../cs/vlastni-uloziste.md) |
 | **Stažené** | s nastavenou složkou pro stahování | stažené a rozstahované soubory |
 | **Nastavení** | vždy | viz [Nastavení](nastaveni.md) |
+
+Pořadí položek změníš v místní nabídce položky (podržet OK nebo pravé tlačítko): **Posunout nahoru**, **Posunout dolů** nebo **Skrýt z menu**. Skryté položky vrátíš v **Nastavení → Pokročilé → Upravit hlavní menu**.
 
 Občas vám pošleme krátkou zprávu (novinka, výpadek zdroje, odpověď na nahlášený problém). Ukáže se jako posouvatelné okno a nezastaví přehrávání.
 
@@ -88,7 +90,7 @@ Znovu puštěný stream si pamatuje zvukovou stopu a titulky z minulého sledov�
 
 Místní nabídka (podržet OK nebo pravé tlačítko) u filmu a dílu nabízí:
 
-- **Vybrat stream** – dialog výběru i u rozkoukaného titulu, který by jinak pokračoval rovnou.
+- **Vybrat stream** – dialog výběru i u rozkoukaného titulu, který by jinak pokračoval rovnou. Vždy hledá znovu, ne z uloženého výsledku.
 - **Stáhnout** – stejný dialog, vybraný stream se stáhne místo přehrání.
 - **Podobné tituly**
 - **Přidat do Mého seznamu** / **Odebrat z Mého seznamu**

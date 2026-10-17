@@ -38,8 +38,11 @@ které máš zapnuté a nastavené. Zdroje třetích stran jsou volitelné a u n
    - Po neúspěšném hledání se doplněk zeptá „Zkusit hledat pod jiným názvem?“. Zadej český nebo originální název.
 
 ## Proč Nokturno nenabídne soubor, který na zdroji vidím
-Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, u seriálu číslo série a dílu).
+Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, u seriálu číslo série a dílu, případně název dílu nebo datum vysílání v názvu souboru).
 Podobný, ale jiný film záměrně vynechá. Uvolněné hledání (bod 4) ukáže i soubory, které tím sítem neprošly.
+
+- **Soubor je výrazně kratší než film.** U filmu se nenabízí soubory kratší než zhruba 60 % oficiální stopáže (a vždy kratší než 20 minut) – bývají to ukázky a sestřihy. Díly rozděleného filmu (CD1, part1) zůstávají.
+- **Film ještě nevyšel.** U filmu s premiérou za víc než dva týdny se na zdrojích třetích stran nic nenabízí, jsou tam jen ukázky nebo jiné filmy. Soubor z [vlastního úložiště](vlastni-uloziste.md) se ukáže i tak.
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/zadny-stream)

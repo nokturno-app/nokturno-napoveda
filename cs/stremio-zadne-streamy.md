@@ -39,6 +39,8 @@ Zdroj, který neodpověděl, se přeskočí a streamy přijdou z ostatních. Zku
 ## Účty jsou v pořádku, a stejně nic
 - **Titul na zdrojích nemusí vůbec být**, hlavně úplné novinky a málo známé seriály.
 - Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, díl). Podobné, ale jiné filmy záměrně vynechá.
+- U filmu se neukazují soubory výrazně kratší než film (ukázky) a u filmu s premiérou za víc než dva týdny jen soubory z vlastního úložiště.
+  Podrobnosti v článku [Žádný stream](zadny-stream.md#proc-nokturno-nenabidne-soubor-ktery-na-zdroji-vidim).
 
 ## Stream je vidět, ale nepřehraje se
 - U streamu je „⚠️ Ve webovém přehrávači se nepřehraje – jen v aplikaci“: takový řádek ukazuje jen starší
