@@ -116,7 +116,7 @@ Dnes už skončené pořady se skrývají; položka **Skončené pořady** (nebo
 
 ## Stahování
 
-**Stáhnout** v místní nabídce titulu (stream vybereš v dialogu) stáhne soubor na pozadí do [složky pro stahování](nastaveni.md#stahovani). Stahovat jde ze všech zdrojů včetně CZtoru a Přehraj.to. Stahování běží ve službě doplňku, takže nezávisí na tom, jestli máš otevřené menu.
+**Stáhnout** v místní nabídce titulu (stream vybereš v dialogu) stáhne soubor na pozadí do [složky pro stahování](nastaveni.md#stahovani). Stahovat jde ze všech zdrojů včetně Přehraj.to. Z CZtoru jen streamy, které CZtor ke stažení povolí – ostatní se ve výběru ke stažení neukážou. Stahování běží ve službě doplňku, takže nezávisí na tom, jestli máš otevřené menu.
 
 V menu **Stažené** je průběh a hotové soubory. Přerušené stahování (výpadek sítě, vypnutý box) naváže tam, kde skončilo; do síťové složky začne znovu. Místní nabídka nabízí u rozstahovaného souboru **Zrušit stahování**, u chyby **Zkusit znovu** a **Odebrat ze seznamu**, u hotového souboru **Smazat** (po potvrzení smaže i soubor z disku).
 

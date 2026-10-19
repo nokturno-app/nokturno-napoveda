@@ -24,6 +24,10 @@ Hotová a rozstahovaná videa jsou v menu **Stažené**.
 **Nokturno → Nastavení → Přehrávání → Stahování → Složka pro stahování.** Bez ní se stahovat nedá a položka
 **Stažené** v menu není.
 
+### Ve výběru ke stažení chybí streamy z CZtoru
+CZtor povoluje stahování jen u části obsahu. Streamy, které stáhnout nedovolí, se ve výběru ke stažení
+neukážou – přehrát je jde dál normálně.
+
 ### „Stahování selhalo: …“
 1. **Aktualizuj Nokturno.** Starší verze nestahovaly z CZtoru (do 6.0.3), z Přehraj.to (do 7.0.3)
    a do síťové složky (do 7.9.6).

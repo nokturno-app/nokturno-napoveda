@@ -24,6 +24,10 @@ Hotové a rozťahané videá sú v menu **Stiahnuté**.
 **Nokturno → Nastavenia → Prehrávanie → Sťahovanie → Priečinok na sťahovanie.** Bez neho sa sťahovať nedá a položka
 **Stiahnuté** v menu nie je.
 
+### Vo výbere na stiahnutie chýbajú streamy z CZtoru
+CZtor povoľuje sťahovanie len pri časti obsahu. Streamy, ktoré stiahnuť nedovolí, sa vo výbere na stiahnutie
+neukážu – prehrať ich ide ďalej normálne.
+
 ### „Sťahovanie zlyhalo: …“
 1. **Aktualizuj Nokturno.** Staršie verzie nesťahovali z CZtoru (do 6.0.3), z Přehraj.to (do 7.0.3)
    a do sieťového priečinka (do 7.9.6).
