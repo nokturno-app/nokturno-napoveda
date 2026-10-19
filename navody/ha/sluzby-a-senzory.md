@@ -58,7 +58,7 @@ Všechny služby najdeš v *Nástroje pro vývojáře → Akce* pod doménou `no
 | `nokturno.detail` | popis, plakát a hodnocení titulu podle IMDb id |
 | `nokturno.play` | pustí titul v Kodi nebo jiném přehrávači; místo ID jde zadat dotaz. Bez zadané entity hraje na všech nastavených přehrávačích. |
 | `nokturno.resolve` | vrátí přímý odkaz na stream (VLC, mobil, Cast) |
-| `nokturno.fulltext_search` | uvolněné fulltextové hledání (WebShare, HellSpy, Sledujteto, FastShare) |
+| `nokturno.fulltext_search` | uvolněné fulltextové hledání (WebShare, HellSpy, Sledujteto, FastShare, Přehraj.to) |
 | `nokturno.continue_watching`, `nokturno.remove_progress` | rozkoukané tituly z Kodi; odebrání z Pokračovat ve sledování |
 
 **Stahování a odkazy**

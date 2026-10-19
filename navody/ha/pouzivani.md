@@ -35,7 +35,7 @@ Titul se pustí v Kodi přes doplněk Nokturno, takže si Kodi vede rozkoukanost
 
 ### Když automatické hledání nestačí
 
-Dole v seznamu streamů je tlačítko **Zkusit fulltext na …** (vyjmenuje zapnuté fulltextové zdroje – WebShare, HellSpy, Sledujteto, FastShare). Spustí uvolněnější hledání, které najde i soubory s neobvyklým názvem. Takové výsledky mají u sebe otazník – jde o neověřenou shodu, jestli soubor k titulu patří, posuď podle názvu.
+Dole v seznamu streamů je tlačítko **Zkusit fulltext na …** (vyjmenuje zapnuté fulltextové zdroje – WebShare, HellSpy, Sledujteto, FastShare, Přehraj.to). Spustí uvolněnější hledání, které najde i soubory s neobvyklým názvem. Takové výsledky mají u sebe otazník – jde o neověřenou shodu, jestli soubor k titulu patří, posuď podle názvu.
 
 ## Soubory z vlastního úložiště
 
