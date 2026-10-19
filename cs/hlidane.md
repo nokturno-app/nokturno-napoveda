@@ -39,6 +39,7 @@ Když se u titulu nenajde žádný stream, Nokturno se zeptá samo: „Ozvat se,
 U dílu seriálu se tím začne hlídat celý seriál.
 
 Z Hlídaných titul odebereš v kontextovém menu: **Přestat hlídat nové díly**, **Přestat hlídat** nebo **Nekontrolovat dál**.
+Zhlédnutý film nebo díl zmizí z Hlídaných sám, díl i tehdy, když už máš zhlédnutý některý další.
 
 ### Seznam Hlídané
 Položka **Hlídané** je v hlavním menu hned pod **Pokračovat ve sledování**. Ukáže se, jakmile v ní něco je.
@@ -46,7 +47,8 @@ Když přibyl nový díl, je to vidět rovnou v menu („Hlídané · 1 nový d�
 
 - **Seriály** jsou nahoře, s novým dílem první: „Zrádci · nový díl 3x02“. Bez nového dílu je u seriálu poslední díl,
   který jde pustit. Kliknutím seriál otevřeš a nový díl tím zhasne. V kontextovém menu je navíc
-  **Označit nový díl jako viděný** a **Kontrolovat dál** u posledního dílu.
+  **Označit nový díl jako viděný** a **Kontrolovat dál** u posledního dílu. U seriálu i u hlídaného dílu je v kontextovém menu
+  **Seznam dílů** a **Všechny série**.
 - **Tituly** jsou pod seriály a mají stav:
 
 | Stav | Co znamená |

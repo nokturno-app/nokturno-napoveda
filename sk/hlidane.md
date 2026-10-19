@@ -40,6 +40,7 @@ Pri diele seriálu sa tým začne sledovať celý seriál.
 
 Zo Sledovaných titul odoberieš v kontextovom menu: **Prestať sledovať nové diely**, **Prestať sledovať**
 alebo **Nekontrolovať ďalej**.
+Pozretý film alebo diel zo Sledovaných zmizne sám, diel aj vtedy, keď už máš pozretý niektorý ďalší.
 
 ### Zoznam Sledované
 Položka **Sledované** je v hlavnom menu hneď pod **Pokračovať v sledovaní**. Zobrazí sa, len čo v nej niečo je.
@@ -47,7 +48,8 @@ Keď pribudol nový diel, je to vidieť rovno v menu („Sledované · 1 nový d
 
 - **Seriály** sú hore, s novým dielom prvé: „Zrádci · nový diel 3x02“. Bez nového dielu je pri seriáli posledný diel,
   ktorý sa dá pustiť. Kliknutím seriál otvoríš a nový diel tým zhasne. V kontextovom menu je navyše
-  **Označiť nový diel ako videný** a **Kontrolovať ďalej** pri poslednom diele.
+  **Označiť nový diel ako videný** a **Kontrolovať ďalej** pri poslednom diele. Pri seriáli aj pri sledovanom diele je v kontextovom menu
+  **Zoznam dielov** a **Všetky série**.
 - **Tituly** sú pod seriálmi a majú stav:
 
 | Stav | Čo znamená |
