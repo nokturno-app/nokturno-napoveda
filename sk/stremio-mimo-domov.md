@@ -76,6 +76,25 @@ Prehrávač si súbor sťahuje sám. Keď je úložisko doma, musí naň dosiahn
 úložiska použi jeho adresu v Tailscale (`100.x.y.z` alebo meno z MagicDNS), alebo na domácom zariadení zapni
 v Tailscale zdieľanie domácej siete (subnet router).
 
+### Luna z doplnku Home Assistantu
+Lunu z doplnku v Home Assistante môžeš používať aj mimo domova rovnakou cestou. Home Assistant je potom v tvojom
+tailnete (doplnok **Tailscale**, pozri vyššie) a Luna na ňom počúva na všetkých jeho adresách, teda aj na tej z Tailscale.
+
+1. V doplnku **Tailscale** v Home Assistante sa prihlás rovnakým účtom ako ostatné zariadenia a zisti adresu
+   Home Assistanta (`100.x.y.z`, nájdeš ju v aplikácii Tailscale alebo v administrácii).
+2. Na zariadení vonku nainštaluj aplikáciu Tailscale a prihlás sa rovnakým účtom.
+3. Adresa Luny je potom namiesto domácej adresy táto:
+    - Kodi, Nuvio: `http://100.x.y.z:7126`
+    - Stremio (chce HTTPS): `https://100-x-y-z.my.local-ip.co:7127` – adresa Tailscale s pomlčkami namiesto bodiek.
+4. V Nokturne pre Kodi ju vlož ručne: **Nastavenia → Zdroje a účty**, skupina **Luna**. **Nájsť Lunu v sieti**
+   mimo domova nič nenájde, pretože hľadá len v domácej sieti. Potom klikni na **Overiť nastavenie Luny**.
+
+Adresu s tokenom si nechaj vygenerovať doma na stránke `/setup` Luny, ako je v návode [Nastavenie Luny](../navody/kodi/nastaveni-luny.md),
+a vonku v nej vymeň len začiatok (domácu adresu a port) za adresu z bodu 3. Adresu ani token nikomu neposielaj.
+
+Niektoré routery alebo DNS mená z local-ip.co zablokujú. Potom pri Stremiu pomôže `tailscale serve`, pozri vyššie.
+Funnel nepoužívaj, zverejnil by Lunu celému internetu.
+
 ## Iné VPN
 - **VPN v routeri:** veľa routerov (Fritz!Box, ASUS, Turris, MikroTik…) vie VPN server, často WireGuard.
   Po pripojení je zariadenie vonku ako doma: Nuvio vezme `http://<domáca IP>:7140`, Stremio adresu
