@@ -88,6 +88,10 @@ stačí, když titul má jedno. Zrušení kteréhokoli dialogu tlačítkem Zpět
 Po uložení katalogu v režimu **Jen tituly se streamem** se Nokturno zeptá **„Spustit ověření streamů nyní?“**. **Ano** spustí první
 dávku – ta hned prověří 40 titulů, ať je v katalogu co ukázat.
 
+Filmový katalog v režimu **Jen tituly se streamem**, který řadí podle **Data vydání** nebo má **Posledních X let**,
+bere jen filmy, které už vyšly digitálně nebo na DVD a Blu-ray. Film, který je zatím jen v kinech, se objeví,
+až vyjde mimo kino. Při řazení podle **Data vydání** navíc vynecháme neznámé filmy, které na TMDB skoro nikdo nehodnotil.
+
 ### Úprava a smazání
 Místní nabídka katalogu (dlouhý stisk OK, nebo tlačítko menu na ovladači):
 - **Upravit katalog** – projde stejné dialogy, předvybrané jsou uložené volby. Název, který jsi přepsal, zůstane.

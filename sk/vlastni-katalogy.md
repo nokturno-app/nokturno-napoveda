@@ -88,6 +88,10 @@ stačí, keď titul má jednu. Zrušenie ktoréhokoľvek dialógu tlačidlom Sp�
 Po uložení katalógu v režime **Len tituly so streamom** sa Nokturno opýta **„Spustiť overenie streamov teraz?“**. **Áno** spustí prvú
 dávku – tá hneď preverí 40 titulov, nech je v katalógu čo ukázať.
 
+Filmový katalóg v režime **Len tituly so streamom**, ktorý radí podľa **Dátumu vydania** alebo má **Posledných X rokov**,
+berie len filmy, ktoré už vyšli digitálne alebo na DVD a Blu-ray. Film, ktorý je zatiaľ len v kinách, sa objaví,
+až keď vyjde mimo kina. Pri radení podľa **Dátumu vydania** navyše vynecháme neznáme filmy, ktoré na TMDB skoro nikto nehodnotil.
+
 ### Úprava a zmazanie
 Miestna ponuka katalógu (dlhé podržanie OK, alebo tlačidlo menu na ovládači):
 - **Upraviť katalóg** – prejde rovnaké dialógy, predvybrané sú uložené voľby. Názov, ktorý si prepísal, zostane.
