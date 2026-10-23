@@ -33,6 +33,14 @@ Otevřením filmu se načtou streamy, u seriálu nejdřív seznam dílů:
 
 Titul se pustí v Kodi přes doplněk Nokturno, takže si Kodi vede rozkoukanost. Když máš v [Nastavení](nastaveni.md#prehravani) víc přehrávačů, karta se podle volby **Přehrávání při více přehrávačích** buď zeptá, kde přehrát, nebo pustí na prvním v seznamu a výběr nabídne na dlouhý stisk tlačítka Přehrát. Přehraje se vždy přesně ten stream, na který klepneš.
 
+### Klik na plakát rovnou přehraje
+
+V editoru karty jde zapnout **Klik na plakát rovnou přehraje (dlouhý stisk = nabídka)** (`auto_play: true`). Klepnutí na plakát filmu pak neotevře nabídku titulu, ale rovnou pustí na výchozím (nebo prvním) přehrávači stream, který splní všechny předvolby z [Nastavení](nastaveni.md#prehravani) – jazyk zvuku, 5.1, bez SD a strop datového toku. Když žádný stream nesplní všechno, ukáže se seznam streamů a vybereš sám.
+
+- **Pokračovat ve sledování** pustí stejný stream jako minule, takže Kodi naváže tam, kde přestalo.
+- U seriálu se otevře seznam dílů.
+- Nabídku titulu (Můj seznam, Hlídané, Vybrat stream) otevře dlouhý stisk plakátu.
+
 ### Když automatické hledání nestačí
 
 Dole v seznamu streamů je tlačítko **Zkusit fulltext na …** (vyjmenuje zapnuté fulltextové zdroje – WebShare, HellSpy, Sledujteto, FastShare, Přehraj.to). Spustí uvolněnější hledání, které najde i soubory s neobvyklým názvem. Takové výsledky mají u sebe otazník – jde o neověřenou shodu, jestli soubor k titulu patří, posuď podle názvu.

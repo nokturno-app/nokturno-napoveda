@@ -15,6 +15,11 @@ priority: 3
 - V Kodi zapni ovládanie cez webový server: **Nastavenia → Služby → Ovládanie**.
 - Keď sa prehrávanie spustí, ale v Kodi sa nič nedeje, pošli nám log z Kodi, pozri [Ako poslať log](poslat-log.md).
 
+## Ťuknutie na plagát rovno pustí film
+V editore karty je zapnutá voľba **Klik na plagát rovno prehrá**. Karta potom pustí stream, ktorý spĺňa
+predvoľby z nastavenia integrácie (jazyk zvuku, 5.1…). Ponuka titulu sa otvorí dlhým podržaním plagátu.
+Keď žiadny stream predvoľby nespĺňa, zobrazí sa zoznam streamov. Voľbu vypneš v editore karty.
+
 ## Karta nereaguje alebo vyzerá zaseknutá
 - Spusti akciu **Vymazať cache API** (`nokturno.clear_cache`) v **Nástroje pre vývojárov → Akcie**.
 - Po aktualizácii integrácie obnov stránku úplne (Ctrl+Shift+R). Prehliadač si drží starú verziu karty.
