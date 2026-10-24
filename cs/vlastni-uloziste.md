@@ -66,7 +66,7 @@ V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, n
 ve Stremiu máš, změny platí hned a znovu ho přidávat nemusíš.
 
 Ve Stremiu platí tři věci navíc:
-- Úložiště může být WebDAV i SMB (`smb://server/složka`). SMB čte aplikace Nokturno, takže počítač nebo telefon s aplikací musí být ve stejné síti jako sdílená složka. Na VPS ani přes internet SMB nefunguje (hláška „SMB jen z domácí sítě“).
+- Úložiště může být WebDAV i SMB (`smb://server/složka`). SMB čte aplikace Nokturno, takže na sdílenou složku musí dosáhnout přímo ona: běží doma, nebo má do domácí sítě VPN. Na sdílené veřejné instanci SMB nejde (hláška „SMB jen z domácí sítě“).
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno**. Ta v něm hledá soubory a od verze 9.6.1
   je přehrávači i předává, přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
 - Ve Stremiu v prohlížeči se soubory `.mkv`, `.avi` a podobné nepřehrají, o přehrání rozhoduje formát souboru.
@@ -100,9 +100,9 @@ Podporované přípony: `mkv mp4 avi m4v mov ts m2ts wmv webm mpg mpeg flv iso`.
 a systémové složky NAS (`@eaDir`, `#recycle`) se přeskakují.
 
 ## Kde se soubory objeví
-- **U titulu mezi streamy** – vždy **první**, na začátku řádku zelený název úložiště, za ním kvalita, zvuk, velikost a délka. Pouští se rovnou z úložiště.
-- **Moje úložiště** v hlavním menu Kodi – procházení úložiště po složkách; u složky je počet videí uvnitř. Při víc úložištích se napřed vybírá úložiště.
-- Ve **výsledcích hledání** se soubory neukazují – hledání je o titulech, soubor přijde na řadu až u titulu.
+- **U titulu mezi streamy** – vždy **první**, na začátku řádku zelený název úložiště, za ním kvalita, zvuk, velikost a délka. V Kodi se pouští rovnou z úložiště, ve Stremiu jde soubor přes aplikaci Nokturno.
+- **Moje úložiště** v hlavním menu Kodi – procházení úložiště po složkách; u složky je počet videí uvnitř. Napřed se vždy vybírá úložiště (i když máš jen jedno). U souborů se podle názvu souboru nebo složky doplní z TMDB plakát, popis, rok a žánr (u dílu seriálu série a epizoda); popisek zůstává název souboru. Popis se načte u prvních 60 souborů ve složce; chybí u souborů, jejichž název nejde přiřadit k titulu, a tam, kde se ještě nestihl načíst.
+- Ve **výsledcích hledání** se soubory mezi tituly neukazují – hledání je o titulech, soubor přijde na řadu až u titulu. V Kodi je výjimka: po zadání dotazu v hlavním menu v **Hledat** je položka **Jen v mém úložišti**, která hledá dotaz jen mezi soubory ve vlastním úložišti (počet nálezů se u ní neukazuje; ukáže se jen s nastaveným vlastním úložištěm).
 
 ![Moje úložiště: filmy ve složkách Název (rok)](../navody/kodi/images/kodi-uloziste.jpg)
 
@@ -119,7 +119,7 @@ rychleji, ulož do kořene složky soubor `.nokturno-rev` a po každé změně v
 | při hledání | „<název>: špatné jméno nebo heslo“, „<název>: složka neexistuje“ | oprav jméno, heslo nebo cestu ke složce |
 | soubor se u titulu nenabídne | – | zkontroluj [pojmenování](#jak-pojmenovat-soubory); nový soubor se ukáže nejpozději do hodiny |
 | díly seriálu se nenabídnou, film ano | – | soubory nemají značku dílu (`S01E02`) ani název dílu nebo datum vysílání, nebo nesedí číslování sérií s katalogem |
-| Stremio, Ověřit úložiště | „SMB jen z domácí sítě“ | aplikace pro Stremio dostala požadavek z internetu (VPS, přístup mimo domov). SMB jde jen v domácí síti, mimo ni použij WebDAV. |
+| Stremio, Ověřit úložiště | „SMB jen z domácí sítě“ | ověřuješ úložiště na sdílené veřejné instanci aplikace, ta SMB nepovoluje. Vlastní aplikace (doma i na VPS) SMB použije, když na sdílenou složku dosáhne přímo (domácí síť, VPN). Na sdílené instanci použij WebDAV. |
 | Ověřit zdroje | „v adrese chybí sdílená složka (smb://server/složka)“ | adresa končí jménem serveru. Doplň název sdílené složky, třeba `smb://nas/video/`. |
 | Ověřit zdroje, WebDAV | chyba přesměrování nebo „HTTP 301“ | server adresu přesměrovává (třeba z http na https). Aktuální Nokturno přesměrování sleduje samo; když to přesto nejde, zadej rovnou konečnou adresu tak, jak ji ukáže prohlížeč (obvykle `https://…/` s lomítkem na konci). |
 | stream se nabídne, ale nepřehraje | – | úložiště vrací soubor pomalu nebo přeruší přenos; zkus soubor stáhnout prohlížečem. U 4K přes internet rozhoduje hlavně rychlost linky. |

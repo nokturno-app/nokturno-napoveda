@@ -33,15 +33,19 @@ Hlášky:
 | „CZtor není spárovaný – použij Spárovat PINem.“ | spáruj PINem |
 | „Spárování s CZtorem se nepodařilo.“, „PIN vypršel…“ | spusť Spárovat PINem znovu a PIN zadej hned |
 | „Předplatné CZtor není aktivní.“, „předplatné vypršelo“ | prodluž předplatné na cztor.com |
+| „CZtor omezil počet požadavků, zkus to za chvíli.“ | počkej chvíli, Nokturno se CZtoru na čas nebude dotazovat, pak to zkus znovu |
+| „úložiště CZtor teď stream nevydalo – zkus jiný ze seznamu“ | vyber ve výpisu jiný stream |
 
 **Odhlásit toto zařízení** zruší spárování jen v tomto Kodi.
+
+Stáhnout jde jen to, co CZtor povolí. Streamy, které stažení nepovolují, Kodi ve výběru ke stažení neukáže.
 
 Po **přenosu nastavení** nebo **synchronizaci účtů** do jiného Kodi se spárování nepřenáší. Každé zařízení
 se páruje samo.
 
 ## Home Assistant
 **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**, sekce **Zdroje a účty**: zapni **Používat CZtor**.
-Formulář pak ukáže PIN a adresu `cztor.com/activate`. Vypršelý PIN si vyžádej znovu.
+Formulář pak ukáže PIN a adresu `cztor.com/activate`. Vypršelý PIN si vyžádej znovu. Tlačítko **Stáhnout** u streamu, který CZtor stažení nepovoluje, skončí hláškou „CZtor stažení tohohle streamu nepovoluje.“ – vyber jiný stream.
 
 ## Stremio
 V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo `http://<IP zařízení s aplikací>:7140/configure`) je karta **CZtor**:

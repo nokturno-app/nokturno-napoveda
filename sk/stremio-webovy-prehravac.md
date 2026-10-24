@@ -33,6 +33,7 @@ teda rozhoduje formát súboru, nie zdroj.
 ## Vlastné úložisko nehrá ani v aplikácii
 Úložisko musí byť dosiahnuteľné zo zariadenia, kde beží aplikácia Nokturno (tá v ňom hľadá súbory a odovzdáva ich prehrávaču).
 Prehrávač potrebuje dosiahnuť len na aplikáciu. Keď je aplikácia doma, stačí adresa z domácej siete (`192.168.…`).
+Zdieľaný priečinok SMB (`smb://…`) číta aplikácia priamo, takže naň musí dosiahnuť (doma, alebo cez VPN do domácej siete). Na zdieľanej verejnej inštancii SMB nejde a hlási „SMB jen z domácí sítě“ (po česky).
 Pozri [Ako pripojiť vlastné úložisko](vlastni-uloziste.md).
 
 ---

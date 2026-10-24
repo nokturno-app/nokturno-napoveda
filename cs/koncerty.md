@@ -98,6 +98,8 @@ Když žánr **odebereš**, zmizí interpreti, kteří do žádného z vybranýc
 2. V kartě **Koncerty** zaškrtni hudební žánry a vyplň **Last.fm API klíč**.
 3. Dej **Uložit změny** a doplněk ve Stremiu **přidej znovu**, ať Stremio načte nové katalogy.
 
+U uloženého profilu se klíč do formuláře nevrací, pole ukazuje „Uloženo – nech prázdné, pokud ho neměníš“. Klíč vyplňuješ znovu jen při změně.
+
 Ve Stremiu přibude druh **Koncerty** se seznamy **Nově přidané** a **Podle abecedy** (s výběrem žánru). Interpret
 je plakát, jeho koncerty jsou jako díly. V seznamu **Podle abecedy** jde hledat jménem interpreta, neznámého doplněk prohledá v úložišti a zapnutých zdrojích a přidá. Hledá aplikace na pozadí, dokud běží, takže se seznam zaplňuje postupně.
 

@@ -125,7 +125,7 @@ Hodí se jen na ty modely, které mají dost paměti a úložiště (nejlépe US
 ## Co platí všude
 - **Zařízení musí běžet pořád** a být ve stejné síti jako Stremio, nebo přístupné přes VPN.
 - **Pevná IP** v routeru, jinak se po restartu routeru adresa změní a doplněk přestane fungovat.
-- **Adresa doplňku obsahuje tvoje účty.** Nikomu ji neposílej.
+- **Adresa doplňku je klíč k tvým účtům.** Nikomu ji neposílej.
 - Doma to funguje hned. Pro televizi u rodičů nebo mobil venku použij
   [Tailscale nebo VPN](stremio-mimo-domov.md), případně [VPS s vlastní doménou](stremio-vps.md).
 - Když ti nastavení neotevře z jiného zařízení nebo doplněk nejde přidat, projdi tabulku *Časté problémy*

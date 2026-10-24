@@ -25,6 +25,7 @@ templates:
 - **Nokturno ako prvá položka hlavnej ponuky.** Hore sú dlaždice ponuky Nokturna (Hľadať, Pokračovať v sledovaní, Sledované, Filmy, Seriály…).
 - **Rady s plagátmi**: Pokračovať v sledovaní, Najsledovanejšie filmy a seriály tento týždeň, Môj zoznam, Pre Teba, vlastné katalógy a sezónne katalógy (napríklad Vianoce).
 - **Popis vybraného titulu** nad radami – logo alebo názov, rok, dĺžka, hodnotenie a dej.
+- **Údaje o titule dole** (dátum, dĺžka, kodek, rozlíšenie, HDR / Dolby Vision, formát obrazu, zvuk a kanály) sú v okrúhlych odznakoch.
 - Farby Nokturna, zaoblené plagáty, jednotné ikony a modernejšie načítanie a hlásenia.
 - Voľba písma: okrem predvoleného aj **Inter** a **Plus Jakarta Sans** (Nastavenia → Rozhranie → Vzhľad → Písma).
 
@@ -53,5 +54,6 @@ Popis titulu hore sa ukáže, hneď ako prejdeš do radov. Šípkou hore sa vrá
 
 - **V radoch sa opakuje ponuka Nokturna namiesto plagátov** – máš staršie Nokturno. Aktualizuj doplnok (pozri [Ako zistiť verziu a aktualizovať](aktualizace.md)).
 - **Rady sa po štarte Kodi chvíľu načítavajú** – na slabších boxoch to trvá aj desiatky sekúnd, Kodi po štarte spúšťa viac doplnkov naraz.
+- **Dlaždice Nokturna hore sú po štarte prázdne** – Nokturno ich samo skúsi načítať znova (až štyrikrát, nie počas prehrávania).
 
 Vzhľad na GitHube: [github.com/nokturno-app/skin.estuary.nokturno](https://github.com/nokturno-app/skin.estuary.nokturno)

@@ -22,6 +22,9 @@ Jazyk zvukové stopy se čte z **hlavičky souboru**. U každého streamu to chv
   Zjišťovat zvuk ze souboru (kolik streamů)**,
 - na čtení se čeká nejvýš pár sekund. Co se nestihne, dočte se na pozadí a ukáže se při dalším otevření titulu.
 
+U souborů z vlastního úložiště na sdílené složce SMB (`smb://`) se hlavička nečte vůbec, takže u nich jazyk zvuku
+a další technické údaje bývají prázdné. Přehrávání to neovlivní.
+
 ## Co znamenají značky u streamu
 - **`CZ`, `SK`, `EN`…** – jazyk ověřený z hlavičky souboru.
 - **`~CZ`** s vlnovkou – jazyk odhadnutý z názvu souboru. Většinou sedí, ale ověřený není.

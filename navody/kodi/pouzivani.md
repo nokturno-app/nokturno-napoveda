@@ -58,6 +58,8 @@ Průběh hledání ukazuje ukazatel v rohu obrazovky, dotazy na jednotlivé zdro
 
 Když hledání najde filmy i seriály, nabídnou se obě skupiny zvlášť. Stejný titul z víc zdrojů je v seznamu jen jednou – zdroj je vidět až u konkrétního streamu.
 
+S nastaveným vlastním úložištěm se mezi výsledky hledání (i v rozcestníku, kde se po hledání volí **Filmy** nebo **Seriály**) nabídne i **Jen v mém úložišti** – hledá dotaz jen mezi soubory v úložišti.
+
 ## Výběr streamu
 
 Klik na film nebo díl otevře **dialog výběru streamu**. Stejně funguje tlačítko Přehrát v detailu, widget i TMDb Helper. Doplněk souběžně prohledá všechny zapnuté zdroje a seřadí je do jednoho seznamu; průběh ukazuje ukazatel v rohu obrazovky (*Streamy: N · Meta: x/y*).
@@ -71,6 +73,7 @@ Každý stream má dva řádky. Vlevo je obrázek kvality (4K, 1080p, 720p…), 
 - Když vybraný stream nejde přehrát (vypršelý účet, chybí kredit, smazaný soubor), doplněk sám zkusí další nalezené streamy.
 - Zdroj, který neodpoví do 20 sekund, seznam nezdrží – ukáže se, co došlo.
 - Streamy, o kterých doplněk ví, že nejdou přehrát, se skryjí a oznámení to řekne.
+- Když žádný zdroj k titulu nic nenajde (a nejde o chybu zdroje), titul se 20 minut neprohledává znovu, takže nově přidaný stream se může ukázat až po chvíli. Hned znovu hledá **Vybrat stream** z místní nabídky filmu nebo dílu.
 - 3D soubory skryje volba **Skrýt 3D streamy** v [Přehrávání](nastaveni.md#prehravani).
 - U seriálu je předvybraný stream stejného druhu, jaký byl vybraný u předchozího dílu. Při automatickém přehrání (doplněk Up Next, karta v Home Assistantu) se takový stream pustí bez ptaní.
 
@@ -105,7 +108,7 @@ Skiny jako **Arctic Fuse** ukazují detail filmu nebo dílu přes doplněk **TMD
 
 ## Pokračovat ve sledování a Můj seznam
 
-- **Pokračovat ve sledování** – rozkoukané filmy a další nezhlédnutý díl seriálů, které sleduješ. Další díl se nabídne, až když opravdu vyšel.
+- **Pokračovat ve sledování** – rozkoukané filmy a další nezhlédnutý díl seriálů, které sleduješ. Další díl se nabídne, až když opravdu vyšel. Seriál s rozkoukaným dílem má jen jeden řádek. Film, který se přeruší uprostřed (výpadek streamu, chyba dekodéru), v Pokračovat zůstane i s pozicí; zhlédnutý je od 90 % délky, nebo když přehrávání doběhne až na konec.
 - **Můj seznam** – tituly uložené místní nabídkou. Uvnitř je i **Naposledy zhlédnuté** a, když synchronizuješ, **Synchronizovat teď**.
 
 ## TV program

@@ -32,7 +32,7 @@ Funguje v Kodi a v Stremiu. Home Assistant katalógy nezakladá, ale vie ich [ov
 ## Dva režimy katalógu
 | Režim | Čo ukáže | Kedy sa hodí |
 |---|---|---|
-| **Katalóg z TMDB** | hneď všetky tituly podľa filtrov, po 20 na stranu | prechádzanie, tipy na filmy. Pri titule bez streamu si zapni [stráženie](hlidane.md) – Sledované dajú vedieť, keď stream bude. |
+| **Katalóg z TMDB** | hneď všetky tituly podľa filtrov, po 20 na stránku | prechádzanie, tipy na filmy. Pri titule bez streamu si zapni [stráženie](hlidane.md) – Sledované dajú vedieť, keď stream bude. |
 | **Len tituly so streamom** | len tituly, ktoré sa dajú prehrať podľa tvojich požiadaviek | „chcem 4K s CZ dabingom a nechcem klikať naprázdno“ |
 
 V režime **Len tituly so streamom** sa katalóg plní postupne. Nokturno na pozadí prechádza kandidátov (zhruba 200
@@ -70,13 +70,14 @@ Keď ich chceš, založ si ich zo šablóny – a môžeš si ich rovno upraviť
 | **Témy (stačí jedna, najviac 3)** | Rozprávky, Vianoce, Halloween, Silvester, Podľa skutočnej udalosti, Podľa knihy, Životopisný, Superhrdinovia, Sériový vrah, 2. svetová vojna, Bojové umenia, Šport, Mimozemšťania, Cestovanie v čase, Zombie, Duchovia, Upíri, Postapokalypsa, Lúpež, Špionáž, Prežitie, Psy, Dinosaury |
 | **Tituly musia mať** | len pri dvoch a viac žánroch: **všetky vybrané žánre**, alebo **aspoň jeden vybraný žáner** |
 | **Krajiny pôvodu (najviac 5)** | Česko, Slovensko, Československo, USA, Veľká Británia, Francúzsko, Nemecko, Taliansko, Španielsko, Poľsko, Maďarsko, Južná Kórea, Japonsko, Dánsko, Švédsko, Nórsko |
+| **Vylúčiť krajiny (nič = žiadne)** | pýta sa len vtedy, keď nie sú vybrané žiadne krajiny pôvodu (vybrané krajiny majú prednosť). Titul z vylúčenej krajiny sa neukáže, titul bez údaja o krajine prejde. V názve potom stojí napríklad „bez USA“. Filter sa použije až na vrátené tituly, takže stránka katalógu môže mať menej titulov. |
 | **Roky** | **Bez obmedzenia**, **Od–do** (rok od a do, prázdne = bez obmedzenia), alebo **Posledných X rokov** (1–50, predvolené 5) |
 | **Radiť podľa** | **Obľúbenosti**, **Hodnotenia na TMDB** (len tituly s dosť hlasmi), **Dátumu vydania** (najnovšie prvé), **Abecedy** (obľúbené tituly podľa názvu) |
 | **Jazyk zvuku** * | Ľubovoľné, Čeština, Slovenčina, Čeština alebo slovenčina, Angličtina, Maďarčina |
 | **Titulky** * | rovnaké možnosti ako jazyk zvuku |
 | **Minimálna kvalita** * | Ľubovoľná, Full HD, 2K, 4K |
 | **Kanály zvuku** * | Ľubovoľné, alebo **5.1 a viac** |
-| **Zobraziť zoradené podľa** * | **Novo nájdené**, **Rovnako ako výber**, alebo **Najnovšie vydanie** |
+| **Zobraziť zoradené podľa** * | **Novo nájdené** (najnovšie nálezy hore, podľa toho, kedy titul našla kontrola dostupnosti), **Rovnako ako výber** (poradie, v akom tituly vrátil výber katalógu), alebo **Najnovšie vydanie** (podľa dátumu vydania titulu) |
 | **Ikona katalógu** | Filmy, Seriály, Zoznam, Hviezda, Rebríček, Žáner, Rok, Krajina, Zbierka, Novinky, Herci, Štúdiá |
 | **Názov katalógu** | predvyplní sa z volieb (napríklad „Rozprávky · Česko · CZ dabing · posledných 5 rokov“), môžeš ho prepísať |
 
@@ -149,10 +150,15 @@ So zapnutou [synchronizáciou](synchronizace.md) sa katalógy zdieľajú v skupi
 Home Assistant katalógy dostáva synchronizáciou z Kodi (bez nastavenia, okruh je vždy zapnutý). Beží stále, a tak je
 na overovanie ideálny: každú minútu overí jeden titul a výsledky pošle späť do Kodi.
 
+Na karte Nokturno je rad **Katalógy**: tlačidlá s názvami overovaných katalógov prepínajú, ktorý sa ukáže (po 50 tituloch).
+V predvolenom stave sú v ňom len tituly so streamom, čo sa dá zmeniť voľbou **V katalógoch len dostupné** v editore karty.
+Popis karty je v návode [Používanie](../navody/ha/pouzivani.md).
+
 | Čo | Na čo |
 |---|---|
 | akcia **Stav vlastných katalógov** (`nokturno.catalogs`) | vráti overované katalógy a ich stav |
 | akcia **Overiť katalóg hneď** (`nokturno.catalog_verify`) | overí hneď **Počet titulov** (1–50, predvolené 10). **ID katalógu** prázdne = ďalší v poradí. |
+| akcia **Tituly vlastného katalógu** (`nokturno.catalog_items`) | vráti tituly overovaného katalógu (plagát, rok, hodnotenie, či sa našiel stream), hodí sa na vlastný dashboard. Polia **ID katalógu**, **Len dostupné** (predvolene zapnuté) a **Limit** (1–200, predvolene 50). |
 | akcia **Pozastaviť overovanie katalógov** (`nokturno.catalog_pause`) | zastaví alebo pustí overovanie na tomto Home Assistante |
 | senzor **Katalógy** (`sensor.nokturno_katalogy`) | počet overovaných katalógov; v atribútoch pri každom overené, vyhovuje, celkom a čas poslednej kontroly |
 
@@ -167,7 +173,7 @@ V Stremiu sa katalógy skladajú vo formulári nastavení doplnku.
 3. Vyplň:
    - **Druh** (Filmy alebo Seriály) a prípadne **Zo šablóny**,
    - režim **Katalóg z TMDB** alebo **Len tituly so streamom**,
-   - **Žánre**, **Témy**, **Krajina pôvodu**, **Roky** a **Zoradiť podľa**,
+   - **Žánre**, **Témy**, **Krajina pôvodu**, **Vylúčiť krajiny** (platí, len keď nie sú vybrané krajiny pôvodu), **Roky** a **Zoradiť podľa**,
    - pri overovanom režime **Jazyk zvuku**, **Titulky**, **Minimálna kvalita**, **5.1 a viac** a **Zobraziť zoradené podľa**,
    - **Názov** (do 40 znakov, doplní sa sám).
 4. Daj **Uložiť zmeny** a **doplnok v Stremiu pridaj znova**. Stremio si zoznam katalógov pamätá, takže zmenu

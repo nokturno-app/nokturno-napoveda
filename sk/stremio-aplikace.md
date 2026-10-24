@@ -49,8 +49,9 @@ kde Stremio spúšťaš.
    raz otvor, inak ju Android po zapnutí nespustí.
 4. Otvor nastavenie: na televízore priamo v aplikácii Nokturno (bez prehliadača sa formulár otvorí v nej), alebo
    pohodlnejšie z telefónu v rovnakej sieti na `http://<IP adresa televízora>:7140/configure`. IP adresu ukazuje
-   hlavná obrazovka aplikácie.
-5. Založ profil (napíš jeho názov a daj **Založiť nový profil**), potom vyplň [vlastné úložisko](vlastni-uloziste.md)
+   hlavná obrazovka aplikácie v karte „Z jiného zařízení v síti“. Prednosť má Wi-Fi alebo ethernet, nie mobilné dáta
+   ani VPN, takže na ňu dosiahneš z telefónu v rovnakej sieti.
+5. Pri prvom otvorení najprv nastav správcu ([Správca, režimy a účty](#spravca-rezimy-a-ucty)). Potom založ profil (napíš jeho názov a daj **Založiť nový profil**) a vyplň [vlastné úložisko](vlastni-uloziste.md)
    a prípadne účty zdrojov a daj **✓ Overiť všetky účty**. Postup je v článku [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 6. **Pridať do Stremia** alebo **Pridať do Nuvia**. Na tom istom televízore to ide rovno z formulára v aplikácii,
    na ostatných zariadeniach v sieti z formulára otvoreného cez IP adresu.
@@ -90,7 +91,7 @@ amd64 a aarch64; Raspberry Pi s 32bit systémom nie). Beží potom doma stále, 
    Úložiská** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
 2. Nainštaluj **Nokturno pro Stremio** a daj **Spustiť**.
 3. **Otvoriť webové rozhranie**, alebo z telefónu či počítača v rovnakej sieti `http://<IP Home Assistantu>:7140/configure`.
-4. Založ profil s názvom, vyplň vlastné úložisko, prípadne voliteľné účty zdrojov, daj **✓ Overiť všetky účty** a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
+4. Pri prvom otvorení najprv nastav správcu ([Správca, režimy a účty](#spravca-rezimy-a-ucty)). Potom založ profil s názvom, vyplň vlastné úložisko, prípadne voliteľné účty zdrojov, daj **✓ Overiť všetky účty** a potom **Pridať do Stremia** alebo **Pridať do Nuvia**.
 
 Doplnok používa sieť hostiteľa: port **7140** (nastavenie a doplnok pre Nuvio) a **7141** (HTTPS cez local-ip.co
 pre Stremio). V záložke **Konfigurácia** sa dajú vypnúť štatistiky (`stats`), hlásenia o pádoch (`crash_reports`)
@@ -174,7 +175,7 @@ Aplikácia spozná správcu podľa mena a hesla, nie podľa siete. Funguje tak r
 doménou. Doplnok v Stremiu ani v Nuviu heslo nechce, adresa doplnku sa nemení.
 
 **Prvé spustenie.** Kým aplikácia nemá správcu, stránka nastavení (`/configure`) ukáže len kartu **Správca aplikácie**:
-meno, heslo (aspoň 6 znakov) dvakrát a e-mail. E-mail uvidí každý na prihlasovacej stránke ako kontakt pre zabudnuté
+meno (3 až 32 znakov: písmená bez diakritiky, číslice, bodka, pomlčka, podčiarkovník; veľké písmená sa prevedú na malé), heslo (aspoň 6 znakov) dvakrát a e-mail. E-mail uvidí každý na prihlasovacej stránke ako kontakt pre zabudnuté
 heslo, aplikácia e-maily neposiela. Keď stránku neotvoríš cez adresu z domácej siete (`127.0.0.1`, `192.168.…`),
 ale cez doménu alebo proxy, chce navyše kód, ktorý aplikácia pri štarte vypíše do výpisu na riadok „Aplikace zatím nemá správce“ (`journalctl`, `docker logs`).
 Na VPS otvor `/configure` hneď po inštalácii, ešte predtým, ako aplikáciu pustíš von: nginx s holým `proxy_pass`
@@ -204,14 +205,14 @@ je voľba zapnutá hneď po prepnutí. V Stremiu sa namiesto streamov ukáže ri
 
 ### Heslá vo formulári
 Uložené heslá sa do stránky nastavení nikdy nevracajú, ani správcovi. Pole zostane prázdne s poznámkou **Uložené –
-nechaj prázdne, ak ho nemeníš**. Keď pri účte zmeníš meno, e-mail alebo adresu úložiska, uložené heslo sa nepoužije
+nechaj prázdne, ak ho nemeníš**. Keď pri účte zmeníš meno, e-mail, adresu úložiska alebo poskytovateľa FastShare, uložené heslo sa nepoužije
 a pole ukáže **Účet sa zmenil – zadaj heslo znova**. Tak si nikto s adresou doplnku nepresmeruje úložisko na svoj
 server, aby mu aplikácia heslo poslala. To isté platí pre **Overiť účet**.
 
 ### Používatelia
 V sekcii **⚙ Aplikácia → Používatelia** správca pridáva používateľov a pri každom vidí počet profilov, poslednú
 aktivitu a počet prehratí za 7 a 30 dní, bez názvov titulov. Môže zmeniť heslo, zablokovať (prestanú fungovať aj
-adresy profilov používateľa) alebo zmazať aj s profilmi. Zabudnuté heslo používateľa mení správca, prihlasovacia
+adresy profilov používateľa; v Stremiu sa namiesto streamov ukáže „Účet je zablokovaný správcom aplikácie.“) alebo zmazať aj s profilmi. Zabudnuté heslo používateľa mení správca, prihlasovacia
 stránka ukazuje jeho e-mail.
 
 ### Prihlásenie a zabudnuté heslo

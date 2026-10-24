@@ -1,6 +1,6 @@
 # Služby a senzory
 
-Integrace vytváří čtyři senzory a řadu služeb, na které jde navázat automatizace. Názvy senzorů se překládají podle jazyka Home Assistantu; skutečné `entity_id` najdeš v *Nastavení → Zařízení a služby → Entity* (starší instalace si ponechávají původní, třeba `sensor.nokturno_k_zhlednuti`).
+Integrace vytváří pět senzorů a řadu služeb, na které jde navázat automatizace. Názvy senzorů se překládají podle jazyka Home Assistantu; skutečné `entity_id` najdeš v *Nastavení → Zařízení a služby → Entity* (starší instalace si ponechávají původní, třeba `sensor.nokturno_k_zhlednuti`).
 
 ## Senzory
 
@@ -53,7 +53,7 @@ Všechny služby najdeš v *Nástroje pro vývojáře → Akce* pod doménou `no
 | Služba | Co dělá |
 |---|---|
 | `nokturno.search` | vyhledá film nebo seriál |
-| `nokturno.streams` | seřazené streamy titulu z hledání |
+| `nokturno.streams` | seřazené streamy titulu z hledání; pole `auto` v odpovědi je pořadí streamu, který by se podle tvých předvoleb pustil rovnou (prázdné = žádný nevyhovuje); pole `tags` nese štítky formátu obrazu (`DV`, `DV only`, `HDR10`, `HDR10+`, `HDR`, `HLG`, `3D`) |
 | `nokturno.episodes` | díly a série seriálu |
 | `nokturno.detail` | popis, plakát a hodnocení titulu podle IMDb id |
 | `nokturno.play` | pustí titul v Kodi nebo jiném přehrávači; místo ID jde zadat dotaz. Bez zadané entity hraje na všech nastavených přehrávačích. |
@@ -65,7 +65,7 @@ Všechny služby najdeš v *Nástroje pro vývojáře → Akce* pod doménou `no
 
 | Služba | Co dělá |
 |---|---|
-| `nokturno.download` | stáhne stream do složky Home Assistantu |
+| `nokturno.download` | stáhne stream do složky Home Assistantu; stream z CZtoru jen tehdy, když to CZtor povolí |
 | `nokturno.start_download`, `nokturno.cancel_download` | spustí čekající stahování hned / zruší stahování |
 | `nokturno.send_link` | pošle odkaz na stream do mobilu |
 | `nokturno.share_file` | pošle do mobilu dočasný odkaz na stažený soubor (jen správce) |
@@ -90,6 +90,7 @@ Katalogy zakládáš v Kodi, do Home Assistantu přijdou synchronizací. Home As
 | Služba | Co dělá |
 |---|---|
 | `nokturno.catalogs` | vrátí stav ověřovaných katalogů |
+| `nokturno.catalog_items` | vrátí tituly ověřovaného katalogu (plakát, rok, hodnocení, žánry, popis, zda se našel stream); pole `catalog_id` (ID vrací `nokturno.catalogs`), `only_available` (výchozí zapnuto), `limit` (1–200, výchozí 50) – hodí se na vlastní dashboard |
 | `nokturno.catalog_verify` | hned ověří `count` titulů (1–50, výchozí 10) katalogu `id`; bez `id` další v pořadí |
 | `nokturno.catalog_pause` | `paused: true` zastaví ověřování na tomto Home Assistantu, `false` ho pustí |
 
@@ -100,6 +101,6 @@ Katalogy zakládáš v Kodi, do Home Assistantu přijdou synchronizací. Home As
 | `nokturno.trakt_auth` | propojí Trakt.tv: kód přijde do oznámení, zadáš ho na `trakt.tv/activate` |
 | `nokturno.trakt_watched` | zapíše titul do historie Trakt.tv |
 | `nokturno.clear_history` | smaže historii hledání |
-| `nokturno.clear_cache` | vymaže cache hledání, streamů a katalogů (ne historii ani Můj seznam) |
+| `nokturno.clear_cache` | vymaže cache hledání, streamů a katalogů (ne historii ani Můj seznam); smaže i paměť prázdných výsledků – titul, u kterého se nic nenašlo, se jinak 20 minut znovu neprohledává |
 
 Služby `nokturno.delete_file` a `nokturno.share_file` smí spustit jen správce Home Assistantu. Volání z automatizace nebo skriptu (bez přihlášeného uživatele) projde.

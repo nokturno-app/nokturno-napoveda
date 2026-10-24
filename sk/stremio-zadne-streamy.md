@@ -17,7 +17,7 @@ templates:
 1. **Počkaj pár sekúnd.** Stremio ukazuje streamy postupne, ako doplnky odpovedajú.
 2. **Beží aplikácia Nokturno?** Doplnok funguje len vtedy, keď aplikácia beží, pozri
    [Nokturno pre Stremio – aplikácia](stremio-aplikace.md).
-3. **Je tam položka ⛔ Nokturno?** Prišlo príliš veľa požiadaviek za sebou, pozri
+3. **Je tam položka ⛔ Nokturno?** Prišlo príliš veľa požiadaviek za sebou, alebo správca aplikácie vypol staré adresy s nastavením či zablokoval účet, pozri
    [Položka „⛔ Nokturno“](stremio-polozky-nokturno.md).
 
 ## Over vlastné úložisko
@@ -39,6 +39,7 @@ Zdroj, ktorý neodpovedal, sa preskočí a streamy prídu z ostatných. Skús to
 
 ## Účty sú v poriadku, a aj tak nič
 - **Titul na zdrojoch nemusí vôbec byť**, hlavne úplné novinky a málo známe seriály.
+- Keď Nokturno pri titule nenájde nič, hľadá znova až o 20 minút. Novo pridaný súbor sa tak môže ukázať s oneskorením; Stremio tlačidlo na obnovenie nemá.
 - Nokturno berie len súbory, ktoré k titulu naozaj patria (názov, rok, diel). Podobné, ale iné filmy zámerne vynechá.
 - Pri filme sa neukazujú súbory výrazne kratšie než film (ukážky) a pri filme s premiérou o viac než dva týždne len súbory z vlastného úložiska.
   Podrobnosti v článku [Žiadny stream](zadny-stream.md#preco-nokturno-neponukne-subor-ktory-na-zdroji-vidim).

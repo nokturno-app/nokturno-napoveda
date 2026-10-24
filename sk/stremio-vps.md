@@ -183,7 +183,7 @@ Keď má poskytovateľ VPS vlastný firewall v administrácii, povoľ v ňom tie
    Na televízore sa doplnok objaví sám, keď ho pridáš na telefóne alebo počítači pod rovnakým účtom Stremio.
 
 Vlastné úložisko doma musí byť dosiahnuteľné z VPS (prehrávač ide cez VPS), teda cez verejnú adresu
-alebo VPN. Adresa v domácej sieti (`192.168.…`) z VPS nefunguje.
+alebo VPN. Adresa v domácej sieti (`192.168.…`) z VPS nefunguje. To isté platí pre zdieľaný priečinok SMB (`smb://…`): VPS naň musí dosiahnuť, napríklad cez VPN.
 
 ## Aktualizácie a logy
 - Aplikácia sa aktualizuje sama, pri štarte a potom každých 6 hodín. Nové verzie sťahuje do priečinka s dátami,
@@ -232,6 +232,7 @@ Skôr ako to zapneš, počítaj s týmto:
 | `https://…/configure` sa neotvorí, Caddy hlási chybu certifikátu | doména ešte neukazuje na VPS. Počkaj, kým `getent hosts <doména>` vypíše IP VPS (obvykle minúty, výnimočne hodiny), potom `sudo systemctl reload caddy`. |
 | Certifikát sa nevydá ani po zmene DNS | Let's Encrypt potrebuje dosiahnuť na porty **80** a 443. Skontroluj `sudo ufw status` a firewall v administrácii VPS. Dôvod vypíše `journalctl -u caddy`. |
 | Caddy hlási „502 Bad Gateway“ | aplikácia nebeží. `sudo systemctl status nokturno` a `journalctl -u nokturno`. |
+| Vo výpise streamov je namiesto streamov hlásenie „Adresy s nastavením sú v tejto aplikácii vypnuté“ alebo „Účet je zablokovaný správcom aplikácie.“ | prvé znamená, že ide o starú adresu s nastavením, ktorá je vypnutá (správca ju vypol v sekcii **⚙ Aplikácia**, alebo je v predvolenom stave vypnutá v režime **Používateľské účty**, správca ju môže zapnúť): ulož nastavenie ako profil na `/configure` a doplnok pridaj znova. Profil ukladá správca aplikácie, v režime **Používateľské účty** aj prihlásený používateľ. Druhé znamená, že účet majiteľa profilu zablokoval správca aplikácie. |
 | Pri filme nie sú streamy | pozri [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md) |
 
 ---

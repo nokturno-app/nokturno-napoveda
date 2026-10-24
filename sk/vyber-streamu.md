@@ -17,7 +17,8 @@ templates:
 
 Po kliknutí na film alebo diel (aj po **Prehrať** v detaile) sa otvorí dialóg **Vyber stream**. Kedykoľvek ho vyvoláš
 aj z kontextového menu filmu alebo dielu: **Vybrať stream**. **Vybrať stream** vždy hľadá znova a neberie výsledok uložený
-z minulosti, takže uvidíš aktuálnu ponuku.
+z minulosti, takže uvidíš aktuálnu ponuku. Keď pri titule žiadny zdroj nič nenašiel, bežné otvorenie ho 20 minút znova neprehľadáva;
+**Vybrať stream** z kontextového menu hľadá hneď.
 
 ## Čo je v dialógu
 - Každý stream má dva riadky, vľavo obrázok kvality. Čo a v akom poradí sa ukazuje, sa dá nastaviť (nižšie).
@@ -76,10 +77,12 @@ v názve sa preto môže zobraziť prvýkrát a zmizne pri ďalšom otvorení.
 
 ## Formát obrazu
 Dolby Vision, HDR a kodek AV1 spoznávame z hlavičky súboru, inak podľa názvu. Vo výpise sa pri streame zobrazí štítok:
-**DV only** (Dolby Vision bez záložnej vrstvy), **DV**, **HDR10**, **HDR10+**, **HLG** alebo **3D**.
+**DV only** (Dolby Vision bez záložnej vrstvy), **DV**, **HDR10**, **HDR10+**, **HDR**, **HLG** alebo **3D**.
+Pri Dolby Vision so záložnou vrstvou sa vedľa **DV** ukáže aj jej formát (**HDR10** alebo **HLG**), spoznáme ho z hlavičky súboru.
+**HDR10+** sa pri takom súbore spozná z označenia `UHDR+DV` alebo `HDR10+DV` v názve.
 
 Hlavička sa číta len pri prvých streamoch výpisu, zvyšok sa dočíta na pozadí. Pri streame bez prečítanej hlavičky platí len názov
-a **Skryť Dolby Vision bez záložnej vrstvy** tam zachytí len jasné označenie profilu 5 (napríklad `DV.P5`), nikdy holé „DV“.
+a **Skryť Dolby Vision bez záložnej vrstvy** tam zachytí len jasné označenie profilu 5 (napríklad `DV.P5`), nikdy holé „DV“. Pri súboroch z vlastného úložiska na SMB sa hlavička nečíta vôbec, takže tam býva štítkov menej.
 
 ---
 [Všetky návody](./) · [Česky](../cs/vyber-streamu)

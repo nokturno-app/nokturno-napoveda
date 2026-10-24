@@ -27,7 +27,7 @@ Plný text podmínek použití a kontakty pro nahlášení nelegálního obsahu 
 | Vlastní úložiště | ano, až tři | ano | ano |
 | Luna | ano | ne (Luna má pro Stremio vlastní doplněk) | ano |
 | Pokračovat ve sledování, Můj seznam, Hlídané | ano | ne | ano |
-| Vlastní katalogy | ano | ano | ověřuje katalogy z Kodi |
+| Vlastní katalogy | ano | ano | ukazuje a ověřuje katalogy z Kodi |
 | Koncerty | ano | ano | ne |
 
 ## Co umí doplněk pro Kodi

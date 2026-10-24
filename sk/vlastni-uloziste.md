@@ -54,7 +54,7 @@ V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, 
 v Stremiu máš, zmeny platia hneď a znova ho pridávať nemusíš.
 
 V Stremiu platia tri veci navyše:
-- Úložisko môže byť WebDAV aj SMB (`smb://server/priečinok`). SMB číta aplikácia Nokturno, takže počítač alebo telefón s aplikáciou musí byť v rovnakej sieti ako zdieľaný priečinok. Na VPS ani cez internet SMB nefunguje (hlásenie „SMB jen z domácí sítě“).
+- Úložisko môže byť WebDAV aj SMB (`smb://server/priečinok`). SMB číta aplikácia Nokturno, takže na zdieľaný priečinok musí dosiahnuť priamo ona: beží doma, alebo má do domácej siete VPN. Na zdieľanej verejnej inštancii SMB nejde (hlásenie „SMB jen z domácí sítě“).
 - Úložisko musí byť dosiahnuteľné **zo zariadenia, kde beží aplikácia Nokturno**. Tá v ňom hľadá súbory a od verzie 9.6.1
   ich odovzdáva aj prehrávaču, prehrávač potrebuje dosiahnuť len na aplikáciu. Keď je aplikácia doma, stačí adresa z domácej siete.
 - V Stremiu v prehliadači sa súbory `.mkv`, `.avi` a podobné neprehrajú, o prehraní rozhoduje formát súboru.
@@ -66,7 +66,7 @@ V Stremiu platia tri veci navyše:
 | hore v menu, Overiť zdroje | „Úložisko: neodpovedá“, „<názov> neodpovídá“ | adresa nie je z Kodi dosiahnuteľná: iná sieť, vypnutý server, nevystavený port. Skús adresu otvoriť v prehliadači v rovnakej sieti. |
 | hore v menu | „Úložisko: nesedí meno alebo heslo“ | prihlasovacie údaje k úložisku, nie k Nokturnu |
 | pri hľadaní | „<názov>: špatné jméno nebo heslo“, „<názov>: složka neexistuje“ (po česky) | oprav meno, heslo alebo cestu k priečinku |
-| Stremio, Overiť úložisko | „SMB jen z domácí sítě“ (po česky) | aplikácia pre Stremio dostala požiadavku z internetu (VPS, prístup mimo domova). SMB ide len v domácej sieti, mimo nej použi WebDAV. |
+| Stremio, Overiť úložisko | „SMB jen z domácí sítě“ (po česky) | overuješ úložisko na zdieľanej verejnej inštancii aplikácie, tá SMB nepovoľuje. Vlastná aplikácia (doma aj na VPS) SMB použije, keď na zdieľaný priečinok dosiahne priamo (domáca sieť, VPN). Na zdieľanej inštancii použi WebDAV. |
 | Overiť zdroje | „v adrese chybí sdílená složka (smb://server/složka)“ (po česky) | adresa končí menom servera. Doplň názov zdieľaného priečinka, napríklad `smb://nas/video/`. |
 | Overiť zdroje, WebDAV | chyba presmerovania alebo „HTTP 301“ | server adresu presmerováva (napríklad z http na https). Aktuálne Nokturno presmerovanie sleduje samo; keď to napriek tomu nejde, zadaj rovno konečnú adresu tak, ako ju ukáže prehliadač (zvyčajne `https://…/` s lomkou na konci). |
 | pri titule | súbor sa neponúkne | skontroluj pomenovanie (nižšie); nový súbor sa zobrazí najneskôr do hodiny |
@@ -75,6 +75,11 @@ V Stremiu platia tri veci navyše:
 - **Film:** názov na začiatku, rok v zátvorke – `Filmy/Pelíšky (1999).mkv`.
 - **Seriál:** najistejšia je značka dielu – `Seriály/Hospoda/Hospoda S02E04 - Úraz.avi` (funguje aj `2x04`). Súbor bez nej sa nájde aj vtedy, keď je v jeho názve **názov dielu** (`1. Závěť.avi`) alebo **dátum vysielania** (`07.03.2025`, `2025-03-07`) a sedí s katalógom. Samotné číslo dielu bez názvu nestačí. Pre istotu daj značku dielu do názvu.
 - Keď má film slovenský či český názov úplne iný ako originál, daj ho do priečinka s originálnym názvom.
+
+## Kde sa súbory zobrazia
+- **Pri titule medzi streamami** – vždy **prvý**, na začiatku riadka zelený názov úložiska, za ním kvalita, zvuk, veľkosť a dĺžka. V Kodi sa púšťa rovno z úložiska, v Stremiu ide súbor cez aplikáciu Nokturno.
+- **Moje úložisko** v hlavnom menu Kodi – prehliadanie úložiska po priečinkoch; pri priečinku je počet videí vnútri. Najprv sa vždy vyberá úložisko (aj keď máš len jedno). Podľa názvu súboru alebo priečinka sa z TMDB doplní plagát, popis, rok a žáner (pri diele seriálu séria a epizóda); popisok zostáva názov súboru. Popis sa načíta pri prvých 60 súboroch v priečinku; chýba pri súboroch, ktorých názov sa nedá priradiť k titulu, a tam, kde sa ešte nestihol načítať.
+- Vo **výsledkoch hľadania** sa súbory medzi titulmi nezobrazujú – hľadanie je o tituloch, súbor príde na rad až pri titule. V Kodi je výnimka: po zadaní dotazu v hlavnom menu v **Hľadať** je položka **Len v mojom úložisku**, ktorá hľadá dotaz len medzi súbormi vo vlastnom úložisku (počet nálezov sa pri nej nezobrazuje; zobrazí sa len s nastaveným vlastným úložiskom).
 
 Podrobnosti (po česky): [Jak připojit vlastní úložiště](https://nokturno-app.github.io/nokturno-napoveda/cs/vlastni-uloziste).
 

@@ -70,13 +70,14 @@ Když je chceš, založ si je ze šablony – a můžeš si je rovnou upravit, t
 | **Témata (stačí jedno, nejvýš 3)** | Pohádky, Vánoce, Halloween, Silvestr, Podle skutečné události, Podle knihy, Životopisný, Superhrdinové, Sériový vrah, 2. světová válka, Bojová umění, Sport, Mimozemšťané, Cestování časem, Zombie, Duchové, Upíři, Postapokalypsa, Loupež, Špionáž, Přežití, Psi, Dinosauři |
 | **Tituly musí mít** | jen při dvou a víc žánrech: **všechny vybrané žánry**, nebo **aspoň jeden vybraný žánr** |
 | **Země původu (nejvýš 5)** | Česko, Slovensko, Československo, USA, Velká Británie, Francie, Německo, Itálie, Španělsko, Polsko, Maďarsko, Jižní Korea, Japonsko, Dánsko, Švédsko, Norsko |
+| **Vyloučit země (nic = žádné)** | ptá se jen tehdy, když nejsou vybrané žádné země původu (vybrané země mají přednost). Titul z vyloučené země se neukáže, titul bez údaje o zemi projde. V názvu pak stojí třeba „bez USA“. Filtr se použije až na vrácené tituly, takže stránka katalogu může mít méně titulů. |
 | **Roky** | **Bez omezení**, **Od–do** (rok od a do, prázdné = bez omezení), nebo **Posledních X let** (1–50, výchozí 5) |
 | **Řadit podle** | **Oblíbenosti**, **Hodnocení na TMDB** (jen tituly s dost hlasy), **Data vydání** (nejnovější první), **Abecedy** (oblíbené tituly podle názvu) |
 | **Jazyk zvuku** * | Libovolné, Čeština, Slovenština, Čeština nebo slovenština, Angličtina, Maďarština |
 | **Titulky** * | stejné možnosti jako jazyk zvuku |
 | **Minimální kvalita** * | Libovolná, Full HD, 2K, 4K |
 | **Kanály zvuku** * | Libovolné, nebo **5.1 a víc** |
-| **Zobrazit seřazené podle** * | **Nově nalezené**, **Stejně jako výběr**, nebo **Nejnovější vydání** |
+| **Zobrazit seřazené podle** * | **Nově nalezené** (nejnovější nálezy nahoře, podle toho, kdy titul našla kontrola dostupnosti), **Stejně jako výběr** (pořadí, v jakém tituly vrátil výběr katalogu), nebo **Nejnovější vydání** (podle data vydání titulu) |
 | **Ikona katalogu** | Filmy, Seriály, Seznam, Hvězda, Žebříček, Žánr, Rok, Země, Sbírka, Novinky, Herci, Studia |
 | **Název katalogu** | předvyplní se z voleb (třeba „Pohádky · Česko · CZ dabing · posledních 5 let“), můžeš ho přepsat |
 
@@ -149,10 +150,15 @@ Co se synchronizuje → Synchronizovat vlastní katalogy**.
 Home Assistant katalogy dostává synchronizací z Kodi (bez nastavení, okruh je vždy zapnutý). Běží pořád, a tak je
 na ověřování ideální: každou minutu ověří jeden titul a výsledky pošle zpátky do Kodi.
 
+Na kartě Nokturno je řada **Katalogy**: tlačítka s názvy ověřovaných katalogů přepínají, který se ukáže (po 50 titulech).
+Ve výchozím stavu jsou v ní jen tituly se streamem, což jde změnit volbou **V katalozích jen dostupné** v editoru karty.
+Popis karty je v návodu [Používání](../navody/ha/pouzivani.md).
+
 | Co | K čemu |
 |---|---|
 | akce **Stav vlastních katalogů** (`nokturno.catalogs`) | vrátí ověřované katalogy a jejich stav |
 | akce **Ověřit katalog hned** (`nokturno.catalog_verify`) | ověří hned **Počet titulů** (1–50, výchozí 10). **ID katalogu** prázdné = další v pořadí. |
+| akce **Tituly vlastního katalogu** (`nokturno.catalog_items`) | vrátí tituly ověřovaného katalogu (plakát, rok, hodnocení, zda se našel stream), hodí se na vlastní dashboard. Pole **ID katalogu**, **Jen dostupné** (výchozí zapnuto) a **Limit** (1–200, výchozí 50). |
 | akce **Pozastavit ověřování katalogů** (`nokturno.catalog_pause`) | zastaví nebo pustí ověřování na tomto Home Assistantu |
 | senzor **Katalogy** (`sensor.nokturno_katalogy`) | počet ověřovaných katalogů; v atributech u každého ověřeno, vyhovuje, celkem a čas poslední kontroly |
 
@@ -167,7 +173,7 @@ Ve Stremiu se katalogy skládají ve formuláři nastavení doplňku.
 3. Vyplň:
    - **Druh** (Filmy nebo Seriály) a případně **Ze šablony**,
    - režim **Katalog z TMDB** nebo **Jen tituly se streamem**,
-   - **Žánry**, **Témata**, **Země původu**, **Roky** a **Řadit podle**,
+   - **Žánry**, **Témata**, **Země původu**, **Vyloučit země** (platí, jen když nejsou vybrané země původu), **Roky** a **Řadit podle**,
    - u ověřovaného režimu **Jazyk zvuku**, **Titulky**, **Minimální kvalita**, **5.1 a víc** a **Zobrazit seřazené podle**,
    - **Název** (do 40 znaků, doplní se sám).
 4. Dej **Uložit změny** a **doplněk ve Stremiu přidej znovu**. Stremio si seznam katalogů pamatuje, takže změnu

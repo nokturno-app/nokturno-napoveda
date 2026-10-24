@@ -49,5 +49,10 @@ Integrácia sťahuje do **Priečinka na sťahovanie** zo sekcie **Sťahovanie a 
 existovať a byť zapisovateľný. Upozornenia na dokončenie chodia do služby `notify.`
 z poľa **Upozornenia na stiahnutie a nové diely**. Prázdne pole pošle upozornenie len do Home Assistantu.
 
+Sťahovanie spustíš ikonou sťahovania (bublina **Stiahnuť**) pri streame v karte Nokturno. Bežiace sťahovanie je v karte
+pod nadpisom **Sťahovanie** a hotové súbory v sekcii **Stiahnuté**, oboje úplne dole na úvodnej obrazovke. V editore karty sa sekcia
+**Stiahnuté** dá vynechať v **Sekcie a ich poradie (rady plagátov)**, potom sa nezobrazí ani bežiace sťahovanie. CZtor povoľuje sťahovanie len pri časti obsahu: pri streame, ktorý nedovolí, skončí **Stiahnuť**
+hláškou „CZtor stažení tohohle streamu nepovoluje.“ (prehrať ide ďalej normálne).
+
 ---
 [Všetky návody](./) · [Česky](../cs/stahovani)

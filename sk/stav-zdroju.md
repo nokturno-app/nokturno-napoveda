@@ -27,7 +27,7 @@ pravým tlačidlom na jeho riadok a zvoľ **Uspať zdroj** (10 minút, 1 hodina,
 ## Čo jednotlivé stavy znamenajú
 | Vo výpise | Čo to znamená | Návod |
 |---|---|---|
-| Úložisko: neodpovedá | vlastné úložisko | [Ako pripojiť vlastné úložisko](vlastni-uloziste.md) |
+| Úložisko: neodpovedá | vlastné úložisko (WebDAV alebo SMB) | [Ako pripojiť vlastné úložisko](vlastni-uloziste.md) |
 | neodpovedá | zdroj alebo server nie je dosiahnuteľný | [„<Zdroj> neodpovedá“](zdroj-neodpovida.md) |
 | nesedí meno alebo heslo | zdroj odmietol prihlásenie | [Zdroj hlási „nesedí meno alebo heslo“](prihlaseni.md) |
 | predplatné vypršalo, do konca predplatného zostáva dní: N | WebShare, CZtor alebo Přehraj.to | [Premium, VIP a kredit](premium-a-kredit.md) |

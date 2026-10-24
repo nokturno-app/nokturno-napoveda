@@ -44,7 +44,7 @@ Při prvním otevření se doplněk zeptá na souhlas s podmínkami použití (*
 Po souhlasu se nabídne **průvodce nastavením** se třemi možnostmi:
 
 - **Z mobilu** – na TV se ukáže QR kód, v mobilu vyplníš vlastní úložiště a případné účty v pohodlném formuláři (viz [Nastavit z mobilu](nastaveni.md#nastavit-z-mobilu)).
-- **Průvodce ovladačem** – nejdřív se zeptá na **vlastní úložiště** (adresa, jméno, heslo). Pak připomene, že zdroje třetích stran jsou volitelné, a teprve potom nabídne sérii otázek ano/ne: WebShare, Sosáč (účet Streamuj.tv), Luna, HellSpy, Sledujteto, FastShare nebo Sdilej.cz, CZtor, klíč TMDB. Kde je potřeba účet, vyplníš jméno a heslo.
+- **Průvodce ovladačem** – nejdřív se zeptá na **vlastní úložiště** (WebDAV, SMB nebo NAS: adresa, jméno, heslo). Pak připomene, že zdroje třetích stran jsou volitelné, a teprve potom nabídne sérii otázek ano/ne: WebShare, Sosáč (účet Streamuj.tv), Luna, HellSpy, Sledujteto, FastShare nebo Sdilej.cz, CZtor, klíč TMDB. Kde je potřeba účet, vyplníš jméno a heslo.
 - **Přeskočit** – všechno jde doplnit později v nastavení.
 
 Na konci se průvodce zeptá, jestli **změřit rychlost internetu** a podle ní nastavit nejvyšší datový tok. Když máš doplněk **TMDb Helper**, nabídne i nastavení Nokturna jako přehrávače pro tlačítko Přehrát v detailu filmu a **přepnutí jazyka TMDb Helperu** na jazyk Kodi (TMDb Helper ho z Kodi nepřebírá, detail filmu by jinak byl anglicky).

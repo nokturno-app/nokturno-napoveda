@@ -16,7 +16,7 @@ templates:
 
 !!! danger "Doplnok na cudzom serveri dostáva tvoje prihlasovacie údaje"
     Každý doplnok pre Stremio, ktorý beží na cudzom serveri, dostáva tvoje prihlasovacie údaje k zdrojom
-    (vlastné úložisko, WebShare, FastShare…). Sú v adrese doplnku, prevádzkovateľ servera ich preto môže vidieť
+    (vlastné úložisko, WebShare, FastShare…). Sú v adrese doplnku alebo uložené na serveri, prevádzkovateľ ich preto môže vidieť
     a uložiť a musíš mu veriť. Istotu máš len s doplnkom, ktorý beží u teba: doma, cez VPN alebo na vlastnom VPS.
 
 Aplikácia Nokturno pre Stremio zostane doma (na televízore, počítači, Raspberry Pi, NAS alebo v Home Assistante)
@@ -46,6 +46,13 @@ V domácej sieti toto nepotrebuješ, tam stačí adresa z formulára aplikácie.
 4. **MagicDNS a HTTPS:** v [administrácii Tailscale](https://login.tailscale.com/admin/dns) zapni **MagicDNS**
    a **HTTPS Certificates**. Stremio ich potrebuje, Nuvio nie.
 5. **Adresa zariadenia s aplikáciou:** ukáže ju aplikácia Tailscale (`100.x.y.z`), na Linuxe `tailscale ip -4`.
+   Adresa z karty „Z jiného zařízení v síti“ v aplikácii pre Android je z Wi-Fi alebo ethernetu a mimo domova
+   nefunguje, tú nepoužívaj.
+
+Aplikácia pozná správcu podľa mena a hesla, nie podľa siete, takže sa na zariadení vonku v nastavení (`/configure`)
+prihlás ako správca. Keď správca už je založený a nie si prihlásený, uvidíš v predvolenom režime Profily len kartu **Prihlásenie**. Správca, ktorý
+ešte nebol založený, chce cez Tailscale aj kód z výpisu aplikácie, pretože sa nepočíta ako domáca sieť. Založ ho
+radšej doma, pozri [Správca, režimy a účty](stremio-aplikace.md#spravca-rezimy-a-ucty).
 
 ### Nuvio
 Stačí adresa cez `http://<adresa 100.x.y.z zariadenia s aplikáciou>:7140`. Na zariadení vonku otvor
@@ -72,9 +79,9 @@ ručne a niektoré routery alebo DNS také meno zablokujú.
     ktorý platí len pre tvoje zariadenia.
 
 ### Vlastné úložisko
-Prehrávač si súbor sťahuje sám. Keď je úložisko doma, musí naň dosiahnuť aj zariadenie vonku: v adrese
-úložiska použi jeho adresu v Tailscale (`100.x.y.z` alebo meno z MagicDNS), alebo na domácom zariadení zapni
-v Tailscale zdieľanie domácej siete (subnet router).
+Súbor z vlastného úložiska (WebDAV aj SMB) prehrávaču posiela aplikácia Nokturno, prehrávač si ho z úložiska
+nesťahuje sám. Stačí preto, aby na úložisko dosiahla aplikácia doma, a zariadenie vonku k nemu prístup nepotrebuje.
+SMB (`smb://`) číta aplikácia priamo, takže na zdieľaný priečinok musí dosiahnuť sama: beží doma, alebo má do domácej siete VPN.
 
 ### Luna z doplnku Home Assistantu
 Lunu z doplnku v Home Assistante môžeš používať aj mimo domova rovnakou cestou. Home Assistant je potom v tvojom
@@ -118,7 +125,7 @@ Kde VPN aplikáciu nenainštaluješ (niektoré televízory), pomôže VPS:
 [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md).
 
 Doplnok je len pre teba a tvoju domácnosť. Adresu doplnku ani adresu zariadenia v tailnete nikomu nedávaj,
-adresa doplnku obsahuje tvoje účty.
+adresa doplnku je kľúč k tvojim účtom.
 
 ---
 [Všetky návody](./) · [Česky](../cs/stremio-mimo-domov)

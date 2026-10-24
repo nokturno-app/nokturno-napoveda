@@ -32,6 +32,8 @@ až když neprojde žádný z nich.
 | FastShare: na soubor … nestačí kredit (…) | na účtu FastShare / Sdilej.cz chybí kredit | dobij kredit, nebo vyber menší soubor |
 | FastShare: přihlášení se nepovedlo…, Přehraj.to: přihlášení se nepovedlo… | zdroj odmítl přihlášení | [Zdroj hlásí „nesedí jméno nebo heslo“](prihlaseni.md) |
 | CZtor: stream už v CZtor není… | soubor mezitím zmizel | vyber jiný stream |
+| CZtor: úložiště CZtor teď stream nevydalo – zkus jiný ze seznamu | CZtor zrovna odkaz na tenhle stream nevydal | vyber jiný stream |
+| CZtor: CZtor omezil počet požadavků… | CZtor omezil počet požadavků a zdroj si na chvíli odpočine | chvíli počkej, nebo vyber stream z jiného zdroje |
 | file_link: File temporarily unavailable | WebShare soubor zrovna nevydal | vyber jiný stream |
 | Jednu nebo více položek se nepodařilo přehrát (hláška Kodi) | přehrání skončilo bez streamu, třeba po zrušení výběru | zkus to znovu a vyber stream |
 | Stream se nepodařilo přehrát – vyber jiný. | stream se nerozjel: zdroj zrovna nic nevydal, nebo soubor zařízení neumí | otevři u titulu místní nabídku → **Vybrat stream** (hledá vždy znovu) a zkus jiný – jinou kvalitu nebo jiný zdroj; když má televize s obrazem potíže, zapni v **Nastavení → Přehrávání** volby **Skrýt Dolby Vision streamy** nebo **Skrýt HDR streamy** (viz [Výběr streamu](vyber-streamu.md)) |

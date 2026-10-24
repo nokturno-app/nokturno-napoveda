@@ -18,7 +18,8 @@ priority: 3
 ## Klepnutí na plakát rovnou pustí film
 V editoru karty je zapnutá volba **Klik na plakát rovnou přehraje**. Karta pak pustí stream, který splní
 předvolby z nastavení integrace (jazyk zvuku, 5.1…). Nabídka titulu se otevře dlouhým stiskem plakátu.
-Když žádný stream předvolby nesplní, ukáže se seznam streamů. Volbu vypneš v editoru karty.
+Když žádný stream předvolby nesplní, ukáže se seznam streamů. Volbu vypneš v editoru karty;
+klepnutí na plakát pak otevře dialog titulu s popisem a volbami (třeba **Vybrat stream**).
 
 ## Karta nereaguje nebo vypadá zaseklá
 - Spusť akci **Vymazat cache API** (`nokturno.clear_cache`) v **Nástroje pro vývojáře → Akce**.
@@ -27,6 +28,7 @@ Když žádný stream předvolby nesplní, ukáže se seznam streamů. Volbu vyp
 ## „Pokračovat ve sledování“ je prázdné
 Karta ukazuje poslední známý stav i ve chvíli, kdy Kodi neběží. Když je prázdné i tak, zkontroluj,
 že Home Assistant vidí Kodi: entita `media_player.…` musí existovat a aspoň jednou být dostupná.
+Prázdná řada se na kartě nezobrazí.
 
 ## Oznámení nechodí
 - V sekci **Stahování a odkazy** vyplň **Oznámení o stažení a nových dílech** službou `notify.`,

@@ -38,6 +38,7 @@ Orientačně: **Full HD 8–15 Mb/s, 4K 25–60 Mb/s**.
 ## Vlastní úložiště
 Přes internet rozhoduje rychlost odesílání (upload) tam, kde úložiště stojí. Domácí linka mívá upload mnohem
 menší než download.
+U sdílené složky SMB rozhoduje rychlost cesty mezi zařízením s Nokturnem a složkou – doma kabel místo Wi-Fi, přes VPN i upload domácí linky.
 
 ---
 [Všechny návody](../) · [Slovensky](../sk/seka-se-to)

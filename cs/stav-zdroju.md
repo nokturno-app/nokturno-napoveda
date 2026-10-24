@@ -27,7 +27,7 @@ pravým tlačítkem na jeho řádek a zvol **Uspat zdroj** (10 minut, 1 hodina, 
 ## Co jednotlivé stavy znamenají
 | Ve výpisu | Co to znamená | Návod |
 |---|---|---|
-| Úložiště: neodpovídá | vlastní úložiště | [Jak připojit vlastní úložiště](vlastni-uloziste.md) |
+| Úložiště: neodpovídá | vlastní úložiště (WebDAV nebo SMB) | [Jak připojit vlastní úložiště](vlastni-uloziste.md) |
 | neodpovídá | zdroj nebo server není dosažitelný | [„<Zdroj> neodpovídá“](zdroj-neodpovida.md) |
 | nesedí jméno nebo heslo | zdroj odmítl přihlášení | [Zdroj hlásí „nesedí jméno nebo heslo“](prihlaseni.md) |
 | předplatné vypršelo, do konce předplatného zbývá dní: N | WebShare, CZtor nebo Přehraj.to | [Premium, VIP a kredit](premium-a-kredit.md) |

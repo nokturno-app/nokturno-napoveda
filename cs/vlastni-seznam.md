@@ -81,7 +81,7 @@ vypršelý účet), zkusí se další. Jedno video může mít nejvýš 10 odkaz
 
 | Tvar | Zdroj |
 |---|---|
-| `dav:<číslo úložiště>:<cesta>` | tvoje vlastní úložiště 1–3 z nastavení, cesta ve složce úložiště |
+| `dav:<číslo úložiště>:<cesta>` | tvoje vlastní úložiště 1–3 z nastavení (WebDAV nebo SMB), cesta ve složce úložiště |
 | `https://…` | přímá adresa souboru, přehraje se tak, jak je |
 | `ws:<ident>` | WebShare (volitelný zdroj třetí strany) |
 | `hs:<id>:<hash>` | HellSpy (volitelný zdroj třetí strany) |

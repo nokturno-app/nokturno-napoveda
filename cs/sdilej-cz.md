@@ -15,8 +15,8 @@ templates:
     Tým Nokturno
   stremio: |
     Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.
-    V nastavení doplňku (Doplňky → Nokturno → ozubené kolo) v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz a dej Ověřit účet.
-    Pak doplněk přidej znovu tlačítkem Přidat do Stremia a starý odinstaluj.
+    V nastavení doplňku (Doplňky → Nokturno → ozubené kolo) v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz, zadej heslo znovu (po změně účtu se uložené heslo zahodí) a dej Ověřit účet a Uložit změny.
+    Doplněk znovu přidávat nemusíš, účty platí hned.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz
     Tým Nokturno
 ---
@@ -47,8 +47,10 @@ Průvodce prvním nastavením se zeptá sám („Máš účet FastShare nebo Sdi
 V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo `http://<IP zařízení s aplikací>:7140/configure`) v kartě **FastShare / Sdilej.cz**:
 1. Vyplň **Uživatel** a **Heslo**.
 2. **Účet z:** **FastShare.cz**, nebo **Sdilej.cz**.
-3. Dej **Ověřit účet**.
-4. Doplněk přidej znovu tlačítkem **Přidat do Stremia** a starý odinstaluj.
+3. Dej **Ověřit účet** a **Uložit změny** (tlačítko je jen v režimu s profily).
+
+Uložené heslo se do nastavení nevrací, pole ukáže „Uloženo – nech prázdné, pokud ho neměníš“. Když změníš uživatele nebo **Účet z**, pole hlásí „Účet se změnil – zadej heslo znovu“ a bez nového hesla aplikace uložené heslo zahodí.
+Účty platí hned, doplněk znovu přidávat nemusíš. Jen v režimu **Bez profilů** (adresa nese celé nastavení) ho přidej znovu tlačítkem **Přidat do Stremia** a starý odinstaluj.
 
 Soubory z FastShare i Sdilej.cz od verze 9.6.1 přehrávači předává aplikace Nokturno, hrají tedy i ve Stremiu pro Android.
 Na kartě **FastShare** v nastavení aplikace je volba **Přehrávat přímo z FastShare**: přehrávač pak stahuje soubor rovnou z FastShare, ne přes aplikaci. Funguje v Nuviu a ve Stremiu na počítači; Stremio pro Android a webový přehrávač takový stream nepřehrají. Výchozí je vypnutá.

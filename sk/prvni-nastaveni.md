@@ -34,7 +34,7 @@ Pri prvom spustení sa sprievodca ponúkne sám (voľby **Z mobilu**, **Sprievod
 Kedykoľvek ho spustíš znova: **Nastavenia → Pokročilé → Sprievodca nastavením**. Kým nemáš vlastné úložisko
 ani žiadny zdroj, je sprievodca aj prvou položkou hlavného menu.
 
-Sprievodca sa najprv opýta na vlastné úložisko (adresa, meno, heslo). Potom pripomenie, že zdroje tretích strán
+Sprievodca sa najprv opýta na vlastné úložisko (WebDAV, SMB alebo NAS: adresa, meno, heslo). Potom pripomenie, že zdroje tretích strán
 sú voliteľné, a až potom ponúkne ich účty. Nakoniec sa opýta na kľúč TMDB (české popisy), zmeria rýchlosť
 internetu a ponúkne nastavenie TMDb Helpera.
 

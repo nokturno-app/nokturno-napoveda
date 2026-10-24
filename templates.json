@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-23T18:17:32Z",
+  "generated": "2026-10-23T21:47:48Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -597,7 +597,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "FastShare s účtem ze Sdilej.cz",
-      "text": "Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.\nV nastavení doplňku (Doplňky → Nokturno → ozubené kolo) v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz a dej Ověřit účet.\nPak doplněk přidej znovu tlačítkem Přidat do Stremia a starý odinstaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
+      "text": "Ahoj, účet ze Sdilej.cz jde použít, jen musí být vybraný správný web.\nV nastavení doplňku (Doplňky → Nokturno → ozubené kolo) v kartě FastShare / Sdilej.cz přepni Účet z na Sdilej.cz, zadej heslo znovu (po změně účtu se uložené heslo zahodí) a dej Ověřit účet a Uložit změny.\nDoplněk znovu přidávat nemusíš, účty platí hned.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/sdilej-cz",
       "when": {
         "fastshare": [
@@ -611,7 +611,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "FastShare s účtom zo Sdilej.cz",
-      "text": "Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.\nV nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.\nPotom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
+      "text": "Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.\nV nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz, zadaj heslo znova (po zmene účtu sa uložené heslo zahodí) a daj Overiť účet a Uložiť zmeny.\nDoplnok znova pridávať nemusíš, účty platia hneď.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz",
       "when": {
         "fastshare": [
@@ -1031,7 +1031,7 @@
       "lang": "cs",
       "product": "stremio",
       "title": "Položka „⛔ Nokturno“",
-      "text": "„⛔ Nokturno“ místo streamů znamená, že na doplněk přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, nebo aplikaci Nokturno restartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
+      "text": "„⛔ Nokturno“ místo streamů znamená, že na doplněk přišlo naráz moc požadavků.\nPočkej pár minut, nejdéle hodinu, nebo aplikaci Nokturno restartuj.\nJestli v textu stojí, že jsou adresy s nastavením vypnuté, jde o jiný případ: nastavení jako profil ulož na /configure (smí správce aplikace, v režimu Uživatelské účty i přihlášený uživatel) a přidej novou adresu.\nJestli v textu stojí, že je účet zablokovaný, napiš správci aplikace.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/stremio-polozky-nokturno",
       "when": {},
       "priority": 3
@@ -1041,7 +1041,7 @@
       "lang": "sk",
       "product": "stremio",
       "title": "Položka „⛔ Nokturno“",
-      "text": "„⛔ Nokturno“ namiesto streamov znamená, že na doplnok prišlo naraz veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, alebo aplikáciu Nokturno reštartuj.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
+      "text": "„⛔ Nokturno“ namiesto streamov znamená, že na doplnok prišlo naraz veľa požiadaviek.\nPočkaj pár minút, najdlhšie hodinu, alebo aplikáciu Nokturno reštartuj.\nAk v texte stojí, že adresy s nastavením sú vypnuté, ide o iný prípad: nastavenie ako profil ulož na /configure (smie správca aplikácie, v režime Používateľské účty aj prihlásený používateľ) a pridaj novú adresu.\nAk v texte stojí, že je účet zablokovaný, napíš správcovi aplikácie.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/stremio-polozky-nokturno",
       "when": {},
       "priority": 3

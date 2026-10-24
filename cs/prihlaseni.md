@@ -33,8 +33,9 @@ U Sledujteto, Přehraj.to a FastShare / Sdilej.cz Nokturno po odmítnutém přih
    - **Kodi:** vlastní úložiště v **Nokturno → Nastavení → Vlastní úložiště**, zdroje třetích stran
      v **Nokturno → Nastavení → Zdroje a účty**, skupina zdroje. Pozor na mezeru na konci
      a na velká písmena. Pohodlněji to jde z mobilu: **Nastavit z mobilu a přenos → Nastavit z mobilu**.
-   - **Stremio:** v nastavení doplňku (ozubené kolo u Nokturna ve Stremiu) oprav údaje, dej **Ověřit účet**
-     a ulož změny. S profilem platí hned. Ve starém režimu bez profilů je změněné nastavení nová adresa:
+   - **Stremio:** v nastavení doplňku (ozubené kolo u Nokturna ve Stremiu) oprav údaje, dej **Ověřit účet** (u vlastního úložiště **Ověřit úložiště**)
+     a ulož změny. S profilem platí hned a uložené heslo se v poli neukazuje („Uloženo – nech prázdné, pokud ho neměníš“):
+     chceš-li ho změnit, napiš nové, a když pole hlásí „Účet se změnil – zadej heslo znovu“, vyplň ho znovu. Ve starém režimu bez profilů je změněné nastavení nová adresa:
      doplněk přidej znovu a starý ve Stremiu odinstaluj.
    - **Home Assistant:** **Nastavení → Zařízení a služby → Nokturno → Konfigurovat**, krok **Vlastní úložiště**
      nebo **Zdroje a účty**.

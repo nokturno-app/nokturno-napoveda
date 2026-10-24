@@ -81,7 +81,7 @@ vypršaný účet), skúsi sa ďalší. Jedno video môže mať najviac 10 odkaz
 
 | Tvar | Zdroj |
 |---|---|
-| `dav:<číslo úložiska>:<cesta>` | tvoje vlastné úložisko 1–3 z nastavení, cesta v priečinku úložiska |
+| `dav:<číslo úložiska>:<cesta>` | tvoje vlastné úložisko 1–3 z nastavení (WebDAV alebo SMB), cesta v priečinku úložiska |
 | `https://…` | priama adresa súboru, prehrá sa tak, ako je |
 | `ws:<ident>` | WebShare (voliteľný zdroj tretej strany) |
 | `hs:<id>:<hash>` | HellSpy (voliteľný zdroj tretej strany) |

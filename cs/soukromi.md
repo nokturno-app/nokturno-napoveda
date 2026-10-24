@@ -36,7 +36,7 @@ Tituly ani zdroje ne.
 
 ## Co se neposílá nikdy
 - hesla, tokeny ani jména k účtům ke zdrojům,
-- adresa doplňku pro Stremio (jsou v ní tvoje účty),
+- adresa doplňku pro Stremio (je klíčem k tvým účtům, v režimu **Bez profilů** jsou v ní přímo i hesla),
 - adresy tvých úložišť a obsah hledání.
 
 Ke statistikám se neukládá IP adresa. Server si jako každý web vede technické záznamy o požadavcích i s IP adresou
@@ -45,7 +45,10 @@ a drží je 14 dní kvůli provozu a ochraně před zneužitím.
 ## Kde jsou hesla
 Jen ve tvém zařízení: v nastavení doplňku v Kodi, v integraci v Home Assistantu, nebo u aplikace Nokturno pro Stremio
 na tvém vlastním serveru. Doplněk pro Stremio, který běží **na cizím serveru**, ale tvoje přihlašovací údaje vidí,
-protože jsou v adrese doplňku. Proto ho pouštěj jen u sebe, viz [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
+protože jsou uložené v aplikaci (v režimu **Bez profilů** v adrese doplňku). Proto ho pouštěj jen u sebe,
+viz [Nokturno pro Stremio – aplikace](stremio-aplikace.md).
+V přehledu uživatelů v režimu **Uživatelské účty** vidí správce aplikace u každého jen počet profilů, kdy byl
+naposledy aktivní, a počet přehrání za 7 a 30 dní, ne co sleduje.
 
 ## Jak sběr vypnout
 | Kde | Jak |

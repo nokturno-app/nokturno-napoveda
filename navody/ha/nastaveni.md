@@ -16,6 +16,7 @@ Začni vlastním úložištěm, zdroje třetích stran jsou volitelné. Co jedno
 - **Preferovat prostorový zvuk (5.1 a víc)** – mění jen pořadí, stereo streamy nemizí.
 - **Skrýt SD streamy** – streamy pod 720p se nenabídnou. U starších titulů tím nabídka může zůstat prázdná.
 - **Skrýt Dolby Vision streamy** a **Skrýt HDR streamy** – takové soubory se nezobrazí nikdy.
+- **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – skryje jen Dolby Vision, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru, u ostatních jen podle označení P5 v názvu. Dolby Vision se záložní vrstvou (HDR10, HLG) zůstane.
 - **Max. datový tok (Mb/s, 0 = bez omezení)**
 - **Řazení streamů** – *Pořadí od zdroje* / *Nejlepší kvalita napřed* / *Od největšího souboru* / *Od nejmenšího souboru*. Rozhoduje, když je jazyk i zvuk shodný.
 

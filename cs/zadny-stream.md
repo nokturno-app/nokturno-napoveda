@@ -36,6 +36,8 @@ které máš zapnuté a nastavené. Zdroje třetích stran jsou volitelné a u n
    Ve vlastním úložišti pomůže, když název souboru nebo složky obsahuje název titulu a rok.
    - Dole v dialogu streamů zkus **Hledat volněji podle názvu souboru** (ve starších verzích **Zkusit uvolněný fulltext**).
    - Po neúspěšném hledání se doplněk zeptá „Zkusit hledat pod jiným názvem?“. Zadej český nebo originální název.
+   - Když žádný zdroj čistě nic nenajde, titul se 20 minut znovu neprohledává. Nově přidaný soubor se tak může ukázat až po 20 minutách.
+     Chceš hledat hned znovu? V kontextovém menu filmu nebo dílu zvol **Vybrat stream** – ten hledá vždy znovu.
 
 ## Proč Nokturno nenabídne soubor, který na zdroji vidím
 Nokturno bere jen soubory, které k titulu opravdu patří (název, rok, u seriálu číslo série a dílu, případně název dílu nebo datum vysílání v názvu souboru).

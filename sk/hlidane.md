@@ -79,14 +79,21 @@ zapnuté). Sledované sa potom zdieľajú medzi všetkými Kodi aj s Home Assist
 [Synchronizácia medzi zariadeniami nefunguje](synchronizace.md).
 
 ## Home Assistant
-V karte Nokturno:
-- **Domov → Sledované:** tituly so stavom (dá sa pustiť, kontrolovať ďalej, sleduje sa, zatiaľ nie).
-  Vlajočka pri titule so streamami zapne alebo vypne Kontrolovať ďalej. Titul, ktorý sa dá pustiť,
-  presunieš tlačidlom **Presunúť do Môjho zoznamu**.
-- **Knižnica → Sledované seriály:** pri každom seriáli nový diel alebo posledný diel na sledovanie.
-  Vlajočka pri poslednom diele = Kontrolovať ďalej pre ten diel. Ďalej tu je **Označiť nový diel ako videný**,
-  **Otvoriť** a **Prestať sledovať**.
-- **V detaile titulu:** zvonček **Pridať do Sledovaných**, pri seriáli vo výpise dielov oko **Sledovať nové diely**.
+V karte Nokturno je **Sledované** rad plagátov na úvodnej obrazovke, vedľa Pokračovať v sledovaní, Môjho zoznamu a Katalógov.
+Ukáže 12 titulov, zvyšok je za dlaždicou **Zobraziť všetko**. Kým v ňom nič nie je, rad sa nezobrazí.
+
+- **Seriály** sú prvé. Na plagáte s novým dielom je štítok „nový diel 1x03“.
+- **Tituly** sú za seriálmi. Plagát titulu, ktorý zatiaľ nemá žiadny stream, je stlmený. Pri sledovanom diele je na plagáte číslo dielu (1x02).
+- Klepnutím na plagát sa otvorí dialóg titulu. Je v ňom stav titulu (dá sa pustiť, kontrolovať ďalej, sleduje sa, zatiaľ nie), pri seriáli nový diel, diel na sledovanie, alebo „zatiaľ bez streamu“, a dole voľby:
+  - seriál: **Otvoriť**, **Označiť nový diel ako videný** (keď je nový diel), **Kontrolovať ďalej diel 1x02 (streamy nevyhovujú)**
+    alebo **Prestať kontrolovať diel 1x02** (len keď je nejaký diel na sledovanie) a **Prestať sledovať**,
+  - titul so streamami: **Vybrať stream**, **Presunúť do Môjho zoznamu** (len keď sa nekontroluje ďalej), **Kontrolovať ďalej (streamy nevyhovujú)**
+    alebo **Prestať kontrolovať ďalej** a **Odobrať zo Sledovaných**,
+  - titul bez streamov: **Vybrať stream** (pri diele **Otvoriť**) a **Odobrať zo Sledovaných**.
+- Do Sledovaných pridáš titul z dialógu ktoréhokoľvek radu alebo výsledkov vyhľadávania: **Pridať do Sledovaných**, pri seriáli **Sledovať nové diely**.
+  V detaile titulu je to isté zvonček, pri seriáli vo výpise dielov oko.
+
+Keď máš v editore karty zapnuté **Klik na plagát rovno prehrá (dlhé podržanie = ponuka)**, dialóg otvorí dlhé podržanie.
 
 Upozornenia do mobilu: v nastaveniach integrácie, sekcia **Sťahovanie a odkazy**, vyplň
 **Upozornenia na stiahnutie a nové diely** (napríklad `notify.mobile_app_telefon`). Prázdne pole = upozornenie len v Home Assistante.

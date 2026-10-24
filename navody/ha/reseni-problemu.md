@@ -6,7 +6,9 @@ Problémy se zdroji (chybějící jazyk zvuku, nabídnutý jiný titul, anglick�
 
 ## Soubory z vlastního úložiště se nenabízejí
 
-Úložiště musí být dosažitelné z Home Assistantu a soubory pojmenované podle titulu (rok u filmu, `S01E02` u dílu). Zkontroluj krok **Vlastní úložiště** v nastavení integrace a senzor [Stav zdrojů](sluzby-a-senzory.md#stav-zdroju). Podrobně: [Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md).
+Úložiště (WebDAV nebo sdílená složka SMB) musí být dosažitelné z Home Assistantu a soubory pojmenované podle titulu (rok u filmu, `S01E02` u dílu). Zkontroluj krok **Vlastní úložiště** v nastavení integrace a senzor [Stav zdrojů](sluzby-a-senzory.md#stav-zdroju). Podrobně: [Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md).
+
+Právě přidaný soubor se nemusí hned ukázat: když u titulu karta napsala „Pro tento titul se nenašel žádný stream.“, hledá se znovu obvykle až za 20 minut. Hned to vynutíš akcí **Vymazat cache API** (`nokturno.clear_cache`) v **Nástroje pro vývojáře → Akce**.
 
 ## Integrace hlásí „vyžaduje opravu“
 

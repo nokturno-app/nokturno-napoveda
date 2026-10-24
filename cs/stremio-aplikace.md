@@ -49,8 +49,9 @@ kde Stremio pouštíš.
    jednou otevři, jinak ji Android po zapnutí nespustí.
 4. Otevři nastavení: na televizi přímo v aplikaci Nokturno (bez prohlížeče se formulář otevře v ní), nebo
    pohodlněji z telefonu ve stejné síti na `http://<IP adresa televize>:7140/configure`. IP adresu ukazuje
-   hlavní obrazovka aplikace.
-5. Založ profil (napiš jeho název a dej **Založit nový profil**), pak vyplň [vlastní úložiště](vlastni-uloziste.md)
+   hlavní obrazovka aplikace v kartě „Z jiného zařízení v síti“. Přednost má Wi-Fi nebo ethernet, ne mobilní data
+   nebo VPN, takže na ni dosáhneš z telefonu ve stejné síti.
+5. Při prvním otevření nejdřív nastav správce ([Správce, režimy a účty](#spravce-rezimy-a-ucty)). Pak založ profil (napiš jeho název a dej **Založit nový profil**) a vyplň [vlastní úložiště](vlastni-uloziste.md)
    a případně účty zdrojů a dej **✓ Ověřit všechny účty**. Postup je v článku [Jak přidat Nokturno do Stremia nebo Nuvia](stremio-instalace.md).
 6. **Přidat do Stremia** nebo **Přidat do Nuvia**. Na téže televizi to jde rovnou z formuláře v aplikaci,
    na ostatních zařízeních v síti z formuláře otevřeného přes IP adresu.
@@ -90,7 +91,7 @@ amd64 a aarch64; Raspberry Pi s 32bit systémem ne). Běží pak doma pořád, d
    Úložiště** a vlož `https://github.com/nokturno-app/nokturno-stremio-ha`.
 2. Nainstaluj **Nokturno pro Stremio** a dej **Spustit**.
 3. **Otevřít webové rozhraní**, nebo z telefonu či počítače ve stejné síti `http://<IP Home Assistantu>:7140/configure`.
-4. Založ profil s názvem, vyplň vlastní úložiště, případně volitelné účty zdrojů, dej **✓ Ověřit všechny účty** a pak **Přidat do Stremia** nebo **Přidat do Nuvia**.
+4. Při prvním otevření nejdřív nastav správce ([Správce, režimy a účty](#spravce-rezimy-a-ucty)). Pak založ profil s názvem, vyplň vlastní úložiště, případně volitelné účty zdrojů, dej **✓ Ověřit všechny účty** a pak **Přidat do Stremia** nebo **Přidat do Nuvia**.
 
 Doplněk používá síť hostitele: port **7140** (nastavení a doplněk pro Nuvio) a **7141** (HTTPS přes local-ip.co
 pro Stremio). V záložce **Konfigurace** jde vypnout statistiky (`stats`), hlášení o pádech (`crash_reports`)
@@ -174,7 +175,7 @@ Aplikace pozná správce podle jména a hesla, ne podle sítě. Funguje tak stej
 Doplněk ve Stremiu ani v Nuviu heslo nechce, adresa doplňku se nemění.
 
 **První spuštění.** Dokud aplikace nemá správce, stránka nastavení (`/configure`) ukáže jen kartu **Správce aplikace**:
-jméno, heslo (aspoň 6 znaků) dvakrát a e-mail. E-mail uvidí každý na přihlašovací stránce jako kontakt pro zapomenuté
+jméno (3 až 32 znaků: písmena bez diakritiky, číslice, tečka, pomlčka, podtržítko; velká písmena se převedou na malá), heslo (aspoň 6 znaků) dvakrát a e-mail. E-mail uvidí každý na přihlašovací stránce jako kontakt pro zapomenuté
 heslo, aplikace e-maily neposílá. Když stránku neotevřeš přes adresu z domácí sítě (`127.0.0.1`, `192.168.…`), ale
 přes doménu nebo proxy, chce navíc kód, který aplikace při startu vypíše do výpisu na řádek „Aplikace zatím nemá správce“ (`journalctl`, `docker logs`). Na VPS
 otevři `/configure` hned po instalaci, ještě než aplikaci pustíš ven: nginx s holým `proxy_pass` vypadá jako
@@ -204,14 +205,14 @@ volba zapnutá hned po přepnutí. Ve Stremiu se místo streamů ukáže řádek
 
 ### Hesla ve formuláři
 Uložená hesla se do stránky nastavení nikdy nevrací, ani správci. Pole zůstane prázdné s poznámkou **Uloženo – nech
-prázdné, pokud ho neměníš**. Když u účtu změníš jméno, e-mail nebo adresu úložiště, uložené heslo se nepoužije a pole
+prázdné, pokud ho neměníš**. Když u účtu změníš jméno, e-mail, adresu úložiště nebo poskytovatele FastShare, uložené heslo se nepoužije a pole
 ukáže **Účet se změnil – zadej heslo znovu**. Tak si nikdo s adresou doplňku nepřesměruje úložiště na svůj server,
 aby mu aplikace heslo poslala. Totéž platí pro **Ověřit účet**.
 
 ### Uživatelé
 V sekci **⚙ Aplikace → Uživatelé** správce přidává uživatele a u každého vidí počet profilů, poslední aktivitu a počet
 přehrání za 7 a 30 dní, bez názvů titulů. Může změnit heslo, zablokovat (přestanou fungovat i adresy profilů
-uživatele) nebo smazat i s profily. Zapomenuté heslo uživatele mění správce, přihlašovací stránka ukazuje jeho e-mail.
+uživatele; ve Stremiu se místo streamů ukáže „Účet je zablokovaný správcem aplikace.“) nebo smazat i s profily. Zapomenuté heslo uživatele mění správce, přihlašovací stránka ukazuje jeho e-mail.
 
 ### Přihlášení a zapomenuté heslo
 - **Přihlášení** vydrží rok. V režimu bez profilů je nad formulářem volba **Jsi správce aplikace? Přihlas se**.

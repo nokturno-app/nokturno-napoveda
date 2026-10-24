@@ -97,6 +97,8 @@ Placený katalog [cztor.com](https://cztor.com) se soubory na giganthost.com. Zv
 - **Spárovat PINem** – na TV se ukáže PIN, zadáš ho na `cztor.com/activate`. **Heslo se do doplňku nezadává** a doplněk ho nikdy nevidí.
 - **Stav účtu** ukáže předplatné a dokdy platí, **Odhlásit toto zařízení** párování zruší.
 
+Stáhnout jde jen to, co CZtor povolí – streamy, které stažení nepovolují, Kodi ve výběru ke stažení neukáže.
+
 Spárování platí jen pro jedno zařízení. Při [přenosu nastavení](synchronizace.md#prenos-nastaveni-do-dalsiho-kodi) ani při synchronizaci se nekopíruje – na dalším Kodi spáruješ znovu.
 
 Podrobně v nápovědě: [CZtor: „zařízení není spárované“](../../cs/cztor.md).
@@ -129,6 +131,8 @@ U titulů, ke kterým zdroje nemají české ani slovenské titulky, je doplněk
 - **Ověřit OpenSubtitles** (ve starších verzích Vyzkoušet OpenSubtitles) – ověří spojení, účet a kolik titulků dnes zbývá.
 
 Pořadí titulků ze všech zdrojů se řídí preferovaným jazykem (čeština, pak slovenština, nebo obráceně).
+
+Titulky z OpenSubtitles jde stáhnout i ručně během přehrávání: v dialogu přehrávače *Titulky → Stáhnout titulky* vyber službu **Nokturno**. Najde titulky k právě přehrávanému filmu nebo dílu, jde hledat i ručně podle názvu a napřed nabídne jazyky z nastavení Nokturna. Při vypnutém OpenSubtitles se ukáže „OpenSubtitles je vypnuté (Nastavení → Zdroje a účty → OpenSubtitles).“
 
 ## TMDB API
 

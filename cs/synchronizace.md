@@ -44,6 +44,11 @@ Kód je zároveň klíč k datům. Bez něj je nikdo nepřečte ani neobnoví, p
 Chceš mít kartu v Home Assistantu aktuální a synchronizuješ přes Dashboard Nokturna? Zadej týž kód skupiny
 i v nastavení integrace v Home Assistantu (pole **Kód skupiny**). Home Assistant se stane dalším členem skupiny.
 
+## Film zmizel z Mého seznamu
+V Kodi film z Mého seznamu po dokoukání sám zmizí, seriál až po zhlédnutí všech vydaných dílů. Vypnout to jde v
+**Nokturno → Nastavení → Přehrávání → Odebírat zhlédnuté z Mého seznamu**. Při synchronizaci Mého seznamu se odebrání
+přenese i na ostatní zařízení.
+
 ## Změny se neprojeví hned
 Synchronizace běží na pozadí po několika minutách. Hned ji spustí **Synchronizovat teď**
 (v nastavení i v Mém seznamu). Na telefonu s Androidem se synchronizuje hlavně ve chvíli, kdy je Kodi otevřené.

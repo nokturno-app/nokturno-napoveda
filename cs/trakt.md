@@ -75,6 +75,10 @@ Od verze 10.0 je Watchlist na Traktu totéž co **Můj seznam** v Nokturnu (Kodi
 - kontroluje se každých 15 minut, ne při přehrávání a ne bez sítě,
 - na Trakt jdou jen filmy a seriály, ne jednotlivé díly ani soubory.
 
+Seriál, který Trakt sám vyhodí z Watchlistu po prvním zhlédnutém dílu, v Mém seznamu zůstane. V Kodi z něj odejde
+až po zhlédnutí všech vydaných dílů (volba **Odebírat zhlédnuté z Mého seznamu** v **Nastavení → Přehrávání**,
+výchozí zapnutá) a odebrání se propíše i na ostatní zařízení. V Home Assistantu se zhlédnutý seriál z Mého seznamu sám neodebere; film odejde, jen když ho Trakt vyhodí z Watchlistu.
+
 Tituly z Watchlistu už nejsou v [Hlídaných](hlidane.md). Když chceš vědět, až nějaký půjde pustit, zapni u něj
 hlídání ručně.
 

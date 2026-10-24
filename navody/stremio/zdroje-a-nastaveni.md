@@ -4,7 +4,7 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 
 | Zdroj | Co dává | Co potřebuje |
 |---|---|---|
-| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV nebo SMB složky (`smb://server/složka`, SMB jen v domácí síti), případně jméno a heslo |
+| **Vlastní úložiště** | tvoje soubory z NAS, Nextcloudu nebo serveru, vždy první mezi streamy | adresa WebDAV nebo SMB složky (`smb://server/složka`, SMB musí být dosažitelné z aplikace), případně jméno a heslo |
 | **WebShare** | největší výběr souborů, všechny kvality až po 4K; přehrává se přímo z WebShare | účet WebShare, pro plynulé přehrávání **VIP** |
 | **Sosáč** | české filmy a seriály s dabingem a titulky, po dílech | účet **Streamuj.tv** (přehrává se odtamtud) |
 | **Sledujteto** | velký výběr filmů a seriálů, rozlišení a zvuk posílá přímo jejich rozhraní | účet Sledujteto, k přehrání **Premium** |
@@ -15,7 +15,7 @@ Hlavní funkcí je [vlastní úložiště](#vlastni-uloziste). Ostatní zdroje j
 
 ## Vlastní úložiště
 
-Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní úložiště** – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server) nebo na sdílené složce SMB. SMB čte aplikace Nokturno, takže počítač nebo telefon s aplikací musí být ve stejné síti jako sdílená složka; na VPS SMB nefunguje. U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
+Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní úložiště** – až tři složky s vlastními soubory na WebDAV (NAS, Nextcloud, server) nebo na sdílené složce SMB. SMB čte aplikace Nokturno přímo, takže na sdílenou složku musí dosáhnout ona: běží doma, nebo má do domácí sítě VPN (i na VPS). U každého: **název** (ukáže se u streamu), **adresa složky**, **uživatelské jméno** a **heslo**. Tlačítko **Ověřit úložiště** zkusí přečíst kořen složky a řekne, kolik v něm je položek, nebo proč to nejde.
 
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
 - **Soubor přehrávači předává aplikace Nokturno** (od verze 9.6.1), přihlášení k úložišti do Stremia neodchází a data tečou přes aplikaci. Ve webovém přehrávači Stremia v prohlížeči záleží na formátu souboru (`.mkv`, `.avi` a podobné nepřehraje), v aplikaci (Stremio, Nuvio) hrají.
@@ -27,6 +27,8 @@ Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní
 
 Zdroje třetích stran jsou na dalších kartách sekce **Vlastní úložiště a zdroje**. Všechny jsou volitelné a v novém
 profilu vypnuté.
+
+U uloženého profilu formulář hesla zpět neukazuje, ani správci aplikace: pole zůstane prázdné s textem „Uloženo – nech prázdné, pokud ho neměníš“. Když změníš jméno nebo e-mail účtu (u vlastního úložiště i adresu, u FastShare i volbu **Účet z**), pole hlásí „Účet se změnil – zadej heslo znovu“ a heslo je třeba zadat znovu.
 
 ### WebShare
 
@@ -96,7 +98,7 @@ Titulky z **OpenSubtitles** má zatím jen doplněk pro Kodi.
 
 ## Co se u streamu zobrazuje
 
-Vlevo kvalita (a značky jako HDR10, DV nebo DV only, které poznáváme z hlavičky souboru u prvních streamů výpisu, jinak podle názvu), vpravo název souboru, jazyky zvuku jako vlaječky s počtem kanálů a kodekem (např. `🇨🇿 5.1 AC3`), titulky, velikost, datový tok, délka a zdroj. Vlnovka (`~Full HD`) znamená odhad, ne údaj ze zdroje nebo ze souboru.
+Vlevo kvalita (a značky jako HDR10, HLG, DV nebo DV only, které poznáváme z hlavičky souboru u prvních streamů výpisu (u Dolby Vision i jeho záložní vrstvu HDR10 nebo HLG), jinak podle názvu; HDR10+ se pozná jen podle názvu), vpravo název souboru, jazyky zvuku jako vlaječky s počtem kanálů a kodekem (např. `🇨🇿 5.1 AC3`), titulky, velikost, datový tok, délka a zdroj. Vlnovka (`~Full HD`) znamená odhad, ne údaj ze zdroje nebo ze souboru. U souborů ze sdílené složky SMB se hlavička nečte, proto u nich bývá méně technických údajů (kvalita, HDR, zvuk).
 
 ## Vlastní katalogy
 
@@ -104,7 +106,7 @@ Karta **Vlastní katalogy** – až 20 seznamů filmů a seriálů na domovské 
 
 - **Ze šablony** – Populární, Nejlépe hodnocené, Nové s CZ dabingem, Filmy ve 4K s CZ dabingem, České filmy a seriály, Pohádky s CZ dabingem. Šablonu jde dál upravit.
 - **Katalog z TMDB** ukáže hned všechny tituly podle filtrů. **Jen tituly se streamem** ověřuje na pozadí, dokud aplikace běží, a ukáže jen to, co jde přehrát v požadované kvalitě, jazyce zvuku a titulků a s 5.1.
-- Filtry: žánry, témata (Pohádky, Vánoce, Podle skutečné události… nejvýš 3), země původu (nejvýš 5), roky (od–do, posledních X let) a řazení.
+- Filtry: žánry, témata (Pohádky, Vánoce, Podle skutečné události… nejvýš 3), země původu (nejvýš 5) nebo naopak **Vyloučit země** (platí, jen když nejsou vybrané žádné země původu), roky (od–do, posledních X let) a řazení.
 - **Název** do 40 znaků se vyplní sám, přepsat ho jde.
 
 Ověřuje se 1 titul za minutu napříč všemi ověřovanými katalogy, nový katalog dostane úvodní dávku 40 titulů. Podrobně v nápovědě: [Vlastní katalogy](../../cs/vlastni-katalogy.md).

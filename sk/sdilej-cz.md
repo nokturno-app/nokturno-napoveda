@@ -15,8 +15,8 @@ templates:
     Tím Nokturno
   stremio: |
     Ahoj, účet zo Sdilej.cz sa dá použiť, len musí byť vybraný správny web.
-    V nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz a daj Overiť účet.
-    Potom doplnok pridaj znova tlačidlom Pridať do Stremia a starý odinštaluj.
+    V nastavení doplnku (Doplnky → Nokturno → ozubené koliesko) v karte FastShare / Sdilej.cz prepni Účet z na Sdilej.cz, zadaj heslo znova (po zmene účtu sa uložené heslo zahodí) a daj Overiť účet a Uložiť zmeny.
+    Doplnok znova pridávať nemusíš, účty platia hneď.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/sdilej-cz
     Tím Nokturno
 ---
@@ -47,8 +47,10 @@ Sprievodca prvým nastavením sa spýta sám („Máš účet FastShare alebo Sd
 V nastavení doplnku (v Stremiu **Doplnky → Nokturno → ozubené koliesko**, alebo `http://<IP zariadenia s aplikáciou>:7140/configure`) v karte **FastShare / Sdilej.cz**:
 1. Vyplň **Používateľ** a **Heslo**.
 2. **Účet z:** **FastShare.cz** alebo **Sdilej.cz**.
-3. Daj **Overiť účet**.
-4. Doplnok pridaj znova tlačidlom **Pridať do Stremia** a starý odinštaluj.
+3. Daj **Overiť účet** a **Uložiť zmeny** (tlačidlo je len v režime s profilmi).
+
+Uložené heslo sa do nastavení nevracia, pole ukáže „Uložené – nechaj prázdne, ak ho nemeníš“. Keď zmeníš používateľa alebo **Účet z**, pole hlási „Účet sa zmenil – zadaj heslo znova“ a bez nového hesla aplikácia uložené heslo zahodí.
+Účty platia hneď, doplnok znova pridávať nemusíš. Len v režime **Bez profilov** (adresa nesie celé nastavenie) ho pridaj znova tlačidlom **Pridať do Stremia** a starý odinštaluj.
 
 Súbory z FastShare aj Sdilej.cz od verzie 9.6.1 prehrávaču odovzdáva aplikácia Nokturno, hrajú teda aj v Stremiu pre Android.
 Na karte **FastShare** v nastavení aplikácie je voľba **Prehrávať priamo z FastShare**: prehrávač potom sťahuje súbor rovno z FastShare, nie cez aplikáciu. Funguje v Nuviu a v Stremiu na počítači; Stremio pre Android a webový prehrávač takýto stream neprehrajú. Predvolene je vypnutá.

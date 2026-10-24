@@ -44,6 +44,8 @@ Každý okruh jde zapnout zvlášť:
 - **Synchronizovat nastavení doplňku** (výchozí vypnuto) – preferovaný jazyk, řazení streamů, zapnuté zdroje a podobně.
 - **Synchronizovat účty ke zdrojům** (výchozí vypnuto) – přihlášení ke zdrojům, vlastnímu úložišti, klíče TMDB a Last.fm a hlavičky [vlastních seznamů](../../cs/vlastni-seznam.md). Hesla jdou zašifrovaná a server je nepřečte, ale kdo má kód skupiny, přečte je – kód patří jen tvým zařízením.
 
+Dokoukaný film z Mého seznamu sám zmizí, seriál až po zhlédnutí všech dosud vydaných dílů. Vypnout to jde v *Nastavení → Přehrávání* volbou **Odebírat zhlédnuté z Mého seznamu**. Při synchronizaci Mého seznamu se odebrání přenese i na ostatní zařízení.
+
 Nikdy se nesdílí složka pro stahování, samotné nastavení synchronizace a přihlášení k CZtoru a Traktu – ta se párují na každém zařízení zvlášť.
 
 **Synchronizovat teď** (v nastavení a v Mém seznamu) spustí výměnu hned. Na telefonu s Androidem se synchronizuje hlavně ve chvíli, kdy je Kodi otevřené – na pozadí mu systém často vypne připojení.

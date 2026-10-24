@@ -21,7 +21,9 @@ templates:
 
 Doplněk pro Stremio běží v aplikaci **Nokturno pro Stremio** u tebe doma. Jak ji stáhnout a spustit, je v článku
 [Nokturno pro Stremio – aplikace](stremio-aplikace.md). Nastavení (účty, úložiště, předvolby) si aplikace od verze
-9.6.0 ukládá u sebe jako **profil**. Adresa doplňku nese jen náhodný klíč profilu, žádná hesla.
+9.6.0 ukládá u sebe jako **profil**. Adresa doplňku nese jen náhodný klíč profilu, žádná hesla. Správce aplikace může v sekci **⚙ Aplikace** zvolit i jiný
+režim (Bez profilů, Uživatelské účty), viz [Nokturno pro Stremio – aplikace](stremio-aplikace.md#spravce-rezimy-a-ucty).
+Tento návod popisuje výchozí režim Profily.
 
 ## 1. Založ profil
 Otevři v prohlížeči `http://<IP adresa zařízení s aplikací>:7140/configure` (na tomtéž zařízení
@@ -63,7 +65,9 @@ Adresu doplňku nikomu neposílej. Hesla v ní nejsou, ale kdo ji má a dostane 
 ## Změna nastavení
 Ve Stremiu **Doplňky → Nokturno → ozubené kolo**, nebo otevři `/configure` a klikni na název profilu. Uprav nastavení
 a dej **Uložit změny** (tlačítko se objeví, jakmile něco změníš). Účty, úložiště a předvolby platí hned,
-**doplněk do Stremia znovu nepřidáváš**.
+**doplněk do Stremia znovu nepřidáváš**. Uložená hesla se do formuláře nevracejí: pole zůstane prázdné s poznámkou
+*Uloženo – nech prázdné, pokud ho neměníš*. Když u účtu změníš jméno, e-mail, adresu úložiště nebo poskytovatele FastShare, pole hlásí
+*Účet se změnil – zadej heslo znovu*.
 
 Výjimka jsou **katalogy**: Stremio si seznam katalogů pamatuje, takže po zapnutí nebo vypnutí katalogu doplněk
 ve Stremiu odinstaluj a přidej znovu.
@@ -71,7 +75,8 @@ ve Stremiu odinstaluj a přidej znovu.
 ## Víc profilů
 Každý profil má vlastní adresu doplňku a vlastní nastavení. Hodí se, když má každý člen domácnosti jiné účty, nebo když
 chceš na televizi jiné předvolby než na mobilu. Nový profil založíš přes **← Všechny profily** → **Založit nový profil**.
-Smazaný profil přestane fungovat ve všech aplikacích, kam jsi ho přidal.
+Smazaný profil přestane fungovat ve všech aplikacích, kam jsi ho přidal. V režimu Uživatelské účty může správce profil
+předat jinému uživateli (u profilu vybereš z rozbalovacího seznamu jméno uživatele), adresa doplňku se přitom nemění.
 
 ## Stará dlouhá adresa (do verze 9.5.x)
 Dřívější adresa doplňku nesla celé nastavení i s účty (začínala `/c/eyJ…`). Když ve Stremiu u takového doplňku
@@ -80,7 +85,9 @@ otevřeš ozubené kolo, stránka nastavení ho sama převede na profil a ukáž
 2. Starý doplněk ve Stremiu odinstaluj.
 3. Doplň profilu název, ať ho v seznamu poznáš.
 
-Od té chvíle při změnách nastavení doplněk přidávat nemusíš. Stará adresa funguje dál, dokud ji neodinstaluješ.
+Od té chvíle při změnách nastavení doplněk přidávat nemusíš. Stará adresa funguje dál, dokud ji neodinstaluješ nebo dokud ji správce aplikace nevypne (volba **Vypnout staré adresy s nastavením**
+v sekci ⚙ Aplikace). Pak se místo streamů ukáže hláška *Adresy s nastavením jsou v téhle aplikaci vypnuté. Ulož si nastavení jako profil na …/configure*
+a doplněk je potřeba přidat znovu z profilu. V režimu Uživatelské účty jsou staré adresy ve výchozím stavu vypnuté.
 
 ## Nokturno mám ve Stremiu dvakrát
 Je to starý a nový doplněk, nebo dva různé profily. Ve Stremiu **Doplňky** odinstaluj ten, který nechceš.
@@ -90,6 +97,8 @@ Je to starý a nový doplněk, nebo dva různé profily. Ve Stremiu **Doplňky**
 |---|---|
 | „Tohle nastavení už v aplikaci není“ | profil byl smazaný. Otevři `/configure`, založ nový profil a doplněk přidej znovu. |
 | QR kód se v telefonu neotevře | telefon není ve stejné síti jako aplikace. Připoj ho na domácí Wi-Fi, nebo použij [Tailscale nebo VPN](stremio-mimo-domov.md). Aplikace v Androidu ukazuje adresu pro ostatní zařízení z Wi-Fi, ne z mobilních dat. Telefon i televize musí být ve stejné Wi-Fi; adresa 127.0.0.1 funguje jen na samotném telefonu. |
+| Ve výpisu streamů je místo streamů hláška „Adresy s nastavením jsou v téhle aplikaci vypnuté“ | správce vypnul staré adresy. Na `/configure` ulož nastavení jako profil (smí správce aplikace, v režimu Uživatelské účty i přihlášený uživatel, jinak ho o to požádej), přidej doplněk znovu a starý odinstaluj. |
+| Ve výpisu streamů je hláška „Účet je zablokovaný správcem aplikace“ | správce zablokoval majitele profilu. Napiš správci aplikace (případně jeho e-mail na přihlašovací stránce `/configure`). |
 | Změna se ve Stremiu neprojevila | u účtů a předvoleb otevři titul znovu. U katalogů doplněk odinstaluj a přidej znovu. |
 | „Unable to resolve host …my.local-ip.co“ nebo *Failed to fetch* | DNS zahodilo adresu doplňku (ochrana proti DNS rebinding). Android: Nastavení → Připojení → Další nastavení připojení → Soukromé DNS → `one.one.one.one`. Router nebo Pi-hole: výjimka pro `my.local-ip.co` (`rebind-domain-ok=/my.local-ip.co/`). |
 

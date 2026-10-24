@@ -78,14 +78,21 @@ další už znovu nekontroluje, a oznámení přijde na každé. Nastavení sync
 [Synchronizace mezi zařízeními nefunguje](synchronizace.md).
 
 ## Home Assistant
-V kartě Nokturno:
-- **Domů → Hlídané:** tituly se stavem (lze pustit, kontrolovat dál, hlídá se, zatím ne).
-  Vlaječka u titulu se streamy zapne nebo vypne Kontrolovat dál. Titul, který jde pustit,
-  přesuneš tlačítkem **Přesunout do Mého seznamu**.
-- **Knihovna → Hlídané seriály:** u každého seriálu nový díl, nebo poslední díl ke sledování.
-  Vlaječka u posledního dílu = Kontrolovat dál pro ten díl. Dál tu je **Označit nový díl jako viděný**,
-  **Otevřít** a **Přestat hlídat**.
-- **V detailu titulu:** zvoneček **Přidat do Hlídaných**, u seriálu ve výpisu dílů oko **Hlídat nové díly**.
+V kartě Nokturno je **Hlídané** řada plakátů na úvodní obrazovce, vedle Pokračovat ve sledování, Mého seznamu a Katalogů.
+Ukáže 12 titulů, zbytek je za dlaždicí **Zobrazit vše**. Dokud v ní nic není, řada se nezobrazí.
+
+- **Seriály** jsou první. Na plakátu s novým dílem je štítek „nový díl 1x03“.
+- **Tituly** jsou za seriály. Plakát titulu, který zatím žádný stream nemá, je ztlumený. U hlídaného dílu je na plakátu číslo dílu (1x02).
+- Klepnutím na plakát se otevře dialog titulu. Je v něm stav titulu (lze pustit, kontrolovat dál, hlídá se, zatím ne), u seriálu nový díl, díl ke sledování, nebo „zatím bez streamu“, a dole volby:
+  - seriál: **Otevřít**, **Označit nový díl jako viděný** (když je nový díl), **Kontrolovat dál díl 1x02 (streamy nevyhovují)**
+    nebo **Přestat kontrolovat díl 1x02** (jen když je nějaký díl ke sledování) a **Přestat hlídat**,
+  - titul se streamy: **Vybrat stream**, **Přesunout do Mého seznamu** (jen když se nekontroluje dál), **Kontrolovat dál (streamy nevyhovují)**
+    nebo **Přestat kontrolovat dál** a **Odebrat z Hlídaných**,
+  - titul bez streamů: **Vybrat stream** (u dílu **Otevřít**) a **Odebrat z Hlídaných**.
+- Do Hlídaných přidáš titul z dialogu kterékoli řady nebo výsledků hledání: **Přidat do Hlídaných**, u seriálu **Hlídat nové díly**.
+  V detailu titulu je totéž zvoneček, u seriálu ve výpisu dílů oko.
+
+Když máš v editoru karty zapnuté **Klik na plakát rovnou přehraje (dlouhý stisk = nabídka)**, dialog otevře dlouhý stisk.
 
 Oznámení do mobilu: v nastavení integrace, sekce **Stahování a odkazy**, vyplň **Oznámení o stažení a nových dílech**
 (třeba `notify.mobile_app_telefon`). Prázdné pole = oznámení jen v Home Assistantu.
