@@ -121,6 +121,8 @@ Koncerty se hledají ve tvém vlastním úložišti a volitelně v úložištíc
 
 Stremio si seznam katalogů pamatuje – po změně vlastních katalogů nebo koncertů dej **Uložit změny** a doplněk ve Stremiu odinstaluj a přidej znovu. Účty a předvolby platí hned i bez toho.
 
+Se zapnutými katalogy dodává Nokturno i detail titulu a hledání (**Hledání – Filmy / Seriály**). Hodí se v aplikacích bez Cinemety, třeba v Nuviu: bez toho by detail titulu z katalogu hlásil „Žádný doplněk neposkytuje metadata“ a hledání „Žádné prohledávatelné katalogy“. Ve Stremiu s Cinemetou se detail nemění. Po aktualizaci doplněk v Nuviu obnov (nebo odinstaluj a přidej znovu), jinak si pamatuje starý seznam.
+
 **Sezónní a tematické katalogy** (třeba vánoční filmy nebo Film pro dnešní den) přidáváme sami. Nezapínají se ve formuláři – jsou v doplňku vždy, na začátku seznamu katalogů, a sezónní po sezóně zase zmizí. Stremio si seznam katalogů pamatuje, nový katalog proto někdy uvidíš až po obnovení doplňku.
 
 ## Statistiky
