@@ -66,6 +66,7 @@ Stejné volby (Skrýt 3D, Skrýt Dolby Vision, Skrýt HDR) má i integrace pro H
 |---|---|
 | **Co a v jakém pořadí ukazovat u streamu** | údaje v horním a dolním řádku. Pohodlněji přes **Nastavit z mobilu**, kde se údaje přesouvají šipkami. **Výchozí pořadí** vrátí původní stav |
 | **Automaticky použít poslední filtr** | dialog se otevře rovnou s posledním filtrem. Když by u titulu nenechal žádný stream, ukážou se všechny |
+| **Rovnou přehrát nejlepší stream** | klik na titul (i Přehrát v detailu nebo z TMDBHelperu) pustí bez výběru zapamatovaný stream, jinak první podle **Řazení streamů**. Výběr dál otevře **Vybrat stream** v místní nabídce titulu |
 
 ## 3D streamy
 3D verze jsou na běžné televizi dva obrazy vedle sebe nebo nad sebou. Nokturno je pozná podle názvu souboru
