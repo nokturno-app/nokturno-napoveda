@@ -35,6 +35,7 @@ Doma ju spustíš na televízore s Androidom, na počítači, na Raspberry Pi al
 | Starý Android telefón, Docker na NAS, MikroTik, starý notebook | nápady a príklady, na čom to doma rozbehnúť | [Kde doma spustiť Nokturno pre Stremio](stremio-kde-spustit.md) |
 | Mobil alebo TV mimo domova, aplikácia zostane doma | doma, prístup cez Tailscale alebo VPN | [Nokturno pre Stremio mimo domova – Tailscale a VPN](stremio-mimo-domov.md) |
 | VPS s vlastnou doménou, prístup odkiaľkoľvek bez VPN | na VPS | [Nokturno pre Stremio na VPS s vlastnou doménou](stremio-vps.md) |
+| iPad alebo iPhone | na inom zariadení doma, na iPade len Stremio v prehliadači | [iPad a iPhone](#ipad-a-iphone) |
 
 Najlepšie je spustiť aplikáciu na zariadení, ktoré je stále zapnuté (box, Raspberry Pi, NAS), alebo priamo na tom,
 kde Stremio spúšťaš.
@@ -55,6 +56,20 @@ kde Stremio spúšťaš.
    a prípadne účty zdrojov a daj **✓ Overiť všetky účty**. Postup je v článku [Ako pridať Nokturno do Stremia alebo Nuvia](stremio-instalace.md).
 6. **Pridať do Stremia** alebo **Pridať do Nuvia**. Na tom istom televízore to ide rovno z formulára v aplikácii,
    na ostatných zariadeniach v sieti z formulára otvoreného cez IP adresu.
+
+## iPad a iPhone
+Aplikácia Nokturno na iPade ani iPhone nebeží a Stremio tam býva len ako webová aplikácia
+[web.stremio.com](https://web.stremio.com). Aplikáciu preto spusti doma na inom zariadení (box, počítač, Home Assistant)
+a v Safari na iPade v rovnakej sieti otvor `https://<IP s pomlčkami>.my.local-ip.co:7141/configure`,
+napríklad `https://192-168-1-10.my.local-ip.co:7141/configure`. Vo formulári daj **Skopírovať adresu** a vo web.stremio.com
+ho vlož v **Addons** do poľa pre adresu doplnku.
+
+- Webový prehrávač neprehrá súbory `.mkv`, `.avi` a podobné, hrajú hlavne `.mp4`. Pozri
+  [„⚠️ Vo webovom prehrávači sa neprehrá“](stremio-webovy-prehravac.md).
+- Keď adresa s `my.local-ip.co` nejde otvoriť, blokuje ju router, pozri [Časté problémy](#caste-problemy).
+- Mimo domova pomôže [Tailscale](stremio-mimo-domov.md), aplikácia Tailscale je aj v App Store.
+
+Na iPade sme to sami neskúšali. Napíš nám na [Discord](discord.md), či ti to išlo.
 
 ## Počítač
 Z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest) vyber súbor podľa systému:
@@ -233,6 +248,10 @@ Aplikácia sa aktualizuje sama: pri štarte a potom každých 6 hodín. Novú ve
 vráti predchádzajúcu. Na Androide sa aktualizácia sťahuje pri spustení aplikácie alebo po zapnutí zariadenia.
 Nový inštalačný súbor sťahovať nemusíš.
 
+Stremio si ale pamätá údaje doplnku z doby, keď si ho pridal. V zozname doplnkov preto môže ďalej ukazovať
+staršie číslo verzie, aj keď je aplikácia aktuálna. Nevadí to, doplnok sa pýta aplikácie a dostáva všetko nové.
+Keď chceš vidieť správne číslo, doplnok v Stremiu odober a pridaj znova z formulára `/configure`.
+
 Nechceš čakať? Na stránke nastavení (`/configure`) je dole v sekcii **⚙ Aplikácia** (od verzie 9.12.0 ju vidí len
 [správca](#spravca-rezimy-a-ucty)) tlačidlo **Skontrolovať aktualizácie** (od verzie 9.0.7). Ukáže nainštalovanú a najnovšiu verziu
 a novšiu hneď stiahne. Rovnako poslúži reštart aplikácie: na počítači ju zavri a spusť znova,
@@ -249,6 +268,7 @@ zatvorenie a nové spustenie aplikácie.
 | Pri štarte „Address already in use“ | port 7140 používa iný program. Spusti aplikáciu s `--port 7150 --https-port 7151`. |
 | Stream s „⚠️ Vo webovom prehrávači sa neprehrá“ | riadok ukazuje len staršia aplikácia (do 9.6.0), aktualizuj ju; vo webovom prehrávači záleží na formáte súboru, pozri [„⚠️ Vo webovom prehrávači sa neprehrá“](stremio-webovy-prehravac.md) |
 | Pri filme nie sú streamy | pozri [Pri filme nie sú streamy Nokturna](stremio-zadne-streamy.md) |
+| Google Play Protect hlási „Nocturno is harmful“ alebo neznámu aplikáciu | APK nie je z Google Play a podpisujeme ju vlastným certifikátom, Play Protect ju preto nepozná. Aplikácia nič škodlivé nerobí a jej [zdrojový kód](https://github.com/nokturno-app/nokturno-stremio) je verejný. V hláške otvor podrobnosti a aplikáciu ponechaj. APK sťahuj len z [vydaní na GitHube](https://github.com/nokturno-app/nokturno-stremio-app/releases/latest). |
 
 ## Prečo adresa `https://…my.local-ip.co`
 Stremio prijme doplnok cez obyčajné `http` len z toho istého zariadenia. Z iného zariadenia chce HTTPS s platným
