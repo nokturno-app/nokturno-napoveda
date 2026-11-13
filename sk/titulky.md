@@ -25,6 +25,11 @@ templates:
 
 Keď je zvuk v preferovanom jazyku, titulky sa vypnú.
 
+## Sťahovanie titulkov
+**Nokturno → Nastavenia → Prehrávanie → Sťahovať titulky automaticky** (predvolene zapnuté). Titulky sa nesťahujú, keď má vybraný stream zvuk
+alebo vložené titulky v tvojom jazyku (slovenčina a čeština sa navzájom zastúpia). Keď voľbu vypneš, Nokturno žiadne titulky samo nesťahuje;
+ručne ich stiahneš dialógom Titulky v prehrávači.
+
 ## Odkiaľ sú titulky
 1. Z **videa samotného** (titulky vo vnútri súboru, aj pri súboroch z vlastného úložiska).
 2. Z voliteľného **zdroja tretej strany**, napríklad súbor s titulkami vedľa videa na WebShare. K dielu seriálu sa priradí, len keď

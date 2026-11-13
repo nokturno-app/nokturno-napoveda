@@ -30,6 +30,7 @@ Ve stejné kategorii je **Přenos nastavení** (Odeslat do jiného Kodi, Načís
 - **Preferovat prostorový zvuk (5.1 a víc)** – při stejné kvalitě jde nahoru stream s prostorovým zvukem.
 - **Automaticky přepnout zvuk na preferovaný jazyk** – po spuštění se vybere zvuková stopa v preferovaném jazyce, i když má soubor jako výchozí jinou.
 - **Titulky** – *Nechat na Kodi* / *Když chybí zvuk v preferovaném jazyce* / *Vždy v preferovaném jazyce*. Ve výchozím stavu se titulky zapnou, když zvuk v preferovaném jazyce není (čeština a slovenština se navzájem zastoupí), a vypnou se, když zvuk v preferovaném jazyce je.
+- **Stahovat titulky automaticky** – ve výchozím stavu zapnuto. Titulky se nestahují, když má stream zvuk nebo vložené titulky v tvém jazyce. Po vypnutí Nokturno titulky samo nestahuje, jdou stáhnout ručně v dialogu Titulky v přehrávači.
 - **Skrýt SD streamy** – streamy pod 720p se ze seznamu úplně vyřadí.
 - **Skrýt 3D streamy** – 3D soubory (podle názvu nebo hlavičky souboru) se nezobrazí nikdy, ani když jiný stream není. Podrobně v nápovědě: [Výběr streamu: filtry, 3D a poslední filtr](../../cs/vyber-streamu.md).
 - **Skrýt Dolby Vision bez záložní vrstvy (profil 5)** – streamy, které televize bez Dolby Vision ukáže zeleně a fialově. Poznáme je z hlavičky souboru (u prvních streamů výpisu), u ostatních jen podle označení P5 v názvu.
