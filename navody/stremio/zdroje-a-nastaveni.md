@@ -20,6 +20,7 @@ Sekce **Vlastní úložiště a zdroje** ve formuláři, první karta **Vlastní
 - Soubory, které k filmu nebo dílu patří, jsou ve Stremiu **mezi streamy první**; místo zdroje je u nich název úložiště.
 - **Soubor přehrávači předává aplikace Nokturno** (od verze 9.6.1), přihlášení k úložišti do Stremia neodchází a data tečou přes aplikaci. Ve webovém přehrávači Stremia v prohlížeči záleží na formátu souboru (`.mkv`, `.avi` a podobné nepřehraje), v aplikaci (Stremio, Nuvio) hrají.
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno** (ta v něm hledá soubory a předává je přehrávači). Přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
+- Na domovské stránce Stremia přibude katalog **Vlastní úložiště** (filmy a seriály zvlášť) se všemi tituly, které se podle názvu souborů podařilo poznat, seřazený podle abecedy.
 - Jak soubory pojmenovat (rok u filmu, `S01E02` u dílu, **složka s originálním názvem** u filmů s odlišným českým názvem – Stremio zná tituly často jen anglicky) je podrobně v [článku Jak připojit vlastní úložiště](../../cs/vlastni-uloziste.md#jak-pojmenovat-soubory).
 - Nový soubor se objeví nejpozději do hodiny.
 

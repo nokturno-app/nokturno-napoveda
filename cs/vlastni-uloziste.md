@@ -102,6 +102,7 @@ a systémové složky NAS (`@eaDir`, `#recycle`) se přeskakují.
 ## Kde se soubory objeví
 - **U titulu mezi streamy** – vždy **první**, na začátku řádku zelený název úložiště, za ním kvalita, zvuk, velikost a délka. V Kodi se pouští rovnou z úložiště, ve Stremiu jde soubor přes aplikaci Nokturno.
 - **Moje úložiště** v hlavním menu Kodi – procházení úložiště po složkách; u složky je počet videí uvnitř. Napřed se vždy vybírá úložiště (i když máš jen jedno). U souborů se podle názvu souboru nebo složky doplní z TMDB plakát, popis, rok a žánr (u dílu seriálu série a epizoda); popisek zůstává název souboru. Popis se načte u prvních 60 souborů ve složce; chybí u souborů, jejichž název nejde přiřadit k titulu, a tam, kde se ještě nestihl načíst.
+- **Katalog Vlastní úložiště** ve Stremiu – na domovské stránce jsou dva katalogy (filmy a seriály) se všemi tituly, které se podle názvu souborů podařilo poznat, seřazené podle abecedy. Ukáže se, jen když máš nastavené vlastní úložiště. Soubor, který se k titulu přiřadit nepodařilo, v katalogu chybí, viz [Jak pojmenovat soubory](#jak-pojmenovat-soubory).
 - Ve **výsledcích hledání** se soubory mezi tituly neukazují – hledání je o titulech, soubor přijde na řadu až u titulu. V Kodi je výjimka: po zadání dotazu v hlavním menu v **Hledat** je položka **Jen v mém úložišti**, která hledá dotaz jen mezi soubory ve vlastním úložišti (počet nálezů se u ní neukazuje; ukáže se jen s nastaveným vlastním úložištěm).
 
 ![Moje úložiště: filmy ve složkách Název (rok)](../navody/kodi/images/kodi-uloziste.jpg)
