@@ -41,7 +41,7 @@ Hlídané jsou v Kodi a v Home Assistantu. Ve Stremiu nejsou.
 
 **Požadavky na stream** mají čtyři řádky: **Obraz** (Full HD, 2K nebo 4K a lepší), **Zvuk** (5.1 a víc), **Dabing**
 a **Titulky** (čeština, slovenština, čeština nebo slovenština, angličtina, maďarština). U každého jde nechat
-**Nerozhoduje**, to je i výchozí stav. Nabídnou se hned po přidání do Hlídaných (Zpět = nechat vše na Nerozhoduje). Po uložení se titul hned zkontroluje podle nových požadavků. Za názvem titulu
+**Nerozhoduje**, to je i výchozí stav. Nabídnou se hned po přidání do Hlídaných. Výběr potvrdíš horním řádkem **Uložit**, Zrušit nebo Zpět změny zahodí (u nového titulu tedy zůstane vše na Nerozhoduje). Po uložení se titul hned zkontroluje podle nových požadavků. Za názvem titulu
 je pak šedě shrnutí, třeba „2K+ · CZ dabing · 5.1“. Zdroje jako WebShare nebo HellSpy jazyk a zvuk často neuvádí,
 Nokturno ho pak odhaduje z názvu souboru nebo z hlavičky, takže přísné požadavky můžou chvíli nevyhovovat ničemu.
 
