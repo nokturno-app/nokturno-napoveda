@@ -10,6 +10,7 @@ templates:
     1. Seriál: v kontextovom menu seriálu daj Sledovať nové diely.
     2. Film alebo seriál, ktorý zatiaľ nikde nie je: v kontextovom menu daj Sledovať, kým bude dostupné.
     3. Diel má streamy, ale nie také, aké chceš (napríklad bez CZ titulkov): v kontextovom menu dielu daj Kontrolovať ďalej. Nokturno sa ozve, keď streamov pribudne.
+    4. Chceš len určitú kvalitu, 5.1, dabing alebo titulky: v Sledovaných v kontextovom menu titulu daj Požiadavky na stream…
     Zoznam je v hlavnom menu pod Pokračovať v sledovaní, položka Sledované.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane
     Tím Nokturno
@@ -22,6 +23,8 @@ Sledované si pamätajú, na čo čakáš. Nokturno sa samo ozve, keď sa to bud
 - **film alebo seriál, ktorý zatiaľ nikde nie je**,
 - titul alebo diel, ktorý streamy má, ale **nie také, aké chceš** (napríklad bez CZ titulkov alebo bez 5.1).
   Na to je **Kontrolovať ďalej**: Nokturno ho sleduje ďalej a ozve sa, keď streamov pribudne.
+- titul, pri ktorom chceš **určitú kvalitu obrazu, 5.1, dabing alebo titulky**. Na to sú **Požiadavky na stream**:
+  Nokturno počíta len streamy, ktoré im zodpovedajú, a ozve sa, keď sa prvý taký objaví.
 
 Sledované sú v Kodi a v Home Assistante. V Stremiu nie sú.
 
@@ -34,6 +37,13 @@ Sledované sú v Kodi a v Home Assistante. V Stremiu nie sú.
 | film alebo seriál, ktorý zatiaľ nikde nie je | kontextové menu titulu → **Sledovať, kým bude dostupné** |
 | diel, ktorý streamy má, ale nie také, aké chceš | kontextové menu dielu → **Kontrolovať ďalej 2x02** (s číslom toho dielu) |
 | film, ktorý streamy má, ale nie také, aké chceš | **Sledovať, kým bude dostupné**, po prvej kontrole v Sledovaných kontextové menu → **Kontrolovať ďalej** |
+| titul len v určitej kvalite, s 5.1, dabingom alebo titulkami | v Sledovaných kontextové menu titulu → **Požiadavky na stream…** |
+
+**Požiadavky na stream** majú štyri riadky: **Obraz** (Full HD, 2K alebo 4K a lepšie), **Zvuk** (5.1 a viac), **Dabing**
+a **Titulky** (čeština, slovenčina, čeština alebo slovenčina, angličtina, maďarčina). Pri každom sa dá nechať
+**Nerozhoduje**, to je aj predvolený stav. Po uložení sa titul hneď skontroluje podľa nových požiadaviek. Za názvom titulu
+je potom sivo zhrnutie, napríklad „2K+ · CZ dabing · 5.1“. Zdroje ako WebShare alebo HellSpy jazyk a zvuk často neuvádzajú,
+Nokturno ho potom odhaduje z názvu súboru alebo z hlavičky, takže prísne požiadavky môžu chvíľu nevyhovovať ničomu.
 
 Keď sa pri titule nenájde žiadny stream, Nokturno sa spýta samo: „Ozvať sa, keď bude dostupné?“ Stačí potvrdiť.
 Pri diele seriálu sa tým začne sledovať celý seriál.
@@ -56,6 +66,7 @@ Keď pribudol nový diel, je to vidieť rovno v menu („Sledované · 1 nový d
 |---|---|
 | dá sa pustiť | titul má streamy, kliknutím otvoríš výber streamu |
 | kontrolovať ďalej | streamy má, ale Nokturno ho sleduje ďalej, kým ich nepribudne |
+| nevyhovuje požiadavkám | streamy má, ale žiadny nezodpovedá nastaveným požiadavkám na stream |
 | zatiaľ nie | titul je známy, ale žiadny zdroj ho zatiaľ nemá |
 | sleduje sa | titul zatiaľ žiadny zdroj nepozná, Nokturno ho hľadá podľa názvu |
 
@@ -90,6 +101,9 @@ Ukáže 12 titulov, zvyšok je za dlaždicou **Zobraziť všetko**. Kým v ňom 
   - titul so streamami: **Vybrať stream**, **Presunúť do Môjho zoznamu** (len keď sa nekontroluje ďalej), **Kontrolovať ďalej (streamy nevyhovujú)**
     alebo **Prestať kontrolovať ďalej** a **Odobrať zo Sledovaných**,
   - titul bez streamov: **Vybrať stream** (pri diele **Otvoriť**) a **Odobrať zo Sledovaných**.
+- V detaile sledovaného titulu je sekcia **Požiadavky na stream** so štyrmi výbermi: **Obraz**, **Zvuk**, **Dabing** a **Titulky**,
+  každý s voľbou **Nerozhoduje**. Zmena sa uloží hneď a titul sa skontroluje. Keď streamy sú, ale žiadny požiadavkám
+  nezodpovedá, je stav **nevyhovuje**. V automatizáciách ide to isté akciou `nokturno.trakt_requirements`.
 - Do Sledovaných pridáš titul z dialógu ktoréhokoľvek radu alebo výsledkov vyhľadávania: **Pridať do Sledovaných**, pri seriáli **Sledovať nové diely**.
   V detaile titulu je to isté zvonček, pri seriáli vo výpise dielov oko.
 

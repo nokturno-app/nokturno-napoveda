@@ -97,7 +97,7 @@ Místní nabídka (podržet OK nebo pravé tlačítko) u filmu a dílu nabízí:
 - **Stáhnout** – stejný dialog, vybraný stream se stáhne místo přehrání.
 - **Podobné tituly**
 - **Přidat do Mého seznamu** / **Odebrat z Mého seznamu**
-- **Hlídat nové díly** (seriál), **Hlídat, až bude k dispozici** (film), **Kontrolovat dál** (díl) – viz [Hlídané](../../cs/hlidane.md).
+- **Hlídat nové díly** (seriál), **Hlídat, až bude k dispozici** (film), **Kontrolovat dál** (díl), v Hlídaných **Požadavky na stream…** (kvalita, 5.1, dabing, titulky) – viz [Hlídané](../../cs/hlidane.md).
 - **Označit jako zhlédnuté** / **Označit jako nezhlédnuté**
 
 Označit jako zhlédnuté funguje i z místní nabídky skinu. Změna se promítne do Nokturna, na Trakt.tv i do [synchronizace](synchronizace.md).
