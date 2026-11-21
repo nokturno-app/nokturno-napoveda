@@ -10,7 +10,7 @@ templates:
     1. Seriál: v kontextovém menu seriálu dej Hlídat nové díly.
     2. Film nebo seriál, který zatím nikde není: v kontextovém menu dej Hlídat, až bude k dispozici.
     3. Díl má streamy, ale ne takové, jaké chceš (třeba bez CZ titulků): v kontextovém menu dílu dej Kontrolovat dál. Nokturno se ozve, až streamů přibude.
-    4. Chceš jen určitou kvalitu, 5.1, dabing nebo titulky: v Hlídaných v kontextovém menu titulu dej Požadavky na stream…
+    4. Chceš jen určitou kvalitu, 5.1, dabing nebo titulky: požadavky na stream se nabídnou hned po přidání do Hlídaných, později je změníš v Hlídaných v kontextovém menu titulu (Požadavky na stream…).
     Seznam je v hlavním menu pod Pokračovat ve sledování, položka Hlídané.
     Návod: https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane
     Tým Nokturno
@@ -41,7 +41,7 @@ Hlídané jsou v Kodi a v Home Assistantu. Ve Stremiu nejsou.
 
 **Požadavky na stream** mají čtyři řádky: **Obraz** (Full HD, 2K nebo 4K a lepší), **Zvuk** (5.1 a víc), **Dabing**
 a **Titulky** (čeština, slovenština, čeština nebo slovenština, angličtina, maďarština). U každého jde nechat
-**Nerozhoduje**, to je i výchozí stav. Po uložení se titul hned zkontroluje podle nových požadavků. Za názvem titulu
+**Nerozhoduje**, to je i výchozí stav. Nabídnou se hned po přidání do Hlídaných (Zpět = nechat vše na Nerozhoduje). Po uložení se titul hned zkontroluje podle nových požadavků. Za názvem titulu
 je pak šedě shrnutí, třeba „2K+ · CZ dabing · 5.1“. Zdroje jako WebShare nebo HellSpy jazyk a zvuk často neuvádí,
 Nokturno ho pak odhaduje z názvu souboru nebo z hlavičky, takže přísné požadavky můžou chvíli nevyhovovat ničemu.
 

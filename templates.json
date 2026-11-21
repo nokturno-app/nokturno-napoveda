@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-11-21T22:00:36Z",
+  "generated": "2026-11-21T22:08:04Z",
   "base_url": "https://nokturno-app.github.io/nokturno-napoveda",
   "vars": {
     "verze": "verze doplňku u instalace (installs.version)",
@@ -469,7 +469,7 @@
       "lang": "cs",
       "product": "kodi",
       "title": "Hlídané: nové díly a Kontrolovat dál",
-      "text": "Ahoj, na to jsou v Nokturnu Hlídané. Nokturno se samo ozve, až půjde titul pustit.\n1. Seriál: v kontextovém menu seriálu dej Hlídat nové díly.\n2. Film nebo seriál, který zatím nikde není: v kontextovém menu dej Hlídat, až bude k dispozici.\n3. Díl má streamy, ale ne takové, jaké chceš (třeba bez CZ titulků): v kontextovém menu dílu dej Kontrolovat dál. Nokturno se ozve, až streamů přibude.\n4. Chceš jen určitou kvalitu, 5.1, dabing nebo titulky: v Hlídaných v kontextovém menu titulu dej Požadavky na stream…\nSeznam je v hlavním menu pod Pokračovat ve sledování, položka Hlídané.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane\nTým Nokturno",
+      "text": "Ahoj, na to jsou v Nokturnu Hlídané. Nokturno se samo ozve, až půjde titul pustit.\n1. Seriál: v kontextovém menu seriálu dej Hlídat nové díly.\n2. Film nebo seriál, který zatím nikde není: v kontextovém menu dej Hlídat, až bude k dispozici.\n3. Díl má streamy, ale ne takové, jaké chceš (třeba bez CZ titulků): v kontextovém menu dílu dej Kontrolovat dál. Nokturno se ozve, až streamů přibude.\n4. Chceš jen určitou kvalitu, 5.1, dabing nebo titulky: požadavky na stream se nabídnou hned po přidání do Hlídaných, později je změníš v Hlídaných v kontextovém menu titulu (Požadavky na stream…).\nSeznam je v hlavním menu pod Pokračovat ve sledování, položka Hlídané.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane\nTým Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/cs/hlidane",
       "when": {},
       "priority": 2
@@ -479,7 +479,7 @@
       "lang": "sk",
       "product": "kodi",
       "title": "Sledované: nové diely a Kontrolovať ďalej",
-      "text": "Ahoj, na toto sú v Nokturne Sledované. Nokturno sa samo ozve, keď sa titul bude dať pustiť.\n1. Seriál: v kontextovom menu seriálu daj Sledovať nové diely.\n2. Film alebo seriál, ktorý zatiaľ nikde nie je: v kontextovom menu daj Sledovať, kým bude dostupné.\n3. Diel má streamy, ale nie také, aké chceš (napríklad bez CZ titulkov): v kontextovom menu dielu daj Kontrolovať ďalej. Nokturno sa ozve, keď streamov pribudne.\n4. Chceš len určitú kvalitu, 5.1, dabing alebo titulky: v Sledovaných v kontextovom menu titulu daj Požiadavky na stream…\nZoznam je v hlavnom menu pod Pokračovať v sledovaní, položka Sledované.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane\nTím Nokturno",
+      "text": "Ahoj, na toto sú v Nokturne Sledované. Nokturno sa samo ozve, keď sa titul bude dať pustiť.\n1. Seriál: v kontextovom menu seriálu daj Sledovať nové diely.\n2. Film alebo seriál, ktorý zatiaľ nikde nie je: v kontextovom menu daj Sledovať, kým bude dostupné.\n3. Diel má streamy, ale nie také, aké chceš (napríklad bez CZ titulkov): v kontextovom menu dielu daj Kontrolovať ďalej. Nokturno sa ozve, keď streamov pribudne.\n4. Chceš len určitú kvalitu, 5.1, dabing alebo titulky: požiadavky na stream sa ponúknu hneď po pridaní do Sledovaných, neskôr ich zmeníš v Sledovaných v kontextovom menu titulu (Požiadavky na stream…).\nZoznam je v hlavnom menu pod Pokračovať v sledovaní, položka Sledované.\nNávod: https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane\nTím Nokturno",
       "link": "https://nokturno-app.github.io/nokturno-napoveda/sk/hlidane",
       "when": {},
       "priority": 2
