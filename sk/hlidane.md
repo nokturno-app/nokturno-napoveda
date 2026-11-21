@@ -45,6 +45,9 @@ a **Titulky** (čeština, slovenčina, čeština alebo slovenčina, angličtina,
 je potom sivo zhrnutie, napríklad „2K+ · CZ dabing · 5.1“. Zdroje ako WebShare alebo HellSpy jazyk a zvuk často neuvádzajú,
 Nokturno ho potom odhaduje z názvu súboru alebo z hlavičky, takže prísne požiadavky môžu chvíľu nevyhovovať ničomu.
 
+Požiadavky sa dajú nastaviť aj pri **sledovanom seriáli** (kontextové menu seriálu v Sledovaných). Nový diel sa potom ohlási,
+až keď má stream, ktorý im zodpovedá. Po zmene si Nokturno dostupné diely len znova prejde a ozve sa až s ďalším novým.
+
 Keď sa pri titule nenájde žiadny stream, Nokturno sa spýta samo: „Ozvať sa, keď bude dostupné?“ Stačí potvrdiť.
 Pri diele seriálu sa tým začne sledovať celý seriál.
 
@@ -101,7 +104,7 @@ Ukáže 12 titulov, zvyšok je za dlaždicou **Zobraziť všetko**. Kým v ňom 
   - titul so streamami: **Vybrať stream**, **Presunúť do Môjho zoznamu** (len keď sa nekontroluje ďalej), **Kontrolovať ďalej (streamy nevyhovujú)**
     alebo **Prestať kontrolovať ďalej** a **Odobrať zo Sledovaných**,
   - titul bez streamov: **Vybrať stream** (pri diele **Otvoriť**) a **Odobrať zo Sledovaných**.
-- V detaile sledovaného titulu je sekcia **Požiadavky na stream** so štyrmi výbermi: **Obraz**, **Zvuk**, **Dabing** a **Titulky**,
+- V detaile sledovaného titulu aj seriálu je sekcia **Požiadavky na stream** so štyrmi výbermi: **Obraz**, **Zvuk**, **Dabing** a **Titulky**,
   každý s voľbou **Nerozhoduje**. Zmena sa uloží hneď a titul sa skontroluje. Keď streamy sú, ale žiadny požiadavkám
   nezodpovedá, je stav **nevyhovuje**. V automatizáciách ide to isté akciou `nokturno.trakt_requirements`.
 - Do Sledovaných pridáš titul z dialógu ktoréhokoľvek radu alebo výsledkov vyhľadávania: **Pridať do Sledovaných**, pri seriáli **Sledovať nové diely**.
