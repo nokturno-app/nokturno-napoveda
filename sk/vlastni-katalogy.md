@@ -77,7 +77,7 @@ Keď ich chceš, založ si ich zo šablóny – a môžeš si ich rovno upraviť
 | **Titulky** * | rovnaké možnosti ako jazyk zvuku |
 | **Minimálna kvalita** * | Ľubovoľná, Full HD, 2K, 4K |
 | **Kanály zvuku** * | Ľubovoľné, alebo **5.1 a viac** |
-| **Zobraziť zoradené podľa** * | **Novo nájdené** (najnovšie nálezy hore, podľa toho, kedy titul našla kontrola dostupnosti), **Rovnako ako výber** (poradie, v akom tituly vrátil výber katalógu), alebo **Najnovšie vydanie** (podľa dátumu vydania titulu) |
+| **Zobraziť zoradené podľa** * | **Novo nájdené** (hore to, čo overovanie dostupnosti našlo naposledy – hneď vidíš, čo pribudlo), **Rovnako ako výber** (poradie podľa voľby **Radiť podľa** – obľúbenosť, hodnotenie, dátum…), alebo **Najnovšie vydanie** (hore najnovší dátum vydania, bez ohľadu na to, kedy titul overovanie našlo) |
 | **Ikona katalógu** | Filmy, Seriály, Zoznam, Hviezda, Rebríček, Žáner, Rok, Krajina, Zbierka, Novinky, Herci, Štúdiá |
 | **Názov katalógu** | predvyplní sa z volieb (napríklad „Rozprávky · Česko · CZ dabing · posledných 5 rokov“), môžeš ho prepísať |
 

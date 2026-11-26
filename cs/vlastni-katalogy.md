@@ -77,7 +77,7 @@ Když je chceš, založ si je ze šablony – a můžeš si je rovnou upravit, t
 | **Titulky** * | stejné možnosti jako jazyk zvuku |
 | **Minimální kvalita** * | Libovolná, Full HD, 2K, 4K |
 | **Kanály zvuku** * | Libovolné, nebo **5.1 a víc** |
-| **Zobrazit seřazené podle** * | **Nově nalezené** (nejnovější nálezy nahoře, podle toho, kdy titul našla kontrola dostupnosti), **Stejně jako výběr** (pořadí, v jakém tituly vrátil výběr katalogu), nebo **Nejnovější vydání** (podle data vydání titulu) |
+| **Zobrazit seřazené podle** * | **Nově nalezené** (nahoře to, co ověřování dostupnosti našlo naposledy – hned vidíš, co přibylo), **Stejně jako výběr** (pořadí podle volby **Řadit podle** – oblíbenost, hodnocení, datum…), nebo **Nejnovější vydání** (nahoře nejnovější datum vydání, bez ohledu na to, kdy titul ověřování našlo) |
 | **Ikona katalogu** | Filmy, Seriály, Seznam, Hvězda, Žebříček, Žánr, Rok, Země, Sbírka, Novinky, Herci, Studia |
 | **Název katalogu** | předvyplní se z voleb (třeba „Pohádky · Česko · CZ dabing · posledních 5 let“), můžeš ho přepsat |
 
