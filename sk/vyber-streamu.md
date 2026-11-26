@@ -67,6 +67,7 @@ Rovnaké voľby (Skryť 3D, Skryť Dolby Vision, Skryť HDR) má aj integrácia 
 | **Čo a v akom poradí ukazovať pri streame** | údaje v hornom a dolnom riadku. Pohodlnejšie cez **Nastaviť z mobilu**, kde sa údaje presúvajú šípkami. **Predvolené poradie** vráti pôvodný stav |
 | **Automaticky použiť posledný filter** | dialóg sa otvorí rovno s posledným filtrom. Keby pri titule nenechal žiadny stream, zobrazia sa všetky |
 | **Rovno prehrať najlepší stream** | klik na titul (aj Prehrať v detaile alebo z TMDBHelpera) pustí bez výberu zapamätaný stream, inak prvý podľa **Radenia streamov**. Výber naďalej otvorí **Vybrať stream** v miestnej ponuke titulu |
+| **Pri pokračovaní vždy ponúknuť výber streamu** | rozpozeraný film alebo diel sa nespustí rovno na zapamätanom streame, ukáže sa výber a zapamätaný stream v ňom bude predvybraný. Platí aj pri zapnutom **Rovno prehrať najlepší stream** |
 
 ## 3D streamy
 3D verzie sú na bežnom televízore dva obrazy vedľa seba alebo nad sebou. Nokturno ich spozná podľa názvu súboru

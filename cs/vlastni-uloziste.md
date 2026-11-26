@@ -65,8 +65,9 @@ V nastavení doplňku (ve Stremiu **Doplňky → Nokturno → ozubené kolo**, n
 **Vlastní úložiště a zdroje** první kartu **Vlastní úložiště** a dej **Ověřit úložiště**. Pak ulož změny. Když už doplněk
 ve Stremiu máš, změny platí hned a znovu ho přidávat nemusíš.
 
-Ve Stremiu platí tři věci navíc:
+Ve Stremiu platí čtyři věci navíc:
 - Úložiště může být WebDAV i SMB (`smb://server/složka`). SMB čte aplikace Nokturno, takže na sdílenou složku musí dosáhnout přímo ona: běží doma, nebo má do domácí sítě VPN. Na sdílené veřejné instanci SMB nejde (hláška „SMB jen z domácí sítě“).
+- Úložiště může být i **místní složka** na zařízení s aplikací. Do adresy napiš cestu, třeba `/media` nebo `file:///media`. Hodí se, když aplikace běží v Dockeru a složku s filmy do kontejneru namapuješ.
 - Úložiště musí být dosažitelné **ze zařízení, kde běží aplikace Nokturno**. Ta v něm hledá soubory a od verze 9.6.1
   je přehrávači i předává, přehrávač potřebuje dosáhnout jen na aplikaci. Když je aplikace doma, stačí adresa z domácí sítě.
 - Ve Stremiu v prohlížeči se soubory `.mkv`, `.avi` a podobné nepřehrají, o přehrání rozhoduje formát souboru.
